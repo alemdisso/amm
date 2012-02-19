@@ -1,0 +1,60 @@
+<div id="breadcrumb"><?php echo $this->breadcrumb?></div>
+
+<h1><?php echo $this->tituloPagina . ": " . $this->usuarioPagina['nome_completo']?></h1>
+
+<div class="edita_senha_box">Para alterar sua senha, clique 
+<a class="bold" href="/autenticacao/conta/altera-senha?titulo=<?php echo $this->usuarioPagina['apelido']?>">aqui</a>.</div>
+
+<div class="clear_both margin_2">
+
+
+
+
+<?php
+if ($this->usuarioPagina['usuarioEnviado']) {
+
+    if (!$this->usuarioPagina['usuarioEnviadoComErro']) {
+?>
+
+<!-- success -->
+<p class="text_success"><?php echo $this->translate('Usuário editado com sucesso.')?></p>
+<!-- /success -->
+
+<?php
+    } else {
+?>
+
+<!-- result -->
+<p class="text_error"><?php echo $this->translate('erro: ')?> <?php echo $this->usuarioPagina['mensagem_erro_usuario']?></p>
+<!-- /result -->
+
+<?php
+    }
+}
+
+if ((!$this->usuarioPagina['usuarioEnviado']) || (($this->usuarioPagina['usuarioEnviado']) && ($this->usuarioPagina['usuarioEnviadoComErro']))) {
+?>
+
+<form method="post" name="frmUsuario" action="<?php echo $_SERVER["REQUEST_URI"]?>" enctype="multipart/form-data" accept-charset="utf-8">
+
+<br />
+
+<label for="txtNome"><?php echo $this->translate('nome')?></label>
+<input name="txtNome" id="txtNome" type="text" class="single" value="<?php echo $this->usuarioPagina['nome']?>" maxlength="120"/>
+
+<label for="txtSobrenome"><?php echo $this->translate('sobrenome')?></label>
+<input name="txtSobrenome" id="txtSobrenome" type="text" class="single" value="<?php echo $this->usuarioPagina['sobrenome']?>" maxlength="120"/>
+
+<label for="txtEmail"><?php echo $this->translate('email')?></label>
+<input name="txtEmail" type="text" class="single_readonly" id="txtEmail" readonly="readonly" value="<?php echo $this->usuarioPagina['email']?>" maxlength="80"/>
+
+<div class="margin_1">
+<input type="hidden" name="etapaEnvio" value="1"/>
+<input name="submit" id="submit" type="submit" value="<?php echo $this->translate('enviar')?>" alt="<?php echo $this->translate('enviar')?>" title="<?php echo $this->translate('enviar')?>" class="button_2" />
+</div>
+
+</form>
+
+<?php
+}
+?>

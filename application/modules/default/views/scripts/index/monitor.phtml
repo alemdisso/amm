@@ -1,0 +1,489 @@
+<div class="clearfix clear_both margin_2">
+
+	<div id="home_column_1">
+	
+		<h1 class="h1_2">Aulas</h1>
+		
+<?php
+		if (($this->alertaAulas['aulas_a_ajustar']) || ($this->alertaAulas['aulas_a_relatar'])) {
+?>
+	
+		<div class="main_box_3">Você tem 
+		
+<?php
+			if ($this->alertaAulas['aulas_a_ajustar']) {
+			
+				if($this->alertaAulas['aulas_a_ajustar'] > 1){
+?>
+		
+<a class="bold" href="<?php echo $this->alertaAulas['link_aulas_a_ajustar']?>"><?php echo $this->alertaAulas['aulas_a_ajustar']?> aulas com planos a ajustar</a><?php
+				} else {
+?><a class="bold" href="<?php echo $this->alertaAulas['link_aulas_a_ajustar']?>">1 aula com plano a ajustar</a><?php }} ?>
+<?php
+			if ($this->alertaAulas['aulas_a_relatar']) {
+			
+				if($this->alertaAulas['aulas_a_relatar'] > 1){
+?>	
+<?php echo $this->alertaAulas['aulas_a_ajustar'] ? " e " : ""?><a class="bold" href="<?php echo $this->alertaAulas['link_aulas_a_relatar']?>"><?php echo $this->alertaAulas['aulas_a_relatar']?> aulas a relatar</a><?php
+				} else {
+?><?php echo $this->alertaAulas['aulas_a_ajustar'] ? " e " : ""?><a class="bold" href="<?php echo $this->alertaAulas['link_aulas_a_relatar']?>">1 aula a relatar</a><?php }} ?>.</div>
+<?php
+		}
+?>
+
+<div class="clear_both margin_2">
+
+<?php
+if (isset($this->conjuntoAulas)) {
+?>
+
+<table width="480" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+    	<th colspan="7" align="left" class="manage_title left_home">Minhas aulas</th>
+	</tr>  
+	<tr>
+    	<th width="140" align="left" class="manage_title_2 left_home_2">Escola/Turma</th>
+		<th width="10" class="manage_title_2 middle_home_2">&nbsp;</th>
+    	<th width="120" align="left" class="manage_title_2 middle_home_2">Aula</th>
+		<th width="10" class="manage_title_2 middle_home_2">&nbsp;</th>
+		<th width="90" align="left" class="manage_title_2 middle_home_2">Plano</th>
+		<th width="10" align="left" class="manage_title_2 middle_home_2">&nbsp;</th>
+		<th align="left" class="manage_title_2 right_home_2">Relato</th>
+	</tr>
+	
+<?php
+    foreach ($this->conjuntoAulas as $dataAula => $dadosAula) {
+        foreach ($dadosAula as $idStr => $dadosHorario) {
+?>
+
+
+	<tr>
+    	<td width="140" align="left" class="<?php echo $dadosHorario['proxima_aula'] ? "manage_item_left_home_2" : "manage_item_left_home" ?>"><?php echo $dadosHorario['escola']?><br /><?php echo $dadosHorario['turma']?></td>
+		<td width="10" class="<?php echo $dadosHorario['proxima_aula'] ? "manage_item_middle_home_2" : "manage_item_middle_home" ?>">&nbsp;</td>
+    	<td width="120" align="left" class="<?php echo $dadosHorario['proxima_aula'] ? "manage_item_middle_home_2" : "manage_item_middle_home" ?>">
+<?php
+			if($dadosHorario['link']){
+?>
+		
+		<a class="default_2" href="<?php echo $dadosHorario['link']?>"><?php echo date("d/m/Y", strtotime($dataAula))?>, <?php echo $dadosHorario['dia_semana']?> <?php echo $dadosHorario['hora_inicio']?></a>
+		
+<?php
+			} else {
+?>
+		
+		<?php echo date("d/m/Y", strtotime($dataAula))?>, <?php echo $dadosHorario['dia_semana']?> <?php echo $dadosHorario['hora_inicio']?>h às <?php echo $dadosHorario['hora_termino']?>h
+		
+<?php
+			}
+?>		</td>
+		<td width="10" class="<?php echo $dadosHorario['proxima_aula'] ? "manage_item_middle_home_2" : "manage_item_middle_home" ?>">&nbsp;</td>
+		<td width="90" align="left" class="<?php echo $dadosHorario['proxima_aula'] ? "manage_item_middle_home_2" : "manage_item_middle_home" ?>">
+		
+<?php
+			if(!$dadosHorario['aula_planejada']){
+			
+				if($dadosHorario['link_planejar']){
+?>
+
+<a class="default_11" href="<?php echo $dadosHorario['link_planejar']?>">Planejar</a>
+
+<?php
+				} else {
+?>
+
+<p class="no_2">Sem plano</p>
+
+<?php
+				}
+
+			} else {
+			
+				if($dadosHorario['plano_aprovado']){
+?>
+
+<p class="ok_2">Aprovado</p>
+
+<?php
+				} else if($dadosHorario['plano_a_ajustar']){
+?>
+
+<p class="atention_2">A ajustar</p>
+
+<?php
+				} else if($dadosHorario['plano_a_verificar']){
+?>
+
+<p class="verify_2">A verificar</p>
+
+<?php
+				}
+
+			}
+?>
+		
+		</td>
+		<td width="10" align="left" class="<?php echo $dadosHorario['proxima_aula'] ? "manage_item_middle_home_2" : "manage_item_middle_home" ?>"></td>
+		<td align="left" class="<?php echo $dadosHorario['proxima_aula'] ? "manage_item_right_home_2" : "manage_item_right_home" ?>">
+		
+<?php
+			if(!$dadosHorario['aula_relatada']){
+			
+				if($dadosHorario['link_relatar']){
+?>
+
+<a class="default_11" href="<?php echo $dadosHorario['link_relatar']?>">Relatar</a>
+
+<?php
+				}
+
+			} else {
+?>
+
+<p class="ok_2">Feito</p>
+
+<?php
+			}
+?>
+		
+		</td>
+	</tr>
+
+<?php
+    	}
+	}
+?>
+
+	<tr>
+    	<td colspan="4" align="left" valign="middle" class="manage_title_4 left_4"><a class="default_4" href="<?php echo $this->minhasProximasAulas?>">Consultar próximas aulas</a></td>
+		<td colspan="3" align="right" valign="middle" class="manage_title_4 right_4"><img src="/img/icon_caption.png" style="vertical-align:middle"/> &nbsp; Pr&oacute;xima aula</td>
+  </tr>
+</table>
+
+<?php
+} else {
+?>
+
+<p class="margin_9">Nenhuma aula pr&oacute;xima retornada.</p>
+
+<?php
+}
+?>
+
+</div>
+
+<?php
+if (isset($this->conjuntoRelatos)) {
+?>
+
+<!-- ultimos relatos -->
+<div class="clear_both margin_2">
+
+	<div class="home_box_1_top">&Uacute;ltimos relatos</div>
+	
+	<div class="home_box_1_middle clearfix">
+	
+<?php
+    foreach ($this->conjuntoRelatos as $idStr => $dadosRelato) {
+?>
+	
+		<p class="margin_21"><a class="bold" href="<?php echo $dadosRelato['link']?>"><?php echo $dadosRelato['data']?>, <?php echo $dadosRelato['dia_semana']?> <?php echo $dadosRelato['hora_inicio']?></a></p>
+		<p class="caption_6 margin_2"><?php echo $dadosRelato['escola']?>, <?php echo $dadosRelato['turma']?> | Por <a class="default_2" href="<?php echo $dadosRelato['link_autor']?>"><?php echo $dadosRelato['autor']?></a></p>
+		
+<?php
+	}
+?>
+	
+	</div>
+	
+	<div class="home_box_1_bottom"><a class="default_4" href="<?php echo $this->todosRelatos?>">Todos os relatos</a></div>
+
+</div>
+<!-- /ultimos relatos -->
+
+<?php
+}
+?>
+
+<?php
+if (isset($this->conjuntoPlanos)) {
+?>
+
+<!-- ultimos planos -->
+<div class="clear_both margin_2">
+
+	<div class="home_box_1_top">&Uacute;ltimos planos</div>
+	
+	<div class="home_box_1_middle clearfix">
+	
+<?php
+    foreach ($this->conjuntoPlanos as $idStr => $dadosPlano) {
+?>
+	
+		<p class="margin_21"><a class="bold" href="<?php echo $dadosPlano['link']?>"><?php echo $dadosPlano['data']?>, <?php echo $dadosPlano['dia_semana']?> <?php echo $dadosPlano['hora_inicio']?></a></p>
+		<p class="caption_6 margin_2"><?php echo $dadosPlano['escola']?>, <?php echo $dadosPlano['turma']?> | Por <a class="default_2" href="<?php echo $dadosPlano['link_autor']?>"><?php echo $dadosPlano['autor']?></a></p>
+		
+<?php
+	}
+?>
+	
+	</div>
+	
+	<div class="home_box_1_bottom"><a class="default_4" href="<?php echo $this->todosPlanos?>">Todos os planos</a></div>
+
+</div>
+<!-- /ultimos planos -->
+
+<?php
+}
+?>
+
+<?php
+if (isset($this->conjuntoAulasComentadas)) {
+?>
+
+<!-- ultimas aulas mais comentadas -->
+<div class="clear_both margin_2">
+
+	<div class="home_box_1_top">Aulas mais comentadas recentemente</div>
+	
+	<div class="home_box_1_middle clearfix">
+	
+<?php
+    foreach ($this->conjuntoAulasComentadas as $idStr => $dadosAulaComentada) {
+?>
+	
+		<p class="margin_21"><a class="bold" href="<?php echo $dadosAulaComentada['link']?>"><?php echo $dadosAulaComentada['data']?>, <?php echo $dadosAulaComentada['dia_semana']?> <?php echo $dadosAulaComentada['hora_inicio']?>h às <?php echo $dadosAulaComentada['hora_termino']?>h</a></p>
+		<p class="caption_6 margin_2"><?php echo $dadosAulaComentada['escola']?>, <?php echo $dadosAulaComentada['turma']?> | 
+
+<?php	
+		if($dadosAulaComentada['comentarios'] < 1){
+?>
+
+nenhum coment&aacute;rio |
+
+<?php
+		} else if($dadosAulaComentada['comentarios'] == 1){
+?>
+
+<!--<a class="default_2" href="<?php //echo $dadosAulaComentada['link']?>">-->1 coment&aacute;rio<!--</a>--> |
+
+<?php
+		} else {
+?>
+
+<!--<a class="default_2" href="<?php //echo $dadosAulaComentada['link']?>">--><?php echo $dadosAulaComentada['comentarios']?> coment&aacute;rios<!--</a>--> |
+
+<?php
+		}
+?>
+		
+		Por <a class="default_2" href="<?php echo $dadosAulaComentada['link_autor']?>"><?php echo $dadosAulaComentada['autor']?></a></p>
+		
+<?php
+	}
+?>
+	
+	</div>
+	
+	<div class="home_box_1_bottom"><a class="default_4" href="<?php echo $this->todasAulas?>">Todas as aulas</a></div>
+
+</div>
+<!-- /ultimas aulas mais comentadas -->
+
+<?php
+}
+?>
+
+	</div>
+	
+	<div id="home_column_2">
+	
+	<h1 class="h1_2">Pano pra manga</h1>
+	
+<?php
+if ($this->alertaAtividades['atividades_a_ajustar']) {
+?>
+	
+		<div class="main_box_3">Você tem 
+		
+<?php
+	if($this->alertaAtividades['atividades_a_ajustar'] > 1){
+?>
+		
+<a class="bold" href="<?php echo $this->alertaAtividades['link_atividades_a_ajustar']?>"><?php echo $this->alertaAtividades['atividades_a_ajustar']?> atividades a ajustar</a><?php
+				} else {
+?><a class="bold" href="<?php echo $this->alertaAtividades['link_atividades_a_ajustar']?>">1 atividade a ajustar</a><?php } ?>.</div>
+<?php
+}
+?>
+
+<!-- minhas atividades -->
+<div class="clear_both margin_2">
+
+	<div class="home_box_2_top">Minhas atividades</div>
+	
+	<div class="home_box_1_middle clearfix">
+	
+<?php
+if (isset($this->minhasAtividades)) {
+?>
+		<p class="margin_10"><a class="default_4" href="<?php echo $this->minhasAtividades?>">Consultar minhas atividades</a></p>
+<?php
+}
+?>
+		<p class="margin_2"><a class="default_4" href="/panopramanga/atividade/cria?banco=pano-pra-manga">Criar atividade</a></p>
+		
+<?php
+if (isset($this->conjuntoComentariosAtividades)) {
+?>
+
+<h3>&Uacute;ltimos coment&aacute;rios</h3>
+
+<?php
+    foreach ($this->conjuntoComentariosAtividades as $idStr => $dadosComentarioAtividade) {
+?>
+	
+		<p class="margin_21"><a class="bold" href="<?php echo $dadosComentarioAtividade['link_atividade']?>"><?php echo $dadosComentarioAtividade['titulo_atividade']?></a></p>
+		<p class="caption_6 margin_2"><?php echo $dadosComentarioAtividade['data_atividade']?> | 
+		
+		Por <?php echo $dadosComentarioAtividade['autor_comentario']?></p>
+		
+<?php
+	}
+?>
+
+<?php
+}
+?>
+	
+	</div>
+	
+	<div class="home_box_1_bottom"><a class="default_4" href="/panopramanga/atividade/lista?titulo=pano-pra-manga">Todas as atividades</a></div>
+
+</div>
+<!-- /minhas atividades -->
+
+<?php
+if (isset($this->conjuntoAtividadesComentadas)) {
+?>
+
+<!-- ultimas atividades mais comentadas -->
+<div class="clear_both margin_2">
+
+	<div class="home_box_1_top">Atividades mais comentadas recentemente</div>
+	
+	<div class="home_box_1_middle clearfix">
+	
+<?php
+    foreach ($this->conjuntoAtividadesComentadas as $idStr => $dadosAtividadeComentada) {
+?>
+	
+		<p class="margin_21"><a class="bold" href="<?php echo $dadosAtividadeComentada['link']?>"><?php echo $dadosAtividadeComentada['titulo']?></a></p>
+		<p class="caption_6 margin_2">
+		
+<?php	
+		if($dadosAtividadeComentada['comentarios'] < 1){
+?>
+
+nenhum coment&aacute;rio |
+
+<?php
+		} else if($dadosAtividadeComentada['comentarios'] == 1){
+?>
+
+<a class="default_2" href="<?php echo $dadosAtividadeComentada['link']?>#comentarios">1 coment&aacute;rio</a> |
+
+<?php
+		} else {
+?>
+
+<a class="default_2" href="<?php echo $dadosAtividadeComentada['link']?>#comentarios"><?php echo $dadosAtividadeComentada['comentarios']?> coment&aacute;rios</a> | <?php echo $dadosAtividadeComentada['data']?> |
+
+<?php
+		}
+?>
+		
+		Por <?php echo $dadosAtividadeComentada['autor']?></p>
+		
+<?php
+	}
+?>
+	
+	</div>
+	
+	<div class="home_box_1_bottom"><a class="default_4" href="/panopramanga/atividade/lista?titulo=pano-pra-manga">Todas as atividades</a></div>
+
+</div>
+<!-- /ultimas atividades mais comentadas -->
+
+<?php
+}
+?>
+
+<?php
+if (isset($this->conjuntoAtividadesUtilizadas)) {
+?>
+
+<!-- atividades mais utilizadas -->
+<div class="clear_both margin_2">
+
+	<div class="home_box_1_top">Atividades mais utilizadas</div>
+	
+	<div class="home_box_1_middle clearfix">
+	
+<?php
+    foreach ($this->conjuntoAtividadesUtilizadas as $idStr => $dadosAtividadeUtilizada) {
+?>
+	
+		<p class="margin_2"><a class="default_4" href="<?php echo $dadosAtividadeUtilizada['link']?>"><?php echo $dadosAtividadeUtilizada['titulo']?></a></p>
+		
+<?php
+	}
+?>
+	
+	</div>
+	
+	<div class="home_box_1_bottom"><a class="default_4" href="/panopramanga/atividade/lista?titulo=pano-pra-manga">Todas as atividades</a></div>
+
+</div>
+<!-- ultimas atividades mais utilizadas -->
+
+<?php
+}
+?>
+
+<?php
+if (isset($this->conjuntoAtividadesRecentes)) {
+?>
+
+<!-- atividades mais recentes -->
+<div class="clear_both margin_2">
+
+	<div class="home_box_1_top">Atividades mais recentes</div>
+	
+	<div class="home_box_1_middle clearfix">
+	
+<?php
+    foreach ($this->conjuntoAtividadesRecentes as $idStr => $dadosAtividadeRecente) {
+?>
+	
+		<p class="margin_2"><a class="default_4" href="<?php echo $dadosAtividadeRecente['link']?>"><?php echo $dadosAtividadeRecente['titulo']?></a></p>
+		
+<?php
+	}
+?>
+	
+	</div>
+	
+	<div class="home_box_1_bottom"><a class="default_4" href="/panopramanga/atividade/lista?titulo=pano-pra-manga">Todas as atividades</a></div>
+
+</div>
+<!-- ultimas atividades mais recentes -->
+
+<?php
+}
+?>
+	
+	</div>
+	
+</div>

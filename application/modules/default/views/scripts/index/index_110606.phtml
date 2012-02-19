@@ -1,0 +1,146 @@
+<h1><?php echo $this->tituloPagina?></h1>
+
+<?php
+if ($this->linksHome['logado']) {
+?>
+
+<div class="clearfix clear_both">
+
+	<div class="home_box">
+		<p class="caption_2">Autentica&ccedil;&atilde;o</p>
+		
+<?php
+if (isset($this->linksHome['link_cria_usuario'])) {
+?>
+
+		<p class="border_1"><a class="default_4" href="<?php echo $this->linksHome['link_cria_usuario']?>">Criar novo usu&aacute;rio</a></p>
+		
+<?php
+}
+?>
+		
+		<p class="border_1"><a class="default_4" href="/autenticacao/conta/edita?titulo=<?php echo $this->identity->apelidoUsuario ?>">Editar meu perfil</a></p>
+		
+<?php
+if (isset($this->linksHome['link_usuarios'])) {
+?>
+                <p class="border_1"><a class="default_4" href="<?php echo $this->linksHome['link_usuarios']?>">Listar usu&aacute;rios</a></p>
+<?php
+}
+?>
+		
+		<p class="border_1"><a class="default_4" href="/autenticacao/login/retira">Sair do sistema</a></p>
+	</div>
+
+	<div class="home_box">
+		<p class="caption_2">Pano pra Manga
+		
+<?php
+	if($this->bancoPagina['link_edita']){
+?>
+		
+ <a href="<?php echo $this->bancoPagina['link_edita']?>"><img src="/img/icon_edit.png" alt="editar" title="editar" border="0" /></a>
+		
+<?php
+	}
+?>
+		</p>
+		<p class="border_1"><a class="default_4" href="/panopramanga/atividade/cria?banco=pano-pra-manga">Criar nova atividade</a></p>
+		<p class="border_1"><a class="default_4" href="/panopramanga/atividade/lista?titulo=pano-pra-manga">Listar atividades</a></p>
+
+<?php
+if (isset($this->linksHome['link_gerencia_categorias'])) {
+?>
+                <p class="border_1"><a class="default_4" href="<?php echo $this->linksHome['link_gerencia_categorias']?>">Gerenciar categorias</a></p>
+<?php
+}
+?>
+
+<?php
+if (isset($this->linksHome['link_atividades'])) {
+?>
+                <p class="border_1"><a class="default_4" href="<?php echo $this->linksHome['link_atividades']?>">Minhas atividades</a></p>
+<?php
+}
+?>
+		
+	</div>
+
+	<div class="home_box">
+		<p class="caption_2">Planejamento</p>
+		
+<?php
+if (isset($this->linksHome['link_cadastra_escola'])) {
+?>
+		
+		<p class="border_1"><a class="default_4" href="<?php echo $this->linksHome['link_cadastra_escola']?>">Cadastrar escola</a></p>
+		
+<?php
+}
+?>
+
+<?php
+if (isset($this->linksHome['link_cadastra_turma'])) {
+?>
+		
+		<p class="border_1"><a class="default_4" href="<?php echo $this->linksHome['link_cadastra_turma']?>">Cadastrar turma</a></p>
+		
+<?php
+}
+?>
+
+<?php
+if (isset($this->linksHome['link_cadastra_horario'])) {
+?>
+		
+        <p class="border_1"><a class="default_4" href="<?php echo $this->linksHome['link_cadastra_horario']?>">Cadastrar horário</a></p>
+		
+<?php
+}
+?>
+		
+        <p class="border_1"><a class="default_4" href="/planejamento/escola/lista">Listar escolas</a></p>
+<?php
+if (isset($this->linksHome['link_monitores'])) {
+?>
+                <p class="border_1"><a class="default_4" href="<?php echo $this->linksHome['link_monitores']?>">Listar monitores</a></p>
+<?php
+}
+?>
+
+<?php
+if (isset($this->linksHome['link_aulas'])) {
+?>
+                <p class="border_1"><a class="default_4" href="<?php echo $this->linksHome['link_aulas']?>">Minhas aulas</a></p>
+<?php
+}
+?>
+
+<?php
+if (isset($this->linksHome['link_planos_nao_verificados'])) {
+?>
+                <p class="border_1"><a class="default_4" href="<?php echo $this->linksHome['link_planos_nao_verificados']?>">Verificar planos</a></p>
+<?php
+}
+?>
+
+	</div>
+
+</div>
+
+<?php
+} else {
+?>
+
+<div class="clearfix clear_both">
+
+	<div class="home_box">
+		<p class="caption_2">Autentica&ccedil;&atilde;o</p>
+		<p class="border_1"><a class="default_4" href="/autenticacao/login/acessa">Fa&ccedil;a seu login</a></p>
+	</div>
+
+</div>
+
+<?php
+}
+?>

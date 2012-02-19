@@ -1,0 +1,39 @@
+<?php
+if (isset($this->dadosUsuario)) {
+    $loginUsuario = $this->dadosUsuario;
+
+    if ($loginUsuario['dadosUsuarioEnviadoComErro']) {
+?>
+
+<p class="text_error"><?php echo $this->translate('erro')?> <?php echo $loginUsuario['mensagem_erro_dadosUsuario']?></p>
+
+<?php
+    }
+}
+?>
+
+<form method="post" name="frmLogin" id="frmLogin" action="<?php echo $_SERVER["REQUEST_URI"]?>" accept-charset="utf-8">
+
+<label for="txtLogin"><?php echo $this->translate('login')?> <span class="esqueceu_senha">Esqueceu sua senha? <a class="default_13" href="/autenticacao/conta/solicita-senha">Solicite uma nova.</a></span></label>
+
+<input name="txtLogin" id="txtLogin" type="text" class="single" value="<?php echo $loginUsuario['login']?>" maxlength="80"/>
+
+<label for="txtSenha"><?php echo $this->translate('senha')?></label>
+<input name="txtSenha" type="password" class="single" id="txtSenha" value="<?php echo $loginUsuario['senha']?>" maxlength="11"/>
+
+<div class="margin_1">
+<input type="hidden" name="etapaEnvio" value="1"/>
+<input name="submit" id="submit" type="submit" value="<?php echo $this->translate('enviar')?>" alt="<?php echo $this->translate('enviar')?>" title="<?php echo $this->translate('enviar')?>" class="button_2" />
+</div>
+
+</form>
+
+<?php
+if(isset($this->linkSolicitaSenha)){
+?>
+
+<p class="margin_1"><a class="default_4" href="<?php echo $this->linkSolicitaSenha?>"><?php echo $this->translate('esqueci_login_senha')?></a></p>
+
+<?php
+}
+?>

@@ -1,0 +1,61 @@
+<div id="breadcrumb"><?php echo $this->breadcrumb?></div>
+
+<h1><?php echo $this->tituloPagina?></h1>
+
+<?php
+if (isset($this->conjuntoUsuarios)) {
+?>
+
+<table width="990" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+    	<th align="left" class="manage_title left"><?php echo $this->translate('usuarios')?></th>
+		<th width="10" class="manage_title middle">&nbsp;</th>
+    	<th width="180" align="left" class="manage_title middle"><?php echo $this->translate('title_apelido')?></th>
+		<th width="10" class="manage_title middle">&nbsp;</th>
+		<th width="440" align="left" class="manage_title middle"><?php echo $this->translate('email')?></th>
+		<th width="10" class="manage_title middle">&nbsp;</th>
+		<th width="70" align="left" class="manage_title right"><?php echo $this->translate('status')?></th>
+	</tr>
+	
+<?php
+    foreach ($this->conjuntoUsuarios as $idStr => $dadosUsuario) {
+?>
+
+	<tr>
+    	<td align="left" class="manage_item_left"><?php echo $dadosUsuario['nome']?> <?php echo $dadosUsuario['sobrenome']?>
+
+<?php
+		if($dadosUsuario['link_edita']){
+?>
+
+ <a href="<?php echo $dadosUsuario['link_edita']?>"><img src="/img/icon_edit.png" alt="editar" title="editar" border="0" /></a>
+ 
+<?php
+    	}
+?>		</td>
+		<td width="10" class="manage_item_middle">&nbsp;</td>
+    	<td width="180" align="left" class="manage_item_middle"><?php echo $dadosUsuario['apelido']?></td>
+		<td width="10" class="manage_item_middle">&nbsp;</td>
+		<td width="440" align="left" class="manage_item_middle"><?php echo $dadosUsuario['email']?></td>
+		<td width="10" class="manage_item_right">&nbsp;</td>
+		<td width="70" align="left" class="manage_item_right"><?php echo $dadosUsuario['status']?></td>
+	</tr>
+		
+<?php
+    }
+?>
+
+	<tr>
+		<td colspan="7" align="left" class="manage_title_3 left_3">&nbsp;</td>
+	</tr>
+</table>
+
+<?php
+} else {
+?>
+
+<p class="margin_9"><?php echo $this->translate('nenhum_usuario')?></p>
+
+<?php
+}
+?>

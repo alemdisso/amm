@@ -1,0 +1,8 @@
+Olá, [nome].
+
+Você foi cadastrado(a) no Programa Repertórios e, para prosseguir com a ativação de sua conta, clique no link abaixo:
+[link]
+
+Se por acaso o link não funcionar, copie-o e cole-o na barra de endereços de seu navegador. Caso você não tenha solicitado registro, por favor desconsidere esta mensagem.
+
+Obrigado por registrar-se e bem-vindo!

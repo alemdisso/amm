@@ -1,0 +1,31 @@
+<div class="clearfix clear_both">
+
+	<div class="home_box">
+		<p class="caption_2">Autentica&ccedil;&atilde;o</p>
+		
+<?php
+if (isset($this->linksHome['link_cria_usuario'])) {
+?>
+
+		<p class="border_1"><a class="default_4" href="<?php echo $this->linksHome['link_cria_usuario']?>">Criar novo usu&aacute;rio</a></p>
+		
+<?php
+}
+?>
+		
+		<p class="border_1"><a class="default_4" href="/autenticacao/conta/edita?titulo=<?php echo $this->identity->apelidoUsuario ?>">Editar meu perfil</a></p>
+		
+<?php
+if (isset($this->linksHome['link_usuarios'])) {
+?>
+                <p class="border_1"><a class="default_4" href="<?php echo $this->linksHome['link_usuarios']?>">Listar usu&aacute;rios</a></p>
+<?php
+}
+?>
+		
+		<p class="border_1"><a class="default_4" href="/autenticacao/login/retira">Sair do sistema</a></p>
+	</div>
+
+
+
+</div>
