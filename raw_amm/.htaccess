@@ -1,0 +1,17 @@
+RewriteEngine on
+IndexIgnore *
+Options -Indexes
+
+# home
+RewriteRule ^$ paginas/home.php
+RewriteRule ^home/?$ paginas/home.php
+
+# seções
+RewriteRule ^livros/?$ paginas/livros.php
+RewriteRule ^livros/lista-de-livros?$ paginas/livros_lista.php
+RewriteRule ^livros/titulo-do-livro?$ paginas/livro.php
+RewriteRule ^novidades/?$ paginas/novidades.php
+RewriteRule ^novidades/lista-de-novidades?$ paginas/novidades_lista.php
+RewriteRule ^novidades/titulo-da-novidade?$ paginas/novidade.php
+RewriteRule ^biografia/?$ paginas/biografia.php
+RewriteRule ^contato/?$ paginas/contato.php

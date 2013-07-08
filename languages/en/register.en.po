@@ -1,0 +1,456 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: c3op\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-10-07 21:57-0300\n"
+"PO-Revision-Date: 2012-10-07 21:57-0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate;setLabel\n"
+"X-Poedit-Basepath: C:\\xampp\\htdocs\\c3op\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: application\\modules\\register\\views\\scripts\n"
+"X-Poedit-SearchPath-1: library\\C3op\\register\n"
+
+#: library\C3op\register/ContactTypes.php:27
+#: library\C3op\register/InstitutionTypes.php:30
+#: library\C3op\register/RelationshipTypes.php:30
+msgid "#Unknown type"
+msgstr ""
+
+#: library\C3op\register/InstitutionTypes.php:9
+#, fuzzy
+msgid "#Government"
+msgstr "Department"
+
+#: library\C3op\register/InstitutionTypes.php:10
+#, fuzzy
+msgid "#Private Entity"
+msgstr "Create contact"
+
+#: library\C3op\register/InstitutionTypes.php:11
+msgid "#Research Institute"
+msgstr ""
+
+#: library\C3op\register/InstitutionTypes.php:12
+msgid "#Non Governmental Organization"
+msgstr ""
+
+#: library\C3op\register/InstitutionTypes.php:13
+msgid "#Particular"
+msgstr ""
+
+#: library\C3op\register/RelationshipTypes.php:9
+msgid "#General"
+msgstr ""
+
+#: library\C3op\register/RelationshipTypes.php:10
+msgid "#Client"
+msgstr ""
+
+#: library\C3op\register/RelationshipTypes.php:11
+msgid "#Partner"
+msgstr ""
+
+#: library\C3op\register/RelationshipTypes.php:12
+msgid "#Supplier"
+msgstr ""
+
+#: library\C3op\register/RelationshipTypes.php:13
+#, fuzzy
+msgid "#Contractor"
+msgstr "Contact:"
+
+#: application\modules\register\views\scripts/contact/add-email.phtml:2
+msgid "#Email addresses"
+msgstr "Email addresses"
+
+#: application\modules\register\views\scripts/contact/add-email.phtml:3
+#, php-format
+msgid "#Create %s's email address"
+msgstr "Create %s's email address"
+
+#: application\modules\register\views\scripts/contact/add-messenger.phtml:2
+msgid "#Service messengers"
+msgstr "Service messengers"
+
+#: application\modules\register\views\scripts/contact/add-messenger.phtml:3
+#, php-format
+msgid "#Create %s's service messenger"
+msgstr "Create %s's service messenger"
+
+#: application\modules\register\views\scripts/contact/add-phone-number.phtml:2
+#: application\modules\register\views\scripts/contact/change-phone-number.phtml:1
+msgid "#Phone number"
+msgstr "Phone number"
+
+#: application\modules\register\views\scripts/contact/add-phone-number.phtml:3
+#, php-format
+msgid "#Create %s's phone number"
+msgstr "Create %s's phone number"
+
+#: application\modules\register\views\scripts/contact/change-email.phtml:2
+msgid "#Email"
+msgstr "Email"
+
+#: application\modules\register\views\scripts/contact/change-email.phtml:3
+#, php-format
+msgid "#Change %s's email address"
+msgstr "Change %s's email address"
+
+#: application\modules\register\views\scripts/contact/change-messenger.phtml:2
+msgid "#Service messenger"
+msgstr "Service messenger"
+
+#: application\modules\register\views\scripts/contact/change-messenger.phtml:3
+#, php-format
+msgid "#Change %s's service messenger"
+msgstr "Change %s's service messenger"
+
+#: application\modules\register\views\scripts/contact/change-phone-number.phtml:2
+#, php-format
+msgid "#Change phone number of %s"
+msgstr "Change phone number of %s"
+
+#: application\modules\register\views\scripts/contact/create.phtml:2
+msgid "#Create contact"
+msgstr "Create contact"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:8
+msgid "#Contact:"
+msgstr "Contact:"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:15
+msgid "#Name:"
+msgstr "Name"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:25
+msgid "#Relationship"
+msgstr "Relationship with us"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:43
+msgid "#Phone Numbers"
+msgstr "Phone numbers"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:47
+msgid "#Area code"
+msgstr "Area Code"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:48
+msgid "#Local Number"
+msgstr "Local Number"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:49
+msgid "#Label"
+msgstr "Label"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:76
+#: application\modules\register\views\scripts/contact/detail.phtml:136
+#: application\modules\register\views\scripts/contact/detail.phtml:195
+#: application\modules\register\views\scripts/contact/detail.phtml:259
+#: application\modules\register\views\scripts/contact/index.phtml:40
+#: application\modules\register\views\scripts/institution/index.phtml:60
+msgid "#Options..."
+msgstr "Options..."
+
+#: application\modules\register\views\scripts/contact/detail.phtml:80
+msgid "Editar"
+msgstr "Edit"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:94
+msgid "#Add phone number"
+msgstr "Add phone number"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:110
+msgid "#Emails"
+msgstr "Emails"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:114
+msgid "#Address"
+msgstr "Address"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:115
+#: application\modules\register\views\scripts/institution/index.phtml:27
+msgid "#Type"
+msgstr "Type"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:140
+#: application\modules\register\views\scripts/contact/detail.phtml:199
+#: application\modules\register\views\scripts/contact/detail.phtml:263
+#: application\modules\register\views\scripts/contact/index.phtml:44
+#: application\modules\register\views\scripts/institution/detail.phtml:23
+#: application\modules\register\views\scripts/institution/index.phtml:64
+msgid "#Edit"
+msgstr "Edit"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:154
+msgid "#Add email"
+msgstr "Add email"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:169
+msgid "#Messengers"
+msgstr "Messengers"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:173
+msgid "#Service"
+msgstr "Service"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:174
+msgid "#Service.Address"
+msgstr "Account"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:213
+msgid "#Add messenger"
+msgstr "Add Messenger"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:228
+msgid "Vínculos"
+msgstr "Linkages"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:232
+msgid "#Institution"
+msgstr "Institution"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:233
+msgid "#Departament"
+msgstr "Department"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:234
+msgid "#Position"
+msgstr "Position"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:276
+msgid "#Create new linkage"
+msgstr "Create new linkage"
+
+#: application\modules\register\views\scripts/contact/detail.phtml:283
+msgid "#There is no data from this contact."
+msgstr "There is no data from this contact."
+
+#: application\modules\register\views\scripts/contact/edit.phtml:6
+msgid "#Edit contact"
+msgstr "Edit contact"
+
+#: application\modules\register\views\scripts/contact/edit.phtml:9
+msgid "#Create linkage"
+msgstr "Create linkage"
+
+#: application\modules\register\views\scripts/contact/index.phtml:6
+#: application\modules\register\views\scripts/index/index.phtml:6
+msgid "#Contacts"
+msgstr "Contacts"
+
+#: application\modules\register\views\scripts/contact/index.phtml:25
+#: application\modules\register\views\scripts/institution/index.phtml:26
+msgid "#Name"
+msgstr "Name"
+
+#: application\modules\register\views\scripts/contact/index.phtml:62
+msgid "#No registered contacts"
+msgstr "No registered contacts"
+
+#: application\modules\register\views\scripts/contact/index.phtml:72
+msgid "#Contacts list was not found"
+msgstr "Contacts list was not found"
+
+#: application\modules\register\views\scripts/contact/index.phtml:77
+msgid "#Add new contact"
+msgstr "Add new contact"
+
+#: application\modules\register\views\scripts/contact/success-create.phtml:2
+msgid "#Success creating!"
+msgstr "Success creating!"
+
+#: application\modules\register\views\scripts/contact/success-update.phtml:2
+msgid "#Success updating!"
+msgstr "Success updating!"
+
+#: application\modules\register\views\scripts/index/index.phtml:2
+msgid "#Register"
+msgstr "Register"
+
+#: application\modules\register\views\scripts/index/index.phtml:5
+#: application\modules\register\views\scripts/institution/index.phtml:6
+msgid "#Institutions"
+msgstr "Institutions"
+
+#: application\modules\register\views\scripts/institution/create.phtml:3
+#, fuzzy
+msgid "#Create institution"
+msgstr "No registered institutions."
+
+#: application\modules\register\views\scripts/institution/detail.phtml:10
+msgid "#Contacts in this institution"
+msgstr "Contacts in this institution"
+
+#: application\modules\register\views\scripts/institution/detail.phtml:29
+msgid "#Add new linkage"
+msgstr "Add new linkage"
+
+#: application\modules\register\views\scripts/institution/detail.phtml:33
+msgid "#There is no data about this institution."
+msgstr "There is no data about this institution."
+
+#: application\modules\register\views\scripts/institution/edit.phtml:2
+#, fuzzy
+msgid "#Edit institution"
+msgstr "Institution"
+
+#: application\modules\register\views\scripts/institution/index.phtml:28
+msgid "#City"
+msgstr "City"
+
+#: application\modules\register\views\scripts/institution/index.phtml:29
+msgid "#State"
+msgstr ""
+
+#: application\modules\register\views\scripts/institution/index.phtml:30
+msgid "#institution.index.Relationship"
+msgstr "Relationship"
+
+#: application\modules\register\views\scripts/institution/index.phtml:79
+msgid "#No registered institutions."
+msgstr "No registered institutions."
+
+#: application\modules\register\views\scripts/institution/index.phtml:88
+msgid "#Institutions list was not found."
+msgstr "Institutions list was not found."
+
+#: application\modules\register\views\scripts/institution/index.phtml:94
+msgid "#Add new institution"
+msgstr "Add new institution"
+
+#: application\modules\register\views\scripts/institution/success.phtml:2
+#, fuzzy
+msgid "#Success!"
+msgstr "Success creating!"
+
+#~ msgid "#Generic error message"
+#~ msgstr "An error occurred"
+
+#~ msgid "Email"
+#~ msgstr "Email"
+
+#~ msgid "Acrescentar email para %s"
+#~ msgstr "Add email to %s"
+
+#~ msgid "Serviço de mensagens"
+#~ msgstr "Messenger Services "
+
+#~ msgid "Acrescentar conta para %s"
+#~ msgstr "Add service to %s"
+
+#, fuzzy
+#~ msgid "Criar vínculo"
+#~ msgstr "Create new linkage"
+
+#~ msgid "name"
+#~ msgstr "Nome"
+
+#~ msgid "Telefones"
+#~ msgstr "Phone numbers"
+
+#~ msgid "Código de área"
+#~ msgstr "Area code"
+
+#~ msgid "Número Local"
+#~ msgstr "Local number"
+
+#~ msgid "Rótulo"
+#~ msgstr "Type"
+
+#~ msgid "Opções..."
+#~ msgstr "Options..."
+
+#~ msgid "Adicionar telefone"
+#~ msgstr "Add phone number"
+
+#~ msgid "Endere&ccedil;o"
+#~ msgstr "Address"
+
+#~ msgid "Tipo"
+#~ msgstr "Type"
+
+#~ msgid "Serviços de Mensagens"
+#~ msgstr "Messenger Services "
+
+#~ msgid "Conta"
+#~ msgstr "Account"
+
+#~ msgid "Adicionar serviço"
+#~ msgstr "Add service"
+
+#~ msgid "Posição"
+#~ msgstr "Position"
+
+#~ msgid "Criar Novo Vínculo"
+#~ msgstr "Create new linkage"
+
+#~ msgid "Não há informações sobre este contato."
+#~ msgstr "There is no data about this contact."
+
+#~ msgid "My test"
+#~ msgstr "Contact:"
+
+#~ msgid "Nome"
+#~ msgstr "Name"
+
+#, fuzzy
+#~ msgid "Relação"
+#~ msgstr "Relationship with IETS"
+
+#, fuzzy
+#~ msgid "Nome:"
+#~ msgstr "Name"
+
+#, fuzzy
+#~ msgid "Descrição:"
+#~ msgstr "Position"
+
+#, fuzzy
+#~ msgid "Código de área:"
+#~ msgstr "Area code"
+
+#, fuzzy
+#~ msgid "Número local:"
+#~ msgstr "Local number"
+
+#, fuzzy
+#~ msgid "Relação com o Iets:"
+#~ msgstr "Relationship with IETS"
+
+#, fuzzy
+#~ msgid "Email:"
+#~ msgstr "Email"
+
+#, fuzzy
+#~ msgid "Relação com o IETS: "
+#~ msgstr "Relationship with IETS"
+
+#, fuzzy
+#~ msgid "Inscrição: "
+#~ msgstr "Institution"
+
+#, fuzzy
+#~ msgid "Número:"
+#~ msgstr "Local number"
+
+#, fuzzy
+#~ msgid "Instituição: "
+#~ msgstr "Institution"
+
+#, fuzzy
+#~ msgid "Departamento:"
+#~ msgstr "Department"
+
+#, fuzzy
+#~ msgid "Conta:"
+#~ msgstr "Account"
+
+#, fuzzy
+#~ msgid "Code area"
+#~ msgstr "DDD"

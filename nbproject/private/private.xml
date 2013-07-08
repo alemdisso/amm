@@ -2,8 +2,17 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/C:/xampp/htdocs/amm/application/modules/acervo/controllers/LivroController.php</file>
+        <file>file:/C:/xampp/htdocs/amm/application/Bootstrap.php</file>
         <file>file:/C:/xampp/htdocs/amm/public/index.php</file>
+        <file>file:/C:/xampp/htdocs/amm/application/layouts/wrapper.phtml</file>
+        <file>file:/C:/xampp/htdocs/amm/raw_amm/paginas/home.php</file>
+        <file>file:/C:/xampp/htdocs/amm/application/layouts/meta.phtml</file>
+        <file>file:/C:/xampp/htdocs/amm/raw_amm/includes/css.html.php</file>
+        <file>file:/C:/xampp/htdocs/amm/application/layouts/inner.phtml</file>
+        <file>file:/C:/xampp/htdocs/amm/application/modules/includes/controllers/HeaderController.php</file>
+        <file>file:/C:/xampp/htdocs/amm/application/modules/includes/views/scripts/header/include.phtml</file>
         <file>file:/C:/xampp/htdocs/amm/application/configs/application.ini</file>
+        <file>file:/C:/xampp/htdocs/amm/application/modules/default/controllers/IndexController.php</file>
+        <file>file:/C:/xampp/htdocs/amm/application/modules/auth/controllers/LoginController.php</file>
     </open-files>
 </project-private>

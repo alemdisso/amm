@@ -1,37 +1,35 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="pt-br"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="pt-br"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="pt-br"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="pt-br"> <!--<![endif]-->
+<html>
+  <head>
+    <title><?php echo $this->layout()->title?></title>
 
 <?php include ("meta.phtml") ?>
 
-<link rel="stylesheet" href="/css/styles.css" type="text/css" media="screen"/>
-<link rel="stylesheet" href="/css/css3.css" type="text/css" media="screen"/>
-<link rel="stylesheet" href="/css/forms.css" type="text/css" media="screen" />
+<script type="text/javascript" src="/js/jquery-1.5.min.js"></script>
+<script type="text/javascript" src="/js/easytabs.js"></script>
 
-<title><?php echo $this->layout()->title?></title>
+<link rel="stylesheet" href="/css/estilo.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/css/usuarios.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="/css/destaque.css" type="text/css" media="screen" />
 
-</head>
-
-<body>
-
-<!-- container -->
-<div id="container">
-    
+  </head>
+  <body>
+    <div class="container" id="Envelope">
 <?php
-if ($this->layout()->nestedLayout) {
-    $this->layout()->setLayout($this->layout()->nestedLayout);   
-} else {
-    $this->layout()->setLayout('inner');
-}
-echo $this->layout()->render();
+  if ($this->layout()->nestedLayout) {
+      $this->layout()->setLayout($this->layout()->nestedLayout);
+  } else {
+      $this->layout()->setLayout('inner');
+  }
+  echo $this->layout()->render();
 ?>
-
 <!-- footer -->
 <?php //echo $this->action('inclui', 'footer', 'includes') ?>
 <!-- /footer -->
-
-</div>
-<!-- /container -->
-
-</body>
+    </div><!-- #Envelope -->
+  </body>
 </html>

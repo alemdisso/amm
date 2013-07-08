@@ -1,0 +1,777 @@
+/*
+	CABECALHO
+
+*/
+
+/* GERAL */
+* {
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+	
+html {
+	min-height:100%;
+	}
+	
+body {
+	background:#fff; 
+	font-family: arial, serif; 
+	font-size:14px; 
+	color:#000;
+	height:100%;
+	}
+	
+@font-face {
+    font-family: 'swissc';
+    src: url('../css/fontes/swissc.eot');
+    src: url('../css/fontes/swissc.eot?#iefix') format('embedded-opentype'),
+         url('../css/fontes/swissc.woff') format('woff'),
+         url('../css/fontes/swissc.ttf') format('truetype'),
+         url('../css/fontes/swissc.svg#swis721_cn_btroman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	}
+
+@font-face {
+    font-family: 'swiss';
+    src: url('../css/fontes/swisscl.eot');
+    src: url('../css/fontes/swisscl.eot?#iefix') format('embedded-opentype'),
+         url('../css/fontes/swisscl.woff') format('woff'),
+         url('../css/fontes/swisscl.ttf') format('truetype'),
+         url('../css/fontes/swisscl.svg#swis721_ltcn_btlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+	}
+	
+/* LINKS */
+a, a:visited {
+	color:#17416c; 
+	text-decoration:none;
+	}
+	
+a:hover {
+	
+	}
+	
+a img {
+	border:none;
+	}
+	
+a:focus, a:hover, a:active {
+	text-decoration:underline;
+	}
+	
+a.mais {
+	font-size:12px;
+	font-weight:bold;
+	padding:0 12px 0 0;
+	background:url(../img/icone_mais.png) no-repeat right;
+	font-family:Arial, Helvetica, sans-serif!important;
+	}
+	
+a.uppercase {
+	font-size:12px;
+	margin:0 0 20px 0;
+	text-transform:uppercase;
+	display:block;
+	}
+	
+a.tag_1 {
+	font-weight:bold;
+	font-size:12px;
+	}
+	
+a.tag_2 {
+	font-weight:bold;
+	font-size:14px;
+	}
+	
+a.tag_3 {
+	font-weight:bold;
+	font-size:16px;
+	}
+	
+a.tag_4 {
+	font-weight:bold;
+	font-size:18px;
+	}
+	
+/* TOPO */
+#topo {
+	width:1000px;
+	height:175px;
+	background:url(../img/fundo_topo.png) no-repeat;
+	}
+	
+/* MENU */
+#menu {
+	float:right;
+	background:#183047;	
+	padding:7px 10px;
+	}
+
+#menu li {
+	display:block;
+	float:left;
+	}
+	
+#menu li a {
+	color:#fff;
+	padding:3px 20px 0 25px;
+	font-size:12px;
+	font-weight:bold;
+	height:15px;
+	display:block;
+	}
+	
+#menu li a#menu_livros {
+	background:url(../img/icone_topo_livros.png) no-repeat;
+	}
+	
+#menu li a#menu_novidades {
+	background:url(../img/icone_topo_novidades.png) no-repeat;
+	}
+	
+#menu li a#menu_biografia {
+	background:url(../img/icone_topo_biografia.png) no-repeat;
+	}
+	
+#menu li a#menu_contato {
+	background:url(../img/icone_topo_contato.png) no-repeat;
+	}	
+
+/* CONTEÚDO */
+#conteudo {
+	line-height:18px;
+	width:600px;
+	float:left;
+	}	
+	
+.conteudo_1coluna {
+	width:1000px!important;
+	}
+	
+#conteudo p {
+	margin-bottom:15px;
+	}
+	
+#conteudo small {
+	font-size:12px;
+	}
+	
+#conteudo ul, #conteudo ol {
+	
+	}
+	
+#conteudo ul li, #conteudo ol li {
+	margin:0 0 10px 20px;
+	list-style:outside disc;
+	}
+	
+h1 {
+	font-family:swiss;
+	font-size:42px;
+	font-weight:normal;
+	margin:0 0 25px 0;
+	}
+	
+h2 {
+	font-family:swiss;
+	font-size:36px;
+	font-weight:normal;
+	margin:0 0 15px 0;
+	}
+	
+h3, h3 a {
+	font-size:18px;
+	font-weight:bold;
+	margin:0 0 10px 0;
+	color:#17416c;
+	}
+
+h4 {
+	font-family:swissc;
+	font-size:12px;
+	margin:0 0 15px 0;
+	text-transform:uppercase;
+	padding:5px;
+	background:url(../img/fundo_transparencia.png) repeat;
+	display:inline;
+	}
+	
+#breadcrumb {
+	padding:10px 0;
+	margin:-50px 30px 20px 0;
+	font-size:11px;
+	text-align:right;
+	}
+	
+#breadcrumb a {
+	font-weight:bold;
+	}
+	
+#paginacao {
+	border-top:1px solid #666666;
+	padding:10px 0 30px;
+	font-size:12px;
+	clear:both;
+	}
+	
+.item {
+	margin-bottom:20px;
+	}
+	
+.box_conteudo {
+	padding:12px 20px;
+	background:url(../img/fundo_transparencia.png) repeat;
+	margin:0 0 20px 0;
+	}
+	
+.box_conteudo h4.comentario {
+	font-family:arial;
+	font-size:14px;
+	margin:0 0 15px 0;
+	text-transform:none;
+	padding:3px 0 11px 30px;
+	background:url(../img/detalhe_comentario.png) no-repeat;
+	font-wieght:bold;
+	border-bottom:1px solid #999999;
+	display:block;
+	}
+	
+.box_conteudo h4.premio {
+	font-family:arial;
+	font-size:14px;
+	margin:0 0 15px 0;
+	text-transform:none;
+	padding:3px 0 11px 30px;
+	background:url(../img/detalhe_premio.png) no-repeat;
+	font-wieght:bold;
+	border-bottom:1px solid #999999;
+	display:block;
+	}
+	
+.item_comentario {
+	border-bottom:1px solid #999999;
+	padding-bottom:10px;
+	margin-bottom:20px;
+	}
+	
+.item_comentario p {
+	margin-bottom:10px!important;
+	}
+
+
+/* HOME */
+#home {
+	width:1000px;
+	margin:0 auto 0;
+	}
+	
+#livros_home {
+	height:313px;
+	padding:80px 35px 0 20px;
+	background:url(../img/fundo_home_livros.png) no-repeat;
+	margin:-124px 0 -67px 0;
+	}
+	
+#livros_home .coluna1 {
+	margin:100px 15px 0 0;
+	float:left;
+	}
+	
+#livros_home .coluna2 {
+	border-left:1px solid #7baab7;
+	margin:100px 0 0 0;
+	float:left;
+	display:block;
+	}
+	
+#livros_home .coluna2 li {
+	padding:0 0 0 27px;
+	background:url(../img/icone_check.png) no-repeat 13px 5px;
+	list-style:none;
+	font-weight:bold;
+	}
+	
+#livros_home .coluna3 {
+	width:400px;
+	float:right;
+	}
+	
+#livros_home div.coluna3 div {
+	width:180px;
+	margin:90px 0 0 0;
+	background:#fff;
+	padding:14px 20px;
+	border-top:2px dotted #7baab7;
+	border-bottom:2px dotted #7baab7;
+	}
+	
+#livros_home a img {
+	border:2px solid #fff9cb;
+	}
+	
+#livros_home h2, #livros_home h4 {
+	margin-left:10px;
+	}
+	
+#novidades_home {
+	height:234px;
+	padding:0 35px 0 20px;
+	background:url(../img/fundo_home_novidades.png) no-repeat;
+	}
+	
+#novidades_home .coluna1 {
+	margin:100px 35px 0 0;
+	float:left;
+	}
+	
+#novidades_home .coluna2 {
+	margin:50px 0 0 0;
+	float:left;
+	width:290px;
+	font-size:12px!important;
+	}
+	
+#novidades_home h2, #novidades_home h4 {
+	margin-left:10px;
+	}
+	
+#novidades_home h3 a {
+	font-size:14px!important;
+	margin-bottom:5px;
+	}
+	
+#biografia_home {
+	height:130px;
+	padding:0 35px 0 20px;
+	background:url(../img/fundo_home_biografia.png) no-repeat;
+	margin:8px 0;
+	}
+#biografia_home .coluna1 {
+	margin:40px 0 0 0;
+	float:left;
+	}
+	
+#biografia_home .coluna2 {
+	margin:25px 0 0 0;
+	float:right;
+	width:460px;
+	font-size:18px;
+	font-family:swissc;
+	line-height:24px;
+	}
+		
+#biografia_home h2, #biografia_home h4 {
+	margin-left:10px;
+	}
+	
+#contato_home {
+	height:197px;
+	padding:0 35px 0 20px;
+	background:url(../img/fundo_home_contato.png) no-repeat;
+	margin:0 0 0 0;
+	border-bottom:8px solid #fff;
+	}
+	
+#contato_home .coluna1 {
+	margin:35px 0 0 0;
+	float:left;
+	}
+	
+#contato_home .coluna2 {
+	margin:55px 0 0 0;
+	float:right;
+	width:300px;
+	}	
+	
+#contato_home h2, #contato_home h4 {
+	margin-left:10px;
+	}
+	
+/* LIVROS */
+#livros {
+	width:1000px;
+	margin:0 auto;
+	background:#9ad5e5;
+	}
+	
+#livros #conteudo {
+	margin:30px 0 30px 30px;
+	}
+	
+#livros a img.livro {
+	border:2px solid #fff9cb;
+	}
+	
+#livros h2.categoria {
+	font-family:arial;
+	font-size:18px;
+	font-weight:bold;
+	margin:0 0 30px 0;
+	}
+	
+#livros a.thumbnail_livro {
+	width:125px;
+	height:125px;
+	overflow:hidden;
+	float:left;
+	border:2px solid #fff9cb;
+	}
+	
+#livros a.thumbnail_livro img {
+	width:125px;
+	height:auto;
+	}
+	
+#livros .item_livro {
+	margin-bottom:30px;
+	}
+	
+#livros .item_livro p, #livros .item_livro h3 a {
+	margin-bottom:5px!important;
+	}
+	
+#livros .livro_destaque {
+	width:286px;
+	padding:2px 2px 10px 2px;
+	background:#fff;
+	}
+	
+#livros .livro_destaque img {
+	margin-bottom:10px;
+	}
+	
+#livros .livro_destaque h3 a {
+	font-size:14px;
+	padding:10px;
+	}
+	
+#livros .livro_destaque p {
+	margin:10px;
+	}
+	
+#livros_categorias {
+	background:#fff;
+	padding:20px 10px;
+	width:580px;
+	margin:20px 0;
+	}
+
+#livros_categorias h2 {
+	border-bottom:2px dotted #cecece;
+	font-size:18px;
+	font-family:arial;
+	margin-bottom:20px;
+	padding:0 0 10px 0;
+	}
+	
+#livros_categorias a {
+	background:url(../img/detalhe_seta.png) no-repeat #17416c 253px 17px;
+	padding:10px 20px;
+	color:#fff;
+	font-size:14px;
+	font-weight:bold;
+	width:230px;
+	display:block;
+	margin:0 20px 10px 0;
+	float:left;
+	}
+	
+/* NOVIDADES */
+#novidades {
+	width:1000px;
+	margin:0 auto;
+	background:#c2db82;
+	}
+	
+#novidades #conteudo {
+	margin:30px 0 30px 30px;
+	}
+	
+/* BIOGRAFIA */
+#biografia {
+	width:1000px;
+	margin:0 auto;
+	background:#e3d07d;
+	}
+	
+#biografia #conteudo {
+	margin:30px 0 30px 30px;
+	}
+	
+/* CONTATO */
+#contato {
+	width:1000px;
+	margin:0 auto;
+	background:#fdc085;
+	}
+	
+#contato #conteudo {
+	margin:30px 0 30px 30px;
+	}
+		
+/* LATERAL */
+#lateral {
+	width:300px;
+	float:right;
+	margin:30px 30px 30px 0;
+	}
+	
+#lateral div.box {
+	width:260px;
+	background:#fff;
+	padding:20px;
+	margin-bottom:30px;
+	}
+	
+#lateral div.box_detalhe {
+	width:300px;
+	height:38px;
+	background:url(../img/detalhe_box.png) no-repeat;
+	padding:0;
+	margin:0;
+	}
+	
+#lateral div.item_box {
+	border-bottom:1px solid #eeeeee;
+	margin-bottom:10px;
+	padding-bottom:10px;
+	}
+	
+#lateral ul, #lateral ol {
+	
+	}
+	
+#lateral ul li, #lateral ol li {
+	margin:0 0 10px 0;
+	list-style:inside circle;	
+	}
+	
+#lateral h2 {
+	border-bottom:2px dotted #cecece;
+	font-size:18px;
+	font-family:arial;
+	margin-bottom:20px;
+	padding:0 0 10px 0;
+	}
+	
+#lateral h3, #lateral h3 a {
+	font-size:14px;
+	margin-bottom:5px;
+	}
+	
+#lateral h3.categorias, #lateral h3.categorias a {
+	margin-bottom:0;
+	}
+	
+/* RODAPÉ */
+#rodape {
+	clear:both;
+	height:240px;
+	width:960px;
+	padding:30px 20px 0 20px;
+	margin:0 0 -16px 0;
+	background:url(../img/fundo_rodape.png) repeat-x;
+	font-size:12px;
+	}
+	
+#rodape a {
+	font-weight:bold;
+	}
+	
+#rodape span {
+	text-transform:uppercase;
+	}
+
+#rodape p {
+	margin-bottom:10px;
+	}
+	
+#rodape li {
+	margin:0 0 5px 0;
+	}
+	
+div.box_tag {
+	width:449px;
+	background:url(../img/detalhe_rodape.png) no-repeat right top;
+	height:170px;
+	padding:0 31px 0 0;
+	float:left;
+	}
+	
+.box_rodape {
+	width:170px;
+	margin:0 0 0 20px;
+	height:213px;
+	float:left;
+	display:block;
+	}
+	
+#rodape_detalhe {
+	height:105px;
+	background:url(../img/detalhe_rodape_home.png) no-repeat bottom;
+	border-bottom:8px solid #fff;
+	clear:both;
+	}
+
+/* TABLES */
+table {
+	width:100%;
+	}
+
+td {
+	border:1px solid #f1f1f2;
+	border-bottom:1px dotted #ddd;
+	padding:5px;
+	}
+	
+tr {
+	
+	}
+	
+/* FORM */
+.item_formulario {
+	margin: 20px 0;
+	}
+	
+input[type=text] {
+	border:none;
+	padding:7px 5px;
+	width:390px;
+	margin:0 0 15px 0;
+	background:#fff;
+	font-size:14px;
+	}
+	
+input[type=text].busca {
+	width:200px;
+	padding:10px 5px;
+	margin:0 0 20px 0;
+	background:#dddddd;
+	}
+	
+input[type=text].captcha {
+	width:50px;
+	padding:10px 5px;
+	}
+	
+input[type=text].comentario {
+	width:550px;
+	}	
+	
+input[type=submit], input[type=button] {
+	background:#17416c;
+	padding:10px;
+	color:#fff;
+	border:none;
+	font-size:14px;
+	font-weight:bold;
+	cursor:pointer;
+	}
+	
+label {
+	display:block;
+	font-weight:bold;
+	margin-bottom:5px;
+	}
+	
+select {
+	border:none;
+	background:#fff;
+	padding:10px 5px;
+	width:400px;
+	margin:0 0 15px 0;
+	}
+	
+select.duvidas {
+	width:300px!important;
+	}
+	
+select.busca {
+	width:250px;
+	/*height:20px*/;
+	padding:10px 5px;
+	margin:20px 0 0 0;
+	background:#dddddd;
+	}
+
+textarea {
+	border:none;
+	padding:7px 5px;
+	width:390px;
+	margin:0 0 15px 0;
+	background:#fff;
+	font-size:14px;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+	
+textarea.comentario {
+	width:550px;
+	}	
+		
+/* CLASSES */
+.clear_both {
+	clear:both;
+	}
+	
+.align_left {
+	text-align:left;
+	}
+
+.align_right {
+	text-align:right;
+	}
+	
+.align_center {
+	text-align:center;
+	}
+	
+.float_left {
+	float:left;
+	}
+	
+img.float_left {
+	margin:0 20px 20px 0;
+	}
+	
+.float_right {
+	float:right;
+	}
+	
+.loading_hidden {
+	visibility:hidden;
+	}
+
+.loading_visible {
+	visibility:visible;
+	}
+	
+.replacement {
+	width:1px;
+	height:1px;
+	position:absolute;
+	overflow:hidden;
+	}
+	
+.clearfix:after {
+	content:"."; 
+	display:block; 
+	height:0; 
+	clear:both; 
+	visibility:hidden;
+	}
+
+.clearfix {
+	display:inline-block;
+	}
+
+* html .clearfix {
+	height:1%;
+	}
+	
+.clearfix {
+	display:block;
+	}
