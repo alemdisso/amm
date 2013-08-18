@@ -7,12 +7,20 @@
         <file>file:/C:/xampp/htdocs/amm/application/layouts/wrapper.phtml</file>
         <file>file:/C:/xampp/htdocs/amm/raw_amm/paginas/home.php</file>
         <file>file:/C:/xampp/htdocs/amm/application/layouts/meta.phtml</file>
-        <file>file:/C:/xampp/htdocs/amm/raw_amm/includes/css.html.php</file>
         <file>file:/C:/xampp/htdocs/amm/application/layouts/inner.phtml</file>
-        <file>file:/C:/xampp/htdocs/amm/application/modules/includes/controllers/HeaderController.php</file>
+        <file>file:/C:/xampp/htdocs/amm/raw_amm/paginas/livro.php</file>
+        <file>file:/C:/xampp/htdocs/amm/raw_amm/css/estilo.css</file>
         <file>file:/C:/xampp/htdocs/amm/application/modules/includes/views/scripts/header/include.phtml</file>
-        <file>file:/C:/xampp/htdocs/amm/application/configs/application.ini</file>
+        <file>file:/C:/xampp/htdocs/amm/raw_amm/includes/topo.php</file>
+        <file>file:/C:/xampp/htdocs/amm/application/modules/includes/controllers/HeaderController.php</file>
+        <file>file:/C:/xampp/htdocs/amm/raw_amm/includes/rodape.php</file>
+        <file>file:/C:/xampp/htdocs/amm/application/modules/includes/views/scripts/footer/include.phtml</file>
+        <file>file:/C:/xampp/htdocs/amm/application/modules/includes/controllers/IncludeController.php</file>
+        <file>file:/C:/xampp/htdocs/amm/application/modules/includes/views/scripts/include/categories.phtml</file>
+        <file>file:/C:/xampp/htdocs/amm/raw_amm/includes/box_busca.php</file>
+        <file>file:/C:/xampp/htdocs/amm/application/modules/includes/views/scripts/include/search.phtml</file>
+        <file>file:/C:/xampp/htdocs/amm/raw_amm/includes/css.html.php</file>
         <file>file:/C:/xampp/htdocs/amm/application/modules/default/controllers/IndexController.php</file>
-        <file>file:/C:/xampp/htdocs/amm/application/modules/auth/controllers/LoginController.php</file>
+        <file>file:/C:/xampp/htdocs/amm/application/modules/default/views/scripts/index/index.phtml</file>
     </open-files>
 </project-private>
