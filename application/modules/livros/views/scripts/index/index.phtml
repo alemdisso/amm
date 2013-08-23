@@ -1,0 +1,37 @@
+<?php
+$pageData = $this->pageData;
+?>
+<!-- conteudo -->
+<div id="conteudo">
+
+<h1><img src="/img/icone_livros.png" align="absmiddle" alt="Livros" /> Livros</h1>
+
+<!-- destaques -->
+<div class="clearfix">
+
+<div class="float_left livro_destaque">
+<a href="<?php echo $pageData['leftSpecialUri']?>"><img src="/img/marcacao_destaque_livro1.png" /></a>
+<h3><a href="<?php echo $pageData['leftSpecialUri']?>"><?php echo $pageData['leftSpecialTitle']?></a></h3>
+<p><?php echo $pageData['leftSpecialSummary']?> <a href="<?php echo $pageData['leftSpecialUri']?>" class="mais">mais</a></p>
+</div>
+
+<div class="float_right livro_destaque">
+<a href="<?php echo $pageData['rightSpecialUri']?>"><img src="/img/marcacao_destaque_livro2.png" /></a>
+<h3><a href="<?php echo $pageData['rightSpecialUri']?>"><?php echo $pageData['rightSpecialTitle']?></a></h3>
+<p><?php echo $pageData['rightSpecialSummary']?><a href="<?php echo $pageData['rightSpecialUri']?>" class="mais">mais</a></p>
+</div>
+
+</div>
+<!-- /destaques -->
+
+<!-- categorias -->
+<div id="livros_categorias" class="clearfix">
+<h2>Livros por categoria:</h2>
+<a href="">Infantis</a><a href="">Fic&ccedil;&atilde;o</a><a href="">Juvenis</a><a href="">Ensaios</a>
+</div>
+<!-- categorias -->
+
+
+
+</div>
+<!-- /conteudo -->

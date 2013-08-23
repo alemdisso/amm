@@ -1,11 +1,11 @@
 <?php
-class Acervo_IndexController extends Zend_Controller_Action
+class Novidades_IndexController extends Zend_Controller_Action
 {
     public function init()
     {
         $layoutHelper = $this->_helper->getHelper('Layout');
         $layout = $layoutHelper->getLayoutInstance();
-        $layout->nestedLayout = 'inner_books';
+        $layout->nestedLayout = 'inner_novidades';
     }
 
     public function indexAction()
