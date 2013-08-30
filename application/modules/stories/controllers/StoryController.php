@@ -1,5 +1,5 @@
 <?php
-class Livros_LivroController extends Zend_Controller_Action
+class Stories_StoryController extends Zend_Controller_Action
 {
 
     public function postDispatch()
@@ -14,7 +14,7 @@ class Livros_LivroController extends Zend_Controller_Action
 //        $this->db = Zend_Registry::get('db');
         $layoutHelper = $this->_helper->getHelper('Layout');
         $layout = $layoutHelper->getLayoutInstance();
-        $layout->nestedLayout = 'inner_livros';
+        $layout->nestedLayout = 'inner_stories';
     }
 
     public function exploreAction()
@@ -56,9 +56,10 @@ class Livros_LivroController extends Zend_Controller_Action
             $prizesLabels[$prizeId] = $label;
         }
 
+       $storyTitle = 'Menina Bonita do Laço de Fita';
 
         $pageData = array(
-            'title' => 'Menina Bonita do Laço de Fita',
+            'title' => $storyTitle,
             'bigImageUri' => '/img/marcacao_livro.png',
             'mediumImageUri' => '/img/marcacao_livro.png',
             'editorName' => 'Ática',
@@ -75,7 +76,7 @@ class Livros_LivroController extends Zend_Controller_Action
 
 
         $this->view->pageData = $pageData;
-        $this->view->pageTitle = "Ana Maria Machado - Histórias";
+        $this->view->pageTitle = sprintf($this->view->translate("#Exploring %s"), $storyTitle);
 
     }
 }

@@ -6,16 +6,16 @@
 <div class="coluna1 clearfix">
 <img src="img/icone_livros.png" align="top" class="float_left" />
 <div class="float_left">
-<h2>Livros</h2>
-<h4>Mil hist&oacute;rias num s&oacute; lugar</h4>
+<h2><?php echo $this->translate("#Stories") ?></h2>
+<h4><?php echo $this->translate("#Stories for all") ?></h4>
 </div>
 </div>
 
 <ul class="coluna2">
-<li><a href="" title="Infantis">Infantis</a></li>
-<li><a href="" title="Juvenis">Juvenis</a></li>
-<li><a href="" title="Fic&ccedil;&atilde;o e Poesia">Fic&ccedil;&atilde;o e Poesia</a></li>
-<li><a href="" title="Ensaios">Ensaios</a></li>
+<li><a href="/historias/infantis" title="<?php echo $this->translate("#Children") ?>"><?php echo $this->translate("#Children") ?></a></li>
+<li><a href="/historias/juvenis" title="<?php echo $this->translate("#Young people") ?>"><?php echo $this->translate("#Young people") ?></a></li>
+<li><a href="ficção" title="<?php echo $this->translate("#Fiction") ?>"><?php echo $this->translate("#Fiction") ?></a></li>
+<li><a href="/ensaios" title="<?php echo $this->translate("#Essays") ?>"><?php echo $this->translate("#Essays") ?></a></li>
 </ul>
 
 <div class="coluna3 clearfix">

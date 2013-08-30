@@ -1,5 +1,5 @@
 <?php
-class Livros_IndexController extends Zend_Controller_Action
+class Stories_IndexController extends Zend_Controller_Action
 {
 
     public function postDispatch()
@@ -11,10 +11,9 @@ class Livros_IndexController extends Zend_Controller_Action
 
     public function init()
     {
-//        $this->db = Zend_Registry::get('db');
         $layoutHelper = $this->_helper->getHelper('Layout');
         $layout = $layoutHelper->getLayoutInstance();
-        $layout->nestedLayout = 'inner_livros';
+        $layout->nestedLayout = 'inner_stories';
     }
 
     public function indexAction()
