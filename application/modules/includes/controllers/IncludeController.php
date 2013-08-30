@@ -18,5 +18,27 @@ class Includes_IncludeController extends Zend_Controller_Action
 
     }
 
+    public function breadcrumbAction()
+    {
+
+    }
+
+    public function headerAction()
+    {
+        $pageData = Array();
+
+
+        $controller = $this->getFrontController();
+        $moduleName = $controller->getParam('outerModule');
+
+        $user = Zend_Registry::get('user');
+
+    }
+
+    public function footerAction()
+    {
+
+    }
+
 
 }

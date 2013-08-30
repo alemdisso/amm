@@ -6,15 +6,11 @@
 ?>
 
 <!-- container -->
-<div id="livros" class="clearfix">
+<div id="home" class="clearfix">
 
 <!-- header -->
-<?php echo $this->action('header', 'include', 'includes') ?>
+<?php echo $this->action('include', 'header', 'includes') ?>
 <!-- /header -->
-
-<!-- breadcrumb -->
-<?php echo $this->action('breadcrumb', 'include', 'includes') ?>
-<!-- /breadcrumb -->
 
 <!-- conteudo -->
 <?php echo $this->layout()->content; ?>
@@ -28,7 +24,7 @@
 <!-- /lateral -->
 
 <!-- rodape -->
-<?php echo $this->action('footer', 'include', 'includes') ?>
+<?php echo $this->action('include', 'footer', 'includes') ?>
 <!-- /rodape -->
 
 </div>

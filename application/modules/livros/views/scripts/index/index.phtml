@@ -4,7 +4,7 @@ $pageData = $this->pageData;
 <!-- conteudo -->
 <div id="conteudo">
 
-<h1><img src="/img/icone_livros.png" align="absmiddle" alt="Livros" /> Livros</h1>
+<h1><img src="/img/icone_livros.png" align="absmiddle" alt="<?php echo $this->translate("#Stories") ?>" /><?php echo $this->translate("#Stories") ?></h1>
 
 <!-- destaques -->
 <div class="clearfix">
@@ -26,8 +26,8 @@ $pageData = $this->pageData;
 
 <!-- categorias -->
 <div id="livros_categorias" class="clearfix">
-<h2>Livros por categoria:</h2>
-<a href="">Infantis</a><a href="">Fic&ccedil;&atilde;o</a><a href="">Juvenis</a><a href="">Ensaios</a>
+<h2><?php echo $this->translate("#Stories by category") ?></h2>
+<a href="/historias/infantis"><?php echo $this->translate("#Children") ?></a><a href="/ficção"><?php echo $this->translate("#Fiction") ?></a><a href=""><?php echo $this->translate("#Young people") ?></a><a href="/ensaios"><?php echo $this->translate("#Essays") ?></a>
 </div>
 <!-- categorias -->
 
