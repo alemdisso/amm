@@ -28,6 +28,11 @@ public function __construct() {
     $this->add(new Zend_Acl_Resource('moxca:auth.logout'));
     $this->add(new Zend_Acl_Resource('moxca:auth.user'));
 
+    $this->add(new Zend_Acl_Resource('moxca:admin'));
+    $this->add(new Zend_Acl_Resource('moxca:admin.panel'));
+
+    $this->allow(Moxca_Access_RolesConstants::ROLE_ADMINISTRATOR, 'moxca:admin.panel', 'panel');
+
     $this->allow(Moxca_Access_RolesConstants::ROLE_UNKNOWN,       'moxca:auth.login', 'index');
     $this->allow(Moxca_Access_RolesConstants::ROLE_UNKNOWN,       'moxca:auth.logout', 'index');
 

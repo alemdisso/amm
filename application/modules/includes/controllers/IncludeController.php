@@ -45,12 +45,12 @@ class Includes_IncludeController extends Zend_Controller_Action
     public function footerAction()
     {
 
+ 
     }
 
     public function footerHomeAction()
     {
 
     }
-
 
 }
