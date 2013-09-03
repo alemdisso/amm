@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-08-30 10:05-0300\n"
-"PO-Revision-Date: 2013-08-30 10:05-0300\n"
+"POT-Creation-Date: 2013-09-02 20:42-0300\n"
+"PO-Revision-Date: 2013-09-02 20:42-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -14,12 +14,9 @@ msgstr ""
 "X-Poedit-Basepath: C:\\xampp\\htdocs\\amm\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: application\\modules\n"
+"X-Poedit-SearchPath-1: library\\Moxca\n"
 
-#: application\modules/auth/controllers/LoginController.php:12
-msgid "#Window title"
-msgstr "Ana Maria Machado"
-
-#: application\modules/auth/controllers/LoginController.php:41
+#: application\modules/auth/controllers/LoginController.php:40
 msgid "#You could not be logged in. Please try again."
 msgstr "Não foi possível fazer o login. Por favor tente novamente."
 
@@ -36,10 +33,1063 @@ msgstr "O registro foi atualizado com sucesso."
 msgid "#Invalid User Id from Get"
 msgstr "Id inválido"
 
-#: application\modules/stories/controllers/StoryController.php:79
+#: application\modules/works/controllers/IndexController.php:60
+msgid "#Ana Maria Machado - Fiction"
+msgstr "Ana Maria Machado - Ficção"
+
+#: application\modules/works/controllers/WorkController.php:85
 #, php-format
 msgid "#Exploring %s"
 msgstr "Explorando %s"
+
+#: library\Moxca/Access/Roles.php:10
+msgid "#Unknown"
+msgstr "Tipo indefinido"
+
+#: library\Moxca/Access/Roles.php:11
+msgid "#Guest"
+msgstr "Visitante"
+
+#: library\Moxca/Access/Roles.php:12
+msgid "#User"
+msgstr "Usuário"
+
+#: library\Moxca/Access/Roles.php:13
+msgid "#Assistant"
+msgstr "Assistente"
+
+#: library\Moxca/Access/Roles.php:14
+msgid "#Administrator"
+msgstr "Editor"
+
+#: library\Moxca/Access/Roles.php:15
+msgid "#System administrator"
+msgstr "Sysadmin"
+
+#: library\Moxca/Collection/WorkTypes.php:11
+msgid "#Nil"
+msgstr "Nula"
+
+#: library\Moxca/Collection/WorkTypes.php:12
+#: application\modules/default/views/scripts/index/index.phtml:18
+#: application\modules/works/views/scripts/index/index.phtml:30
+msgid "#Children"
+msgstr "Infantil"
+
+#: library\Moxca/Collection/WorkTypes.php:13
+msgid "#Young"
+msgstr "Juvenil"
+
+#: library\Moxca/Collection/WorkTypes.php:14
+#: application\modules/default/views/scripts/index/index.phtml:20
+#: application\modules/works/views/scripts/index/index.phtml:30
+msgid "#Fiction"
+msgstr "Ficção"
+
+#: library\Moxca/Collection/WorkTypes.php:15
+msgid "#Essay"
+msgstr "Ensaios"
+
+#: library\Moxca/Collection/WorkTypes.php:34
+msgid "#Unknown type"
+msgstr "Tipo indefinido"
+
+#: library\Moxca/Form/UserCreate.php:15
+msgid "#Name:"
+msgstr "Nome:"
+
+#: library\Moxca/Form/UserCreate.php:31
+msgid "#Role"
+msgstr "Papel"
+
+#: library\Moxca/Form/UserCreate.php:50
+msgid "#Login Name:"
+msgstr "Login"
+
+#: library\Moxca/Form/UserCreate.php:67 library\Moxca/Form/UserLogin.php:34
+msgid "#Password:"
+msgstr "Senha"
+
+#: library\Moxca/Form/UserCreate.php:84
+msgid "#Email:"
+msgstr "Email"
+
+#: library\Moxca/Form/UserCreate.php:101
+msgid "#Submit"
+msgstr "Enviar"
+
+#: library\Moxca/Form/UserCreate.php:117 library\Moxca/Form/UserEdit.php:28
+#: library\Moxca/Form/UserLogin.php:66
+msgid "#Invalid data!"
+msgstr "Dados inválidos"
+
+#: library\Moxca/Form/UserLogin.php:16
+msgid "#User:"
+msgstr "Usuário"
+
+#: library\Moxca/Form/UserLogin.php:51
+msgid "#Login"
+msgstr "Login"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Afghanistan"
+msgstr "Afeganistão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Albania"
+msgstr "Albânia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Algeria"
+msgstr "Algéria"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "American Samoa"
+msgstr "Samoa Americana"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Andorra"
+msgstr "Andorra"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Angola"
+msgstr "Angola"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Anguilla"
+msgstr "ANguila"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Antarctica"
+msgstr "Antarctica"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Antigua and Barbuda"
+msgstr "Antiga e Barbuda"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Argentina"
+msgstr "Argentina"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Armenia"
+msgstr "Armênia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Aruba"
+msgstr "Aruba"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Australia"
+msgstr "Austrália"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Austria"
+msgstr "Áustria"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Azerbaijan"
+msgstr "Azerbaijão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Bahamas"
+msgstr "Bahamas"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Bahrain"
+msgstr "Bahrein"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Bangladesh"
+msgstr "Bangladesh"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Barbados"
+msgstr "Barbados"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Belarus"
+msgstr "Bielorrússia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Belgium"
+msgstr "Bélgica"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Belize"
+msgstr "Belize"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Benin"
+msgstr "Benin"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Bermuda"
+msgstr "Bermuda"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Bhutan"
+msgstr "Butão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Bolivia"
+msgstr "Bolívia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Bosnia and Herzegovina"
+msgstr "Bósnia e Herzegovina"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Botswana"
+msgstr "Botsuana"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Bouvet Island"
+msgstr "Ilha Bouvet"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Brazil"
+msgstr "Brasil"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "British Indian Ocean Territory"
+msgstr "Território das Índias Ocidentais"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Brunei Darussalam"
+msgstr "Brunei"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Bulgaria"
+msgstr "Bulgária"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Burundi"
+msgstr "Burundi"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Cambodia"
+msgstr "Camboja"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Cameroon"
+msgstr "Camarões"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Canada"
+msgstr "Canadá"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Cape Verde"
+msgstr "Cabo Verde"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Cayman Islands"
+msgstr "Ilhas Cayman"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Central African Republic"
+msgstr "Centro-Africana, República"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Chad"
+msgstr "Chade"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Chile"
+msgstr "Chile"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "China"
+msgstr "China"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Christmas Island"
+msgstr "Ilha Christmas"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Cocos (Keeling) Islands"
+msgstr "Ilhas Cocos (Keeling)"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Colombia"
+msgstr "Colombia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Comoros"
+msgstr "Comores"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Congo"
+msgstr "Congo"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Congo, the Democratic Republic of the"
+msgstr "Congo-Kinshasa"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Cook Islands"
+msgstr "Ilhas Cook"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Cote D'Ivoire"
+msgstr "Costa do Marfim"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Croatia"
+msgstr "Croácia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Cuba"
+msgstr "Cuba"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Cyprus"
+msgstr "Chipre"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Czech Republic"
+msgstr "República Tcheca"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Denmark"
+msgstr "Dinamarca"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Djibouti"
+msgstr "Djibuti"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Dominica"
+msgstr "Dominica"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Dominican Republic"
+msgstr "Dominicana, República"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Ecuador"
+msgstr "Equador"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Egypt"
+msgstr "Egito"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "El Salvador"
+msgstr "El Salvador"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Equatorial Guinea"
+msgstr "Guiné Equatorial"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Eritrea"
+msgstr "Eritreia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Estonia"
+msgstr "Estônia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Ethiopia"
+msgstr "Etiópia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Falkland Islands (Malvinas)"
+msgstr "Ilhas Falkland"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Faroe Islands"
+msgstr "Ilhas Faroe"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Fiji"
+msgstr "Fiji"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Finland"
+msgstr "Finlândia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "France"
+msgstr "França"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "French Guiana"
+msgstr "Guiana Francesa"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "French Polynesia"
+msgstr "Polinésia Francesa"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "French Southern Territories"
+msgstr "Terras Austrais e Antárcticas Francesas"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Gabon"
+msgstr "Gabão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Gambia"
+msgstr "Gâmbia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Georgia"
+msgstr "Geórgia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Germany"
+msgstr "Alemanha"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Ghana"
+msgstr "Gana"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Gibraltar"
+msgstr "Gibraltar"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Greece"
+msgstr "Grécia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Greenland"
+msgstr "Groenlândia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Grenada"
+msgstr "Granada"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Guadeloupe"
+msgstr "Guadalupe"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Guam"
+msgstr "Guam"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Guinea"
+msgstr "Guiné"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Guinea-Bissau"
+msgstr "Guiné-Bissau"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Guyana"
+msgstr "Guiana"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Haiti"
+msgstr "Haiti"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Heard Island and Mcdonald Islands"
+msgstr "Ilha Heard e Ilhas McDonald"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Holy See (Vatican City State)"
+msgstr "Vaticano"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Honduras"
+msgstr "Honduras"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Hong Kong"
+msgstr "Hong Kong"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Hungary"
+msgstr "Hungria"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Iceland"
+msgstr "Islândia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "India"
+msgstr "Índia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Indonesia"
+msgstr "Indonésia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Iran, Islamic Republic of"
+msgstr "Irã"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Iraq"
+msgstr "Iraque"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Ireland"
+msgstr "Irlanda"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Israel"
+msgstr "Israel"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Italy"
+msgstr "Itália"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Jamaica"
+msgstr "Jamaica"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Japan"
+msgstr "Japão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Jordan"
+msgstr "Jordânia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Kazakhstan"
+msgstr "Cazaquistão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Kenya"
+msgstr "Quênia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Kiribati"
+msgstr "Quiribáti"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Korea, Democratic People's Republic of"
+msgstr "Coreia do Norte"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Korea, Republic of"
+msgstr "Coreia do Sul"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Kuwait"
+msgstr "Kuwait"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Kyrgyzstan"
+msgstr "Quirguistão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Lao People's Democratic Republic"
+msgstr "Laos"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Latvia"
+msgstr "Letônia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Lebanon"
+msgstr "Líbano"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Lesotho"
+msgstr "Lesoto"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Liberia"
+msgstr "Libéria"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Libyan Arab Jamahiriya"
+msgstr "Líbia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Lithuania"
+msgstr "Lituânia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Luxembourg"
+msgstr "Luxemburgo"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Macao"
+msgstr "Macau"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Macedonia, the Former Yugoslav Republic of"
+msgstr "Macedônia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Madagascar"
+msgstr "Madagascar"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Malawi"
+msgstr "Malauí"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Malaysia"
+msgstr "Malásia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Maldives"
+msgstr "Maldivas"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Mali"
+msgstr "Mali"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Malta"
+msgstr "Malta"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Marshall Islands"
+msgstr " Ilhas Marshall"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Martinique"
+msgstr "Martinica"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Mauritania"
+msgstr "Mauritânia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Mauritius"
+msgstr "Maurício"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Mayotte"
+msgstr "Mayotte"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Mexico"
+msgstr "México"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Micronesia, Federated States of"
+msgstr "Micronésia, Estados Federados da"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Moldova, Republic of"
+msgstr "Moldávia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Monaco"
+msgstr "Mônaco"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Mongolia"
+msgstr "Mongólia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Montenegro"
+msgstr "Montenegro"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Morocco"
+msgstr "Marrocos"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Mozambique"
+msgstr "Moçambique"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Myanmar"
+msgstr "Mianmar"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Namibia"
+msgstr "Namíbia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Nauru"
+msgstr "Nauru"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Nepal"
+msgstr "Nepal"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Netherlands"
+msgstr "Países Baixos"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Netherlands Antilles"
+msgstr "Antilhas Neerlandesas"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "New Caledonia"
+msgstr "Nova Caledônia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "New Zealand"
+msgstr "Nova Zelândia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Nicaragua"
+msgstr "Nicarágua"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Niger"
+msgstr "Níger"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Nigeria"
+msgstr "Nigéria"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Niue"
+msgstr "Niue"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Norfolk Island"
+msgstr "Ilha Norfolk"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Northern Mariana Islands"
+msgstr "Ilhas Marianas do Norte"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Norway"
+msgstr "Noruega"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Oman"
+msgstr "Omã"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Pakistan"
+msgstr "Paquistão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Palau"
+msgstr "Palau"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Palestinian Territory, Occupied"
+msgstr "Palestina"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Panama"
+msgstr "Panamá"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Papua New Guinea"
+msgstr "Papua Nova Guiné"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Paraguay"
+msgstr "Paraguai"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Peru"
+msgstr "Peru"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Philippines"
+msgstr "Filipinas"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Pitcairn"
+msgstr "Pitcairn"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Poland"
+msgstr "Polônia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Portugal"
+msgstr "Portugal"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Puerto Rico"
+msgstr "Porto Rico"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Qatar"
+msgstr "Qatar"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Reunion"
+msgstr "Ilhas da Reunião"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Romania"
+msgstr "Romênia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Russian Federation"
+msgstr "Rússia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Rwanda"
+msgstr "Ruanda"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Saint Helena"
+msgstr "Santa Helena"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Saint Kitts and Nevis"
+msgstr "São Cristóvão e Neves"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Saint Lucia"
+msgstr "Santa Lúcia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Saint Pierre and Miquelon"
+msgstr "São Pedro e Miquelão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Saint Vincent and the Grenadines"
+msgstr "São Vicente e Granadinas"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Samoa"
+msgstr "Samoa"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "San Marino"
+msgstr "São Marinho"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Sao Tome and Principe"
+msgstr "São Tomé e Príncipe"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Saudi Arabia"
+msgstr "Arábia Saudita"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Senegal"
+msgstr "Senegal"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Serbia and Montenegro"
+msgstr "Sérvia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Seychelles"
+msgstr "Seicheles"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Sierra Leone"
+msgstr "Serra Leoa"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Singapore"
+msgstr "Singapura"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Slovakia"
+msgstr "Eslováquia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Slovenia"
+msgstr "Eslovênia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Solomon Islands"
+msgstr "Ilhas Salomão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Somalia"
+msgstr "Somália"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "South Africa"
+msgstr "África do Sul"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "South Georgia and the South Sandwich Islands"
+msgstr " Ilhas Geórgia do Sul e Sanduíche do Sul"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Spain"
+msgstr "Espanha"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Sudan"
+msgstr "Sudão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Suriname"
+msgstr "Suriname"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Svalbard and Jan Mayen"
+msgstr "Esvalbarda"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Swaziland"
+msgstr "Suazilândia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Sweden"
+msgstr "Suécia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Switzerland"
+msgstr "Suíça"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Syrian Arab Republic"
+msgstr "Síria"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Taiwan, Province of China"
+msgstr "Taiwan"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Tajikistan"
+msgstr "Tajiquistão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Tanzania, United Republic of"
+msgstr "Tanzânia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Thailand"
+msgstr "Tailândia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Timor-Leste"
+msgstr "Timor-Leste"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Togo"
+msgstr "Togo"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Tokelau"
+msgstr "Toquelau"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Tonga"
+msgstr "Tonga"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Trinidad and Tobago"
+msgstr "Trinidad e Tobago"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Tunisia"
+msgstr "Tunísia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Turkey"
+msgstr "Turquia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Turkmenistan"
+msgstr "Turcomenistão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Turks and Caicos Islands"
+msgstr "Ilhas Turks e Caicos"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Uganda"
+msgstr "Uganda"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Ukraine"
+msgstr "Ucrânia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "United Arab Emirates"
+msgstr "Emirados Árabes Unidos"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "United Kingdom"
+msgstr "Reino Unido"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "United States"
+msgstr "Estados Unidos"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "United States Minor Outlying Islands"
+msgstr "United States Minor Outlying Islands"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Uruguay"
+msgstr "Uruguai"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Uzbekistan"
+msgstr "Usbequistão"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Viet Nam"
+msgstr "Vietnã"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Virgin Islands, British"
+msgstr "Ilhas Virgens Britânicas"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Virgin Islands, U.s."
+msgstr "Ilhas Vírgens"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Wallis and Futuna"
+msgstr "Wallis e Futuna"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Western Sahara"
+msgstr "Sahara Ocidental"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Yemen"
+msgstr "Íemen"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Zambia"
+msgstr "Zâmbia"
+
+#: library\Moxca/Util/Countries.php:5
+msgid "Zimbabwe"
+msgstr "Zimbábue"
 
 #: application\modules/auth/views/scripts/user/create.phtml:2
 msgid "#New user"
@@ -55,60 +1105,95 @@ msgstr "Editar conta do usuário"
 msgid "#Success!!!"
 msgstr "Sucesso!"
 
-#: application\modules/default/views/scripts/index/index.phtml:9
+#: application\modules/default/views/scripts/index/index.phtml:12
+#: application\modules/includes/views/scripts/include/header-login.phtml:10
 #: application\modules/includes/views/scripts/include/header.phtml:10
-#: application\modules/stories/views/scripts/index/index.phtml:7
-#: application\modules/stories/views/scripts/story/explore.phtml:7
-msgid "#Stories"
-msgstr "Histórias"
+#: application\modules/works/views/scripts/index/index.phtml:7
+msgid "#Books"
+msgstr "Livros"
 
-#: application\modules/default/views/scripts/index/index.phtml:10
+#: application\modules/default/views/scripts/index/index.phtml:13
 msgid "#Stories for all"
 msgstr "Mil histórias num só lugar"
 
+#: application\modules/default/views/scripts/index/index.phtml:19
+#: application\modules/works/views/scripts/index/index.phtml:30
+msgid "#Young people"
+msgstr "Juvenil"
+
+#: application\modules/default/views/scripts/index/index.phtml:21
+#: application\modules/works/views/scripts/index/index.phtml:30
+msgid "#Essays"
+msgstr "Ensaios"
+
+#: application\modules/default/views/scripts/index/index.phtml:28
+#: application\modules/works/views/scripts/index/index.phtml:15
+#: application\modules/works/views/scripts/index/index.phtml:21
+msgid "#more about"
+msgstr "mais"
+
+#: application\modules/includes/views/scripts/include/header-login.phtml:5
 #: application\modules/includes/views/scripts/include/header.phtml:5
 msgid "#Home"
 msgstr "Principal"
 
+#: application\modules/includes/views/scripts/include/header-login.phtml:11
 #: application\modules/includes/views/scripts/include/header.phtml:11
 msgid "#News"
 msgstr "Novidades"
 
+#: application\modules/includes/views/scripts/include/header-login.phtml:12
 #: application\modules/includes/views/scripts/include/header.phtml:12
 msgid "#Biography"
 msgstr "Biografia"
 
+#: application\modules/includes/views/scripts/include/header-login.phtml:13
 #: application\modules/includes/views/scripts/include/header.phtml:13
 msgid "#Contact"
 msgstr "Contato"
 
-#: application\modules/stories/views/scripts/index/index.phtml:29
-msgid "#Stories by category"
-msgstr "Mil histórias num só lugar"
+#: application\modules/works/views/scripts/index/fiction.phtml:7
+#: application\modules/works/views/scripts/work/explore.phtml:7
+msgid "#Works"
+msgstr "Obras"
 
-#: application\modules/stories/views/scripts/index/index.phtml:30
-msgid "#Children"
-msgstr "Infantil"
-
-#: application\modules/stories/views/scripts/index/index.phtml:30
-msgid "#Fiction"
+#: application\modules/works/views/scripts/index/fiction.phtml:9
+msgid "#Fiction books"
 msgstr "Ficção"
 
-#: application\modules/stories/views/scripts/index/index.phtml:30
-msgid "#Young people"
-msgstr "Juvenil"
+#: application\modules/works/views/scripts/index/fiction.phtml:12
+#: application\modules/works/views/scripts/work/explore.phtml:47
+msgid "#Prizes"
+msgstr "Prêmios"
 
-#: application\modules/stories/views/scripts/index/index.phtml:30
-msgid "#Essays"
-msgstr "Ensaios"
+#: application\modules/works/views/scripts/index/fiction.phtml:12
+msgid "#More about this work"
+msgstr "Curiosidades"
 
-#: application\modules/stories/views/scripts/story/explore.phtml:31
+#: application\modules/works/views/scripts/index/fiction.phtml:12
+msgid "#Available in other language"
+msgstr "Disponível em outro idioma"
+
+#: application\modules/works/views/scripts/index/index.phtml:29
+msgid "#Books by category"
+msgstr "Por categoria"
+
+#: application\modules/works/views/scripts/work/explore.phtml:31
 msgid "#Buy online"
 msgstr "Compre online"
 
-#: application\modules/stories/views/scripts/story/explore.phtml:47
-msgid "#Prizes"
-msgstr "Prêmios"
+#, fuzzy
+#~ msgid "#Works for Children"
+#~ msgstr "Mil histórias num só lugar"
+
+#~ msgid "#Stories"
+#~ msgstr "Livros"
+
+#~ msgid "#Controller"
+#~ msgstr "Contrato"
+
+#~ msgid "#Window title"
+#~ msgstr "Ana Maria Machado"
 
 #~ msgid "#Dashboard"
 #~ msgstr "Panorama"
@@ -127,9 +1212,6 @@ msgstr "Prêmios"
 
 #~ msgid "#Hello. Please login."
 #~ msgstr "Hello. Please login."
-
-#~ msgid "#Login"
-#~ msgstr "Login"
 
 #~ msgid "#Hi"
 #~ msgstr "Hi"
@@ -180,12 +1262,6 @@ msgstr "Prêmios"
 #~ msgid "#(unknown date)"
 #~ msgstr "(data desconhecida)"
 
-#~ msgid "#Unknown type"
-#~ msgstr "Tipo indefinido"
-
-#~ msgid "#Nil"
-#~ msgstr "Nula"
-
 #~ msgid "#Planning"
 #~ msgstr "Em Planejamento"
 
@@ -227,9 +1303,6 @@ msgstr "Prêmios"
 
 #~ msgid "#Corporate social responsibility"
 #~ msgstr "Responsabilidade social corporativa"
-
-#~ msgid "#Contract"
-#~ msgstr "Contrato"
 
 #~ msgid "#Agreement"
 #~ msgstr "Convênio"
@@ -420,9 +1493,6 @@ msgstr "Prêmios"
 #~ msgid "#Name"
 #~ msgstr "Nome"
 
-#~ msgid "#Email"
-#~ msgstr "Email"
-
 #~ msgid "#Phone number"
 #~ msgstr "Telefone"
 
@@ -452,10 +1522,6 @@ msgstr "Prêmios"
 
 #~ msgid "#Em Planejamento"
 #~ msgstr "Teste"
-
-#, fuzzy
-#~ msgid "#Invalid contact id"
-#~ msgstr "Editar contato"
 
 #, fuzzy
 #~ msgid "#Invalid phone number"
@@ -511,9 +1577,6 @@ msgstr "Prêmios"
 
 #~ msgid "#Contact:"
 #~ msgstr "Contato:"
-
-#~ msgid "#Name:"
-#~ msgstr "Nome:"
 
 #~ msgid "#Relationship"
 #~ msgstr "Relação com o IETS"
@@ -616,9 +1679,6 @@ msgstr "Prêmios"
 
 #~ msgid "Conta"
 #~ msgstr "Conta"
-
-#~ msgid "name"
-#~ msgstr "Nome"
 
 #~ msgid "My test"
 #~ msgstr "Contato:"

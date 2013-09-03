@@ -1,3 +1,6 @@
+<?php
+$pageData = $this->pageData;
+?>
 <!-- conteudo -->
 <div id="conteudo" class="conteudo_1coluna">
 
@@ -6,7 +9,7 @@
 <div class="coluna1 clearfix">
 <img src="img/icone_livros.png" align="top" class="float_left" />
 <div class="float_left">
-<h2><?php echo $this->translate("#Stories") ?></h2>
+<h2><?php echo $this->translate("#Books") ?></h2>
 <h4><?php echo $this->translate("#Stories for all") ?></h4>
 </div>
 </div>
@@ -14,17 +17,17 @@
 <ul class="coluna2">
 <li><a href="/historias/infantis" title="<?php echo $this->translate("#Children") ?>"><?php echo $this->translate("#Children") ?></a></li>
 <li><a href="/historias/juvenis" title="<?php echo $this->translate("#Young people") ?>"><?php echo $this->translate("#Young people") ?></a></li>
-<li><a href="ficção" title="<?php echo $this->translate("#Fiction") ?>"><?php echo $this->translate("#Fiction") ?></a></li>
+<li><a href="/ficção" title="<?php echo $this->translate("#Fiction") ?>"><?php echo $this->translate("#Fiction") ?></a></li>
 <li><a href="/ensaios" title="<?php echo $this->translate("#Essays") ?>"><?php echo $this->translate("#Essays") ?></a></li>
 </ul>
 
 <div class="coluna3 clearfix">
 <div class="float_left">
-<h3>Aos Quatro Ventos</h3>
-<p>Finalista do Premio Jabuti, Camara Brasileira do Livro.</p>
-<p><a href="" title="Mais" class="mais">mais</a></p>
+<h3><?php echo $pageData['worksSpecialTitle']?></h3>
+<p><?php echo $pageData['worksSpecialSummary']?></p>
+<p><a href="<?php echo $pageData['worksSpecialUri']?>" title="<?php echo $this->translate("#more about") ?>" class="mais"> <?php echo $this->translate("#more about") ?></a></p>
 </div>
-<a href="" class="float_right" title=""><img src="../img/marcacao_capa.png" alt="" /></a>
+<a href="<?php echo $pageData['worksSpecialUri']?>" class="float_right" title="<?php echo $pageData['worksSpecialTitle']?>"><img src="<?php echo $pageData['worksSpecialImageUri']?>" alt="<?php echo $pageData['worksSpecialTitle']?>" /></a>
 </div>
 
 </div>

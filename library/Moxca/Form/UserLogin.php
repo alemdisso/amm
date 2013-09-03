@@ -7,20 +7,20 @@ class Moxca_Form_UserLogin extends Zend_Form
         // initialize form
         $this->setName('loginForm')
             ->setAction('/auth/login')
-            ->setDecorators(array('FormElements',array('HtmlTag', array('tag' => 'div', 'class' => 'Area')),'Form'))
+            ->setDecorators(array('FormElements',array('HtmlTag', array('tag' => 'div', 'class' => '')),'Form'))
             ->setMethod('post');
 
         // create text input for name
         $login = new Zend_Form_Element_Text('loginLogin');
-        $loginValidator = new Moxca_Register_ContactValidName();
+        $loginValidator = new Moxca_Util_ValidName();
         $login->setLabel(_('#User:'))
               ->setDecorators(array(
                   'ViewHelper',
                   'Errors',
-                  array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'five columns omega')),
-                  array('Label', array('tag' => 'div', 'tagClass' => 'one column alpha Right')),
+                  array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => '')),
+                  array('Label', array('tag' => 'div', 'tagClass' => '')),
               ))
-            ->setOptions(array('class' => 'Full alpha omega'))
+            ->setOptions(array('class' => ''))
             ->setRequired(true)
             ->addValidator($loginValidator)
             ->addFilter('StringTrim')
@@ -30,15 +30,15 @@ class Moxca_Form_UserLogin extends Zend_Form
 
         // create text input for name
         $password = new Zend_Form_Element_Password('passwordLogin');
-        $passwordValidator = new Moxca_Register_ContactValidName();
+        $passwordValidator = new Moxca_Util_ValidString();
         $password->setLabel(_('#Password:'))
               ->setDecorators(array(
                   'ViewHelper',
                   'Errors',
-                  array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class' => 'five columns omega')),
-                  array('Label', array('tag' => 'div', 'tagClass' => 'one column alpha Right')),
+                  array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class' => '')),
+                  array('Label', array('tag' => 'div', 'tagClass' => '')),
               ))
-            ->setOptions(array('class' => 'Full alpha omega'))
+            ->setOptions(array('class' => ''))
             ->setRequired(true)
             ->addValidator($passwordValidator)
             ->addFilter('StringTrim')
@@ -53,11 +53,9 @@ class Moxca_Form_UserLogin extends Zend_Form
                   'ViewHelper',
                   'Errors',
                   array(array('data' => 'HtmlTag'),
-                  array('tag' => 'div', 'class' => 'two columns inset-by-three omega')),
-                  array('Label',
-                  array('tag' => 'div', 'tagClass' => 'one column alpha Invisible')),
+                  array('tag' => 'div', 'class' => '')),
                ))
-               ->setOptions(array('class' => 'submit Full alpha omega'));
+               ->setOptions(array('class' => 'submit'));
         $this->addElement($submit);
 
     }

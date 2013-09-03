@@ -1,3 +1,25 @@
+<?php
+  $controller = Zend_Controller_Front::getInstance();
+  $request = $controller->getRequest();
+  $controller->setParam('outerModule', $request->getModuleName());
+  $params = $controller->getParams();
+?>
+
+<!-- container -->
+<div id="livros" class="clearfix">
+
 <!-- header -->
-<?php echo $this->action('include-login', 'header', 'includes') ?>
+<?php echo $this->action('header-login', 'include', 'includes') ?>
 <!-- /header -->
+
+<!-- conteudo -->
+<?php echo $this->layout()->content; ?>
+<!-- /conteudo -->
+
+
+<!-- rodape -->
+<?php echo $this->action('footer', 'include', 'includes') ?>
+<!-- /rodape -->
+
+</div>
+<!-- /container -->

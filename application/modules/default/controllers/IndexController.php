@@ -19,6 +19,15 @@ class IndexController extends Zend_Controller_Action
 
   public function indexAction()
   {
+        $pageData = array(
+            'worksSpecialUri' => '/explore/aos-quatro-ventos',
+            'worksSpecialTitle' => 'Aos Quatro Ventos',
+            'worksSpecialSummary' => 'Finalista do Premio Jabuti, Camara Brasileira do Livro.',
+            'worksSpecialImageUri' => '/img/marcacao_capa.png',
+        );
+
+
+        $this->view->pageData = $pageData;
 
         $this->view->pageTitle = "Ana Maria Machado";
   }

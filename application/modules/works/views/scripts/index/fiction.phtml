@@ -1,0 +1,65 @@
+<?php
+$pageData = $this->pageData;
+?>
+<!-- conteudo -->
+<div id="conteudo">
+
+<h1><img src="/img/icone_livros.png" align="absmiddle" alt="<?php echo $this->translate("#Works") ?>" /> <?php echo $this->translate("#Works") ?></h1>
+
+<h2 class="categoria"><?php echo $this->translate("#Fiction books") ?></h2>
+
+<!-- legenda -->
+<div class="box_conteudo"><img src="/img/detalhe_premio.png" align="absmiddle" title="<?php echo $this->translate("#Prizes") ?>" /> <strong><?php echo $this->translate("#Prizes") ?></strong> | <img src="/img/icone_livro_mais.png" align="absmiddle" title="<?php echo $this->translate("#More about this work") ?>"/> <strong><?php echo $this->translate("#More about this work") ?></strong> | <img src="/img/detalhe_traducao.png" align="absmiddle" title="<?php echo $this->translate("#Available in other language") ?>"/> <strong><?php echo $this->translate("#Available in other language") ?></strong></div>
+<!-- /legenda -->
+
+<?php
+        foreach ($pageData['worksData'] as $workId => $workData) {
+?>
+<!-- item de repeticao -->
+<div class="item_livro clearfix">
+<a href="<?php echo $workData['exploreUri']?>" class="thumbnail_livro"><img src="/img/marcacao_livro.png" /></a>
+<div style="width:450px;" class="float_right"><!-- largura para quando existir thumbnail + class na div -->
+<h3><a href="<?php echo $workData['exploreUri']?>"><?php echo $workData['title']?></a> <a href=""><img src="/img/detalhe_premio.png" align="absmiddle" /></a><a href=""><img src="/img/detalhe_premio.png" align="absmiddle" /></a><a href=""><img src="/img/detalhe_premio.png" align="absmiddle" /></a></h3>
+<p><strong><?php echo $workData['editorName']?></strong></p>
+<p><?php echo $workData['summary']?></p>
+<p><a href="<?php echo $workData['exploreUri']?>" title="" class="mais">leia mais</a></p>
+</div>
+</div>
+<!-- /item de repeticao -->
+<?
+        }
+?>
+
+<!-- item de repeticao -->
+<div class="item_livro clearfix">
+<a href="" class="thumbnail_livro"><img src="/img/marcacao_livro.png" /></a>
+<div style="width:450px;" class="float_right"><!-- largura para quando existir thumbnail + class na div -->
+<h3><a href="">Banho Sem Chuva</a> <a href=""><img src="/img/detalhe_premio.png" align="absmiddle" /></a><a href=""><img src="/img/detalhe_traducao.png" align="absmiddle" /></a><a href=""><img src="/img/icone_livro_mais.png" align="absmiddle" /></a></h3>
+<p><strong>Salamandra, 1988</strong></p>
+<p>Da s&eacute;rie Mico Maneco. Essa divertida hist&oacute;ria ajuda a treinar a leitura de palavras com d&iacute;grafos.</p>
+<p><a href="" title="mais livros" class="mais">leia mais</a></p>
+</div>
+</div>
+<!-- /item de repeticao -->
+
+<!-- item de repeticao -->
+<div class="item_livro clearfix">
+<a href="" class="thumbnail_livro"><img src="/img/marcacao_livro.png" /></a>
+<div style="width:450px;" class="float_right"><!-- largura para quando existir thumbnail + class na div -->
+<h3><a href="">Banho Sem Chuva</a> <a href=""><img src="/img/detalhe_premio.png" align="absmiddle" /></a><a href=""><img src="/img/detalhe_premio.png" align="absmiddle" /></a><a href=""><img src="/img/detalhe_premio.png" align="absmiddle" /></a></h3>
+<p><strong>Salamandra, 1988</strong></p>
+<p>Da s&eacute;rie Mico Maneco. Essa divertida hist&oacute;ria ajuda a treinar a leitura de palavras com d&iacute;grafos.</p>
+<p><a href="" title="mais livros" class="mais">leia mais</a></p>
+</div>
+</div>
+<!-- /item de repeticao -->
+
+<!-- paginacao -->
+<div id="paginacao" class="clearfix">
+<span class="float_left">Livros <strong>1 de 10</strong> de 33</span>
+<span class="float_right">in&iacute;cio | <img src="/img/icone_anterior.png" align="absmiddle" /> anterior | <a href="" title=""><strong>pr&oacute;ximo</strong> <img src="/img/icone_mais.png" align="absmiddle" /></a> | <a href="" title=""><strong>fim</strong></a></span>
+</div>
+<!-- /paginacao -->
+
+</div>
+<!-- /conteudo -->

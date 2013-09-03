@@ -9,7 +9,6 @@ class Auth_LoginController extends Zend_Controller_Action
         $layoutHelper = $this->_helper->getHelper('Layout');
         $layout = $layoutHelper->getLayoutInstance();
 
-        $layout->title = _("#Window title");
 
         $layout->nestedLayout = 'login';
 
@@ -23,7 +22,7 @@ class Auth_LoginController extends Zend_Controller_Action
                 if ($user instanceOf Moxca_Auth_User ) {
                     $session = new Zend_Session_Namespace('moxca.auth');
                     $session->user = $user;
-                    $this->_redirect("/projects");
+                    $this->_redirect("/home");
 //                    if (isset($session->requestURL)) {
 //                        $url = $session->requestURL;
 //                        unset($session->requestURL);
