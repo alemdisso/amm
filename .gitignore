@@ -10,6 +10,6 @@ public/index.php
 /tests/log/**/*
 /nbproject/
 /temp/
-/application/_*.php
+/application/*.php_
 /application/configs/_*.ini
 /.git-rewrite/
