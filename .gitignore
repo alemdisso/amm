@@ -16,7 +16,6 @@ public/index.php
 /application/configs/staging_application.ini
 /application/configs/_staging_application.ini
 /application/configs/_sandbox_application.ini
-/application/configs/sandbox_application.ini
 /application/configs/default_production_application.ini
 /application/en_browser_prod_Bootstrap.php
 /application/en_browser_Bootstrap.php
