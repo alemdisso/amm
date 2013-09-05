@@ -1,0 +1,37 @@
+<?php
+  $controller = Zend_Controller_Front::getInstance();
+  $request = $controller->getRequest();
+  $controller->setParam('outerModule', $request->getModuleName());
+  $params = $controller->getParams();
+?>
+
+<!-- container -->
+<div id="livros" class="clearfix">
+
+<!-- header -->
+<?php echo $this->action('include', 'header', 'includes') ?>
+<!-- /header -->
+
+<!-- breadcrumb -->
+<div id="breadcrumb">
+<a href="/home" title="Home">Home</a> &rsaquo; <a href="/livros" title="Livros">Livros</a> &rsaquo; Menina Bonita do La&ccedil;o de Fita
+</div>
+<!-- /breadcrumb -->
+
+<!-- conteudo -->
+<?php echo $this->layout()->content; ?>
+<!-- /conteudo -->
+
+<!-- lateral -->
+<div id="lateral">
+<?php echo $this->action('categories', 'include', 'includes') ?>
+<?php echo $this->action('search', 'include', 'includes') ?>
+</div>
+<!-- /lateral -->
+
+<!-- rodape -->
+<?php echo $this->action('include', 'footer', 'includes') ?>
+<!-- /rodape -->
+
+</div>
+<!-- /container -->
