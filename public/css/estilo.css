@@ -480,6 +480,24 @@ h4 {
 	float:left;
 	}
 
+/* ADMIN */
+#admin {
+	width:1000px;
+	margin:0 auto;
+	background:#d1d1e0;
+	}
+
+#admin #conteudo {
+	margin:30px 0 30px 30px;
+	}
+
+#admin h2.categoria {
+	font-family:arial;
+	font-size:18px;
+	font-weight:bold;
+	margin:0 0 30px 0;
+	}
+
 /* NOVIDADES */
 #novidades {
 	width:1000px;
@@ -617,7 +635,7 @@ div.box_tag {
 	clear:both;
 	}
 
-/* PAINÉL */
+/* PAINEL */
 #panel {
 	clear:both;
 	height:87px;

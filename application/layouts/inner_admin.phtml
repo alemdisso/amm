@@ -1,0 +1,35 @@
+<?php
+  $controller = Zend_Controller_Front::getInstance();
+  $request = $controller->getRequest();
+  $controller->setParam('outerModule', $request->getModuleName());
+  $params = $controller->getParams();
+?>
+
+<!-- container -->
+<div id="admin" class="clearfix">
+
+<!-- header -->
+<?php echo $this->action('header', 'include', 'includes') ?>
+<!-- /header -->
+
+<!-- breadcrumb -->
+<?php echo $this->action('breadcrumb', 'include', 'includes') ?>
+<!-- /breadcrumb -->
+
+<!-- conteudo -->
+<?php echo $this->layout()->content; ?>
+<!-- /conteudo -->
+
+<!-- lateral -->
+<div id="lateral">
+<?php echo $this->action('categories', 'include', 'includes') ?>
+<?php echo $this->action('search', 'include', 'includes') ?>
+</div>
+<!-- /lateral -->
+
+<!-- rodape -->
+<?php echo $this->action('footer', 'include', 'includes') ?>
+<!-- /rodape -->
+
+</div>
+<!-- /container -->

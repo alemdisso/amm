@@ -20,6 +20,11 @@ class Admin_WorkController extends Zend_Controller_Action
     public function init()
     {
         $this->db = Zend_Registry::get('db');
+
+        $layoutHelper = $this->_helper->getHelper('Layout');
+        $layout = $layoutHelper->getLayoutInstance();
+        $layout->nestedLayout = 'inner_admin';
+
         $this->workMapper = new Amm_Collection_WorkMapper($this->db);
         $this->editorMapper = new Amm_Collection_EditorMapper($this->db);
         $this->editionMapper = new Amm_Collection_EditionMapper($this->db);
@@ -30,7 +35,7 @@ class Admin_WorkController extends Zend_Controller_Action
         $data = array(
             'id' => '1',
             'title' => 'um título',
-            'type' => 1000,
+            'labelType' => 'Infantil',
             'description' => 'O rato estava com fome, mas não tinha nem um resto de rosca para roer. Então ele roeu o reboco, o rádio, o remo e a rolha. Nada matava sua fome. Aí ele roeu a roupa nova do Rei de Roma.',
             'summary' => 'Parte da terceira fase da série Mico Maneco. Enquanto se diverte a criança aprende a leitura dos sons com "r".',
             'editions' => array(
@@ -40,6 +45,8 @@ class Admin_WorkController extends Zend_Controller_Action
                 ),
             ),
         );
+
+        $this->view->pageData = $data;
 
     }
 

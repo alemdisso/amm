@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-02 20:42-0300\n"
-"PO-Revision-Date: 2013-09-02 20:42-0300\n"
+"POT-Creation-Date: 2013-09-06 09:51-0300\n"
+"PO-Revision-Date: 2013-09-06 09:52-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -16,6 +16,17 @@ msgstr ""
 "X-Poedit-SearchPath-0: application\\modules\n"
 "X-Poedit-SearchPath-1: library\\Moxca\n"
 
+#: application\modules/admin/controllers/EditionController.php:39
+#: application\modules/auth/controllers/UserController.php:36
+#: application\modules/auth/controllers/UserController.php:58
+msgid "#The record was successfully updated."
+msgstr "O registro foi atualizado com sucesso."
+
+#: application\modules/admin/controllers/EditionController.php:51
+#: application\modules/admin/views/scripts/edition/create.phtml:17
+msgid "#Create edition"
+msgstr "Criar edição"
+
 #: application\modules/auth/controllers/LoginController.php:40
 msgid "#You could not be logged in. Please try again."
 msgstr "Não foi possível fazer o login. Por favor tente novamente."
@@ -23,11 +34,6 @@ msgstr "Não foi possível fazer o login. Por favor tente novamente."
 #: application\modules/auth/controllers/UserController.php:14
 msgid "#Access denied"
 msgstr "Acesso negado"
-
-#: application\modules/auth/controllers/UserController.php:36
-#: application\modules/auth/controllers/UserController.php:58
-msgid "#The record was successfully updated."
-msgstr "O registro foi atualizado com sucesso."
 
 #: application\modules/auth/controllers/UserController.php:114
 msgid "#Invalid User Id from Get"
@@ -65,34 +71,6 @@ msgstr "Editor"
 #: library\Moxca/Access/Roles.php:15
 msgid "#System administrator"
 msgstr "Sysadmin"
-
-#: library\Moxca/Collection/WorkTypes.php:11
-msgid "#Nil"
-msgstr "Nula"
-
-#: library\Moxca/Collection/WorkTypes.php:12
-#: application\modules/default/views/scripts/index/index.phtml:18
-#: application\modules/works/views/scripts/index/index.phtml:30
-msgid "#Children"
-msgstr "Infantil"
-
-#: library\Moxca/Collection/WorkTypes.php:13
-msgid "#Young"
-msgstr "Juvenil"
-
-#: library\Moxca/Collection/WorkTypes.php:14
-#: application\modules/default/views/scripts/index/index.phtml:20
-#: application\modules/works/views/scripts/index/index.phtml:30
-msgid "#Fiction"
-msgstr "Ficção"
-
-#: library\Moxca/Collection/WorkTypes.php:15
-msgid "#Essay"
-msgstr "Ensaios"
-
-#: library\Moxca/Collection/WorkTypes.php:34
-msgid "#Unknown type"
-msgstr "Tipo indefinido"
 
 #: library\Moxca/Form/UserCreate.php:15
 msgid "#Name:"
@@ -1091,6 +1069,10 @@ msgstr "Zâmbia"
 msgid "Zimbabwe"
 msgstr "Zimbábue"
 
+#: application\modules/admin/views/scripts/panel/panel.phtml:2
+msgid "#New Book"
+msgstr "Novo Livro"
+
 #: application\modules/auth/views/scripts/user/create.phtml:2
 msgid "#New user"
 msgstr "Novo usuário"
@@ -1107,7 +1089,7 @@ msgstr "Sucesso!"
 
 #: application\modules/default/views/scripts/index/index.phtml:12
 #: application\modules/includes/views/scripts/include/header-login.phtml:10
-#: application\modules/includes/views/scripts/include/header.phtml:10
+#: application\modules/includes/views/scripts/include/header.phtml:11
 #: application\modules/works/views/scripts/index/index.phtml:7
 msgid "#Books"
 msgstr "Livros"
@@ -1116,12 +1098,30 @@ msgstr "Livros"
 msgid "#Stories for all"
 msgstr "Mil histórias num só lugar"
 
+#: application\modules/default/views/scripts/index/index.phtml:18
+#: application\modules/includes/views/scripts/include/footer-home.phtml:10
+#: application\modules/includes/views/scripts/include/footer.phtml:12
+#: application\modules/works/views/scripts/index/index.phtml:30
+msgid "#Children"
+msgstr "Infantil"
+
 #: application\modules/default/views/scripts/index/index.phtml:19
+#: application\modules/includes/views/scripts/include/footer-home.phtml:11
+#: application\modules/includes/views/scripts/include/footer.phtml:13
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Young people"
 msgstr "Juvenil"
 
+#: application\modules/default/views/scripts/index/index.phtml:20
+#: application\modules/includes/views/scripts/include/footer-home.phtml:12
+#: application\modules/includes/views/scripts/include/footer.phtml:14
+#: application\modules/works/views/scripts/index/index.phtml:30
+msgid "#Fiction"
+msgstr "Ficção"
+
 #: application\modules/default/views/scripts/index/index.phtml:21
+#: application\modules/includes/views/scripts/include/footer-home.phtml:13
+#: application\modules/includes/views/scripts/include/footer.phtml:15
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Essays"
 msgstr "Ensaios"
@@ -1133,29 +1133,29 @@ msgid "#more about"
 msgstr "mais"
 
 #: application\modules/includes/views/scripts/include/header-login.phtml:5
-#: application\modules/includes/views/scripts/include/header.phtml:5
+#: application\modules/includes/views/scripts/include/header.phtml:6
 msgid "#Home"
 msgstr "Principal"
 
 #: application\modules/includes/views/scripts/include/header-login.phtml:11
-#: application\modules/includes/views/scripts/include/header.phtml:11
+#: application\modules/includes/views/scripts/include/header.phtml:12
 msgid "#News"
 msgstr "Novidades"
 
 #: application\modules/includes/views/scripts/include/header-login.phtml:12
-#: application\modules/includes/views/scripts/include/header.phtml:12
+#: application\modules/includes/views/scripts/include/header.phtml:13
 msgid "#Biography"
 msgstr "Biografia"
 
 #: application\modules/includes/views/scripts/include/header-login.phtml:13
-#: application\modules/includes/views/scripts/include/header.phtml:13
+#: application\modules/includes/views/scripts/include/header.phtml:14
 msgid "#Contact"
 msgstr "Contato"
 
 #: application\modules/works/views/scripts/index/fiction.phtml:7
 #: application\modules/works/views/scripts/work/explore.phtml:7
 msgid "#Works"
-msgstr "Obras"
+msgstr "Livros"
 
 #: application\modules/works/views/scripts/index/fiction.phtml:9
 msgid "#Fiction books"
@@ -1181,6 +1181,18 @@ msgstr "Por categoria"
 #: application\modules/works/views/scripts/work/explore.phtml:31
 msgid "#Buy online"
 msgstr "Compre online"
+
+#~ msgid "#Nil"
+#~ msgstr "Nula"
+
+#~ msgid "#Young"
+#~ msgstr "Juvenil"
+
+#~ msgid "#Essay"
+#~ msgstr "Ensaios"
+
+#~ msgid "#Unknown type"
+#~ msgstr "Tipo indefinido"
 
 #, fuzzy
 #~ msgid "#Works for Children"
@@ -1390,9 +1402,6 @@ msgstr "Compre online"
 
 #~ msgid "#Predict Receiving"
 #~ msgstr "Prever recebimento"
-
-#~ msgid "#Create action"
-#~ msgstr "Criar ação"
 
 #~ msgid "#Project details"
 #~ msgstr "Detalhes do projeto"
