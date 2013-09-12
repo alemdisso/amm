@@ -1,6 +1,6 @@
 <?php
 
-class Amm_Collection_WorkTypeConstants
+class Author_Collection_WorkTypeConstants
 {
     const TYPE_NIL      =  0;
     const TYPE_CHILDREN = 1000;

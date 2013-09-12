@@ -1,6 +1,6 @@
 <?php
 
-class Amm_Collection_Editor {
+class Author_Collection_Editor {
 
     protected $id;
     protected $name;
@@ -22,7 +22,7 @@ class Amm_Collection_Editor {
         if (($this->id == 0) && ($id > 0)) {
             $this->id = (int)$id;
         } else {
-            throw new Amm_Collection_EditorException('It\'s not possible to change a editor\'s ID');
+            throw new Author_Collection_EditorException('It\'s not possible to change a editor\'s ID');
         }
     } //SetId
 
@@ -41,7 +41,7 @@ class Amm_Collection_Editor {
                 $this->uri = $converter->toAscii($this->name);
             }
         } else {
-            throw new Amm_Collection_EditorException("This ($name) is not a valid name.");
+            throw new Author_Collection_EditorException("This ($name) is not a valid name.");
         }
 
     } //SetName

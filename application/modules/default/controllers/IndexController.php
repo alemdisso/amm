@@ -10,7 +10,6 @@ class IndexController extends Zend_Controller_Action
 
     public function init()
     {
-//        $this->db = Zend_Registry::get('db');
         $layoutHelper = $this->_helper->getHelper('Layout');
         $layout = $layoutHelper->getLayoutInstance();
         $layout->nestedLayout = 'inner_home';
@@ -18,7 +17,8 @@ class IndexController extends Zend_Controller_Action
 
 
     public function indexAction()
-  {
+    {
+
         $pageData = array(
             'worksSpecialUri' => '/explore/aos-quatro-ventos',
             'worksSpecialTitle' => 'Aos Quatro Ventos',

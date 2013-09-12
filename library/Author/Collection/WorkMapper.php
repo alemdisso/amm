@@ -1,6 +1,6 @@
 <?php
 
-class Amm_Collection_WorkMapper
+class Author_Collection_WorkMapper
 {
 
     protected $db;
@@ -26,7 +26,7 @@ class Amm_Collection_WorkMapper
 
     }
 
-    public function insert(Amm_Collection_Work $obj)
+    public function insert(Author_Collection_Work $obj)
     {
 
         $query = $this->db->prepare("INSERT INTO collection_works (uri, title, description, summary, type)
@@ -45,10 +45,10 @@ class Amm_Collection_WorkMapper
 
     }
 
-    public function update(Amm_Collection_Work $obj)
+    public function update(Author_Collection_Work $obj)
     {
         if (!isset($this->identityMap[$obj])) {
-            throw new Amm_Collection_WorkMapperException('Object has no ID, cannot update.');
+            throw new Author_Collection_WorkMapperException('Object has no ID, cannot update.');
         }
 
         $query = $this->db->prepare("UPDATE collection_works SET uri = :uri, title = :title, description = :description, summary = :summary, type = :type WHERE id = :id;");
@@ -63,7 +63,7 @@ class Amm_Collection_WorkMapper
         try {
             $query->execute();
         } catch (Exception $e) {
-            throw new Amm_Collection_WorkException("sql failed");
+            throw new Author_Collection_WorkException("sql failed");
         }
 
     }
@@ -85,11 +85,11 @@ class Amm_Collection_WorkMapper
         $result = $query->fetch();
 
         if (empty($result)) {
-            throw new Amm_Collection_WorkMapperException(sprintf('There is no work with id #%d.', $id));
+            throw new Author_Collection_WorkMapperException(sprintf('There is no work with id #%d.', $id));
         }
         $uri = $result['uri'];
 
-        $obj = new Amm_Collection_Work();
+        $obj = new Author_Collection_Work();
         $this->setAttributeValue($obj, $id, 'id');
         $this->setAttributeValue($obj, $result['title'], 'title');
         $this->setAttributeValue($obj, $result['uri'], 'uri');
@@ -113,23 +113,23 @@ class Amm_Collection_WorkMapper
         $result = $query->fetch();
 
         if (empty($result)) {
-            throw new Amm_Collection_WorkMapperException(sprintf('There is no work with uri #%s.', $uri));
+            throw new Author_Collection_WorkMapperException(sprintf('There is no work with uri #%s.', $uri));
         }
         $id = $result['id'];
 
         if ($id > 0) {
             return $this->findById($id);
         } else {
-            throw new Amm_Collection_WorkMapperException(sprintf('The work with id #%s has id=0?!?.', $uri));
+            throw new Author_Collection_WorkMapperException(sprintf('The work with id #%s has id=0?!?.', $uri));
         }
 
     }
 
 
-    public function delete(Amm_Collection_Work $obj)
+    public function delete(Author_Collection_Work $obj)
     {
         if (!isset($this->identityMap[$obj])) {
-            throw new Amm_Collection_WorkMapperException('Object has no ID, cannot delete.');
+            throw new Author_Collection_WorkMapperException('Object has no ID, cannot delete.');
         }
         $query = $this->db->prepare('DELETE FROM collection_works WHERE id = :id;');
         $query->bindValue(':id', $this->identityMap[$obj], PDO::PARAM_STR);
@@ -138,12 +138,30 @@ class Amm_Collection_WorkMapper
     }
 
 
-    private function setAttributeValue(Amm_Collection_Work $a, $fieldValue, $attributeName)
+    private function setAttributeValue(Author_Collection_Work $a, $fieldValue, $attributeName)
     {
         $attribute = new ReflectionProperty($a, $attributeName);
         $attribute->setAccessible(TRUE);
         $attribute->setValue($a, $fieldValue);
     }
+
+
+    public function getAllIdsOfType($type)
+    {
+        $query = $this->db->prepare('SELECT id FROM collection_works WHERE type=:type;');
+        $query->bindValue(':type', $type, PDO::PARAM_STR);
+        $query->execute();
+        $resultPDO = $query->fetchAll();
+
+        $result = array();
+        foreach ($resultPDO as $row) {
+            $result[] = $row['id'];
+        }
+        return $result;
+
+    }
+
+
 
 
 }

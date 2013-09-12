@@ -1,6 +1,6 @@
 <?php
 
-class Amm_Collection_EditorMapper
+class Author_Collection_EditorMapper
 {
 
     protected $db;
@@ -26,7 +26,7 @@ class Amm_Collection_EditorMapper
 
     }
 
-    public function insert(Amm_Collection_Editor $obj)
+    public function insert(Author_Collection_Editor $obj)
     {
 
         $query = $this->db->prepare("INSERT INTO collection_editors (uri, name, country)
@@ -43,10 +43,10 @@ class Amm_Collection_EditorMapper
 
     }
 
-    public function update(Amm_Collection_Editor $obj)
+    public function update(Author_Collection_Editor $obj)
     {
         if (!isset($this->identityMap[$obj])) {
-            throw new Amm_Collection_EditorMapperException('Object has no ID, cannot update.');
+            throw new Author_Collection_EditorMapperException('Object has no ID, cannot update.');
         }
 
         $query = $this->db->prepare("UPDATE collection_editors SET uri = :uri, name = :name, country = :country WHERE id = :id;");
@@ -59,7 +59,7 @@ class Amm_Collection_EditorMapper
         try {
             $query->execute();
         } catch (Exception $e) {
-            throw new Amm_Collection_EditorException("sql failed");
+            throw new Author_Collection_EditorException("sql failed");
         }
 
     }
@@ -81,11 +81,11 @@ class Amm_Collection_EditorMapper
         $result = $query->fetch();
 
         if (empty($result)) {
-            throw new Amm_Collection_EditorMapperException(sprintf('There is no editor with id #%d.', $id));
+            throw new Author_Collection_EditorMapperException(sprintf('There is no editor with id #%d.', $id));
         }
         $uri = $result['uri'];
 
-        $obj = new Amm_Collection_Editor();
+        $obj = new Author_Collection_Editor();
         $this->setAttributeValue($obj, $id, 'id');
         $this->setAttributeValue($obj, $result['name'], 'name');
         $this->setAttributeValue($obj, $result['uri'], 'uri');
@@ -106,22 +106,22 @@ class Amm_Collection_EditorMapper
         $result = $query->fetch();
 
         if (empty($result)) {
-            throw new Amm_Collection_EditorMapperException(sprintf('There is no editor with uri #%s.', $uri));
+            throw new Author_Collection_EditorMapperException(sprintf('There is no editor with uri #%s.', $uri));
         }
         $id = $result['id'];
 
         if ($id > 0) {
             return $this->findById($id);
         } else {
-            throw new Amm_Collection_EditorMapperException(sprintf('The editor with id #%s has id=0?!?.', $uri));
+            throw new Author_Collection_EditorMapperException(sprintf('The editor with id #%s has id=0?!?.', $uri));
         }
     }
 
 
-    public function delete(Amm_Collection_Editor $obj)
+    public function delete(Author_Collection_Editor $obj)
     {
         if (!isset($this->identityMap[$obj])) {
-            throw new Amm_Collection_EditorMapperException('Object has no ID, cannot delete.');
+            throw new Author_Collection_EditorMapperException('Object has no ID, cannot delete.');
         }
         $query = $this->db->prepare('DELETE FROM collection_editors WHERE id = :id;');
         $query->bindValue(':id', $this->identityMap[$obj], PDO::PARAM_STR);
@@ -147,7 +147,7 @@ class Amm_Collection_EditorMapper
 
 
 
-    private function setAttributeValue(Amm_Collection_Editor $a, $fieldValue, $attributeName)
+    private function setAttributeValue(Author_Collection_Editor $a, $fieldValue, $attributeName)
     {
         $attribute = new ReflectionProperty($a, $attributeName);
         $attribute->setAccessible(TRUE);

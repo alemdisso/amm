@@ -1,6 +1,6 @@
 <?php
 
-class Amm_Collection_Work {
+class Author_Collection_Work {
 
     protected $id;
     protected $title;
@@ -27,7 +27,7 @@ class Amm_Collection_Work {
         if (($this->id == 0) && ($id > 0)) {
             $this->id = (int)$id;
         } else {
-            throw new Amm_Collection_WorkException('It\'s not possible to change a work\'s ID');
+            throw new Author_Collection_WorkException('It\'s not possible to change a work\'s ID');
         }
 
     } //SetId
@@ -45,7 +45,7 @@ class Amm_Collection_Work {
                 $this->description = $description;
             }
         } else {
-            throw new Amm_Collection_WorkException("This ($description) is not a valid description.");
+            throw new Author_Collection_WorkException("This ($description) is not a valid description.");
         }
     } //SetDescription
 
@@ -62,7 +62,7 @@ class Amm_Collection_Work {
                 $this->summary = $summary;
             }
         } else {
-            throw new Amm_Collection_WorkException("This ($summary) is not a valid summary.");
+            throw new Author_Collection_WorkException("This ($summary) is not a valid summary.");
         }
     } //SetSummary
 
@@ -81,7 +81,7 @@ class Amm_Collection_Work {
                 $this->uri = $converter->toAscii($this->title);
             }
         } else {
-            throw new Amm_Collection_WorkException("This ($title) is not a valid title.");
+            throw new Author_Collection_WorkException("This ($title) is not a valid title.");
         }
 
     } //SetTitle
@@ -89,11 +89,11 @@ class Amm_Collection_Work {
     public function SetType($type)
     {
         switch ($type) {
-            case Amm_Collection_WorkTypeConstants::TYPE_NIL:
-            case Amm_Collection_WorkTypeConstants::TYPE_CHILDREN:
-            case Amm_Collection_WorkTypeConstants::TYPE_YOUNG:
-            case Amm_Collection_WorkTypeConstants::TYPE_FICTION:
-            case Amm_Collection_WorkTypeConstants::TYPE_ESSAY:
+            case Author_Collection_WorkTypeConstants::TYPE_NIL:
+            case Author_Collection_WorkTypeConstants::TYPE_CHILDREN:
+            case Author_Collection_WorkTypeConstants::TYPE_YOUNG:
+            case Author_Collection_WorkTypeConstants::TYPE_FICTION:
+            case Author_Collection_WorkTypeConstants::TYPE_ESSAY:
                 $this->type = (int)$type;
                 break;
 
@@ -105,7 +105,7 @@ class Amm_Collection_Work {
                 break;
 
             default:
-                throw new Amm_Collection_ProjectException("Invalid project type.");
+                throw new Author_Collection_ProjectException("Invalid project type.");
                 break;
         }
     }

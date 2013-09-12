@@ -1,15 +1,15 @@
 <?php
 
-class Works_View_Helper_IterateWorks extends Zend_View_Helper_Abstract
+class Works_View_Helper_IterateEditions extends Zend_View_Helper_Abstract
 {
-    public function iterateWorks($a)
+    public function iterateEditions($a)
     {
 
-        foreach ($a as $workId => $workData) {
-            $exploreUri = $workData['exploreUri'];
-            $title = $workData['title'];
-            $editorName = $workData['editorName'];
-            $summary = $workData['summary'];
+        foreach ($a as $editionId => $editionData) {
+            $exploreUri = $editionData['exploreUri'];
+            $title = $editionData['title'];
+            $editorName = $editionData['editorName'];
+            $summary = $editionData['summary'];
             echo "<!-- item de repeticao -->
 <div class=\"item_livro clearfix\">
 <a href=\"$exploreUri\" class=\"thumbnail_livro\"><img src=\"/img/marcacao_livro.png\" /></a>
@@ -17,7 +17,7 @@ class Works_View_Helper_IterateWorks extends Zend_View_Helper_Abstract
 <h3><a href=\"$exploreUri\">$title</a> <a href=\"\"><img src=\"/img/detalhe_premio.png\" align=\"absmiddle\" /></a><a href=\"\"><img src=\"/img/detalhe_premio.png\" align=\"absmiddle\" /></a><a href=\"\"><img src=\"/img/detalhe_premio.png\" align=\"absmiddle\" /></a></h3>
 <p><strong>$editorName</strong></p>
 <p>$summary</p>
-<p><a href=\"$exploreUri\" title=\"\" class=\"mais\">leia mais</a></p>
+<p><a href=\"$exploreUri\" title=\"$title\" class=\"mais\">leia mais</a></p>
 </div>
 </div>
 <!-- /item de repeticao -->";

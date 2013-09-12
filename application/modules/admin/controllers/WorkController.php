@@ -25,9 +25,9 @@ class Admin_WorkController extends Zend_Controller_Action
         $layout = $layoutHelper->getLayoutInstance();
         $layout->nestedLayout = 'inner_admin';
 
-        $this->workMapper = new Amm_Collection_WorkMapper($this->db);
-        $this->editorMapper = new Amm_Collection_EditorMapper($this->db);
-        $this->editionMapper = new Amm_Collection_EditionMapper($this->db);
+        $this->workMapper = new Author_Collection_WorkMapper($this->db);
+        $this->editorMapper = new Author_Collection_EditorMapper($this->db);
+        $this->editionMapper = new Author_Collection_EditionMapper($this->db);
     }
 
     public function detailAction()
@@ -53,7 +53,7 @@ class Admin_WorkController extends Zend_Controller_Action
 
     public function populateEditorsSelect(Zend_Form_Element_Select $elementSelect, $current)
     {
-        $editorMapper = new Amm_Collection_EditorMapper($this->db);
+        $editorMapper = new Author_Collection_EditorMapper($this->db);
         $list = $editorMapper->getAllEditorsAlphabeticallyOrdered();
 
         foreach($list as $editorId => $editorName) {

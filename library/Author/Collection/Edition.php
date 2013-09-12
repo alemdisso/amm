@@ -1,6 +1,6 @@
 <?php
 
-class Amm_Collection_Edition {
+class Author_Collection_Edition {
 
     protected $id;
     protected $work;
@@ -30,7 +30,7 @@ class Amm_Collection_Edition {
         if (($this->id == 0) && ($id > 0)) {
             $this->id = (int)$id;
         } else {
-            throw new Amm_Collection_EditionException('It\'s not possible to change a edition\'s ID');
+            throw new Author_Collection_EditionException('It\'s not possible to change a edition\'s ID');
         }
 
     } //SetId
@@ -58,7 +58,7 @@ class Amm_Collection_Edition {
                 $this->pages = $pages;
             }
         } else {
-            throw new Amm_Collection_WorkException("This ($pages) is not a valid pages number.");
+            throw new Author_Collection_WorkException("This ($pages) is not a valid pages number.");
         }
 
     } //SetPages
@@ -78,7 +78,7 @@ class Amm_Collection_Edition {
                 $this->coverImageFilename = $coverImageFilename;
             }
         } else {
-            throw new Amm_Collection_WorkException("This ($coverImageFilename) is not a valid coverImageFilename.");
+            throw new Author_Collection_WorkException("This ($coverImageFilename) is not a valid coverImageFilename.");
         }
 
     } //SetCoverImageFilename
@@ -98,7 +98,7 @@ class Amm_Collection_Edition {
                 $this->isbn = $isbn;
             }
         } else {
-            throw new Amm_Collection_WorkException("This ($isbn) is not a valid isbn.");
+            throw new Author_Collection_WorkException("This ($isbn) is not a valid isbn.");
         }
 
     } //SetIsbn
@@ -117,7 +117,7 @@ class Amm_Collection_Edition {
                 $this->illustrator = $illustrator;
             }
         } else {
-            throw new Amm_Collection_WorkException("This ($illustrator) is not a valid illustrator.");
+            throw new Author_Collection_WorkException("This ($illustrator) is not a valid illustrator.");
         }
 
     } //SetIllustrator
@@ -136,7 +136,7 @@ class Amm_Collection_Edition {
                 $this->coverDesigner = $coverDesigner;
             }
         } else {
-            throw new Amm_Collection_WorkException("This ($coverDesigner) is not a valid coverDesigner.");
+            throw new Author_Collection_WorkException("This ($coverDesigner) is not a valid coverDesigner.");
         }
 
     } //SetCoverDesigner

@@ -22,7 +22,7 @@ class Works_WorkController extends Zend_Controller_Action
     public function exploreAction()
     {
 
-        $this->workMapper = new Amm_Collection_WorkMapper($this->db);
+        $this->workMapper = new Author_Collection_WorkMapper($this->db);
 
         $uri = $this->checkUriFromGet();
 

@@ -1,5 +1,5 @@
 <?php
-class Amm_Form_EditionCreate extends Zend_Form
+class Author_Form_EditionCreate extends Zend_Form
 {
     public function init()
     {
@@ -28,7 +28,7 @@ class Amm_Form_EditionCreate extends Zend_Form
         $this->addElement($element);
 
 
-        $typesObj = new Amm_Collection_WorkTypes();
+        $typesObj = new Author_Collection_WorkTypes();
         $titlesArray = $typesObj->allTitles();
 
 
@@ -107,13 +107,13 @@ class Amm_Form_EditionCreate extends Zend_Form
     public function process($data) {
 
         if ($this->isValid($data) !== true) {
-            throw new Amm_Form_EditionCreateException('Invalid data!');
+            throw new Author_Form_EditionCreateException('Invalid data!');
         } else {
             $db = Zend_Registry::get('db');
-            $workMapper = new Amm_Collection_WorkMapper($db);
+            $workMapper = new Author_Collection_WorkMapper($db);
 
 
-            $work = new Amm_Collection_Work();
+            $work = new Author_Collection_Work();
 
             $work->SetTitle($data['title']);
             $work->SetType($data['type']);
@@ -122,8 +122,8 @@ class Amm_Form_EditionCreate extends Zend_Form
             $workMapper->insert($work);
 
 
-            $editionMapper = new Amm_Collection_EditionMapper($db);
-            $edition = new Amm_Collection_Edition($work->getId(), $data['editor']);
+            $editionMapper = new Author_Collection_EditionMapper($db);
+            $edition = new Author_Collection_Edition($work->getId(), $data['editor']);
 
             $editionMapper->insert($edition);
 

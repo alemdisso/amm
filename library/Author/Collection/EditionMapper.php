@@ -1,6 +1,6 @@
 <?php
 
-class Amm_Collection_EditionMapper
+class Author_Collection_EditionMapper
 {
 
     protected $db;
@@ -26,7 +26,7 @@ class Amm_Collection_EditionMapper
 
     }
 
-    public function insert(Amm_Collection_Edition $obj)
+    public function insert(Author_Collection_Edition $obj)
     {
 
         $query = $this->db->prepare("INSERT INTO collection_editions (work, editor, pages, cover_image_filename, isbn, illustrator, cover_designer)
@@ -47,10 +47,10 @@ class Amm_Collection_EditionMapper
 
     }
 
-    public function update(Amm_Collection_Edition $obj)
+    public function update(Author_Collection_Edition $obj)
     {
         if (!isset($this->identityMap[$obj])) {
-            throw new Amm_Collection_EditionMapperException('Object has no ID, cannot update.');
+            throw new Author_Collection_EditionMapperException('Object has no ID, cannot update.');
         }
 
         $query = $this->db->prepare("UPDATE collection_editions SET work = :work, editor = :editor, pages = :pages
@@ -69,7 +69,7 @@ class Amm_Collection_EditionMapper
         try {
             $query->execute();
         } catch (Exception $e) {
-            throw new Amm_Collection_EditionException("sql failed");
+            throw new Author_Collection_EditionException("sql failed");
         }
 
     }
@@ -89,18 +89,18 @@ class Amm_Collection_EditionMapper
         $query->execute();
         $result = $query->fetch();
         if (empty($result)) {
-            throw new Amm_Collection_EditionMapperException(sprintf('There is no edition with id #%d.', $id));
+            throw new Author_Collection_EditionMapperException(sprintf('There is no edition with id #%d.', $id));
         }
         $work = $result['work'];
-        $obj = new Amm_Collection_Edition();
+        $obj = new Author_Collection_Edition($result['work'], $result['editor']);
         $this->setAttributeValue($obj, $id, 'id');
-        $this->setAttributeValue($obj, $result['editor'], 'editor');
-        $this->setAttributeValue($obj, $result['work'], 'work');
+//        $this->setAttributeValue($obj, $result['editor'], 'editor');
+//        $this->setAttributeValue($obj, $result['work'], 'work');
         $this->setAttributeValue($obj, $result['pages'], 'pages');
-        $this->setAttributeValue($obj, $result['cover_image_filename'], 'cover_image_filename');
+        $this->setAttributeValue($obj, $result['cover_image_filename'], 'coverImageFilename');
         $this->setAttributeValue($obj, $result['isbn'], 'isbn');
         $this->setAttributeValue($obj, $result['illustrator'], 'illustrator');
-        $this->setAttributeValue($obj, $result['cover_designer'], 'cover_designer');
+        $this->setAttributeValue($obj, $result['cover_designer'], 'coverDesigner');
 
         $this->identityMap[$obj] = $id;
 
@@ -117,22 +117,22 @@ class Amm_Collection_EditionMapper
         $result = $query->fetch();
 
         if (empty($result)) {
-            throw new Amm_Collection_EditionMapperException(sprintf('There is no edition with work #%s.', $work));
+            throw new Author_Collection_EditionMapperException(sprintf('There is no edition with work #%s.', $work));
         }
         $id = $result['id'];
 
         if ($id > 0) {
             return $this->findById($id);
         } else {
-            throw new Amm_Collection_EditionMapperException(sprintf('The edition with id #%s has id=0?!?.', $work));
+            throw new Author_Collection_EditionMapperException(sprintf('The edition with id #%s has id=0?!?.', $work));
         }
     }
 
 
-    public function delete(Amm_Collection_Edition $obj)
+    public function delete(Author_Collection_Edition $obj)
     {
         if (!isset($this->identityMap[$obj])) {
-            throw new Amm_Collection_EditionMapperException('Object has no ID, cannot delete.');
+            throw new Author_Collection_EditionMapperException('Object has no ID, cannot delete.');
         }
         $query = $this->db->prepare('DELETE FROM collection_editions WHERE id = :id;');
         $query->bindValue(':id', $this->identityMap[$obj], PDO::PARAM_STR);
@@ -159,12 +159,35 @@ class Amm_Collection_EditionMapper
 
 
 
-    private function setAttributeValue(Amm_Collection_Edition $a, $fieldValue, $attributeEditor)
+    private function setAttributeValue(Author_Collection_Edition $a, $fieldValue, $attributeEditor)
     {
         $attribute = new ReflectionProperty($a, $attributeEditor);
         $attribute->setAccessible(TRUE);
         $attribute->setValue($a, $fieldValue);
     }
+
+
+
+    public function getAllIdsOfType($type)
+    {
+        $query = $this->db->prepare('SELECT e.id FROM collection_works w
+                                     LEFT JOIN collection_editions e ON w.id = e.work
+                                     WHERE w.type=:type;');
+        $query->bindValue(':type', $type, PDO::PARAM_STR);
+        $query->execute();
+        $resultPDO = $query->fetchAll();
+
+        $result = array();
+        foreach ($resultPDO as $row) {
+            if (!is_null($row['id'])) {
+                $result[] = $row['id'];
+            }
+        }
+        return $result;
+
+    }
+
+
 
 
 }

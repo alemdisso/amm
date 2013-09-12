@@ -20,15 +20,15 @@ class Admin_EditionController extends Zend_Controller_Action
     public function init()
     {
         $this->db = Zend_Registry::get('db');
-        $this->workMapper = new Amm_Collection_WorkMapper($this->db);
-        $this->editorMapper = new Amm_Collection_EditorMapper($this->db);
-        $this->editionMapper = new Amm_Collection_EditionMapper($this->db);
+        $this->workMapper = new Author_Collection_WorkMapper($this->db);
+        $this->editorMapper = new Author_Collection_EditorMapper($this->db);
+        $this->editionMapper = new Author_Collection_EditionMapper($this->db);
     }
 
    public function createAction()
     {
         // cria form
-        $form = new Amm_Form_EditionCreate;
+        $form = new Author_Form_EditionCreate;
         $this->view->form = $form;
 
         if ($this->getRequest()->isPost()) {
@@ -57,7 +57,7 @@ class Admin_EditionController extends Zend_Controller_Action
 
     public function populateEditorsSelect(Zend_Form_Element_Select $elementSelect, $current)
     {
-        $editorMapper = new Amm_Collection_EditorMapper($this->db);
+        $editorMapper = new Author_Collection_EditorMapper($this->db);
         $list = $editorMapper->getAllEditorsAlphabeticallyOrdered();
 
         foreach($list as $editorId => $editorName) {

@@ -1,6 +1,10 @@
 <?php
 class Works_IndexController extends Zend_Controller_Action
 {
+    private $db;
+    private $editorMapper;
+    private $editionMapper;
+    private $workMapper;
 
     public function postDispatch()
     {
@@ -11,6 +15,11 @@ class Works_IndexController extends Zend_Controller_Action
 
     public function init()
     {
+        $this->db = Zend_Registry::get('db');
+        $this->workMapper = new Author_Collection_WorkMapper($this->db);
+        $this->editorMapper = new Author_Collection_EditorMapper($this->db);
+        $this->editionMapper = new Author_Collection_EditionMapper($this->db);
+
         $layoutHelper = $this->_helper->getHelper('Layout');
         $layout = $layoutHelper->getLayoutInstance();
         $layout->nestedLayout = 'inner_books';
@@ -18,46 +27,134 @@ class Works_IndexController extends Zend_Controller_Action
 
     public function fictionAction()
     {
+        $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_FICTION);
+        $editionsData = array();
+        foreach ($editionsIds as $editionId) {
+            $loopEditionObj = $this->editionMapper->findById($editionId);
+            $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
+            $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
 
-        $worksData = array(
-                '1' => array(
-                    'title' => 'Cabe na mala',
+
+
+            $editionsData[$editionId] = array(
+                    'title' => $loopWorkObj->getTitle(),
                     'thumbImageUri' => '/img/marcacao_livro.png',
-                    'exploreUri' => '/explore/cabe-na-mala',
-                    'summary' => 'Da s&eacute;rie Mico Maneco. Essa divertida hist&oacute;ria ajuda a treinar a leitura de palavras com d&iacute;grafos.',
-                    'editorName' => 'Moderna',
+                    'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
+                    'summary' => $loopWorkObj->getSummary(),
+                    'editorName' => $loopEditorObj->getName(),
                     'prizes' => array(),
                     'moreAbout' => false,
                     'otherLanguages' => false,
-                ),
-                '2' => array(
-                    'title' => 'Banho sem chuva',
-                    'thumbImageUri' => '/img/marcacao_livro.png',
-                    'exploreUri' => '/explore/banho-sem-chuva',
-                    'summary' => 'Da s&eacute;rie Mico Maneco. Essa divertida hist&oacute;ria ajuda a treinar a leitura de palavras com d&iacute;grafos.',
-                    'editorName' => 'Moderna',
-                    'prizes' => array(),
-                    'moreAbout' => false,
-                    'otherLanguages' => false,
-                ),
-                '3' => array(
-                    'title' => 'Surpresa na sombra',
-                    'thumbImageUri' => '/img/marcacao_livro.png',
-                    'exploreUri' => '/explore/surpresa-na-sombra',
-                    'summary' => 'Da s&eacute;rie Mico Maneco. Essa divertida hist&oacute;ria ajuda a treinar a leitura de palavras com d&iacute;grafos.',
-                    'editorName' => 'Moderna',
-                    'prizes' => array(),
-                    'moreAbout' => false,
-                    'otherLanguages' => false,
-                ),
-        );
+            );
+        }
+
 
         $pageData = array(
-            'worksData' => $worksData,
+            'editionsData' => $editionsData,
         );
 
         $this->view->pageData = $pageData;
         $this->view->pageTitle = $this->view->translate("#Ana Maria Machado - Fiction");
+
+    }
+
+
+    public function childrenAction()
+    {
+        $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_CHILDREN);
+        $editionsData = array();
+        foreach ($editionsIds as $editionId) {
+            $loopEditionObj = $this->editionMapper->findById($editionId);
+            $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
+            $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
+
+
+
+            $editionsData[$editionId] = array(
+                    'title' => $loopWorkObj->getTitle(),
+                    'thumbImageUri' => '/img/marcacao_livro.png',
+                    'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
+                    'summary' => $loopWorkObj->getSummary(),
+                    'editorName' => $loopEditorObj->getName(),
+                    'prizes' => array(),
+                    'moreAbout' => false,
+                    'otherLanguages' => false,
+            );
+        }
+
+
+        $pageData = array(
+            'editionsData' => $editionsData,
+        );
+
+        $this->view->pageData = $pageData;
+        $this->view->pageTitle = $this->view->translate("#Ana Maria Machado - Children");
+
+    }
+
+    public function essaysAction()
+    {
+        $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_ESSAY);
+        $editionsData = array();
+        foreach ($editionsIds as $editionId) {
+            $loopEditionObj = $this->editionMapper->findById($editionId);
+            $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
+            $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
+
+
+
+            $editionsData[$editionId] = array(
+                    'title' => $loopWorkObj->getTitle(),
+                    'thumbImageUri' => '/img/marcacao_livro.png',
+                    'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
+                    'summary' => $loopWorkObj->getSummary(),
+                    'editorName' => $loopEditorObj->getName(),
+                    'prizes' => array(),
+                    'moreAbout' => false,
+                    'otherLanguages' => false,
+            );
+        }
+
+
+        $pageData = array(
+            'editionsData' => $editionsData,
+        );
+
+        $this->view->pageData = $pageData;
+        $this->view->pageTitle = $this->view->translate("#Ana Maria Machado - Essays");
+
+    }
+
+    public function youngAction()
+    {
+        $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_YOUNG);
+        $editionsData = array();
+        foreach ($editionsIds as $editionId) {
+            $loopEditionObj = $this->editionMapper->findById($editionId);
+            $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
+            $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
+
+
+
+            $editionsData[$editionId] = array(
+                    'title' => $loopWorkObj->getTitle(),
+                    'thumbImageUri' => '/img/marcacao_livro.png',
+                    'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
+                    'summary' => $loopWorkObj->getSummary(),
+                    'editorName' => $loopEditorObj->getName(),
+                    'prizes' => array(),
+                    'moreAbout' => false,
+                    'otherLanguages' => false,
+            );
+        }
+
+
+        $pageData = array(
+            'editionsData' => $editionsData,
+        );
+
+        $this->view->pageData = $pageData;
+        $this->view->pageTitle = $this->view->translate("#Ana Maria Machado - Young");
 
     }
 
