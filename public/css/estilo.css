@@ -839,3 +839,20 @@ img.float_left {
 .clearfix {
 	display:block;
 	}
+
+.anchorclass.button {
+  padding: 2px 5px;
+  background-position: 50px;
+  margin: 0px;
+}
+
+div.dataTables_length {
+	float: left;
+	font-size:10px;
+        display:inline;
+}
+div.dataTables_filter {
+	float: right;
+	font-size:10px;
+}
+

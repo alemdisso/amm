@@ -7,7 +7,6 @@ class Author_Collection_WorkTypes {
 
     public function __construct() {
         $this->titles = array(
-
             Author_Collection_WorkTypeConstants::TYPE_NIL      => _("#Nil"),
             Author_Collection_WorkTypeConstants::TYPE_CHILDREN => _("#Children"),
             Author_Collection_WorkTypeConstants::TYPE_YOUNG    => _("#Young"),
@@ -19,14 +18,11 @@ class Author_Collection_WorkTypes {
     public function TitleForType($type)
     {
             switch ($type) {
-                case Author_Collection_WorkTypeConstants::TYPE_PROSPECTING:
-                case Author_Collection_WorkTypeConstants::TYPE_PLANNING:
-                case Author_Collection_WorkTypeConstants::TYPE_PROPOSAL:
-                case Author_Collection_WorkTypeConstants::TYPE_EXECUTION:
-                case Author_Collection_WorkTypeConstants::TYPE_ACCOUNTABILITY:
-                case Author_Collection_WorkTypeConstants::TYPE_CANCELED:
-                case Author_Collection_WorkTypeConstants::TYPE_SUSPENDED:
-                case Author_Collection_WorkTypeConstants::TYPE_FINISHED:
+                case Author_Collection_WorkTypeConstants::TYPE_NIL:
+                case Author_Collection_WorkTypeConstants::TYPE_CHILDREN:
+                case Author_Collection_WorkTypeConstants::TYPE_YOUNG:
+                case Author_Collection_WorkTypeConstants::TYPE_FICTION:
+                case Author_Collection_WorkTypeConstants::TYPE_ESSAY:
                     return $this->titles[$type];
                     break;
 

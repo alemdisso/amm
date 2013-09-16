@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-06 09:51-0300\n"
-"PO-Revision-Date: 2013-09-06 09:52-0300\n"
+"POT-Creation-Date: 2013-09-16 11:42-0300\n"
+"PO-Revision-Date: 2013-09-16 11:42-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -15,6 +15,7 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: application\\modules\n"
 "X-Poedit-SearchPath-1: library\\Moxca\n"
+"X-Poedit-SearchPath-2: library\\Author\n"
 
 #: application\modules/admin/controllers/EditionController.php:39
 #: application\modules/auth/controllers/UserController.php:36
@@ -26,6 +27,10 @@ msgstr "O registro foi atualizado com sucesso."
 #: application\modules/admin/views/scripts/edition/create.phtml:17
 msgid "#Create edition"
 msgstr "Criar edição"
+
+#: application\modules/admin/controllers/WorkController.php:69
+msgid "#no editions"
+msgstr "sem edições"
 
 #: application\modules/auth/controllers/LoginController.php:40
 msgid "#You could not be logged in. Please try again."
@@ -39,9 +44,21 @@ msgstr "Acesso negado"
 msgid "#Invalid User Id from Get"
 msgstr "Id inválido"
 
-#: application\modules/works/controllers/IndexController.php:60
+#: application\modules/works/controllers/IndexController.php:57
 msgid "#Ana Maria Machado - Fiction"
 msgstr "Ana Maria Machado - Ficção"
+
+#: application\modules/works/controllers/IndexController.php:91
+msgid "#Ana Maria Machado - Children"
+msgstr "Ana Maria Machado - Infantil"
+
+#: application\modules/works/controllers/IndexController.php:124
+msgid "#Ana Maria Machado - Essays"
+msgstr "Ana Maria Machado - Ensaios"
+
+#: application\modules/works/controllers/IndexController.php:157
+msgid "#Ana Maria Machado - Young"
+msgstr "Ana Maria Machado - Juvenil"
 
 #: application\modules/works/controllers/WorkController.php:85
 #, php-format
@@ -1069,9 +1086,69 @@ msgstr "Zâmbia"
 msgid "Zimbabwe"
 msgstr "Zimbábue"
 
+#: library\Author/Collection/WorkTypes.php:10
+msgid "#Nil"
+msgstr "Nula"
+
+#: library\Author/Collection/WorkTypes.php:11
+#: application\modules/default/views/scripts/index/index.phtml:18
+#: application\modules/includes/views/scripts/include/footer-home.phtml:10
+#: application\modules/includes/views/scripts/include/footer.phtml:12
+#: application\modules/works/views/scripts/index/index.phtml:30
+msgid "#Children"
+msgstr "Infantil"
+
+#: library\Author/Collection/WorkTypes.php:12
+msgid "#Young"
+msgstr "Juvenil"
+
+#: library\Author/Collection/WorkTypes.php:13
+#: application\modules/default/views/scripts/index/index.phtml:20
+#: application\modules/includes/views/scripts/include/footer-home.phtml:12
+#: application\modules/includes/views/scripts/include/footer.phtml:14
+#: application\modules/works/views/scripts/index/index.phtml:30
+msgid "#Fiction"
+msgstr "Ficção"
+
+#: library\Author/Collection/WorkTypes.php:14
+msgid "#Essay"
+msgstr "Ensaios"
+
+#: library\Author/Collection/WorkTypes.php:30
+msgid "#Unknown type"
+msgstr "Tipo indefinido"
+
+#: library\Author/Form/EditionCreate.php:16
+msgid "#Title:"
+msgstr "Título:"
+
+#: library\Author/Form/EditionCreate.php:25
+msgid "#Title is required"
+msgstr "O título é obrigatório"
+
 #: application\modules/admin/views/scripts/panel/panel.phtml:2
 msgid "#New Book"
 msgstr "Novo Livro"
+
+#: application\modules/admin/views/scripts/panel/panel.phtml:3
+msgid "#List works"
+msgstr "Listar obras"
+
+#: application\modules/admin/views/scripts/work/list.phtml:10
+msgid "#List of works"
+msgstr "Lista de obras"
+
+#: application\modules/admin/views/scripts/work/list.phtml:17
+msgid "#Title"
+msgstr "Título"
+
+#: application\modules/admin/views/scripts/work/list.phtml:18
+msgid "#Type"
+msgstr "Tipo"
+
+#: application\modules/admin/views/scripts/work/list.phtml:19
+msgid "#Editor"
+msgstr "Editor"
 
 #: application\modules/auth/views/scripts/user/create.phtml:2
 msgid "#New user"
@@ -1087,7 +1164,9 @@ msgstr "Editar conta do usuário"
 msgid "#Success!!!"
 msgstr "Sucesso!"
 
+#: application\modules/default/views/scripts/index/index.phtml:10
 #: application\modules/default/views/scripts/index/index.phtml:12
+#: application\modules/default/views/scripts/index/index.phtml:13
 #: application\modules/includes/views/scripts/include/header-login.phtml:10
 #: application\modules/includes/views/scripts/include/header.phtml:11
 #: application\modules/works/views/scripts/index/index.phtml:7
@@ -1098,26 +1177,12 @@ msgstr "Livros"
 msgid "#Stories for all"
 msgstr "Mil histórias num só lugar"
 
-#: application\modules/default/views/scripts/index/index.phtml:18
-#: application\modules/includes/views/scripts/include/footer-home.phtml:10
-#: application\modules/includes/views/scripts/include/footer.phtml:12
-#: application\modules/works/views/scripts/index/index.phtml:30
-msgid "#Children"
-msgstr "Infantil"
-
 #: application\modules/default/views/scripts/index/index.phtml:19
 #: application\modules/includes/views/scripts/include/footer-home.phtml:11
 #: application\modules/includes/views/scripts/include/footer.phtml:13
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Young people"
 msgstr "Juvenil"
-
-#: application\modules/default/views/scripts/index/index.phtml:20
-#: application\modules/includes/views/scripts/include/footer-home.phtml:12
-#: application\modules/includes/views/scripts/include/footer.phtml:14
-#: application\modules/works/views/scripts/index/index.phtml:30
-msgid "#Fiction"
-msgstr "Ficção"
 
 #: application\modules/default/views/scripts/index/index.phtml:21
 #: application\modules/includes/views/scripts/include/footer-home.phtml:13
@@ -1152,47 +1217,59 @@ msgstr "Biografia"
 msgid "#Contact"
 msgstr "Contato"
 
+#: application\modules/works/views/scripts/index/children.phtml:7
+#: application\modules/works/views/scripts/index/essays.phtml:7
 #: application\modules/works/views/scripts/index/fiction.phtml:7
+#: application\modules/works/views/scripts/index/young.phtml:7
 #: application\modules/works/views/scripts/work/explore.phtml:7
 msgid "#Works"
 msgstr "Livros"
+
+#: application\modules/works/views/scripts/index/children.phtml:9
+msgid "#Children books"
+msgstr "Infantil"
+
+#: application\modules/works/views/scripts/index/children.phtml:12
+#: application\modules/works/views/scripts/index/essays.phtml:12
+#: application\modules/works/views/scripts/index/fiction.phtml:12
+#: application\modules/works/views/scripts/index/young.phtml:12
+#: application\modules/works/views/scripts/work/explore.phtml:47
+msgid "#Prizes"
+msgstr "Prêmios"
+
+#: application\modules/works/views/scripts/index/children.phtml:12
+#: application\modules/works/views/scripts/index/essays.phtml:12
+#: application\modules/works/views/scripts/index/fiction.phtml:12
+#: application\modules/works/views/scripts/index/young.phtml:12
+msgid "#More about this work"
+msgstr "Curiosidades"
+
+#: application\modules/works/views/scripts/index/children.phtml:12
+#: application\modules/works/views/scripts/index/essays.phtml:12
+#: application\modules/works/views/scripts/index/fiction.phtml:12
+#: application\modules/works/views/scripts/index/young.phtml:12
+msgid "#Available in other language"
+msgstr "Disponível em outro idioma"
+
+#: application\modules/works/views/scripts/index/essays.phtml:9
+msgid "#Essays books"
+msgstr "Ensaios"
 
 #: application\modules/works/views/scripts/index/fiction.phtml:9
 msgid "#Fiction books"
 msgstr "Ficção"
 
-#: application\modules/works/views/scripts/index/fiction.phtml:12
-#: application\modules/works/views/scripts/work/explore.phtml:47
-msgid "#Prizes"
-msgstr "Prêmios"
-
-#: application\modules/works/views/scripts/index/fiction.phtml:12
-msgid "#More about this work"
-msgstr "Curiosidades"
-
-#: application\modules/works/views/scripts/index/fiction.phtml:12
-msgid "#Available in other language"
-msgstr "Disponível em outro idioma"
-
 #: application\modules/works/views/scripts/index/index.phtml:29
 msgid "#Books by category"
 msgstr "Por categoria"
 
+#: application\modules/works/views/scripts/index/young.phtml:9
+msgid "#Young books"
+msgstr "Juvenil"
+
 #: application\modules/works/views/scripts/work/explore.phtml:31
 msgid "#Buy online"
 msgstr "Compre online"
-
-#~ msgid "#Nil"
-#~ msgstr "Nula"
-
-#~ msgid "#Young"
-#~ msgstr "Juvenil"
-
-#~ msgid "#Essay"
-#~ msgstr "Ensaios"
-
-#~ msgid "#Unknown type"
-#~ msgstr "Tipo indefinido"
 
 #, fuzzy
 #~ msgid "#Works for Children"
@@ -1396,9 +1473,6 @@ msgstr "Compre online"
 
 #~ msgid "#Options..."
 #~ msgstr "Opções..."
-
-#~ msgid "#Edit"
-#~ msgstr "Editar"
 
 #~ msgid "#Predict Receiving"
 #~ msgstr "Prever recebimento"
@@ -1607,9 +1681,6 @@ msgstr "Compre online"
 
 #~ msgid "#Address"
 #~ msgstr "Endereço"
-
-#~ msgid "#Type"
-#~ msgstr "Tipo"
 
 #~ msgid "#Add email"
 #~ msgstr "Acrescentar email"

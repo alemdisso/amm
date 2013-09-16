@@ -32,10 +32,12 @@ class Admin_WorkController extends Zend_Controller_Action
 
     public function detailAction()
     {
+
+
         $data = array(
             'id' => '1',
             'title' => 'um título',
-            'labelType' => 'Infantil',
+            'typeLabel' => 'Infantil',
             'description' => 'O rato estava com fome, mas não tinha nem um resto de rosca para roer. Então ele roeu o reboco, o rádio, o remo e a rolha. Nada matava sua fome. Aí ele roeu a roupa nova do Rei de Roma.',
             'summary' => 'Parte da terceira fase da série Mico Maneco. Enquanto se diverte a criança aprende a leitura dos sons com "r".',
             'editions' => array(
@@ -49,6 +51,45 @@ class Admin_WorkController extends Zend_Controller_Action
         $this->view->pageData = $data;
 
     }
+
+    public function listAction()
+    {
+        $works = $this->workMapper->getAllIds();
+
+        $worksData = array();
+        foreach ($works as $workId) {
+            $loopWorkObj = $this->workMapper->findById($workId);
+
+            $loopEditionObj = $this->editionMapper->findByWork($workId);
+            if (!is_null($loopEditionObj)) {
+                $loopEditorObj = $this->editorMapper->findByid($loopEditionObj->getEditor());
+                $editorName = $loopEditorObj->getName();
+            } else {
+                $loopEditorObj = null;
+                $editorName = $this->view->translate("#no editions");
+                $editorName = "(<em>$editorName</em>)";
+            }
+
+            $workType = $loopWorkObj->getType();
+            $types = new Author_Collection_WorkTypes();
+            $typeLabel = $this->view->translate($types->TitleForType($workType));
+
+            $worksData[$workId] = array('title' => $loopWorkObj->getTitle(),
+                    'typeLabel' => $typeLabel,
+                    'editorName' => $editorName,
+            );
+        }
+
+
+        $data = array(
+            'worksList' => $worksData,
+        );
+
+
+        $this->view->pageData = $data;
+
+    }
+
 
 
     public function populateEditorsSelect(Zend_Form_Element_Select $elementSelect, $current)

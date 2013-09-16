@@ -117,7 +117,7 @@ class Author_Collection_EditionMapper
         $result = $query->fetch();
 
         if (empty($result)) {
-            throw new Author_Collection_EditionMapperException(sprintf('There is no edition with work #%s.', $work));
+            return null;
         }
         $id = $result['id'];
 

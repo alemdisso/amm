@@ -45,12 +45,9 @@ class Admin_EditionController extends Zend_Controller_Action
             }
         } else {
             $element = $form->getElement('editor');
-
             $this->populateEditorsSelect($element, 1);
 
             $this->view->pageTitle = $this->view->translate("#Create edition");
-
-
         }
     }
 
