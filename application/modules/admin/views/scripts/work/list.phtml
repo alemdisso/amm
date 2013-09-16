@@ -8,13 +8,9 @@ $(function() {
    });
 });
 </script>
-
-
 <!-- conteudo -->
 <div id="conteudo">
-
 <h1><?php echo $this->translate("#List of works") ?></h1>
-
 <div id="container" style="width:800px; margin:0 auto;">
            <table id="Works" class="display">
 
@@ -39,22 +35,13 @@ foreach($worksList as $id => $workInfo) {
                   <td>
                     <?php print($workInfo['editorName']) ?></a>
                   </td>
-
                   <td>
-                  </td>
+                 </td>
                 </tr>
 <?php
 }
 ?>
-
-
-
            </table>
-
-</div>
-
-
-
-
+    </div>
 </div>
 <!-- /conteudo -->

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-16 11:42-0300\n"
-"PO-Revision-Date: 2013-09-16 11:42-0300\n"
+"POT-Creation-Date: 2013-09-16 16:41-0300\n"
+"PO-Revision-Date: 2013-09-16 16:41-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -23,12 +23,12 @@ msgstr ""
 msgid "#The record was successfully updated."
 msgstr "O registro foi atualizado com sucesso."
 
-#: application\modules/admin/controllers/EditionController.php:51
+#: application\modules/admin/controllers/EditionController.php:50
 #: application\modules/admin/views/scripts/edition/create.phtml:17
 msgid "#Create edition"
 msgstr "Criar edição"
 
-#: application\modules/admin/controllers/WorkController.php:69
+#: application\modules/admin/controllers/WorkController.php:76
 msgid "#no editions"
 msgstr "sem edições"
 
@@ -1134,19 +1134,27 @@ msgstr "Novo Livro"
 msgid "#List works"
 msgstr "Listar obras"
 
-#: application\modules/admin/views/scripts/work/list.phtml:10
+#: application\modules/admin/views/scripts/work/detail.phtml:11
+msgid "#Description"
+msgstr "Descrição"
+
+#: application\modules/admin/views/scripts/work/detail.phtml:13
+msgid "#Summary"
+msgstr "Sumário"
+
+#: application\modules/admin/views/scripts/work/list.phtml:13
 msgid "#List of works"
 msgstr "Lista de obras"
 
-#: application\modules/admin/views/scripts/work/list.phtml:17
+#: application\modules/admin/views/scripts/work/list.phtml:19
 msgid "#Title"
 msgstr "Título"
 
-#: application\modules/admin/views/scripts/work/list.phtml:18
+#: application\modules/admin/views/scripts/work/list.phtml:20
 msgid "#Type"
 msgstr "Tipo"
 
-#: application\modules/admin/views/scripts/work/list.phtml:19
+#: application\modules/admin/views/scripts/work/list.phtml:21
 msgid "#Editor"
 msgstr "Editor"
 
@@ -1419,9 +1427,6 @@ msgstr "Compre online"
 
 #~ msgid "#Proposal"
 #~ msgstr "Proposta"
-
-#~ msgid "#Execution"
-#~ msgstr "Execução"
 
 #~ msgid "#Accountability"
 #~ msgstr "Prestação de contas"

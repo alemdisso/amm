@@ -856,3 +856,18 @@ div.dataTables_filter {
 	font-size:10px;
 }
 
+#admin h2 {
+	font-size:20px;
+	}
+
+#admin select {
+    width: 60px;
+    padding: 2px 5px;
+
+}
+
+#admin input {
+    width: 160px;
+    padding: 2px 5px;
+
+}

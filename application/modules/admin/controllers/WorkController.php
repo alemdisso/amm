@@ -33,13 +33,20 @@ class Admin_WorkController extends Zend_Controller_Action
     public function detailAction()
     {
 
+        $checker = new Moxca_Util_CheckIdFromGet();
+        $id = $checker->check($this->_request);
+
+        $workObj = $this->workMapper->findById($id);
+
+        $typeLabel = $this->view->typeLabel($workObj, new Author_Collection_WorkTypes, $this->view);
+
 
         $data = array(
-            'id' => '1',
-            'title' => 'um título',
-            'typeLabel' => 'Infantil',
-            'description' => 'O rato estava com fome, mas não tinha nem um resto de rosca para roer. Então ele roeu o reboco, o rádio, o remo e a rolha. Nada matava sua fome. Aí ele roeu a roupa nova do Rei de Roma.',
-            'summary' => 'Parte da terceira fase da série Mico Maneco. Enquanto se diverte a criança aprende a leitura dos sons com "r".',
+            'id' => $id,
+            'title' => $workObj->getTitle(),
+            'typeLabel' => $typeLabel,
+            'description' => $workObj->getDescription(),
+            'summary' => $workObj->getSummary(),
             'editions' => array(
                 '1' => array(
                     'editorId' => 1,
@@ -70,9 +77,7 @@ class Admin_WorkController extends Zend_Controller_Action
                 $editorName = "(<em>$editorName</em>)";
             }
 
-            $workType = $loopWorkObj->getType();
-            $types = new Author_Collection_WorkTypes();
-            $typeLabel = $this->view->translate($types->TitleForType($workType));
+            $typeLabel = $this->view->typeLabel($loopWorkObj, new Author_Collection_WorkTypes, $this->view);
 
             $worksData[$workId] = array('title' => $loopWorkObj->getTitle(),
                     'typeLabel' => $typeLabel,
