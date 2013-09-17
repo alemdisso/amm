@@ -3,17 +3,16 @@ $pageData = $this->pageData;
 ?>
 <!-- conteudo -->
 <div id="conteudo">
+    <h1><?php echo $pageData['title'] ?></h1>
+    <h2><?php echo $pageData['typeLabel']?></h3>
 
-<h1><?php echo $pageData['title'] ?></h1>
+    <h3><?php echo $this->translate('#Description')?></h2>
+    <p><?php echo $pageData['description']?></p>
 
+    <h3><?php echo $this->translate('#Summary')?></h2>
+    <p><?php echo $pageData['summary']?></p>
 
-<h2><?php echo $pageData['typeLabel']?></h3>
-<h3><?php echo $this->translate('#Description')?></h2>
-<p><?php echo $pageData['description']?></p>
-<h3><?php echo $this->translate('#Summary')?></h2>
-<p><?php echo $pageData['summary']?></p>
-
-
-
+    <h3><?php echo $this->translate('#Editions')?></h2>
+    <?php echo $this->editionsLoop($pageData['editions']) ?>
 </div>
 <!-- /conteudo -->

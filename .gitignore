@@ -13,3 +13,4 @@ public/index.php
 /application/*.php_
 /application/configs/_*.ini
 /.git-rewrite/
+/application/configs/sandbox_application.ini

@@ -40,6 +40,24 @@ class Admin_WorkController extends Zend_Controller_Action
 
         $typeLabel = $this->view->typeLabel($workObj, new Author_Collection_WorkTypes, $this->view);
 
+        $editionsIds = $this->editionMapper->getAllEditionsOfWork($id);
+
+        $editionsModel = array();
+
+        foreach($editionsIds as $editionId) {
+            $loopEditionObj = $this->editionMapper->findById($editionId);
+            $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
+            $editorName = $loopEditorObj->getName();
+
+            $editionsModel[$editionId] = array(
+                    'editorName' => 'uma editora',
+                    'src' => '/img/editions/tb/no_img.png',
+
+            );
+        }
+
+
+
 
         $data = array(
             'id' => $id,
@@ -49,8 +67,12 @@ class Admin_WorkController extends Zend_Controller_Action
             'summary' => $workObj->getSummary(),
             'editions' => array(
                 '1' => array(
-                    'editorId' => 1,
                     'editorName' => 'uma editora',
+                    'src' => '/img/editions/tb/no_img.png',
+                ),
+                '2' => array(
+                    'editorName' => 'outra editora',
+                    'src' => '/img/editions/tb/tb_marcacao.png',
                 ),
             ),
         );
@@ -69,7 +91,7 @@ class Admin_WorkController extends Zend_Controller_Action
 
             $loopEditionObj = $this->editionMapper->findByWork($workId);
             if (!is_null($loopEditionObj)) {
-                $loopEditorObj = $this->editorMapper->findByid($loopEditionObj->getEditor());
+                $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
                 $editorName = $loopEditorObj->getName();
             } else {
                 $loopEditorObj = null;

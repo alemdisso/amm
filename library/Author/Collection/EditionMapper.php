@@ -188,6 +188,25 @@ class Author_Collection_EditionMapper
     }
 
 
+    public function getAllEditionsOfWork($work)
+    {
+        $query = $this->db->prepare('SELECT e.id FROM  collection_editions e
+                                     WHERE e.work=:work;');
+        $query->bindValue(':work', $work, PDO::PARAM_STR);
+        $query->execute();
+        $resultPDO = $query->fetchAll();
+
+        $result = array();
+        foreach ($resultPDO as $row) {
+            if (!is_null($row['id'])) {
+                $result[] = $row['id'];
+            }
+        }
+        return $result;
+
+    }
+
+
 
 
 }
