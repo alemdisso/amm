@@ -8,6 +8,7 @@ class Author_Form_EditionCreate extends Zend_Form
         // initialize form
         $this->setName('newEditionForm')
             ->setAction('/admin/edition/create')
+            ->setAttrib('enctype', 'multipart/form-data')
             //->setAction('javascript:callEditionCreate();')
             ->setMethod('post');
 
@@ -27,6 +28,16 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->addFilter('StringTrim');
         $this->addElement($element);
 
+        $element = new Zend_Form_Element_File('cover');
+        $element->setLabel(_('#Upload an image:'))
+                ->setDestination(APPLICATION_PATH . '/../public/img/editions/raw');
+        // ensure only 1 file
+        $element->addValidator('Count', false, 1);
+        // limit to 100K
+        $element->addValidator('Size', false, 102400);
+        // only JPEG, PNG, and GIFs
+        $element->addValidator('Extension', false, 'jpg,png,gif,jpeg');
+        $this->addElement($element);
 
         $typesObj = new Author_Collection_WorkTypes();
         $titlesArray = $typesObj->allTitles();
@@ -121,12 +132,20 @@ class Author_Form_EditionCreate extends Zend_Form
             $work->SetSummary($data['summary']);
             $workMapper->insert($work);
 
-
             $editionMapper = new Author_Collection_EditionMapper($db);
             $edition = new Author_Collection_Edition($work->getId(), $data['editor']);
 
-            $editionMapper->insert($edition);
 
+            if (!$this->cover->receive()) {
+                throw new Author_Form_EditionCreateException('Something wrong receiving cover file');
+            }
+
+            $location = $this->cover->getFileName();
+            $location = str_replace('\\', '/', $location);
+            $tmpArray = explode('/', $location);
+            $edition->setCoverImageFilename(end($tmpArray));
+
+            $editionMapper->insert($edition);
 
             return $work->getId();
         }

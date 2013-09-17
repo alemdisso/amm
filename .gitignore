@@ -14,3 +14,4 @@ public/index.php
 /application/configs/_*.ini
 /.git-rewrite/
 /application/configs/sandbox_application.ini
+/public/img/editions/raw/*

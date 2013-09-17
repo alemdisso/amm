@@ -72,7 +72,7 @@ class Author_Collection_Edition {
 
     public function SetCoverImageFilename($coverImageFilename)
     {
-        $validator = new Moxca_Util_ValidString();
+        $validator = new Moxca_Util_ValidFilename();
         if ($validator->isValid($coverImageFilename)) {
             if ($this->coverImageFilename != $coverImageFilename) {
                 $this->coverImageFilename = $coverImageFilename;
