@@ -50,9 +50,9 @@ class Admin_WorkController extends Zend_Controller_Action
             $editorName = $loopEditorObj->getName();
 
             $editionsModel[$editionId] = array(
-                    'editorName' => 'uma editora',
-                    'src' => '/img/editions/tb/no_img.png',
-
+                    'editionId' => $editionId,
+                    'editorName' => $editorName,
+                    'src' => '/img/editions/raw/' . $loopEditionObj->getCoverImageFilename(),
             );
         }
 
@@ -65,16 +65,7 @@ class Admin_WorkController extends Zend_Controller_Action
             'typeLabel' => $typeLabel,
             'description' => $workObj->getDescription(),
             'summary' => $workObj->getSummary(),
-            'editions' => array(
-                '1' => array(
-                    'editorName' => 'uma editora',
-                    'src' => '/img/editions/tb/no_img.png',
-                ),
-                '2' => array(
-                    'editorName' => 'outra editora',
-                    'src' => '/img/editions/tb/tb_marcacao.png',
-                ),
-            ),
+            'editions' => $editionsModel,
         );
 
         $this->view->pageData = $data;

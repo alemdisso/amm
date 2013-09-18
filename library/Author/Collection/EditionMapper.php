@@ -14,7 +14,7 @@ class Author_Collection_EditionMapper
 
     public function getAllIds()
     {
-        $query = $this->db->prepare('SELECT id FROM collection_editions WHERE 1=1;');
+        $query = $this->db->prepare('SELECT id FROM author_collection_editions WHERE 1=1;');
         $query->execute();
         $resultPDO = $query->fetchAll();
 
@@ -29,7 +29,7 @@ class Author_Collection_EditionMapper
     public function insert(Author_Collection_Edition $obj)
     {
 
-        $query = $this->db->prepare("INSERT INTO collection_editions (work, editor, pages, cover_image_filename, isbn, illustrator, cover_designer)
+        $query = $this->db->prepare("INSERT INTO author_collection_editions (work, editor, pages, cover_image_filename, isbn, illustrator, cover_designer)
             VALUES (:work, :editor, :pages, :cover_image_filename, :isbn, :illustrator, :cover_designer)");
 
         $query->bindValue(':work', $obj->getWork(), PDO::PARAM_STR);
@@ -53,7 +53,7 @@ class Author_Collection_EditionMapper
             throw new Author_Collection_EditionMapperException('Object has no ID, cannot update.');
         }
 
-        $query = $this->db->prepare("UPDATE collection_editions SET work = :work, editor = :editor, pages = :pages
+        $query = $this->db->prepare("UPDATE author_collection_editions SET work = :work, editor = :editor, pages = :pages
              , cover_image_filename = :cover_image_filename, isbn = :isbn, illustrator = :illustrator, cover_designer = :cover_designer
             WHERE id = :id;");
 
@@ -84,7 +84,7 @@ class Author_Collection_EditionMapper
             $this->identityMap->next();
         }
 
-        $query = $this->db->prepare('SELECT work, editor, pages, cover_image_filename, isbn, illustrator, cover_designer FROM collection_editions WHERE id = :id;');
+        $query = $this->db->prepare('SELECT work, editor, pages, cover_image_filename, isbn, illustrator, cover_designer FROM author_collection_editions WHERE id = :id;');
         $query->bindValue(':id', $id, PDO::PARAM_STR);
         $query->execute();
         $result = $query->fetch();
@@ -110,7 +110,7 @@ class Author_Collection_EditionMapper
 
     public function findByWork($work)
     {
-        $query = $this->db->prepare('SELECT id FROM collection_editions WHERE work = :work LIMIT 1;');
+        $query = $this->db->prepare('SELECT id FROM author_collection_editions WHERE work = :work LIMIT 1;');
         $query->bindValue(':work', $work, PDO::PARAM_STR);
         $query->execute();
 
@@ -134,7 +134,7 @@ class Author_Collection_EditionMapper
         if (!isset($this->identityMap[$obj])) {
             throw new Author_Collection_EditionMapperException('Object has no ID, cannot delete.');
         }
-        $query = $this->db->prepare('DELETE FROM collection_editions WHERE id = :id;');
+        $query = $this->db->prepare('DELETE FROM author_collection_editions WHERE id = :id;');
         $query->bindValue(':id', $this->identityMap[$obj], PDO::PARAM_STR);
         $query->execute();
         unset($this->identityMap[$obj]);
@@ -143,7 +143,7 @@ class Author_Collection_EditionMapper
 
    public function getAllEditionsAlphabeticallyOrdered()
     {
-        $query = $this->db->prepare('SELECT id, editor FROM collection_editions WHERE 1 =1 ORDER BY editor;');
+        $query = $this->db->prepare('SELECT id, editor FROM author_collection_editions WHERE 1 =1 ORDER BY editor;');
         $query->bindValue(':project', $obj->getId(), PDO::PARAM_STR);
         $query->execute();
         $resultPDO = $query->fetchAll();
@@ -170,8 +170,8 @@ class Author_Collection_EditionMapper
 
     public function getAllIdsOfType($type)
     {
-        $query = $this->db->prepare('SELECT e.id FROM collection_works w
-                                     LEFT JOIN collection_editions e ON w.id = e.work
+        $query = $this->db->prepare('SELECT e.id FROM author_collection_works w
+                                     LEFT JOIN author_collection_editions e ON w.id = e.work
                                      WHERE w.type=:type;');
         $query->bindValue(':type', $type, PDO::PARAM_STR);
         $query->execute();
@@ -190,7 +190,7 @@ class Author_Collection_EditionMapper
 
     public function getAllEditionsOfWork($work)
     {
-        $query = $this->db->prepare('SELECT e.id FROM  collection_editions e
+        $query = $this->db->prepare('SELECT e.id FROM  author_collection_editions e
                                      WHERE e.work=:work;');
         $query->bindValue(':work', $work, PDO::PARAM_STR);
         $query->execute();

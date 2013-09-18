@@ -14,7 +14,7 @@ class Author_Collection_WorkMapper
 
     public function getAllIds()
     {
-        $query = $this->db->prepare('SELECT id FROM collection_works WHERE 1=1;');
+        $query = $this->db->prepare('SELECT id FROM author_collection_works WHERE 1=1;');
         $query->execute();
         $resultPDO = $query->fetchAll();
 
@@ -29,7 +29,7 @@ class Author_Collection_WorkMapper
     public function insert(Author_Collection_Work $obj)
     {
 
-        $query = $this->db->prepare("INSERT INTO collection_works (uri, title, description, summary, type)
+        $query = $this->db->prepare("INSERT INTO author_collection_works (uri, title, description, summary, type)
             VALUES (:uri, :title, :description, :summary, :type)");
 
         $query->bindValue(':uri', $obj->GetUri(), PDO::PARAM_STR);
@@ -51,7 +51,7 @@ class Author_Collection_WorkMapper
             throw new Author_Collection_WorkMapperException('Object has no ID, cannot update.');
         }
 
-        $query = $this->db->prepare("UPDATE collection_works SET uri = :uri, title = :title, description = :description, summary = :summary, type = :type WHERE id = :id;");
+        $query = $this->db->prepare("UPDATE author_collection_works SET uri = :uri, title = :title, description = :description, summary = :summary, type = :type WHERE id = :id;");
 
         $query->bindValue(':uri', $obj->GetUri(), PDO::PARAM_STR);
         $query->bindValue(':title', $obj->GetTitle(), PDO::PARAM_STR);
@@ -78,7 +78,7 @@ class Author_Collection_WorkMapper
             $this->identityMap->next();
         }
 
-        $query = $this->db->prepare('SELECT uri, title, description, summary, type FROM collection_works WHERE id = :id;');
+        $query = $this->db->prepare('SELECT uri, title, description, summary, type FROM author_collection_works WHERE id = :id;');
         $query->bindValue(':id', $id, PDO::PARAM_STR);
         $query->execute();
 
@@ -106,7 +106,7 @@ class Author_Collection_WorkMapper
 
     public function findByUri($uri)
     {
-        $query = $this->db->prepare('SELECT id FROM collection_works WHERE uri = :uri LIMIT 1;');
+        $query = $this->db->prepare('SELECT id FROM author_collection_works WHERE uri = :uri LIMIT 1;');
         $query->bindValue(':uri', $uri, PDO::PARAM_STR);
         $query->execute();
 
@@ -131,7 +131,7 @@ class Author_Collection_WorkMapper
         if (!isset($this->identityMap[$obj])) {
             throw new Author_Collection_WorkMapperException('Object has no ID, cannot delete.');
         }
-        $query = $this->db->prepare('DELETE FROM collection_works WHERE id = :id;');
+        $query = $this->db->prepare('DELETE FROM author_collection_works WHERE id = :id;');
         $query->bindValue(':id', $this->identityMap[$obj], PDO::PARAM_STR);
         $query->execute();
         unset($this->identityMap[$obj]);
@@ -148,7 +148,7 @@ class Author_Collection_WorkMapper
 
     public function getAllIdsOfType($type)
     {
-        $query = $this->db->prepare('SELECT id FROM collection_works WHERE type=:type;');
+        $query = $this->db->prepare('SELECT id FROM author_collection_works WHERE type=:type;');
         $query->bindValue(':type', $type, PDO::PARAM_STR);
         $query->execute();
         $resultPDO = $query->fetchAll();

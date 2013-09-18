@@ -4,7 +4,6 @@ class Moxca_Auth_Adapter_Mapper implements Zend_Auth_Adapter_Interface
   // array containing authenticated user record
   protected $_resultArray;
   protected $db;
-  private $secretToken = "R2D2"; ///warning!!! changing this will block all previous passwords
   private $user;
 
   // constructor
@@ -21,13 +20,6 @@ class Moxca_Auth_Adapter_Mapper implements Zend_Auth_Adapter_Interface
   // returns Zend_Auth_Result with success/failure code
   public function authenticate()
   {
-//        $result = $this->db->fetchRow(
-//                sprintf(
-//                    'SELECT id FROM auth_users WHERE login = \'%s\' AND password = \'%s\';',
-//                    $this->login,
-//                    $this->scrambleWithToken($this->password)
-//                    )
-//                );
     $userMapper = new Moxca_Auth_UserMapper($this->db);
 
     $user = $userMapper->authenticateUser($this->login, $this->password);
@@ -73,12 +65,6 @@ class Moxca_Auth_Adapter_Mapper implements Zend_Auth_Adapter_Interface
       return $this->_resultArray;
     }
   }
-
-    private function scrambleWithToken($password)
-    {
-        return md5($password . $this->secretToken);
-    }
-
 
 
 }

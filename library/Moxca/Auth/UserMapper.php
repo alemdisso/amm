@@ -15,7 +15,7 @@ class Moxca_Auth_UserMapper
 
     public function getAllIds() {
         $result = array();
-        foreach ($this->db->query('SELECT id FROM auth_users;') as $row) {
+        foreach ($this->db->query('SELECT id FROM moxca_auth_users;') as $row) {
             $result[] = $row['id'];
         }
         return $result;
@@ -33,7 +33,7 @@ class Moxca_Auth_UserMapper
             'last_login' => $new->GetLastLogin(),
             );
 
-        $this->db->insert('auth_users', $data);
+        $this->db->insert('moxca_auth_users', $data);
         $new->SetId((int)$this->db->lastInsertId());
         $this->identityMap[$new] = $new->GetId();
 
@@ -52,7 +52,7 @@ class Moxca_Auth_UserMapper
 
         $this->db->exec(
             sprintf(
-                'UPDATE auth_users SET login = \'%s\'
+                'UPDATE moxca_auth_users SET login = \'%s\'
                     , name = \'%s\'
                     %s
                     , email = \'%s\'
@@ -92,7 +92,7 @@ class Moxca_Auth_UserMapper
                     , status
                     , first_login
                     , last_login
-                     FROM auth_users WHERE id = %d;',
+                     FROM moxca_auth_users WHERE id = %d;',
                 $id
             )
         );
@@ -120,7 +120,7 @@ class Moxca_Auth_UserMapper
         }
         $this->db->exec(
             sprintf(
-                'DELETE FROM auth_users WHERE id = %d;',
+                'DELETE FROM moxca_auth_users WHERE id = %d;',
                 $this->identityMap[$o]
             )
         );
@@ -131,7 +131,7 @@ class Moxca_Auth_UserMapper
     {
         foreach ($this->db->query(
                 sprintf(
-                    'SELECT id FROM auth_users WHERE login = \'%s\' AND password = \'%s\';',
+                    'SELECT id FROM moxca_auth_users WHERE login = \'%s\' AND password = \'%s\';',
                     $login,
                     $this->scrambleWithToken($password)
                     )

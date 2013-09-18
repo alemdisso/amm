@@ -21,7 +21,7 @@ class Author_Form_EditionCreate extends Zend_Form
                     array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
                     array('Label', array('tag' => 'div', 'tagClass' => 'label')),
                 ))
-                ->setOptions(array('class' => 'Full alpha omega'))
+                ->setOptions(array('class' => ''))
                 ->setRequired(true)
                 ->addErrorMessage(_("#Title is required"))
                 ->addValidator($titleValidator)
@@ -79,7 +79,7 @@ class Author_Form_EditionCreate extends Zend_Form
                     array('Label', array('tag' => 'div', 'tagClass' => 'label')),
               ))
             ->setAttrib('rows','3')
-            ->setOptions(array('class' => 'Full alpha omega'))
+            ->setOptions(array('class' => ''))
             ->setRequired(false)
             ->addFilter('StringTrim');
         $this->addElement($element);
@@ -93,7 +93,7 @@ class Author_Form_EditionCreate extends Zend_Form
                     array('Label', array('tag' => 'div', 'tagClass' => 'label')),
               ))
             ->setAttrib('rows','8')
-            ->setOptions(array('class' => 'Full alpha omega'))
+            ->setOptions(array('class' => ''))
             ->setRequired(false)
             ->addFilter('StringTrim');
         $this->addElement($element);
@@ -103,12 +103,12 @@ class Author_Form_EditionCreate extends Zend_Form
         $element->setLabel('#Submit') //Gravar
                ->setDecorators(array('ViewHelper','Errors',
                     array(array('data' => 'HtmlTag'),
-                    array('tag' => 'div','class' => 'two columns inset-by-nine omega')),
+                    array('tag' => 'div','class' => '')),
                     array('Label',
-                      array('tag' => 'div','tagClass' => 'three columns alpha Invisible')
+                      array('tag' => 'div','tagClass' => '')
                     ),
                   ))
-               ->setOptions(array('class' => 'submit Full alpha omega'));
+               ->setOptions(array('class' => 'submit'));
         $this->addElement($element);
 
 

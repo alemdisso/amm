@@ -14,7 +14,7 @@ class Author_Collection_EditorMapper
 
     public function getAllIds()
     {
-        $query = $this->db->prepare('SELECT id FROM collection_editors WHERE 1=1;');
+        $query = $this->db->prepare('SELECT id FROM author_collection_editors WHERE 1=1;');
         $query->execute();
         $resultPDO = $query->fetchAll();
 
@@ -29,7 +29,7 @@ class Author_Collection_EditorMapper
     public function insert(Author_Collection_Editor $obj)
     {
 
-        $query = $this->db->prepare("INSERT INTO collection_editors (uri, name, country)
+        $query = $this->db->prepare("INSERT INTO author_collection_editors (uri, name, country)
             VALUES (:uri, :name, :country)");
 
         $query->bindValue(':uri', $obj->GetUri(), PDO::PARAM_STR);
@@ -49,7 +49,7 @@ class Author_Collection_EditorMapper
             throw new Author_Collection_EditorMapperException('Object has no ID, cannot update.');
         }
 
-        $query = $this->db->prepare("UPDATE collection_editors SET uri = :uri, name = :name, country = :country WHERE id = :id;");
+        $query = $this->db->prepare("UPDATE author_collection_editors SET uri = :uri, name = :name, country = :country WHERE id = :id;");
 
         $query->bindValue(':uri', $obj->GetUri(), PDO::PARAM_STR);
         $query->bindValue(':name', $obj->GetName(), PDO::PARAM_STR);
@@ -74,7 +74,7 @@ class Author_Collection_EditorMapper
             $this->identityMap->next();
         }
 
-        $query = $this->db->prepare('SELECT uri, name, country FROM collection_editors WHERE id = :id;');
+        $query = $this->db->prepare('SELECT uri, name, country FROM author_collection_editors WHERE id = :id;');
         $query->bindValue(':id', $id, PDO::PARAM_STR);
         $query->execute();
 
@@ -99,7 +99,7 @@ class Author_Collection_EditorMapper
 
     public function findByUri($uri)
     {
-        $query = $this->db->prepare('SELECT id FROM collection_editors WHERE uri = :uri LIMIT 1;');
+        $query = $this->db->prepare('SELECT id FROM author_collection_editors WHERE uri = :uri LIMIT 1;');
         $query->bindValue(':uri', $uri, PDO::PARAM_STR);
         $query->execute();
 
@@ -123,7 +123,7 @@ class Author_Collection_EditorMapper
         if (!isset($this->identityMap[$obj])) {
             throw new Author_Collection_EditorMapperException('Object has no ID, cannot delete.');
         }
-        $query = $this->db->prepare('DELETE FROM collection_editors WHERE id = :id;');
+        $query = $this->db->prepare('DELETE FROM author_collection_editors WHERE id = :id;');
         $query->bindValue(':id', $this->identityMap[$obj], PDO::PARAM_STR);
         $query->execute();
         unset($this->identityMap[$obj]);
@@ -132,7 +132,7 @@ class Author_Collection_EditorMapper
 
    public function getAllEditorsAlphabeticallyOrdered()
     {
-        $query = $this->db->prepare('SELECT id, name FROM collection_editors WHERE 1 =1 ORDER BY name;');
+        $query = $this->db->prepare('SELECT id, name FROM author_collection_editors WHERE 1 =1 ORDER BY name;');
         $query->execute();
         $resultPDO = $query->fetchAll();
 
