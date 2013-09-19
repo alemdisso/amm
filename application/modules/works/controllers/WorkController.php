@@ -84,9 +84,12 @@ class Works_WorkController extends Zend_Controller_Action
             'prizesLabels' => $prizesLabels,
         );
 
-
         $this->view->pageData = $pageData;
         $this->view->pageTitle = sprintf($this->view->translate("#Exploring %s"), $workTitle);
+        $keywords = $workObj->getTitle() . ", " . $this->view->keywords;
+
+        $this->view->keywords = $keywords;
+
 
     }
 

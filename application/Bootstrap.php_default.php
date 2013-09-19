@@ -90,4 +90,9 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         return $acl;
     }
 
+    protected function _initKeywords() {
+        $view = $this->bootstrap('view')->getResource('view');
+        $view->keywords = 'Ana Maria Machado, histórias, livros, literatura, romances, ensaios, literatura infantil, literatura juvenil, stories, books, literature, fiction, essays, youth, children, hans christian andersen, casa de las americas, academia brasileira de letras';
+    }
+
 }
