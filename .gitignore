@@ -15,3 +15,4 @@ public/index.php
 /.git-rewrite/
 /application/configs/sandbox_application.ini
 /public/img/editions/raw/*
+/public/img/editions/tb/*

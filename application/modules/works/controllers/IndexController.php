@@ -34,11 +34,11 @@ class Works_IndexController extends Zend_Controller_Action
             $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
             $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
 
-
+            $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
-                    'thumbImageUri' => '/img/marcacao_livro.png',
+                    'coverSrc' => $coverFilePath,
                     'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),
@@ -63,16 +63,17 @@ class Works_IndexController extends Zend_Controller_Action
     {
         $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_CHILDREN);
         $editionsData = array();
+        $editionsModel = array();
         foreach ($editionsIds as $editionId) {
             $loopEditionObj = $this->editionMapper->findById($editionId);
             $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
             $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
 
-
+            $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
-                    'thumbImageUri' => '/img/marcacao_livro.png',
+                    'coverSrc' => $coverFilePath,
                     'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),
@@ -85,6 +86,7 @@ class Works_IndexController extends Zend_Controller_Action
 
         $pageData = array(
             'editionsData' => $editionsData,
+            'editionsModel' => $editionsModel,
         );
 
         $this->view->pageData = $pageData;
@@ -101,11 +103,11 @@ class Works_IndexController extends Zend_Controller_Action
             $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
             $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
 
-
+            $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
-                    'thumbImageUri' => '/img/marcacao_livro.png',
+                    'coverSrc' => $coverFilePath,
                     'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),
@@ -134,11 +136,11 @@ class Works_IndexController extends Zend_Controller_Action
             $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
             $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
 
-
+            $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
-                    'thumbImageUri' => '/img/marcacao_livro.png',
+                    'coverSrc' => $coverFilePath,
                     'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),

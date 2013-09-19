@@ -49,10 +49,20 @@ class Admin_WorkController extends Zend_Controller_Action
             $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
             $editorName = $loopEditorObj->getName();
 
+            $coverFilePath = $this->view->coverFilePath($loopEditionObj);
+
+//            $fileName = $loopEditionObj->getCoverImageFilename();
+//            if ($fileName == "") {
+//                $coverFilePath = "/img/no_img.png";
+//            } else {
+//                $coverFilePath = '/img/editions/raw/' . $loopEditionObj->getCoverImageFilename();
+//            }
+//
+
             $editionsModel[$editionId] = array(
                     'editionId' => $editionId,
                     'editorName' => $editorName,
-                    'src' => '/img/editions/raw/' . $loopEditionObj->getCoverImageFilename(),
+                    'src' => $coverFilePath,
             );
         }
 
