@@ -404,7 +404,16 @@ h4 {
 
 #livros a img.livro {
 	border:2px solid #fff9cb;
+	width:250px;
+	height:auto;
 	}
+
+#livros a img.explore_cover {
+	border:2px solid #fff9cb;
+	width:250px;
+	height:auto;
+	}
+
 
 #livros h2.categoria {
 	font-family:arial;
@@ -415,7 +424,7 @@ h4 {
 
 #livros a.thumbnail_livro {
 	width:125px;
-	height:125px;
+	height: auto;
 	overflow:hidden;
 	float:left;
 	border:2px solid #fff9cb;

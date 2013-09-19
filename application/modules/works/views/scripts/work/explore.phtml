@@ -6,7 +6,7 @@ $pageData = $this->pageData;
 
 <h1><img src="/img/icone_livros.png" align="absmiddle" alt="Livros" /> <?php echo $this->translate("#Works") ?></h1>
 
-<a href="<?php echo $pageData['bigImageUri']?>"><img src="<?php echo $pageData['mediumImageUri']?>" class="float_left livro" /></a>
+<a href="<?php echo $pageData['mediumImageUri']?>"><?php $this->exploreCover($pageData['mediumImageUri']) ?></a>
 <h3><?php echo $pageData['title']?></h3>
 <p><strong><?php echo $pageData['editorName']?></strong></p>
 <p><?php echo $pageData['description']?></p>

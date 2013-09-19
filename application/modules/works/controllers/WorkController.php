@@ -2,6 +2,8 @@
 class Works_WorkController extends Zend_Controller_Action
 {
     private $workMapper;
+    private $editorMapper;
+    private $editionMapper;
     private $db;
 
     public function postDispatch()
@@ -14,6 +16,10 @@ class Works_WorkController extends Zend_Controller_Action
     public function init()
     {
         $this->db = Zend_Registry::get('db');
+        $this->workMapper = new Author_Collection_WorkMapper($this->db);
+        $this->editorMapper = new Author_Collection_EditorMapper($this->db);
+        $this->editionMapper = new Author_Collection_EditionMapper($this->db);
+
         $layoutHelper = $this->_helper->getHelper('Layout');
         $layout = $layoutHelper->getLayoutInstance();
         $layout->nestedLayout = 'inner_books';
@@ -22,11 +28,10 @@ class Works_WorkController extends Zend_Controller_Action
     public function exploreAction()
     {
 
-        $this->workMapper = new Author_Collection_WorkMapper($this->db);
-
         $uri = $this->checkUriFromGet();
-
-        $work = $this->workMapper->findByUri($uri);
+        $workObj = $this->workMapper->findByUri($uri);
+        $editionObj = $this->editionMapper->findByWork($workObj->getId());
+        $coverFilePath = $this->view->coverFilePath($editionObj);
 
         $prizes = array(
                 '1' => array(
@@ -65,11 +70,10 @@ class Works_WorkController extends Zend_Controller_Action
        $workTitle = 'Menina Bonita do Laço de Fita';
 
         $pageData = array(
-            'title' => $work->getTitle(),
-            'bigImageUri' => '/img/marcacao_livro.png',
-            'mediumImageUri' => '/img/marcacao_livro.png',
+            'title' => $workObj->getTitle(),
+            'mediumImageUri' => $coverFilePath,
             'editorName' => 'Ática',
-            'description' => $work->getDescription(),
+            'description' => $workObj->getDescription(),
             'collectionName' => 'Coleção: Barquinho de Papel',
             'ilustratorName' => 'Capa: Claudius',
             'isbn' => 'ISBN: 8508066392',
