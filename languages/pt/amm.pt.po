@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-16 16:41-0300\n"
-"PO-Revision-Date: 2013-09-16 16:41-0300\n"
+"POT-Creation-Date: 2013-09-19 17:25-0300\n"
+"PO-Revision-Date: 2013-09-19 17:25-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -17,18 +17,24 @@ msgstr ""
 "X-Poedit-SearchPath-1: library\\Moxca\n"
 "X-Poedit-SearchPath-2: library\\Author\n"
 
-#: application\modules/admin/controllers/EditionController.php:39
+#: application\modules/admin/controllers/EditionController.php:44
+#: application\modules/admin/controllers/EditionController.php:71
 #: application\modules/auth/controllers/UserController.php:36
 #: application\modules/auth/controllers/UserController.php:58
 msgid "#The record was successfully updated."
 msgstr "O registro foi atualizado com sucesso."
 
-#: application\modules/admin/controllers/EditionController.php:50
+#: application\modules/admin/controllers/EditionController.php:55
 #: application\modules/admin/views/scripts/edition/create.phtml:17
 msgid "#Create edition"
 msgstr "Criar edição"
 
-#: application\modules/admin/controllers/WorkController.php:76
+#: application\modules/admin/controllers/EditionController.php:94
+#: application\modules/admin/views/scripts/edition/cover.phtml:1
+msgid "#Change cover"
+msgstr "Trocar imagem"
+
+#: application\modules/admin/controllers/WorkController.php:99
 msgid "#no editions"
 msgstr "sem edições"
 
@@ -48,19 +54,19 @@ msgstr "Id inválido"
 msgid "#Ana Maria Machado - Fiction"
 msgstr "Ana Maria Machado - Ficção"
 
-#: application\modules/works/controllers/IndexController.php:91
+#: application\modules/works/controllers/IndexController.php:93
 msgid "#Ana Maria Machado - Children"
 msgstr "Ana Maria Machado - Infantil"
 
-#: application\modules/works/controllers/IndexController.php:124
+#: application\modules/works/controllers/IndexController.php:126
 msgid "#Ana Maria Machado - Essays"
 msgstr "Ana Maria Machado - Ensaios"
 
-#: application\modules/works/controllers/IndexController.php:157
+#: application\modules/works/controllers/IndexController.php:159
 msgid "#Ana Maria Machado - Young"
 msgstr "Ana Maria Machado - Juvenil"
 
-#: application\modules/works/controllers/WorkController.php:85
+#: application\modules/works/controllers/WorkController.php:55
 #, php-format
 msgid "#Exploring %s"
 msgstr "Explorando %s"
@@ -1118,13 +1124,23 @@ msgstr "Ensaios"
 msgid "#Unknown type"
 msgstr "Tipo indefinido"
 
-#: library\Author/Form/EditionCreate.php:16
+#: library\Author/Form/CoverChange.php:24
+#: library\Author/Form/EditionCreate.php:32
+msgid "#Upload an image:"
+msgstr "Enviar uma imagem"
+
+#: library\Author/Form/EditionCreate.php:17
 msgid "#Title:"
 msgstr "Título:"
 
-#: library\Author/Form/EditionCreate.php:25
+#: library\Author/Form/EditionCreate.php:26
 msgid "#Title is required"
 msgstr "O título é obrigatório"
+
+#: application\modules/admin/views/scripts/edition/change-cover.phtml:2
+#, php-format
+msgid "#Change cover for %s"
+msgstr "Mudar imagem para %s"
 
 #: application\modules/admin/views/scripts/panel/panel.phtml:2
 msgid "#New Book"
@@ -1134,13 +1150,21 @@ msgstr "Novo Livro"
 msgid "#List works"
 msgstr "Listar obras"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:11
+#: application\modules/admin/views/scripts/panel/panel.phtml:4
+msgid "#Logout"
+msgstr "Logout"
+
+#: application\modules/admin/views/scripts/work/detail.phtml:9
 msgid "#Description"
 msgstr "Descrição"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:13
+#: application\modules/admin/views/scripts/work/detail.phtml:12
 msgid "#Summary"
 msgstr "Sumário"
+
+#: application\modules/admin/views/scripts/work/detail.phtml:15
+msgid "#Editions"
+msgstr "Edições"
 
 #: application\modules/admin/views/scripts/work/list.phtml:13
 msgid "#List of works"
@@ -1312,9 +1336,6 @@ msgstr "Compre online"
 
 #~ msgid "#Hi"
 #~ msgstr "Hi"
-
-#~ msgid "#Logout"
-#~ msgstr "Logout"
 
 #~ msgid "#Please login."
 #~ msgstr "Please login."
@@ -1659,9 +1680,6 @@ msgstr "Compre online"
 
 #~ msgid "#Change %s's service messenger"
 #~ msgstr "Alterar endereço de %s"
-
-#~ msgid "#Change phone number of %s"
-#~ msgstr "Alterar telefone de %s"
 
 #~ msgid "#Contact:"
 #~ msgstr "Contato:"
