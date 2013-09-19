@@ -31,8 +31,52 @@ class Works_WorkController extends Zend_Controller_Action
         $uri = $this->checkUriFromGet();
         $workObj = $this->workMapper->findByUri($uri);
         $editionObj = $this->editionMapper->findByWork($workObj->getId());
+        $editorObj = $this->editorMapper->findById($editionObj->getEditor());
         $coverFilePath = $this->view->coverFilePath($editionObj);
 
+        $workTitle = $workObj->getTitle();
+
+        $pageData = array(
+            'title' => $workTitle,
+            'mediumImageUri' => $coverFilePath,
+            'editorName' => $editorObj->getName(),
+            'description' => $workObj->getDescription(),
+            'collectionName' => 'Coleção: Barquinho de Papel',
+            'ilustratorName' => 'Capa: Claudius',
+            'isbn' => 'ISBN: 8508066392',
+            'pages' => '24 p&aacute;ginas',
+
+            'ecommerce' => '/submarino',
+            'moreAbout' => true,
+            'prizesLabels' => $this->prizes(),
+        );
+
+        $this->view->pageData = $pageData;
+        $this->view->pageTitle = sprintf($this->view->translate("#Exploring %s"), $workTitle);
+        $keywords = $workObj->getTitle() . ", " . $this->view->keywords;
+
+        $this->view->keywords = $keywords;
+
+
+    }
+
+
+    private function checkUriFromGet()
+    {
+        $data = $this->_request->getParams();
+        $validator = new Moxca_Util_ValidTitle();
+
+        if ($validator->isValid($data['uri'])) {
+            $uri = $data['uri'];
+            return $uri;
+        }
+        throw new C3op_Projects_ProjectException("Invalid Project Id from Get");
+
+    }
+
+
+    private function prizes()
+    {
         $prizes = array(
                 '1' => array(
                     'year' => '1997',
@@ -67,47 +111,10 @@ class Works_WorkController extends Zend_Controller_Action
             $prizesLabels[$prizeId] = $label;
         }
 
-       $workTitle = 'Menina Bonita do Laço de Fita';
-
-        $pageData = array(
-            'title' => $workObj->getTitle(),
-            'mediumImageUri' => $coverFilePath,
-            'editorName' => 'Ática',
-            'description' => $workObj->getDescription(),
-            'collectionName' => 'Coleção: Barquinho de Papel',
-            'ilustratorName' => 'Capa: Claudius',
-            'isbn' => 'ISBN: 8508066392',
-            'pages' => '24 p&aacute;ginas',
-
-            'ecommerce' => '/submarino',
-            'moreAbout' => true,
-            'prizesLabels' => $prizesLabels,
-        );
-
-        $this->view->pageData = $pageData;
-        $this->view->pageTitle = sprintf($this->view->translate("#Exploring %s"), $workTitle);
-        $keywords = $workObj->getTitle() . ", " . $this->view->keywords;
-
-        $this->view->keywords = $keywords;
+        return $prizesLabels;
 
 
     }
-
-
-    private function checkUriFromGet()
-    {
-        $data = $this->_request->getParams();
-        $validator = new Moxca_Util_ValidTitle();
-
-        if ($validator->isValid($data['uri'])) {
-            $uri = $data['uri'];
-            return $uri;
-        }
-        throw new C3op_Projects_ProjectException("Invalid Project Id from Get");
-
-    }
-
-
 
 }
 
