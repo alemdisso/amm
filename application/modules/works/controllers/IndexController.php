@@ -20,9 +20,17 @@ class Works_IndexController extends Zend_Controller_Action
         $this->editorMapper = new Author_Collection_EditorMapper($this->db);
         $this->editionMapper = new Author_Collection_EditionMapper($this->db);
 
+        $uri = $this->_request->getPathInfo();
+        $activeNav = $this->view->navigation()->findByUri($uri);
+        try {
+            $activeNav->active = true;
+        } catch (Exception $e) {
+            
+        }
+
         $layoutHelper = $this->_helper->getHelper('Layout');
         $layout = $layoutHelper->getLayoutInstance();
-        $layout->nestedLayout = 'inner_books';
+        $layout->nestedLayout = 'inner_works';
     }
 
     public function fictionAction()

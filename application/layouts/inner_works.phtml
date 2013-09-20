@@ -12,7 +12,11 @@
 <?php echo $this->action('header', 'include', 'includes') ?>
 <!-- /header -->
 
-<?php echo $this->action('breadcrumb', 'include', 'includes') ?>
+<!-- breadcrumb -->
+<div id="breadcrumb">
+<?php echo $this->navigation()->breadcrumbs()->setLinkLast(false)->setMinDepth(0)->setSeparator(" &rsaquo; "); ?>
+</div>
+<!-- /breadcrumb -->
 <?php echo $this->layout()->content; ?>
 
 <!-- lateral -->

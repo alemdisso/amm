@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+    <nav>
+        <home>
+            <label>Ana Maria Machado</label>
+            <uri>/home</uri>
+
+            <pages>
+                <works>
+                    <label>Livros</label>
+                    <uri>/livros</uri>
+                    <pages>
+                        <children>
+                            <label>Infantis</label>
+                            <uri>/livros/infantis</uri>
+                        </children>
+
+                        <youth>
+                            <label>Juvenis</label>
+                            <uri>/livros/juvenis</uri>
+                        </youth>
+
+                        <fiction>
+                            <label>Ficção</label>
+                            <uri>/livros/ficcao</uri>
+                        </fiction>
+
+                        <essays>
+                            <label>Ensaios</label>
+                            <uri>/livros/ensaios</uri>
+                        </essays>
+
+                        <serie>
+                            <label>Mico Maneco</label>
+                            <uri>/colecao/mico-maneco</uri>
+                        </serie>
+                    </pages>
+                </works>
+            </pages>
+        </home>
+    </nav>
+</configdata>
