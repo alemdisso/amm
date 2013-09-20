@@ -28,7 +28,12 @@ class Works_EditionController extends Zend_Controller_Action
     public function exploreAction()
     {
 
-        $uri = $this->checkUriFromGet();
+        $data = $this->_request->getParams();
+        try {
+            $uri = $this->view->checkUriFromGet($data);
+        } catch (Exception $e) {
+            throw $e;
+        }
         $editionObj = $this->editionMapper->findByUri($uri);
         $workObj = $this->workMapper->findById($editionObj->getWork());
         $editorObj = $this->editorMapper->findById($editionObj->getEditor());
@@ -56,8 +61,10 @@ class Works_EditionController extends Zend_Controller_Action
             $serieObj = $serieMapper->findById($serie);
             $serieName = $serieObj->getName();
             $serieLabel = sprintf($this->view->translate("#Serie: %s"), $serieName);
+            $serieUri = $serieObj->getUri();
         } else {
             $serieLabel = "";
+            $serieUri = "#";
         }
 
         $pageData = array(
@@ -66,6 +73,7 @@ class Works_EditionController extends Zend_Controller_Action
             'editorName' => $editorObj->getName(),
             'description' => $workObj->getDescription(),
             'serieName' => $serieLabel,
+            'serieUri' => $serieUri,
             'ilustratorName' => 'Capa: Claudius',
             'isbn' => $isbnLabel,
             'pages' => $pagesLabel,
@@ -84,19 +92,6 @@ class Works_EditionController extends Zend_Controller_Action
 
     }
 
-
-    private function checkUriFromGet()
-    {
-        $data = $this->_request->getParams();
-        $validator = new Moxca_Util_ValidUri();
-
-        if ($validator->isValid($data['uri'])) {
-            $uri = $data['uri'];
-            return $uri;
-        }
-        throw new C3op_Projects_ProjectException("Invalid Uri from Get");
-
-    }
 
 
     private function prizes()

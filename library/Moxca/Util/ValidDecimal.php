@@ -5,5 +5,3 @@ class Moxca_Util_ValidDecimal extends Zend_Validate_Abstract {
         return $nameValidator->isValid($value);
     }
 }
-
-?>

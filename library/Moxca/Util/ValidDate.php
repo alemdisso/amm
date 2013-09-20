@@ -12,5 +12,3 @@ class Moxca_Util_ValidDate extends Zend_Validate_Abstract {
             return true;
     }
 }
-
-?>

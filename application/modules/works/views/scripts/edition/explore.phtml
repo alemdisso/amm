@@ -13,7 +13,7 @@ $pageData = $this->pageData;
 
 <p><small>
 <?php if ((isset($pageData['serieName'])) && ($pageData['serieName'])) { ?>
-<?php echo $pageData['serieName']?><br />
+<a href="/colecao/<?php echo $pageData['serieUri']?>"><?php echo $pageData['serieName']?></a><br />
 <?php } ?>
 <?php if ((isset($pageData['ilustratorName'])) && ($pageData['ilustratorName'])) { ?>
 <?php echo $pageData['ilustratorName']?><br />

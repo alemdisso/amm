@@ -129,7 +129,18 @@ class Works_IndexController extends Zend_Controller_Action
 
     public function serieAction()
     {
-        $editionsIds = $this->editionMapper->getAllEditionsOfSerie(1);
+        $data = $this->_request->getParams();
+        try {
+            $uri = $this->view->checkUriFromGet($data);
+        } catch (Exception $e) {
+            throw $e;
+        }
+        $serieMapper = new Author_Collection_SerieMapper($this->db);
+        $serieObj = $serieMapper->findByUri($uri);
+
+
+
+        $editionsIds = $this->editionMapper->getAllEditionsOfSerie($uri);
         $editionsData = array();
         foreach ($editionsIds as $editionId) {
             $loopEditionObj = $this->editionMapper->findById($editionId);
@@ -150,9 +161,15 @@ class Works_IndexController extends Zend_Controller_Action
             );
         }
 
+        if (count($editionsData) > 0) {
+            $serieLabel = sprintf($this->view->translate("#Serie: %s"), $serieObj->getName());
+        } else {
+            $serieLabel = "";
+        }
+
 
         $pageData = array(
-            'serieLabel' => "HEY HO",
+            'serieLabel' => $serieLabel,
             'editionsData' => $editionsData,
         );
 
