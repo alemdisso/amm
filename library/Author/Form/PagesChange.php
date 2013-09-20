@@ -1,15 +1,15 @@
 <?php
-class Author_Form_CoverChange extends Zend_Form
+class Author_Form_PagesChange extends Zend_Form
 {
     public function init()
     {
         parent::init();
 
+
+
         // initialize form
-        $this->setName('coverChangeForm')
-            ->setAction('/admin/edition/change-cover')
-            ->setAttrib('enctype', 'multipart/form-data')
-            //->setAction('javascript:callEditionCreate();')
+        $this->setName('pagesChangeForm')
+            ->setAction('/admin/edition/change-pages')
             ->setMethod('post');
 
         $element = new Zend_Form_Element_Hidden('id');
@@ -18,16 +18,20 @@ class Author_Form_CoverChange extends Zend_Form
         $this->addElement($element);
         $element->setDecorators(array('ViewHelper'));
 
-        $element = new Zend_Form_Element_File('cover');
-        $element->setLabel(_('#Upload an image:'))
-                ->setDestination(APPLICATION_PATH . '/../public/img/editions/raw');
-        // ensure only 1 file
-        $element->addValidator('Count', false, 1);
-        // limit to 100K
-        $element->addValidator('Size', false, 102400);
-        // only JPEG, PNG, and GIFs
-        $element->addValidator('Extension', false, 'jpg,png,gif,jpeg');
+        $element = new Zend_Form_Element_Text('pages');
+        $validator = new Moxca_Util_ValidPositiveInteger();
+        $element->setLabel(_('#Pages:'))
+                ->setDecorators(array(
+                    'ViewHelper',
+                    'Errors',
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                ))
+                ->setOptions(array('class' => ''))
+                ->addValidator($validator)
+                ->addFilter('StringTrim');
         $this->addElement($element);
+
 
         // create submit button
         $element = new Zend_Form_Element_Submit('submit');
@@ -57,13 +61,7 @@ class Author_Form_CoverChange extends Zend_Form
             $editionId = $data['id'];
             $edition = $editionMapper->findById($editionId);
 
-            if (!$this->cover->receive()) {
-                throw new Author_Form_EditionCreateException('Something wrong receiving cover file');
-            }
-            $location = $this->cover->getFileName();
-            $location = str_replace('\\', '/', $location);
-            $tmpArray = explode('/', $location);
-            $edition->setCoverImageFilename(end($tmpArray));
+            $edition->setPages($data['pages']);
 
             $editionMapper->update($edition);
             return $edition;

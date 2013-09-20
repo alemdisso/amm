@@ -66,10 +66,11 @@ class Admin_EditionController extends Zend_Controller_Action
         if ($this->getRequest()->isPost()) {
             $postData = $this->getRequest()->getPost();
             if ($form->isValid($postData)) {
-                $id = $form->process($postData);
+                $editionObj = $form->process($postData);
+                $workId = $editionObj->getWork();
                 $this->_helper->getHelper('FlashMessenger')
                     ->addMessage($this->view->translate('#The record was successfully updated.'));
-                $this->_redirect('/admin/work/detail/?id=' . $id);
+                $this->_redirect('/admin/work/detail/?id=' . $workId);
             } else {
                 //form error: populate and go back
                 $form->populate($postData);
@@ -86,12 +87,72 @@ class Admin_EditionController extends Zend_Controller_Action
             );
             $input = new Zend_Filter_Input($filters, $validators, $data);
             if ($input->isValid()) {
-                $field = $form->getElement('edition');
+                $field = $form->getElement('id');
                 $field->setValue($input->id);
             } else {
                 throw new Author_Collection_EditionException("Invalid edition to change cover");
             }
             $this->view->pageTitle = $this->view->translate("#Change cover");
+        }
+    }
+
+   public function changeIsbnAction()
+    {
+        // cria form
+        $form = new Author_Form_IsbnChange;
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $this->processAndRedirect($form);
+            return;
+        } else {
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('id');
+            $element->setValue($id);
+
+            $editionObj = $this->editionMapper->findById($id);
+            $element = $form->getElement('isbn');
+            $element->setValue($editionObj->getIsbn());
+
+            $workObj = $this->workMapper->findById($editionObj->getWork());
+            $this->view->title = $workObj->getTitle();
+            $this->view->pageTitle = $this->view->translate("#Change isbn");
+        }
+    }
+
+   public function changePagesAction()
+    {
+        // cria form
+        $form = new Author_Form_PagesChange;
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $this->processAndRedirect($form);
+            return;
+        } else {
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('id');
+            $element->setValue($id);
+
+            $editionObj = $this->editionMapper->findById($id);
+            $element = $form->getElement('pages');
+            $element->setValue($editionObj->getPages());
+
+            $workObj = $this->workMapper->findById($editionObj->getWork());
+            $this->view->title = $workObj->getTitle();
+            $this->view->pageTitle = $this->view->translate("#Change isbn");
         }
     }
 
@@ -105,6 +166,33 @@ class Admin_EditionController extends Zend_Controller_Action
         }
         $elementSelect->setValue($current);
 
+
+    }
+
+    private function processAndRedirect($form)
+    {
+        $postData = $this->getRequest()->getPost();
+        if ($form->isValid($postData)) {
+            $editionObj = $form->process($postData);
+            $workId = $editionObj->getWork();
+            $this->_helper->getHelper('FlashMessenger')
+                ->addMessage($this->view->translate('#The record was successfully updated.'));
+            $this->_redirect('/admin/work/detail/?id=' . $workId);
+        } else {
+            //form error: populate and go back
+            $form->populate($postData);
+            try {
+                $id = $this->view->checkIdFromGet($postData);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $editionObj = $this->editionMapper->findById($id);
+            $workObj = $this->workMapper->findById($editionObj->getWork());
+
+            $this->view->title = $workObj->getTitle();
+            $this->view->form = $form;
+        }
 
     }
 

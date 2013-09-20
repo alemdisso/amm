@@ -12,16 +12,16 @@ $pageData = $this->pageData;
 <p><?php echo $pageData['description']?></p>
 
 <p><small>
-<?php if (isset($pageData['collectionName'])) { ?>
+<?php if ((isset($pageData['collectionName'])) && ($pageData['collectionName'])) { ?>
 <?php echo $pageData['collectionName']?><br />
 <?php } ?>
-<?php if (isset($pageData['ilustratorName'])) { ?>
+<?php if ((isset($pageData['ilustratorName'])) && ($pageData['ilustratorName'])) { ?>
 <?php echo $pageData['ilustratorName']?><br />
 <?php } ?>
-<?php if (isset($pageData['isbn'])) { ?>
+<?php if ((isset($pageData['isbn'])) && ($pageData['isbn'])) { ?>
 <?php echo $pageData['isbn']?><br />
 <?php } ?>
-<?php if (isset($pageData['pages'])) { ?>
+<?php if ((isset($pageData['pages'])) && ($pageData['pages'])) { ?>
 <?php echo $pageData['pages']?><br />
 <?php } ?>
 </small></p>

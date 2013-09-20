@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-19 17:25-0300\n"
-"PO-Revision-Date: 2013-09-19 17:25-0300\n"
+"POT-Creation-Date: 2013-09-19 22:33-0300\n"
+"PO-Revision-Date: 2013-09-19 22:34-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -18,7 +18,8 @@ msgstr ""
 "X-Poedit-SearchPath-2: library\\Author\n"
 
 #: application\modules/admin/controllers/EditionController.php:44
-#: application\modules/admin/controllers/EditionController.php:71
+#: application\modules/admin/controllers/EditionController.php:72
+#: application\modules/admin/controllers/EditionController.php:179
 #: application\modules/auth/controllers/UserController.php:36
 #: application\modules/auth/controllers/UserController.php:58
 msgid "#The record was successfully updated."
@@ -29,12 +30,22 @@ msgstr "O registro foi atualizado com sucesso."
 msgid "#Create edition"
 msgstr "Criar edição"
 
-#: application\modules/admin/controllers/EditionController.php:94
+#: application\modules/admin/controllers/EditionController.php:95
 #: application\modules/admin/views/scripts/edition/cover.phtml:1
 msgid "#Change cover"
 msgstr "Trocar imagem"
 
-#: application\modules/admin/controllers/WorkController.php:99
+#: application\modules/admin/controllers/EditionController.php:125
+#: application\modules/admin/controllers/EditionController.php:155
+msgid "#Change isbn"
+msgstr "Editar isbn"
+
+#: application\modules/admin/controllers/WorkController.php:53
+#: application\modules/admin/controllers/WorkController.php:58
+msgid "#NI"
+msgstr "n.i."
+
+#: application\modules/admin/controllers/WorkController.php:102
 msgid "#no editions"
 msgstr "sem edições"
 
@@ -47,8 +58,14 @@ msgid "#Access denied"
 msgstr "Acesso negado"
 
 #: application\modules/auth/controllers/UserController.php:114
+#: library\Moxca/View/Helper/CheckIdFromGet.php:18
 msgid "#Invalid User Id from Get"
 msgstr "Id inválido"
+
+#: application\modules/works/controllers/EditionController.php:55
+#, php-format
+msgid "#Exploring %s"
+msgstr "Explorando %s"
 
 #: application\modules/works/controllers/IndexController.php:57
 msgid "#Ana Maria Machado - Fiction"
@@ -65,11 +82,6 @@ msgstr "Ana Maria Machado - Ensaios"
 #: application\modules/works/controllers/IndexController.php:159
 msgid "#Ana Maria Machado - Young"
 msgstr "Ana Maria Machado - Juvenil"
-
-#: application\modules/works/controllers/WorkController.php:55
-#, php-format
-msgid "#Exploring %s"
-msgstr "Explorando %s"
 
 #: library\Moxca/Access/Roles.php:10
 msgid "#Unknown"
@@ -1124,7 +1136,7 @@ msgstr "Ensaios"
 msgid "#Unknown type"
 msgstr "Tipo indefinido"
 
-#: library\Author/Form/CoverChange.php:24
+#: library\Author/Form/CoverChange.php:22
 #: library\Author/Form/EditionCreate.php:32
 msgid "#Upload an image:"
 msgstr "Enviar uma imagem"
@@ -1137,10 +1149,30 @@ msgstr "Título:"
 msgid "#Title is required"
 msgstr "O título é obrigatório"
 
+#: library\Author/Form/IsbnChange.php:23
+#: application\modules/admin/views/scripts/work/editions-loop.phtml:4
+msgid "#ISBN:"
+msgstr "ISBN:"
+
+#: library\Author/Form/PagesChange.php:23
+#: application\modules/admin/views/scripts/work/editions-loop.phtml:5
+msgid "#Pages:"
+msgstr "Páginas:"
+
 #: application\modules/admin/views/scripts/edition/change-cover.phtml:2
 #, php-format
 msgid "#Change cover for %s"
 msgstr "Mudar imagem para %s"
+
+#: application\modules/admin/views/scripts/edition/change-isbn.phtml:2
+#, php-format
+msgid "#Change isbn for %s"
+msgstr "Mudar isbn de %s"
+
+#: application\modules/admin/views/scripts/edition/change-pages.phtml:2
+#, php-format
+msgid "#Change pages for %s"
+msgstr "Mudar número de páginas de %s"
 
 #: application\modules/admin/views/scripts/panel/panel.phtml:2
 msgid "#New Book"
@@ -1165,6 +1197,11 @@ msgstr "Sumário"
 #: application\modules/admin/views/scripts/work/detail.phtml:15
 msgid "#Editions"
 msgstr "Edições"
+
+#: application\modules/admin/views/scripts/work/editions-loop.phtml:4
+#: application\modules/admin/views/scripts/work/editions-loop.phtml:5
+msgid "#(edit)"
+msgstr "(editar)"
 
 #: application\modules/admin/views/scripts/work/list.phtml:13
 msgid "#List of works"
@@ -1249,25 +1286,29 @@ msgstr "Biografia"
 msgid "#Contact"
 msgstr "Contato"
 
+#: application\modules/works/views/scripts/edition/explore.phtml:7
 #: application\modules/works/views/scripts/index/children.phtml:7
 #: application\modules/works/views/scripts/index/essays.phtml:7
 #: application\modules/works/views/scripts/index/fiction.phtml:7
 #: application\modules/works/views/scripts/index/young.phtml:7
-#: application\modules/works/views/scripts/work/explore.phtml:7
 msgid "#Works"
 msgstr "Livros"
 
-#: application\modules/works/views/scripts/index/children.phtml:9
-msgid "#Children books"
-msgstr "Infantil"
+#: application\modules/works/views/scripts/edition/explore.phtml:31
+msgid "#Buy online"
+msgstr "Compre online"
 
+#: application\modules/works/views/scripts/edition/explore.phtml:47
 #: application\modules/works/views/scripts/index/children.phtml:12
 #: application\modules/works/views/scripts/index/essays.phtml:12
 #: application\modules/works/views/scripts/index/fiction.phtml:12
 #: application\modules/works/views/scripts/index/young.phtml:12
-#: application\modules/works/views/scripts/work/explore.phtml:47
 msgid "#Prizes"
 msgstr "Prêmios"
+
+#: application\modules/works/views/scripts/index/children.phtml:9
+msgid "#Children books"
+msgstr "Infantil"
 
 #: application\modules/works/views/scripts/index/children.phtml:12
 #: application\modules/works/views/scripts/index/essays.phtml:12
@@ -1298,10 +1339,6 @@ msgstr "Por categoria"
 #: application\modules/works/views/scripts/index/young.phtml:9
 msgid "#Young books"
 msgstr "Juvenil"
-
-#: application\modules/works/views/scripts/work/explore.phtml:31
-msgid "#Buy online"
-msgstr "Compre online"
 
 #, fuzzy
 #~ msgid "#Works for Children"

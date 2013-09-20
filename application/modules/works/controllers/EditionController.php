@@ -1,5 +1,5 @@
 <?php
-class Works_WorkController extends Zend_Controller_Action
+class Works_EditionController extends Zend_Controller_Action
 {
     private $workMapper;
     private $editorMapper;
@@ -29,12 +29,26 @@ class Works_WorkController extends Zend_Controller_Action
     {
 
         $uri = $this->checkUriFromGet();
-        $workObj = $this->workMapper->findByUri($uri);
-        $editionObj = $this->editionMapper->findByWork($workObj->getId());
+        $editionObj = $this->editionMapper->findByUri($uri);
+        $workObj = $this->workMapper->findById($editionObj->getWork());
         $editorObj = $this->editorMapper->findById($editionObj->getEditor());
         $coverFilePath = $this->view->coverFilePath($editionObj);
 
         $workTitle = $workObj->getTitle();
+
+        $isbn = $editionObj->getIsbn();
+        if ($isbn != "") {
+            $isbnLabel = sprintf($this->view->translate("#ISBN: %s"), $isbn);
+        } else {
+            $isbnLabel = "";
+        }
+
+        $pages = $editionObj->getPages();
+        if ($pages != "") {
+            $pagesLabel = sprintf($this->view->translate("#%s pages"), $pages);
+        } else {
+            $pagesLabel = "";
+        }
 
         $pageData = array(
             'title' => $workTitle,
@@ -43,8 +57,8 @@ class Works_WorkController extends Zend_Controller_Action
             'description' => $workObj->getDescription(),
             'collectionName' => 'Coleção: Barquinho de Papel',
             'ilustratorName' => 'Capa: Claudius',
-            'isbn' => 'ISBN: 8508066392',
-            'pages' => '24 p&aacute;ginas',
+            'isbn' => $isbnLabel,
+            'pages' => $pagesLabel,
 
             'ecommerce' => '/submarino',
             'moreAbout' => true,

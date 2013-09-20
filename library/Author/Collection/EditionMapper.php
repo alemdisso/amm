@@ -128,6 +128,29 @@ class Author_Collection_EditionMapper
         }
     }
 
+    public function findByUri($uri)
+    {
+        $query = $this->db->prepare('SELECT e.id FROM author_collection_works w
+                                     LEFT JOIN author_collection_editions e ON w.id = e.work
+                                     WHERE w.uri=:uri LIMIT 1;');
+        $query->bindValue(':uri', $uri, PDO::PARAM_STR);
+        $query->execute();
+
+        $result = $query->fetch();
+
+        if (empty($result)) {
+            throw new Author_Collection_WorkMapperException(sprintf('There is no work with uri #%s.', $uri));
+        }
+        $id = $result['id'];
+
+        if ($id > 0) {
+            return $this->findById($id);
+        } else {
+            throw new Author_Collection_WorkMapperException(sprintf('The work with id #%s has id=0?!?.', $uri));
+        }
+
+    }
+
 
     public function delete(Author_Collection_Edition $obj)
     {

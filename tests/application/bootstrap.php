@@ -19,6 +19,8 @@ set_include_path(implode(PATH_SEPARATOR, array(
 require_once 'Zend/Loader/AutoLoader.php';
 $autoloader = Zend_Loader_AutoLoader::getInstance();
 $autoloader->registerNamespace('PHPUnit_');
+$autoloader->registerNamespace('Moxca_');
+$autoloader->registerNamespace('Author_');
 
 
 require_once 'Zend/Application.php';
