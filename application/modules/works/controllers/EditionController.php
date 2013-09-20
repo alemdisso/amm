@@ -50,12 +50,22 @@ class Works_EditionController extends Zend_Controller_Action
             $pagesLabel = "";
         }
 
+        $serie = $editionObj->getSerie();
+        if ($serie > 0) {
+            $serieMapper = new Author_Collection_SerieMapper($this->db);
+            $serieObj = $serieMapper->findById($serie);
+            $serieName = $serieObj->getName();
+            $serieLabel = sprintf($this->view->translate("#Serie: %s"), $serieName);
+        } else {
+            $serieLabel = "";
+        }
+
         $pageData = array(
             'title' => $workTitle,
             'mediumImageUri' => $coverFilePath,
             'editorName' => $editorObj->getName(),
             'description' => $workObj->getDescription(),
-            'collectionName' => 'Coleção: Barquinho de Papel',
+            'serieName' => $serieLabel,
             'ilustratorName' => 'Capa: Claudius',
             'isbn' => $isbnLabel,
             'pages' => $pagesLabel,

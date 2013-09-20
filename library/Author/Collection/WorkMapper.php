@@ -32,16 +32,16 @@ class Author_Collection_WorkMapper
         $query = $this->db->prepare("INSERT INTO author_collection_works (uri, title, description, summary, type)
             VALUES (:uri, :title, :description, :summary, :type)");
 
-        $query->bindValue(':uri', $obj->GetUri(), PDO::PARAM_STR);
-        $query->bindValue(':title', $obj->GetTitle(), PDO::PARAM_STR);
-        $query->bindValue(':description', $obj->GetDescription(), PDO::PARAM_STR);
-        $query->bindValue(':summary', $obj->GetSummary(), PDO::PARAM_STR);
-        $query->bindValue(':type', $obj->GetType(), PDO::PARAM_STR);
+        $query->bindValue(':uri', $obj->getUri(), PDO::PARAM_STR);
+        $query->bindValue(':title', $obj->getTitle(), PDO::PARAM_STR);
+        $query->bindValue(':description', $obj->getDescription(), PDO::PARAM_STR);
+        $query->bindValue(':summary', $obj->getSummary(), PDO::PARAM_STR);
+        $query->bindValue(':type', $obj->getType(), PDO::PARAM_STR);
 
         $query->execute();
 
-        $obj->SetId((int)$this->db->lastInsertId());
-        $this->identityMap[$obj] = $obj->GetId();
+        $obj->setId((int)$this->db->lastInsertId());
+        $this->identityMap[$obj] = $obj->getId();
 
     }
 
@@ -53,11 +53,11 @@ class Author_Collection_WorkMapper
 
         $query = $this->db->prepare("UPDATE author_collection_works SET uri = :uri, title = :title, description = :description, summary = :summary, type = :type WHERE id = :id;");
 
-        $query->bindValue(':uri', $obj->GetUri(), PDO::PARAM_STR);
-        $query->bindValue(':title', $obj->GetTitle(), PDO::PARAM_STR);
-        $query->bindValue(':description', $obj->GetDescription(), PDO::PARAM_STR);
-        $query->bindValue(':summary', $obj->GetSummary(), PDO::PARAM_STR);
-        $query->bindValue(':type', $obj->GetType(), PDO::PARAM_STR);
+        $query->bindValue(':uri', $obj->getUri(), PDO::PARAM_STR);
+        $query->bindValue(':title', $obj->getTitle(), PDO::PARAM_STR);
+        $query->bindValue(':description', $obj->getDescription(), PDO::PARAM_STR);
+        $query->bindValue(':summary', $obj->getSummary(), PDO::PARAM_STR);
+        $query->bindValue(':type', $obj->getType(), PDO::PARAM_STR);
         $query->bindValue(':id', $this->identityMap[$obj], PDO::PARAM_STR);
 
         try {

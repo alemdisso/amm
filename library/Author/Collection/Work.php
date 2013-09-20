@@ -23,7 +23,7 @@ class Author_Collection_Work {
 
     } //getId
 
-    public function SetId($id) {
+    public function setId($id) {
         if (($this->id == 0) && ($id > 0)) {
             $this->id = (int)$id;
         } else {
@@ -71,7 +71,7 @@ class Author_Collection_Work {
         return $this->title;
     } //getTitle
 
-    public function SetTitle($title)
+    public function setTitle($title)
     {
         $validator = new Moxca_Util_ValidString();
         if ($validator->isValid($title)) {
@@ -86,7 +86,7 @@ class Author_Collection_Work {
 
     } //SetTitle
 
-    public function SetType($type)
+    public function setType($type)
     {
         switch ($type) {
             case Author_Collection_WorkTypeConstants::TYPE_NIL:

@@ -50,7 +50,7 @@ class Admin_EditionController extends Zend_Controller_Action
             }
         } else {
             $element = $form->getElement('editor');
-            $this->populateEditorsSelect($element, 1);
+            $this->populateEditorsSelect($element, 0);
 
             $this->view->pageTitle = $this->view->translate("#Create edition");
         }
@@ -156,18 +156,62 @@ class Admin_EditionController extends Zend_Controller_Action
         }
     }
 
+   public function changeSerieAction()
+    {
+        // cria form
+        $form = new Author_Form_SerieChange;
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $this->processAndRedirect($form);
+            return;
+        } else {
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('id');
+            $element->setValue($id);
+
+            $editionObj = $this->editionMapper->findById($id);
+            $element = $form->getElement('serie');
+            $element->setValue($editionObj->getSerie());
+            $this->populateSeriesSelect($element, $editionObj->getSerie(), $editionObj->getEditor());
+
+            $workObj = $this->workMapper->findById($editionObj->getWork());
+            $this->view->title = $workObj->getTitle();
+            $this->view->pageTitle = $this->view->translate("#Change isbn");
+        }
+    }
+
     public function populateEditorsSelect(Zend_Form_Element_Select $elementSelect, $current)
     {
         $editorMapper = new Author_Collection_EditorMapper($this->db);
         $list = $editorMapper->getAllEditorsAlphabeticallyOrdered();
 
+        $elementSelect->addMultiOption(null, $this->view->translate("#(choose an option)"));
         foreach($list as $editorId => $editorName) {
             $elementSelect->addMultiOption($editorId, $editorName);
         }
         $elementSelect->setValue($current);
-
-
     }
+
+
+    public function populateSeriesSelect(Zend_Form_Element_Select $elementSelect, $current, $editorId)
+    {
+        $serieMapper = new Author_Collection_SerieMapper($this->db);
+        $list = $serieMapper->getAllSeriesAlphabeticallyOrdered($editorId);
+
+        $elementSelect->addMultiOption(null, $this->view->translate("#(choose an option)"));
+        foreach($list as $serieId => $serieName) {
+            $elementSelect->addMultiOption($serieId, $serieName);
+        }
+        $elementSelect->setValue($current);
+    }
+
 
     private function processAndRedirect($form)
     {

@@ -1,6 +1,6 @@
 <?php
 
-class Author_Collection_EditorMapper
+class Author_Collection_SerieMapper
 {
 
     protected $db;
@@ -14,7 +14,7 @@ class Author_Collection_EditorMapper
 
     public function getAllIds()
     {
-        $query = $this->db->prepare('SELECT id FROM author_collection_editors WHERE 1=1;');
+        $query = $this->db->prepare('SELECT id FROM author_collection_series WHERE 1=1;');
         $query->execute();
         $resultPDO = $query->fetchAll();
 
@@ -26,12 +26,13 @@ class Author_Collection_EditorMapper
 
     }
 
-    public function insert(Author_Collection_Editor $obj)
+    public function insert(Author_Collection_Serie $obj)
     {
 
-        $query = $this->db->prepare("INSERT INTO author_collection_editors (uri, name, country)
-            VALUES (:uri, :name, :country)");
+        $query = $this->db->prepare("INSERT INTO author_collection_series (editor, uri, name, country)
+            VALUES (:editor, :uri, :name, :country)");
 
+        $query->bindValue(':editor', $obj->getEditor(), PDO::PARAM_STR);
         $query->bindValue(':uri', $obj->getUri(), PDO::PARAM_STR);
         $query->bindValue(':name', $obj->getName(), PDO::PARAM_STR);
         $query->bindValue(':country', $obj->getCountry(), PDO::PARAM_STR);
@@ -43,13 +44,13 @@ class Author_Collection_EditorMapper
 
     }
 
-    public function update(Author_Collection_Editor $obj)
+    public function update(Author_Collection_Serie $obj)
     {
         if (!isset($this->identityMap[$obj])) {
-            throw new Author_Collection_EditorMapperException('Object has no ID, cannot update.');
+            throw new Author_Collection_SerieMapperException('Object has no ID, cannot update.');
         }
 
-        $query = $this->db->prepare("UPDATE author_collection_editors SET uri = :uri, name = :name, country = :country WHERE id = :id;");
+        $query = $this->db->prepare("UPDATE author_collection_series SET uri = :uri, name = :name, country = :country WHERE id = :id;");
 
         $query->bindValue(':uri', $obj->getUri(), PDO::PARAM_STR);
         $query->bindValue(':name', $obj->getName(), PDO::PARAM_STR);
@@ -59,7 +60,7 @@ class Author_Collection_EditorMapper
         try {
             $query->execute();
         } catch (Exception $e) {
-            throw new Author_Collection_EditorException("sql failed");
+            throw new Author_Collection_SerieException("sql failed");
         }
 
     }
@@ -74,18 +75,18 @@ class Author_Collection_EditorMapper
             $this->identityMap->next();
         }
 
-        $query = $this->db->prepare('SELECT uri, name, country FROM author_collection_editors WHERE id = :id;');
+        $query = $this->db->prepare('SELECT uri, name, country FROM author_collection_series WHERE id = :id;');
         $query->bindValue(':id', $id, PDO::PARAM_STR);
         $query->execute();
 
         $result = $query->fetch();
 
         if (empty($result)) {
-            throw new Author_Collection_EditorMapperException(sprintf('There is no editor with id #%d.', $id));
+            throw new Author_Collection_SerieMapperException(sprintf('There is no serie with id #%d.', $id));
         }
         $uri = $result['uri'];
 
-        $obj = new Author_Collection_Editor();
+        $obj = new Author_Collection_Serie();
         $this->setAttributeValue($obj, $id, 'id');
         $this->setAttributeValue($obj, $result['name'], 'name');
         $this->setAttributeValue($obj, $result['uri'], 'uri');
@@ -99,40 +100,41 @@ class Author_Collection_EditorMapper
 
     public function findByUri($uri)
     {
-        $query = $this->db->prepare('SELECT id FROM author_collection_editors WHERE uri = :uri LIMIT 1;');
+        $query = $this->db->prepare('SELECT id FROM author_collection_series WHERE uri = :uri LIMIT 1;');
         $query->bindValue(':uri', $uri, PDO::PARAM_STR);
         $query->execute();
 
         $result = $query->fetch();
 
         if (empty($result)) {
-            throw new Author_Collection_EditorMapperException(sprintf('There is no editor with uri #%s.', $uri));
+            throw new Author_Collection_SerieMapperException(sprintf('There is no serie with uri #%s.', $uri));
         }
         $id = $result['id'];
 
         if ($id > 0) {
             return $this->findById($id);
         } else {
-            throw new Author_Collection_EditorMapperException(sprintf('The editor with id #%s has id=0?!?.', $uri));
+            throw new Author_Collection_SerieMapperException(sprintf('The serie with id #%s has id=0?!?.', $uri));
         }
     }
 
 
-    public function delete(Author_Collection_Editor $obj)
+    public function delete(Author_Collection_Serie $obj)
     {
         if (!isset($this->identityMap[$obj])) {
-            throw new Author_Collection_EditorMapperException('Object has no ID, cannot delete.');
+            throw new Author_Collection_SerieMapperException('Object has no ID, cannot delete.');
         }
-        $query = $this->db->prepare('DELETE FROM author_collection_editors WHERE id = :id;');
+        $query = $this->db->prepare('DELETE FROM author_collection_series WHERE id = :id;');
         $query->bindValue(':id', $this->identityMap[$obj], PDO::PARAM_STR);
         $query->execute();
         unset($this->identityMap[$obj]);
     }
 
 
-   public function getAllEditorsAlphabeticallyOrdered()
+   public function getAllSeriesAlphabeticallyOrdered($editorId)
     {
-        $query = $this->db->prepare('SELECT id, name FROM author_collection_editors WHERE 1 =1 ORDER BY name;');
+        $query = $this->db->prepare('SELECT id, name FROM author_collection_series WHERE editor = :editor ORDER BY name;');
+        $query->bindValue(':editor', $editorId, PDO::PARAM_STR);
         $query->execute();
         $resultPDO = $query->fetchAll();
 
@@ -147,7 +149,7 @@ class Author_Collection_EditorMapper
 
 
 
-    private function setAttributeValue(Author_Collection_Editor $a, $fieldValue, $attributeName)
+    private function setAttributeValue(Author_Collection_Serie $a, $fieldValue, $attributeName)
     {
         $attribute = new ReflectionProperty($a, $attributeName);
         $attribute->setAccessible(TRUE);

@@ -58,14 +58,14 @@ class Author_Form_EditionCreate extends Zend_Form
 
 
         $element = new Zend_Form_Element_Select('editor');
-        $element->setLabel('#Editor ')
+        $element->setLabel('#Editor')
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
                     array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
                     array('Label', array('tag' => 'div', 'tagClass' => 'label')),
                 ))
-                ->setOptions(array('class' => 'Full alpha omega'))
+                ->setOptions(array('class' => ''))
                 ->setRegisterInArrayValidator(false);
         $this->addElement($element);
 

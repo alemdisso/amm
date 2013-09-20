@@ -1,15 +1,17 @@
 <?php
 
-class Author_Collection_Editor {
+class Author_Collection_Serie {
 
     protected $id;
     protected $name;
+    protected $editor;
     protected $uri;
     protected $country;
 
     function __construct($id=0) {
         $this->id = (int)$id;
         $this->name = null;
+        $this->editor = null;
         $this->uri = null;
         $this->country = null;
     }
@@ -22,9 +24,27 @@ class Author_Collection_Editor {
         if (($this->id == 0) && ($id > 0)) {
             $this->id = (int)$id;
         } else {
-            throw new Author_Collection_EditorException('It\'s not possible to change a editor\'s ID');
+            throw new Author_Collection_SerieException('It\'s not possible to change a serie\'s ID');
         }
     } //SetId
+
+    public function getEditor()
+    {
+        return $this->editor;
+    } //getEditor
+
+    public function setEditor($editor)
+    {
+        $validator = new Moxca_Util_ValidPositiveDecimal();
+        if ($validator->isValid($editor)) {
+            if ($this->pages != $editor) {
+                $this->pages = $editor;
+            }
+        } else {
+            throw new Author_Collection_WorkException("This ($editor) is not a valid editor.");
+        }
+
+    } //SetEditor
 
     public function getName()
     {
@@ -41,7 +61,7 @@ class Author_Collection_Editor {
                 $this->uri = $converter->toAscii($this->name);
             }
         } else {
-            throw new Author_Collection_EditorException("This ($name) is not a valid name.");
+            throw new Author_Collection_SerieException("This ($name) is not a valid name.");
         }
 
     } //SetName

@@ -58,6 +58,15 @@ class Admin_WorkController extends Zend_Controller_Action
                 $pages = $this->view->translate("#NI");
             }
 
+            if ($loopEditionObj->getSerie() > 0) {
+                $serieMapper = new Author_Collection_SerieMapper($this->db);
+                $serieObj = $serieMapper->findById($loopEditionObj->getSerie());
+                $serieName = $serieObj->getName();
+            } else {
+                $serieName = "";
+            }
+
+
             $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
             $editionsModel[$editionId] = array(
@@ -66,6 +75,7 @@ class Admin_WorkController extends Zend_Controller_Action
                     'src' => $coverFilePath,
                     'isbn' => $isbn,
                     'pages' => $pages,
+                    'serie' => $serieName,
             );
         }
 

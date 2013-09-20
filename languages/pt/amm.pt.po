@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-19 22:33-0300\n"
-"PO-Revision-Date: 2013-09-19 22:34-0300\n"
+"POT-Creation-Date: 2013-09-20 00:26-0300\n"
+"PO-Revision-Date: 2013-09-20 00:27-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -19,7 +19,7 @@ msgstr ""
 
 #: application\modules/admin/controllers/EditionController.php:44
 #: application\modules/admin/controllers/EditionController.php:72
-#: application\modules/admin/controllers/EditionController.php:179
+#: application\modules/admin/controllers/EditionController.php:223
 #: application\modules/auth/controllers/UserController.php:36
 #: application\modules/auth/controllers/UserController.php:58
 msgid "#The record was successfully updated."
@@ -37,15 +37,21 @@ msgstr "Trocar imagem"
 
 #: application\modules/admin/controllers/EditionController.php:125
 #: application\modules/admin/controllers/EditionController.php:155
+#: application\modules/admin/controllers/EditionController.php:186
 msgid "#Change isbn"
 msgstr "Editar isbn"
+
+#: application\modules/admin/controllers/EditionController.php:195
+#: application\modules/admin/controllers/EditionController.php:208
+msgid "#(choose an option)"
+msgstr "(escolha uma opção...)"
 
 #: application\modules/admin/controllers/WorkController.php:53
 #: application\modules/admin/controllers/WorkController.php:58
 msgid "#NI"
 msgstr "n.i."
 
-#: application\modules/admin/controllers/WorkController.php:102
+#: application\modules/admin/controllers/WorkController.php:112
 msgid "#no editions"
 msgstr "sem edições"
 
@@ -62,7 +68,22 @@ msgstr "Acesso negado"
 msgid "#Invalid User Id from Get"
 msgstr "Id inválido"
 
-#: application\modules/works/controllers/EditionController.php:55
+#: application\modules/works/controllers/EditionController.php:41
+#, php-format
+msgid "#ISBN: %s"
+msgstr "ISBN: %s"
+
+#: application\modules/works/controllers/EditionController.php:48
+#, php-format
+msgid "#%s pages"
+msgstr "%s páginas"
+
+#: application\modules/works/controllers/EditionController.php:58
+#, php-format
+msgid "#Serie: %s"
+msgstr "Coleção: %s"
+
+#: application\modules/works/controllers/EditionController.php:79
 #, php-format
 msgid "#Exploring %s"
 msgstr "Explorando %s"
@@ -1174,6 +1195,11 @@ msgstr "Mudar isbn de %s"
 msgid "#Change pages for %s"
 msgstr "Mudar número de páginas de %s"
 
+#: application\modules/admin/views/scripts/edition/change-serie.phtml:2
+#, php-format
+msgid "#Change %s's serie"
+msgstr "Alterar coleção de %s"
+
 #: application\modules/admin/views/scripts/panel/panel.phtml:2
 msgid "#New Book"
 msgstr "Novo Livro"
@@ -1200,8 +1226,13 @@ msgstr "Edições"
 
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:4
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:5
+#: application\modules/admin/views/scripts/work/editions-loop.phtml:6
 msgid "#(edit)"
 msgstr "(editar)"
+
+#: application\modules/admin/views/scripts/work/editions-loop.phtml:6
+msgid "#Serie:"
+msgstr "Coleção"
 
 #: application\modules/admin/views/scripts/work/list.phtml:13
 msgid "#List of works"
@@ -1715,9 +1746,6 @@ msgstr "Juvenil"
 #~ msgid "#Service messenger"
 #~ msgstr "Serviço de mensagens"
 
-#~ msgid "#Change %s's service messenger"
-#~ msgstr "Alterar endereço de %s"
-
 #~ msgid "#Contact:"
 #~ msgstr "Contato:"
 
@@ -1747,9 +1775,6 @@ msgstr "Juvenil"
 
 #~ msgid "#Messengers"
 #~ msgstr "Serviços de mensagens"
-
-#~ msgid "#Service"
-#~ msgstr "Serviço"
 
 #~ msgid "#Service.Address"
 #~ msgstr "Conta"

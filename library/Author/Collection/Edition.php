@@ -5,6 +5,7 @@ class Author_Collection_Edition {
     protected $id;
     protected $work;
     protected $editor;
+    protected $serie;
     protected $pages;
     protected $coverImageFilename;
     protected $isbn;
@@ -26,7 +27,7 @@ class Author_Collection_Edition {
         return $this->id;
     } //getId
 
-    public function SetId($id) {
+    public function setId($id) {
         if (($this->id == 0) && ($id > 0)) {
             $this->id = (int)$id;
         } else {
@@ -45,12 +46,30 @@ class Author_Collection_Edition {
         return $this->work;
     } //getWork
 
+    public function getSerie()
+    {
+        return $this->serie;
+    } //getSerie
+
+    public function setSerie($serie)
+    {
+        $validator = new Moxca_Util_ValidPositiveDecimal();
+        if ($validator->isValid($serie)) {
+            if ($this->serie != $serie) {
+                $this->serie = $serie;
+            }
+        } else {
+            throw new Author_Collection_WorkException("This ($serie) is not a valid serie.");
+        }
+
+    } //SetSerie
+
     public function getPages()
     {
         return $this->pages;
     } //getPages
 
-    public function SetPages($pages)
+    public function setPages($pages)
     {
         $validator = new Moxca_Util_ValidPositiveDecimal();
         if ($validator->isValid($pages)) {
@@ -70,7 +89,7 @@ class Author_Collection_Edition {
         return $this->coverImageFilename;
     } //getCoverImageFilename
 
-    public function SetCoverImageFilename($coverImageFilename)
+    public function setCoverImageFilename($coverImageFilename)
     {
         $validator = new Moxca_Util_ValidFilename();
         if ($validator->isValid($coverImageFilename)) {
@@ -90,7 +109,7 @@ class Author_Collection_Edition {
         return $this->isbn;
     } //getIsbn
 
-    public function SetIsbn($isbn)
+    public function setIsbn($isbn)
     {
         $validator = new Moxca_Util_ValidString();
         if ($validator->isValid($isbn)) {
@@ -109,7 +128,7 @@ class Author_Collection_Edition {
         return $this->illustrator;
     } //getIllustrator
 
-    public function SetIllustrator($illustrator)
+    public function setIllustrator($illustrator)
     {
         $validator = new Moxca_Util_ValidString();
         if ($validator->isValid($illustrator)) {
@@ -128,7 +147,7 @@ class Author_Collection_Edition {
         return $this->coverDesigner;
     } //getCoverDesigner
 
-    public function SetCoverDesigner($coverDesigner)
+    public function setCoverDesigner($coverDesigner)
     {
         $validator = new Moxca_Util_ValidString();
         if ($validator->isValid($coverDesigner)) {

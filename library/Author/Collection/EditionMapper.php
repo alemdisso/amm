@@ -29,11 +29,12 @@ class Author_Collection_EditionMapper
     public function insert(Author_Collection_Edition $obj)
     {
 
-        $query = $this->db->prepare("INSERT INTO author_collection_editions (work, editor, pages, cover_image_filename, isbn, illustrator, cover_designer)
-            VALUES (:work, :editor, :pages, :cover_image_filename, :isbn, :illustrator, :cover_designer)");
+        $query = $this->db->prepare("INSERT INTO author_collection_editions (work, editor, serie, pages, cover_image_filename, isbn, illustrator, cover_designer)
+            VALUES (:work, :editor, :serie, :pages, :cover_image_filename, :isbn, :illustrator, :cover_designer)");
 
         $query->bindValue(':work', $obj->getWork(), PDO::PARAM_STR);
         $query->bindValue(':editor', $obj->getEditor(), PDO::PARAM_STR);
+        $query->bindValue(':serie', $obj->getSerie(), PDO::PARAM_STR);
         $query->bindValue(':pages', $obj->getPages(), PDO::PARAM_STR);
         $query->bindValue(':cover_image_filename', $obj->getCoverImageFilename(), PDO::PARAM_STR);
         $query->bindValue(':isbn', $obj->getIsbn(), PDO::PARAM_STR);
@@ -53,12 +54,13 @@ class Author_Collection_EditionMapper
             throw new Author_Collection_EditionMapperException('Object has no ID, cannot update.');
         }
 
-        $query = $this->db->prepare("UPDATE author_collection_editions SET work = :work, editor = :editor, pages = :pages
+        $query = $this->db->prepare("UPDATE author_collection_editions SET work = :work, editor = :editor, serie = :serie, pages = :pages
              , cover_image_filename = :cover_image_filename, isbn = :isbn, illustrator = :illustrator, cover_designer = :cover_designer
             WHERE id = :id;");
 
         $query->bindValue(':work', $obj->getWork(), PDO::PARAM_STR);
         $query->bindValue(':editor', $obj->getEditor(), PDO::PARAM_STR);
+        $query->bindValue(':serie', $obj->getSerie(), PDO::PARAM_STR);
         $query->bindValue(':pages', $obj->getPages(), PDO::PARAM_STR);
         $query->bindValue(':cover_image_filename', $obj->getCoverImageFilename(), PDO::PARAM_STR);
         $query->bindValue(':isbn', $obj->getIsbn(), PDO::PARAM_STR);
@@ -84,7 +86,7 @@ class Author_Collection_EditionMapper
             $this->identityMap->next();
         }
 
-        $query = $this->db->prepare('SELECT work, editor, pages, cover_image_filename, isbn, illustrator, cover_designer FROM author_collection_editions WHERE id = :id;');
+        $query = $this->db->prepare('SELECT work, editor, serie, pages, cover_image_filename, isbn, illustrator, cover_designer FROM author_collection_editions WHERE id = :id;');
         $query->bindValue(':id', $id, PDO::PARAM_STR);
         $query->execute();
         $result = $query->fetch();
@@ -94,7 +96,7 @@ class Author_Collection_EditionMapper
         $work = $result['work'];
         $obj = new Author_Collection_Edition($result['work'], $result['editor']);
         $this->setAttributeValue($obj, $id, 'id');
-//        $this->setAttributeValue($obj, $result['editor'], 'editor');
+        $this->setAttributeValue($obj, $result['serie'], 'serie');
 //        $this->setAttributeValue($obj, $result['work'], 'work');
         $this->setAttributeValue($obj, $result['pages'], 'pages');
         $this->setAttributeValue($obj, $result['cover_image_filename'], 'coverImageFilename');
