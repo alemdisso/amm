@@ -5,5 +5,3 @@ class Moxca_Util_ValidFilename extends Zend_Validate_Abstract {
         return $nameValidator->isValid($value);
     }
 }
-
-?>

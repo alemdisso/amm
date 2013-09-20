@@ -88,13 +88,13 @@ class Works_EditionController extends Zend_Controller_Action
     private function checkUriFromGet()
     {
         $data = $this->_request->getParams();
-        $validator = new Moxca_Util_ValidTitle();
+        $validator = new Moxca_Util_ValidUri();
 
         if ($validator->isValid($data['uri'])) {
             $uri = $data['uri'];
             return $uri;
         }
-        throw new C3op_Projects_ProjectException("Invalid Project Id from Get");
+        throw new C3op_Projects_ProjectException("Invalid Uri from Get");
 
     }
 

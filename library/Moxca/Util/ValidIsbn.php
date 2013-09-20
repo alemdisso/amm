@@ -11,5 +11,3 @@ class Moxca_Util_ValidIsbn extends Zend_Validate_Abstract {
         return $isbn10Digit || $isbn13Digit;
     }
 }
-
-?>

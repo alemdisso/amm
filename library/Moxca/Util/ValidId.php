@@ -12,5 +12,3 @@ class Moxca_Util_ValidId extends Zend_Validate_Abstract {
         }
     }
 }
-
-?>

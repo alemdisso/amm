@@ -26,7 +26,7 @@ class Author_Form_SerieChange extends Zend_Form
                     array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
                     array('Label', array('tag' => 'div', 'tagClass' => 'label')),
                 ))
-                ->setOptions(array('class' => ''))
+                ->setOptions(array('class' => 'change'))
                 ->setRegisterInArrayValidator(false);
         $this->addElement($element);
 

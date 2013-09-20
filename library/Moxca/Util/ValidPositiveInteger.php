@@ -5,5 +5,3 @@ class Moxca_Util_ValidPositiveInteger extends Zend_Validate_Abstract {
         return ($nameValidator->isValid($value)) && ($value >= 0);
     }
 }
-
-?>

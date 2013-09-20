@@ -33,8 +33,15 @@ class Admin_WorkController extends Zend_Controller_Action
     public function detailAction()
     {
 
-        $checker = new Moxca_Util_CheckIdFromGet();
-        $id = $checker->check($this->_request);
+        $data = $this->_request->getParams();
+        try {
+            $id = $this->view->checkIdFromGet($data);
+        } catch (Exception $e) {
+            throw $e;
+        }
+
+//        $checker = new Moxca_Util_CheckIdFromGet();
+//        $id = $checker->check($this->_request);
 
         $workObj = $this->workMapper->findById($id);
 

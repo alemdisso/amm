@@ -869,6 +869,12 @@ div.dataTables_filter {
 
 }
 
+#admin select.change {
+    width: 160px;
+    padding: 2px 5px;
+
+}
+
 #admin input {
     width: 160px;
     padding: 2px 5px;

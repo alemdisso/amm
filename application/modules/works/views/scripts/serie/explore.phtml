@@ -1,0 +1,65 @@
+<?php
+$pageData = $this->pageData;
+?>
+<!-- conteudo -->
+<div id="conteudo">
+
+<h1><img src="/img/icone_livros.png" align="absmiddle" alt="Livros" /> <?php echo $this->translate("#Works") ?></h1>
+
+<a href="<?php echo $pageData['mediumImageUri']?>"><?php $this->exploreCover($pageData['mediumImageUri']) ?></a>
+<h3><?php echo $pageData['title']?></h3>
+<p><strong><?php echo $pageData['editorName']?></strong></p>
+<p><?php echo $pageData['description']?></p>
+
+<p><small>
+<?php if ((isset($pageData['serieName'])) && ($pageData['serieName'])) { ?>
+<?php echo $pageData['serieName']?><br />
+<?php } ?>
+<?php if ((isset($pageData['ilustratorName'])) && ($pageData['ilustratorName'])) { ?>
+<?php echo $pageData['ilustratorName']?><br />
+<?php } ?>
+<?php if ((isset($pageData['isbn'])) && ($pageData['isbn'])) { ?>
+<?php echo $pageData['isbn']?><br />
+<?php } ?>
+<?php if ((isset($pageData['pages'])) && ($pageData['pages'])) { ?>
+<?php echo $pageData['pages']?><br />
+<?php } ?>
+</small></p>
+
+<?php if (isset($pageData['ecommerce'])) { ?>
+<form>
+<input type="submit" value="<?php echo $this->translate("#Buy online") ?>" />
+</form>
+<?php } ?>
+
+<?php if (isset($pageData['moreAbout'])) { ?>
+<!-- mais sobre o livro -->
+<div class="box_conteudo" style="margin-top:20px;"><img src="/img/icone_livro_mais.png" align="absmiddle" /> <a href=""><strong>Mais curiosidades sobre este livro</strong></a></div>
+<!-- /mais sobre o livro -->
+<?php } ?>
+
+<?php
+if (isset($pageData['prizesLabels'])) {
+    if (count($pageData['prizesLabels']) > 0) {
+?>
+<!-- premios -->
+<div class="box_conteudo">
+<h4 class="premio"><?php echo $this->translate("#Prizes") ?></h4>
+<ul>
+<?php
+        foreach ($pageData['prizesLabels'] as $prizeId => $label) {
+?>
+<li><?php echo $label ?></li>
+<?
+        }
+?>
+</ul>
+</div>
+<!-- /premios -->
+<?php
+    }
+}
+?>
+
+</div>
+<!-- /conteudo -->

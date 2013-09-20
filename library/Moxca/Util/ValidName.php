@@ -8,5 +8,3 @@ class Moxca_Util_ValidName extends Zend_Validate_Abstract {
         return $nameValidator->isValid($value);
     }
 }
-
-?>

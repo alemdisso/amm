@@ -127,6 +127,40 @@ class Works_IndexController extends Zend_Controller_Action
 
     }
 
+    public function serieAction()
+    {
+        $editionsIds = $this->editionMapper->getAllEditionsOfSerie(1);
+        $editionsData = array();
+        foreach ($editionsIds as $editionId) {
+            $loopEditionObj = $this->editionMapper->findById($editionId);
+            $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
+            $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
+
+            $coverFilePath = $this->view->coverFilePath($loopEditionObj);
+
+            $editionsData[$editionId] = array(
+                    'title' => $loopWorkObj->getTitle(),
+                    'coverSrc' => $coverFilePath,
+                    'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
+                    'summary' => $loopWorkObj->getSummary(),
+                    'editorName' => $loopEditorObj->getName(),
+                    'prizes' => array(),
+                    'moreAbout' => false,
+                    'otherLanguages' => false,
+            );
+        }
+
+
+        $pageData = array(
+            'serieLabel' => "HEY HO",
+            'editionsData' => $editionsData,
+        );
+
+        $this->view->pageData = $pageData;
+        $this->view->pageTitle = $this->view->translate("#Ana Maria Machado - Essays");
+
+    }
+
     public function youngAction()
     {
         $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_YOUNG);

@@ -232,6 +232,25 @@ class Author_Collection_EditionMapper
     }
 
 
+    public function getAllEditionsOfSerie($serie)
+    {
+        $query = $this->db->prepare('SELECT e.id FROM  author_collection_editions e
+                                     WHERE e.serie=:serie;');
+        $query->bindValue(':serie', $serie, PDO::PARAM_STR);
+        $query->execute();
+        $resultPDO = $query->fetchAll();
+
+        $result = array();
+        foreach ($resultPDO as $row) {
+            if (!is_null($row['id'])) {
+                $result[] = $row['id'];
+            }
+        }
+        return $result;
+
+    }
+
+
 
 
 }
