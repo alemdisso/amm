@@ -99,8 +99,20 @@ class Admin_NavigationController extends Zend_Controller_Action
 //        $config = new Zend_Config_Xml($sxe->asXML(), 'nav');
 //        $navigation = new Zend_Navigation($config);
 //        $this->view->navigation($navigation);
-        file_put_contents(APPLICATION_PATH . '/configs/dynamic.xml', $sxe->asXML());
+//        file_put_contents(APPLICATION_PATH . '/configs/dynamic.xml', $sxe->asXML());
+        $this->saveXMLFile(APPLICATION_PATH . '/configs/dynamic.xml', $sxe);
 
 
     }
+
+    private function saveXMLFile($filename, $xml)
+    {
+        $dom = new DOMDocument('1.0');
+        $dom->preserveWhiteSpace = false;
+        $dom->formatOutput = true;
+        $dom->loadXML($xml->asXML());
+//        echo $dom->saveXML();die();
+        $dom->save($filename); // I used both (menu.xml) as well ($filename) but neither seems to work
+    }
+
 }
