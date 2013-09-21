@@ -15,23 +15,16 @@ class Works_EditionController extends Zend_Controller_Action
 
     public function init()
     {
-        $this->db = Zend_Registry::get('db');
-        $this->workMapper = new Author_Collection_WorkMapper($this->db);
-        $this->editorMapper = new Author_Collection_EditorMapper($this->db);
-        $this->editionMapper = new Author_Collection_EditionMapper($this->db);
+        $this->initDbAndMappers();
 
-        //$uri = $this->_request->getPathInfo();
-        //$activeNav = $this->view->navigation()->findByUri($uri);die(print_r($activeNav));
-        //$activeNav->active = true;
+        $this->view->activateNavigation($this->_request, $this->view);
 
         $layoutHelper = $this->_helper->getHelper('Layout');
-        $layout = $layoutHelper->getLayoutInstance();
-        $layout->nestedLayout = 'inner_works';
+        $this->view->setNestedLayout($layoutHelper, 'inner_works');
     }
 
     public function exploreAction()
     {
-
         $data = $this->_request->getParams();
         try {
             $uri = $this->view->checkUriFromGet($data);
@@ -139,5 +132,13 @@ class Works_EditionController extends Zend_Controller_Action
 
     }
 
+    private function initDbAndMappers()
+    {
+        $this->db = Zend_Registry::get('db');
+        $this->workMapper = new Author_Collection_WorkMapper($this->db);
+        $this->editorMapper = new Author_Collection_EditorMapper($this->db);
+        $this->editionMapper = new Author_Collection_EditionMapper($this->db);
+
+    }
 }
 

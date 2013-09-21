@@ -15,22 +15,12 @@ class Works_IndexController extends Zend_Controller_Action
 
     public function init()
     {
-        $this->db = Zend_Registry::get('db');
-        $this->workMapper = new Author_Collection_WorkMapper($this->db);
-        $this->editorMapper = new Author_Collection_EditorMapper($this->db);
-        $this->editionMapper = new Author_Collection_EditionMapper($this->db);
+        $this->initDbAndMappers();
 
-        $uri = $this->_request->getPathInfo();
-        $activeNav = $this->view->navigation()->findByUri($uri);
-        try {
-            $activeNav->active = true;
-        } catch (Exception $e) {
-            
-        }
+        $this->view->activateNavigation($this->_request, $this->view);
 
         $layoutHelper = $this->_helper->getHelper('Layout');
-        $layout = $layoutHelper->getLayoutInstance();
-        $layout->nestedLayout = 'inner_works';
+        $this->view->setNestedLayout($layoutHelper, 'inner_works');
     }
 
     public function fictionAction()
@@ -235,6 +225,15 @@ class Works_IndexController extends Zend_Controller_Action
 
         $this->view->pageData = $pageData;
         $this->view->pageTitle = "Ana Maria Machado - Histórias";
+
+    }
+
+    private function initDbAndMappers()
+    {
+        $this->db = Zend_Registry::get('db');
+        $this->workMapper = new Author_Collection_WorkMapper($this->db);
+        $this->editorMapper = new Author_Collection_EditorMapper($this->db);
+        $this->editionMapper = new Author_Collection_EditionMapper($this->db);
 
     }
 }

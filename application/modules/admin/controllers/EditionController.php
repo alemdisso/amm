@@ -22,8 +22,7 @@ class Admin_EditionController extends Zend_Controller_Action
         $this->db = Zend_Registry::get('db');
 
         $layoutHelper = $this->_helper->getHelper('Layout');
-        $layout = $layoutHelper->getLayoutInstance();
-        $layout->nestedLayout = 'inner_admin';
+        $this->view->setNestedLayout($layoutHelper, 'inner_admin');
 
         $this->workMapper = new Author_Collection_WorkMapper($this->db);
         $this->editorMapper = new Author_Collection_EditorMapper($this->db);

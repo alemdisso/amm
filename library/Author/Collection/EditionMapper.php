@@ -212,7 +212,6 @@ class Author_Collection_EditionMapper
 
     }
 
-
     public function getAllEditionsOfWork($work)
     {
         $query = $this->db->prepare('SELECT e.id FROM  author_collection_editions e

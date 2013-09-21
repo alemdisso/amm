@@ -1,0 +1,47 @@
+<?php
+$pageData = $this->pageData;
+$worksList = $pageData['worksList'];
+?>
+<script>
+$(function() {
+      $('#Works').dataTable( {
+   });
+});
+</script>
+<!-- conteudo -->
+<div id="conteudo">
+<h1><?php echo $this->translate("#List of works") ?></h1>
+<div id="container" style="width:800px; margin:0 auto;">
+           <table id="Works" class="display">
+
+              <thead>
+                <tr>
+                  <th><?php echo $this->translate("#Title") ?></th>
+                  <th><?php echo $this->translate("#Type") ?></th>
+                  <th><?php echo $this->translate("#Editor") ?></th>
+                  <th width="1%">&nbsp;</th>
+                </tr>
+              </thead>
+<?php
+foreach($worksList as $id => $workInfo) {
+?>
+                <tr>
+                  <td>
+                    <a href="/admin/work/detail/?id=<?php print($id) ?>"><?php print($workInfo['title']) ?></a>
+                  </td>
+                  <td>
+                    <?php print($workInfo['typeLabel']) ?></a>
+                  </td>
+                  <td>
+                    <?php print($workInfo['editorName']) ?></a>
+                  </td>
+                  <td>
+                 </td>
+                </tr>
+<?php
+}
+?>
+           </table>
+    </div>
+</div>
+<!-- /conteudo -->

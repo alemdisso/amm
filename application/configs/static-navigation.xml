@@ -30,12 +30,22 @@
                             <uri>/livros/ensaios</uri>
                         </essays>
 
-                        <serie>
-                            <label>Mico Maneco</label>
-                            <uri>/colecao/mico-maneco</uri>
-                        </serie>
                     </pages>
                 </works>
+
+                <news>
+                    <label>Novidades</label>
+                    <uri>/novidades</uri>
+                </news>
+
+                <biografia>
+                    <label>Biografia</label>
+                    <uri>/biografia</uri>
+                </biografia>
+
+
+
+
             </pages>
         </home>
     </nav>

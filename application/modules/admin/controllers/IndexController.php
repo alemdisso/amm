@@ -3,6 +3,11 @@
 class Admin_IndexController extends Zend_Controller_Action
 {
 
+    private $db;
+    private $editorMapper;
+    private $editionMapper;
+    private $workMapper;
+
     public function preDispatch()
     {
         try {
@@ -15,8 +20,58 @@ class Admin_IndexController extends Zend_Controller_Action
 
     public function init()
     {
-        /* Initialize action controller here */
+        $this->initDbAndMappers();
+
+        $this->view->activateNavigation($this->_request, $this->view);
+
+        $layoutHelper = $this->_helper->getHelper('Layout');
+        $this->view->setNestedLayout($layoutHelper, 'inner_admin');
     }
 
+    public function listAction()
+    {
+        $works = $this->workMapper->getAllIds();
+
+        $worksData = array();
+        foreach ($works as $workId) {
+            $loopWorkObj = $this->workMapper->findById($workId);
+
+            $loopEditionObj = $this->editionMapper->findByWork($workId);
+            if (!is_null($loopEditionObj)) {
+                $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
+                $editorName = $loopEditorObj->getName();
+            } else {
+                $loopEditorObj = null;
+                $editorName = $this->view->translate("#no editions");
+                $editorName = "(<em>$editorName</em>)";
+            }
+
+            $typeLabel = $this->view->typeLabel($loopWorkObj, new Author_Collection_WorkTypes, $this->view);
+
+            $worksData[$workId] = array('title' => $loopWorkObj->getTitle(),
+                    'typeLabel' => $typeLabel,
+                    'editorName' => $editorName,
+            );
+        }
+
+
+        $data = array(
+            'worksList' => $worksData,
+        );
+
+
+        $this->view->pageData = $data;
+
+    }
+
+
+    private function initDbAndMappers()
+    {
+        $this->db = Zend_Registry::get('db');
+        $this->workMapper = new Author_Collection_WorkMapper($this->db);
+        $this->editorMapper = new Author_Collection_EditorMapper($this->db);
+        $this->editionMapper = new Author_Collection_EditionMapper($this->db);
+
+    }
 
 }

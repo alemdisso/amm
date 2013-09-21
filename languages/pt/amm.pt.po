@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-20 00:26-0300\n"
-"PO-Revision-Date: 2013-09-20 00:27-0300\n"
+"POT-Creation-Date: 2013-09-21 18:55-0300\n"
+"PO-Revision-Date: 2013-09-21 18:56-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -17,43 +17,135 @@ msgstr ""
 "X-Poedit-SearchPath-1: library\\Moxca\n"
 "X-Poedit-SearchPath-2: library\\Author\n"
 
-#: application\modules/admin/controllers/EditionController.php:44
-#: application\modules/admin/controllers/EditionController.php:72
-#: application\modules/admin/controllers/EditionController.php:223
+#: application\modules/admin/controllers/EditionController.php:43
+#: application\modules/admin/controllers/EditionController.php:71
+#: application\modules/admin/controllers/EditionController.php:222
 #: application\modules/auth/controllers/UserController.php:36
 #: application\modules/auth/controllers/UserController.php:58
 msgid "#The record was successfully updated."
 msgstr "O registro foi atualizado com sucesso."
 
-#: application\modules/admin/controllers/EditionController.php:55
+#: application\modules/admin/controllers/EditionController.php:54
 #: application\modules/admin/views/scripts/edition/create.phtml:17
 msgid "#Create edition"
 msgstr "Criar edição"
 
-#: application\modules/admin/controllers/EditionController.php:95
+#: application\modules/admin/controllers/EditionController.php:94
 #: application\modules/admin/views/scripts/edition/cover.phtml:1
 msgid "#Change cover"
 msgstr "Trocar imagem"
 
-#: application\modules/admin/controllers/EditionController.php:125
-#: application\modules/admin/controllers/EditionController.php:155
-#: application\modules/admin/controllers/EditionController.php:186
+#: application\modules/admin/controllers/EditionController.php:124
+#: application\modules/admin/controllers/EditionController.php:154
+#: application\modules/admin/controllers/EditionController.php:185
 msgid "#Change isbn"
 msgstr "Editar isbn"
 
-#: application\modules/admin/controllers/EditionController.php:195
-#: application\modules/admin/controllers/EditionController.php:208
+#: application\modules/admin/controllers/EditionController.php:194
+#: application\modules/admin/controllers/EditionController.php:207
 msgid "#(choose an option)"
 msgstr "(escolha uma opção...)"
 
-#: application\modules/admin/controllers/WorkController.php:53
-#: application\modules/admin/controllers/WorkController.php:58
-msgid "#NI"
-msgstr "n.i."
-
-#: application\modules/admin/controllers/WorkController.php:112
+#: application\modules/admin/controllers/IndexController.php:45
 msgid "#no editions"
 msgstr "sem edições"
+
+#: application\modules/admin/controllers/NavigationController.php:44
+#: application\modules/works/views/scripts/edition/explore.phtml:7
+#: application\modules/works/views/scripts/index/children.phtml:7
+#: application\modules/works/views/scripts/index/essays.phtml:7
+#: application\modules/works/views/scripts/index/fiction.phtml:7
+#: application\modules/works/views/scripts/index/serie.phtml:7
+#: application\modules/works/views/scripts/index/young.phtml:7
+#: application\modules/works/views/scripts/serie/explore.phtml:7
+msgid "#Works"
+msgstr "Livros"
+
+#: application\modules/admin/controllers/NavigationController.php:45
+msgid "/works"
+msgstr "/livros"
+
+#: application\modules/admin/controllers/NavigationController.php:49
+#: library\Author/Collection/WorkTypes.php:11
+#: application\modules/default/views/scripts/index/index.phtml:18
+#: application\modules/includes/views/scripts/include/footer-home.phtml:10
+#: application\modules/includes/views/scripts/include/footer.phtml:12
+#: application\modules/works/views/scripts/index/index.phtml:30
+msgid "#Children"
+msgstr "Infantis"
+
+#: application\modules/admin/controllers/NavigationController.php:50
+msgid "/works/children"
+msgstr "/livros/infantis"
+
+#: application\modules/admin/controllers/NavigationController.php:53
+#: library\Author/Collection/WorkTypes.php:12
+msgid "#Young"
+msgstr "Juvenis"
+
+#: application\modules/admin/controllers/NavigationController.php:54
+msgid "/works/young"
+msgstr "/livros/juvenis"
+
+#: application\modules/admin/controllers/NavigationController.php:57
+#: library\Author/Collection/WorkTypes.php:13
+#: application\modules/default/views/scripts/index/index.phtml:20
+#: application\modules/includes/views/scripts/include/footer-home.phtml:12
+#: application\modules/includes/views/scripts/include/footer.phtml:14
+#: application\modules/works/views/scripts/index/index.phtml:30
+msgid "#Fiction"
+msgstr "Ficção"
+
+#: application\modules/admin/controllers/NavigationController.php:58
+msgid "/works/fiction"
+msgstr "/livros/ficcao"
+
+#: application\modules/admin/controllers/NavigationController.php:61
+#: application\modules/default/views/scripts/index/index.phtml:21
+#: application\modules/includes/views/scripts/include/footer-home.phtml:13
+#: application\modules/includes/views/scripts/include/footer.phtml:15
+#: application\modules/works/views/scripts/index/index.phtml:30
+msgid "#Essays"
+msgstr "Ensaios"
+
+#: application\modules/admin/controllers/NavigationController.php:62
+msgid "/works/essays"
+msgstr "/livros/ensaios"
+
+#: application\modules/admin/controllers/NavigationController.php:79
+msgid "#Series"
+msgstr "Coleções"
+
+#: application\modules/admin/controllers/NavigationController.php:80
+msgid "/series"
+msgstr "/colecoes"
+
+#: application\modules/admin/controllers/NavigationController.php:91
+#: application\modules/includes/views/scripts/include/header-login.phtml:12
+#: application\modules/includes/views/scripts/include/header.phtml:13
+msgid "#Biography"
+msgstr "Biografia"
+
+#: application\modules/admin/controllers/NavigationController.php:92
+#, fuzzy
+msgid "/works/biography"
+msgstr "/livros/juvenis"
+
+#: application\modules/admin/controllers/NavigationController.php:95
+#: application\modules/includes/views/scripts/include/header-login.phtml:11
+#: application\modules/includes/views/scripts/include/header.phtml:12
+msgid "#News"
+msgstr "Novidades"
+
+#: application\modules/admin/controllers/NavigationController.php:96
+#, fuzzy
+msgid "/works/news"
+msgstr "/livros/ensaios"
+
+#: application\modules/admin/controllers/WorkController.php:57
+#: application\modules/admin/controllers/WorkController.php:62
+msgid "#NI"
+msgstr "n.i."
 
 #: application\modules/auth/controllers/LoginController.php:40
 msgid "#You could not be logged in. Please try again."
@@ -63,46 +155,43 @@ msgstr "Não foi possível fazer o login. Por favor tente novamente."
 msgid "#Access denied"
 msgstr "Acesso negado"
 
-#: application\modules/auth/controllers/UserController.php:114
-#: library\Moxca/View/Helper/CheckIdFromGet.php:18
-msgid "#Invalid User Id from Get"
-msgstr "Id inválido"
-
-#: application\modules/works/controllers/EditionController.php:41
+#: application\modules/works/controllers/EditionController.php:43
 #, php-format
 msgid "#ISBN: %s"
 msgstr "ISBN: %s"
 
-#: application\modules/works/controllers/EditionController.php:48
+#: application\modules/works/controllers/EditionController.php:50
 #, php-format
 msgid "#%s pages"
 msgstr "%s páginas"
 
-#: application\modules/works/controllers/EditionController.php:58
+#: application\modules/works/controllers/EditionController.php:60
+#: application\modules/works/controllers/IndexController.php:163
 #, php-format
 msgid "#Serie: %s"
 msgstr "Coleção: %s"
 
-#: application\modules/works/controllers/EditionController.php:79
+#: application\modules/works/controllers/EditionController.php:84
 #, php-format
 msgid "#Exploring %s"
 msgstr "Explorando %s"
 
-#: application\modules/works/controllers/IndexController.php:57
+#: application\modules/works/controllers/IndexController.php:55
 msgid "#Ana Maria Machado - Fiction"
 msgstr "Ana Maria Machado - Ficção"
 
-#: application\modules/works/controllers/IndexController.php:93
+#: application\modules/works/controllers/IndexController.php:91
 msgid "#Ana Maria Machado - Children"
-msgstr "Ana Maria Machado - Infantil"
+msgstr "Ana Maria Machado - Infantis"
 
-#: application\modules/works/controllers/IndexController.php:126
+#: application\modules/works/controllers/IndexController.php:124
+#: application\modules/works/controllers/IndexController.php:175
 msgid "#Ana Maria Machado - Essays"
 msgstr "Ana Maria Machado - Ensaios"
 
-#: application\modules/works/controllers/IndexController.php:159
+#: application\modules/works/controllers/IndexController.php:208
 msgid "#Ana Maria Machado - Young"
-msgstr "Ana Maria Machado - Juvenil"
+msgstr "Ana Maria Machado - Juvenis"
 
 #: library\Moxca/Access/Roles.php:10
 msgid "#Unknown"
@@ -191,7 +280,7 @@ msgstr "Angola"
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Anguilla"
-msgstr "ANguila"
+msgstr "Anguila"
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Antarctica"
@@ -1125,29 +1214,13 @@ msgstr "Zâmbia"
 msgid "Zimbabwe"
 msgstr "Zimbábue"
 
+#: library\Moxca/View/Helper/CheckIdFromGet.php:18
+msgid "#Invalid User Id from Get"
+msgstr "Id inválido"
+
 #: library\Author/Collection/WorkTypes.php:10
 msgid "#Nil"
 msgstr "Nula"
-
-#: library\Author/Collection/WorkTypes.php:11
-#: application\modules/default/views/scripts/index/index.phtml:18
-#: application\modules/includes/views/scripts/include/footer-home.phtml:10
-#: application\modules/includes/views/scripts/include/footer.phtml:12
-#: application\modules/works/views/scripts/index/index.phtml:30
-msgid "#Children"
-msgstr "Infantil"
-
-#: library\Author/Collection/WorkTypes.php:12
-msgid "#Young"
-msgstr "Juvenil"
-
-#: library\Author/Collection/WorkTypes.php:13
-#: application\modules/default/views/scripts/index/index.phtml:20
-#: application\modules/includes/views/scripts/include/footer-home.phtml:12
-#: application\modules/includes/views/scripts/include/footer.phtml:14
-#: application\modules/works/views/scripts/index/index.phtml:30
-msgid "#Fiction"
-msgstr "Ficção"
 
 #: library\Author/Collection/WorkTypes.php:14
 msgid "#Essay"
@@ -1200,6 +1273,30 @@ msgstr "Mudar número de páginas de %s"
 msgid "#Change %s's serie"
 msgstr "Alterar coleção de %s"
 
+#: application\modules/admin/views/scripts/index/list.phtml:13
+#: application\modules/admin/views/scripts/work/list.phtml:13
+msgid "#List of works"
+msgstr "Lista de obras"
+
+#: application\modules/admin/views/scripts/index/list.phtml:19
+#: application\modules/admin/views/scripts/work/list.phtml:19
+msgid "#Title"
+msgstr "Título"
+
+#: application\modules/admin/views/scripts/index/list.phtml:20
+#: application\modules/admin/views/scripts/work/list.phtml:20
+msgid "#Type"
+msgstr "Tipo"
+
+#: application\modules/admin/views/scripts/index/list.phtml:21
+#: application\modules/admin/views/scripts/work/list.phtml:21
+msgid "#Editor"
+msgstr "Editor"
+
+#: application\modules/admin/views/scripts/navigation/update.phtml:2
+msgid "#Navigation updated"
+msgstr "Navegação atualizada"
+
 #: application\modules/admin/views/scripts/panel/panel.phtml:2
 msgid "#New Book"
 msgstr "Novo Livro"
@@ -1209,6 +1306,10 @@ msgid "#List works"
 msgstr "Listar obras"
 
 #: application\modules/admin/views/scripts/panel/panel.phtml:4
+msgid "#Update navigation"
+msgstr "Atualizar navegação"
+
+#: application\modules/admin/views/scripts/panel/panel.phtml:5
 msgid "#Logout"
 msgstr "Logout"
 
@@ -1233,22 +1334,6 @@ msgstr "(editar)"
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:6
 msgid "#Serie:"
 msgstr "Coleção"
-
-#: application\modules/admin/views/scripts/work/list.phtml:13
-msgid "#List of works"
-msgstr "Lista de obras"
-
-#: application\modules/admin/views/scripts/work/list.phtml:19
-msgid "#Title"
-msgstr "Título"
-
-#: application\modules/admin/views/scripts/work/list.phtml:20
-msgid "#Type"
-msgstr "Tipo"
-
-#: application\modules/admin/views/scripts/work/list.phtml:21
-msgid "#Editor"
-msgstr "Editor"
 
 #: application\modules/auth/views/scripts/user/create.phtml:2
 msgid "#New user"
@@ -1282,14 +1367,7 @@ msgstr "Mil histórias num só lugar"
 #: application\modules/includes/views/scripts/include/footer.phtml:13
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Young people"
-msgstr "Juvenil"
-
-#: application\modules/default/views/scripts/index/index.phtml:21
-#: application\modules/includes/views/scripts/include/footer-home.phtml:13
-#: application\modules/includes/views/scripts/include/footer.phtml:15
-#: application\modules/works/views/scripts/index/index.phtml:30
-msgid "#Essays"
-msgstr "Ensaios"
+msgstr "Juvenis"
 
 #: application\modules/default/views/scripts/index/index.phtml:28
 #: application\modules/works/views/scripts/index/index.phtml:15
@@ -1302,30 +1380,12 @@ msgstr "mais"
 msgid "#Home"
 msgstr "Principal"
 
-#: application\modules/includes/views/scripts/include/header-login.phtml:11
-#: application\modules/includes/views/scripts/include/header.phtml:12
-msgid "#News"
-msgstr "Novidades"
-
-#: application\modules/includes/views/scripts/include/header-login.phtml:12
-#: application\modules/includes/views/scripts/include/header.phtml:13
-msgid "#Biography"
-msgstr "Biografia"
-
 #: application\modules/includes/views/scripts/include/header-login.phtml:13
-#: application\modules/includes/views/scripts/include/header.phtml:14
 msgid "#Contact"
 msgstr "Contato"
 
-#: application\modules/works/views/scripts/edition/explore.phtml:7
-#: application\modules/works/views/scripts/index/children.phtml:7
-#: application\modules/works/views/scripts/index/essays.phtml:7
-#: application\modules/works/views/scripts/index/fiction.phtml:7
-#: application\modules/works/views/scripts/index/young.phtml:7
-msgid "#Works"
-msgstr "Livros"
-
 #: application\modules/works/views/scripts/edition/explore.phtml:31
+#: application\modules/works/views/scripts/serie/explore.phtml:31
 msgid "#Buy online"
 msgstr "Compre online"
 
@@ -1333,17 +1393,20 @@ msgstr "Compre online"
 #: application\modules/works/views/scripts/index/children.phtml:12
 #: application\modules/works/views/scripts/index/essays.phtml:12
 #: application\modules/works/views/scripts/index/fiction.phtml:12
+#: application\modules/works/views/scripts/index/serie.phtml:12
 #: application\modules/works/views/scripts/index/young.phtml:12
+#: application\modules/works/views/scripts/serie/explore.phtml:47
 msgid "#Prizes"
 msgstr "Prêmios"
 
 #: application\modules/works/views/scripts/index/children.phtml:9
 msgid "#Children books"
-msgstr "Infantil"
+msgstr "Infantis"
 
 #: application\modules/works/views/scripts/index/children.phtml:12
 #: application\modules/works/views/scripts/index/essays.phtml:12
 #: application\modules/works/views/scripts/index/fiction.phtml:12
+#: application\modules/works/views/scripts/index/serie.phtml:12
 #: application\modules/works/views/scripts/index/young.phtml:12
 msgid "#More about this work"
 msgstr "Curiosidades"
@@ -1351,6 +1414,7 @@ msgstr "Curiosidades"
 #: application\modules/works/views/scripts/index/children.phtml:12
 #: application\modules/works/views/scripts/index/essays.phtml:12
 #: application\modules/works/views/scripts/index/fiction.phtml:12
+#: application\modules/works/views/scripts/index/serie.phtml:12
 #: application\modules/works/views/scripts/index/young.phtml:12
 msgid "#Available in other language"
 msgstr "Disponível em outro idioma"
@@ -1369,11 +1433,7 @@ msgstr "Por categoria"
 
 #: application\modules/works/views/scripts/index/young.phtml:9
 msgid "#Young books"
-msgstr "Juvenil"
-
-#, fuzzy
-#~ msgid "#Works for Children"
-#~ msgstr "Mil histórias num só lugar"
+msgstr "Juvenis"
 
 #~ msgid "#Stories"
 #~ msgstr "Livros"
@@ -1540,9 +1600,6 @@ msgstr "Juvenil"
 
 #~ msgid "#Acknowledge start"
 #~ msgstr "Confirmar início"
-
-#~ msgid "#Create new action"
-#~ msgstr "Criar nova ação"
 
 #~ msgid "#New team member for action"
 #~ msgstr "Novo membro de equipe para a ação"
