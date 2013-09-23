@@ -12,7 +12,12 @@ $pageData = $this->pageData;
     <h3><?php echo $this->translate('#Summary')?></h2>
     <p><?php echo $pageData['summary']?></p>
 
+    <h3><?php echo $this->translate('#Prizes')?></h2>
+    <?php echo $this->prizesLoop($pageData['prizes']) ?>
+    <p><a href><?php echo $this->translate("#Add prize") ?></a></p>
+
     <h3><?php echo $this->translate('#Editions')?></h2>
     <?php echo $this->editionsLoop($pageData['editions']) ?>
+
 </div>
 <!-- /conteudo -->

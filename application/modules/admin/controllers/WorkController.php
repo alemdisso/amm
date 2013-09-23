@@ -83,6 +83,7 @@ class Admin_WorkController extends Zend_Controller_Action
             );
         }
 
+        $prizesLabels = $this->prizes($id);
 
 
 
@@ -93,6 +94,7 @@ class Admin_WorkController extends Zend_Controller_Action
             'description' => $workObj->getDescription(),
             'summary' => $workObj->getSummary(),
             'editions' => $editionsModel,
+            'prizes' => $prizesLabels,
         );
 
         $this->view->pageData = $data;
@@ -119,4 +121,71 @@ class Admin_WorkController extends Zend_Controller_Action
         $this->editionMapper = new Author_Collection_EditionMapper($this->db);
 
     }
+
+    private function prizes($id)
+    {
+
+        $prizeMapper = new Author_Collection_PrizeMapper($this->db);
+        $prizesIds = $prizeMapper->getAllPrizesOfWork($id);
+
+        $prizesLabels = array();
+        foreach($prizesIds as $prizeId) {
+            $loopPrizeObj = $prizeMapper->findById($prizeId);
+            $label = "";
+            if ($loopPrizeObj->getYear()) {
+                $label = $loopPrizeObj->getYear() . " - ";
+            }
+            $label .= $loopPrizeObj->getPrizeName();
+            if ($loopPrizeObj->getInstitutionName()) {
+                $label .= ", " . $loopPrizeObj->getInstitutionName();
+            }
+            if ($loopPrizeObj->getCategoryName()) {
+                $label .= " (" . $loopPrizeObj->getCategoryName() . ")";
+            }
+            $prizesLabels[$prizeId] = array('label' => $label);
+
+
+        }
+
+
+//        $prizes = array(
+//                '1' => array(
+//                    'year' => '1997',
+//                    'name' => 'Prêmio Américas',
+//                    'category' =>  '',
+//                    'institution' => 'Fundalectura, Bogotá, Colômbia'
+//                ),
+//                '2' => array(
+//                    'year' => '1995',
+//                    'name' => 'Prêmio Melhores do Ano',
+//                    'category' =>  '',
+//                    'institution' => 'Biblioteca Nacional da Venezuela'
+//                ),
+//                '3' => array(
+//                    'year' => '1988',
+//                    'name' => 'Prêmio Bienal de São Paulo',
+//                    'category' =>  'Menção Honrosa - Uma das Cinco Melhores Obras do Biênio',
+//                    'institution' => 'Bienal de São Paulo'
+//                ),
+//        );
+//
+//        $prizesLabels = array();
+//        foreach ($prizes as $prizeId => $prize) {
+//            $label = "";
+//            $label = $prize['year'] . " - " . $prize['name'];
+//            if ($prize['institution']) {
+//                $label .= ", " . $prize['institution'];
+//            }
+//            if ($prize['category']) {
+//                $label .= " (" . $prize['category'] . ")";
+//            }
+//            $prizesLabels[$prizeId] = array('label' => $label);
+//        }
+
+        return $prizesLabels;
+
+
+    }
+
+
 }
