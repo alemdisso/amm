@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-23 19:07-0300\n"
-"PO-Revision-Date: 2013-09-23 19:07-0300\n"
+"POT-Creation-Date: 2013-09-23 19:35-0300\n"
+"PO-Revision-Date: 2013-09-23 19:36-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -1320,6 +1320,21 @@ msgid "#Summary"
 msgstr "Sumário"
 
 #: application\modules/admin/views/scripts/work/detail.phtml:15
+#: application\modules/works/views/scripts/edition/explore.phtml:47
+#: application\modules/works/views/scripts/index/children.phtml:12
+#: application\modules/works/views/scripts/index/essays.phtml:12
+#: application\modules/works/views/scripts/index/fiction.phtml:12
+#: application\modules/works/views/scripts/index/serie.phtml:12
+#: application\modules/works/views/scripts/index/young.phtml:12
+#: application\modules/works/views/scripts/serie/explore.phtml:47
+msgid "#Prizes"
+msgstr "Prêmios"
+
+#: application\modules/admin/views/scripts/work/detail.phtml:17
+msgid "#Add prize"
+msgstr "Novo prêmio"
+
+#: application\modules/admin/views/scripts/work/detail.phtml:19
 msgid "#Editions"
 msgstr "Edições"
 
@@ -1386,16 +1401,6 @@ msgstr "Contato"
 #: application\modules/works/views/scripts/serie/explore.phtml:31
 msgid "#Buy online"
 msgstr "Compre online"
-
-#: application\modules/works/views/scripts/edition/explore.phtml:47
-#: application\modules/works/views/scripts/index/children.phtml:12
-#: application\modules/works/views/scripts/index/essays.phtml:12
-#: application\modules/works/views/scripts/index/fiction.phtml:12
-#: application\modules/works/views/scripts/index/serie.phtml:12
-#: application\modules/works/views/scripts/index/young.phtml:12
-#: application\modules/works/views/scripts/serie/explore.phtml:47
-msgid "#Prizes"
-msgstr "Prêmios"
 
 #: application\modules/works/views/scripts/index/children.phtml:9
 msgid "#Children books"
@@ -1825,9 +1830,6 @@ msgstr "Juvenis"
 
 #~ msgid "#Emails"
 #~ msgstr "Emails"
-
-#~ msgid "#Address"
-#~ msgstr "Endereço"
 
 #~ msgid "#Add email"
 #~ msgstr "Acrescentar email"
