@@ -43,24 +43,27 @@ class Admin_NavigationController extends Zend_Controller_Action
         $works = $pages->addChild('works');
         $works->addChild('label', $this->view->translate("#Works"));
         $works->addChild('uri', $this->view->translate('/works'));
-
         $worksPages = $works->addChild('pages');
-        $newPage = $worksPages->addChild('children');
-        $newPage->addChild('label', $this->view->translate("#Children"));
-        $newPage->addChild('uri', $this->view->translate('/works/children'));
 
-        $newPage = $worksPages->addChild('young');
-        $newPage->addChild('label', $this->view->translate("#Young"));
-        $newPage->addChild('uri', $this->view->translate('/works/young'));
+        $childrenNode = $worksPages->addChild('children');
+        $childrenNode->addChild('label', $this->view->translate("#Children"));
+        $childrenNode->addChild('uri', $this->view->translate('/works/children'));
+        $childrenPages = $childrenNode->addChild('pages');
 
-        $newPage = $worksPages->addChild('fiction');
-        $newPage->addChild('label', $this->view->translate("#Fiction"));
-        $newPage->addChild('uri', $this->view->translate('/works/fiction'));
+        $youngNode = $worksPages->addChild('young');
+        $youngNode->addChild('label', $this->view->translate("#Young"));
+        $youngNode->addChild('uri', $this->view->translate('/works/young'));
+        $youngPages = $youngNode->addChild('pages');
 
-        $newPage = $worksPages->addChild('essays');
-        $newPage->addChild('label', $this->view->translate("#Essays"));
-        $newPage->addChild('uri', $this->view->translate('/works/essays'));
+        $fictionNode = $worksPages->addChild('fiction');
+        $fictionNode->addChild('label', $this->view->translate("#Fiction"));
+        $fictionNode->addChild('uri', $this->view->translate('/works/fiction'));
+        $fictionPages = $fictionNode->addChild('pages');
 
+        $essaysNode = $worksPages->addChild('essays');
+        $essaysNode->addChild('label', $this->view->translate("#Essays"));
+        $essaysNode->addChild('uri', $this->view->translate('/works/essays'));
+        $essaysPages = $essaysNode->addChild('pages');
 
 
 //        $works = $pages->works;
@@ -70,7 +73,30 @@ class Admin_NavigationController extends Zend_Controller_Action
         foreach ($editionsIds as $editionId) {
             $loopEditionObj = $this->editionMapper->findById($editionId);
             $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
-            $edition = $worksPages->addChild('edition-' . $loopWorkObj->getUri());
+
+            switch($loopWorkObj->getType()) {
+                case Author_Collection_WorkTypeConstants::TYPE_CHILDREN:
+                    $edition = $childrenPages->addChild('edition-' . $loopWorkObj->getUri());
+                    break;
+
+                case Author_Collection_WorkTypeConstants::TYPE_YOUNG:
+                    $edition = $youngPages->addChild('edition-' . $loopWorkObj->getUri());
+                    break;
+
+                case Author_Collection_WorkTypeConstants::TYPE_FICTION:
+                    $edition = $fictionPages->addChild('edition-' . $loopWorkObj->getUri());
+                    break;
+
+                case Author_Collection_WorkTypeConstants::TYPE_ESSAY:
+                    $edition = $essaysPages->addChild('edition-' . $loopWorkObj->getUri());
+                    break;
+
+                default:
+                    $edition = $worksPages->addChild('edition-' . $loopWorkObj->getUri());
+                    break;
+
+            }
+
             $edition->addChild('label', $loopWorkObj->getTitle());
             $edition->addChild('uri', '/explore/' . $loopWorkObj->getUri());
         }

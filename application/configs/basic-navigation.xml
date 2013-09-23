@@ -4,8 +4,11 @@
         <home>
             <label>Ana Maria Machado</label>
             <uri>/home</uri>
-
             <pages>
+                <root>
+                    <uri>/</uri>
+                    <label>Ana Maria Machado</label>
+                </root>
             </pages>
         </home>
     </nav>
