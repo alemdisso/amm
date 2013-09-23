@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-21 18:55-0300\n"
-"PO-Revision-Date: 2013-09-21 18:56-0300\n"
+"POT-Creation-Date: 2013-09-23 19:07-0300\n"
+"PO-Revision-Date: 2013-09-23 19:07-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -78,16 +78,16 @@ msgstr "Infantis"
 msgid "/works/children"
 msgstr "/livros/infantis"
 
-#: application\modules/admin/controllers/NavigationController.php:53
+#: application\modules/admin/controllers/NavigationController.php:54
 #: library\Author/Collection/WorkTypes.php:12
 msgid "#Young"
 msgstr "Juvenis"
 
-#: application\modules/admin/controllers/NavigationController.php:54
+#: application\modules/admin/controllers/NavigationController.php:55
 msgid "/works/young"
 msgstr "/livros/juvenis"
 
-#: application\modules/admin/controllers/NavigationController.php:57
+#: application\modules/admin/controllers/NavigationController.php:59
 #: library\Author/Collection/WorkTypes.php:13
 #: application\modules/default/views/scripts/index/index.phtml:20
 #: application\modules/includes/views/scripts/include/footer-home.phtml:12
@@ -96,11 +96,11 @@ msgstr "/livros/juvenis"
 msgid "#Fiction"
 msgstr "Ficção"
 
-#: application\modules/admin/controllers/NavigationController.php:58
+#: application\modules/admin/controllers/NavigationController.php:60
 msgid "/works/fiction"
 msgstr "/livros/ficcao"
 
-#: application\modules/admin/controllers/NavigationController.php:61
+#: application\modules/admin/controllers/NavigationController.php:64
 #: application\modules/default/views/scripts/index/index.phtml:21
 #: application\modules/includes/views/scripts/include/footer-home.phtml:13
 #: application\modules/includes/views/scripts/include/footer.phtml:15
@@ -108,39 +108,37 @@ msgstr "/livros/ficcao"
 msgid "#Essays"
 msgstr "Ensaios"
 
-#: application\modules/admin/controllers/NavigationController.php:62
+#: application\modules/admin/controllers/NavigationController.php:65
 msgid "/works/essays"
 msgstr "/livros/ensaios"
 
-#: application\modules/admin/controllers/NavigationController.php:79
+#: application\modules/admin/controllers/NavigationController.php:105
 msgid "#Series"
 msgstr "Coleções"
 
-#: application\modules/admin/controllers/NavigationController.php:80
+#: application\modules/admin/controllers/NavigationController.php:106
 msgid "/series"
 msgstr "/colecoes"
 
-#: application\modules/admin/controllers/NavigationController.php:91
+#: application\modules/admin/controllers/NavigationController.php:117
 #: application\modules/includes/views/scripts/include/header-login.phtml:12
 #: application\modules/includes/views/scripts/include/header.phtml:13
 msgid "#Biography"
 msgstr "Biografia"
 
-#: application\modules/admin/controllers/NavigationController.php:92
-#, fuzzy
-msgid "/works/biography"
-msgstr "/livros/juvenis"
+#: application\modules/admin/controllers/NavigationController.php:118
+msgid "/biography"
+msgstr "/biografia"
 
-#: application\modules/admin/controllers/NavigationController.php:95
+#: application\modules/admin/controllers/NavigationController.php:121
 #: application\modules/includes/views/scripts/include/header-login.phtml:11
 #: application\modules/includes/views/scripts/include/header.phtml:12
 msgid "#News"
 msgstr "Novidades"
 
-#: application\modules/admin/controllers/NavigationController.php:96
-#, fuzzy
-msgid "/works/news"
-msgstr "/livros/ensaios"
+#: application\modules/admin/controllers/NavigationController.php:122
+msgid "/news"
+msgstr "/novidades"
 
 #: application\modules/admin/controllers/WorkController.php:57
 #: application\modules/admin/controllers/WorkController.php:62
@@ -1434,6 +1432,10 @@ msgstr "Por categoria"
 #: application\modules/works/views/scripts/index/young.phtml:9
 msgid "#Young books"
 msgstr "Juvenis"
+
+#, fuzzy
+#~ msgid "/works/biography"
+#~ msgstr "/livros/juvenis"
 
 #~ msgid "#Stories"
 #~ msgstr "Livros"

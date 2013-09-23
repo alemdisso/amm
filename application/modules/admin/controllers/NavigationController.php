@@ -115,11 +115,11 @@ class Admin_NavigationController extends Zend_Controller_Action
 
         $newPage = $pages->addChild('biography');
         $newPage->addChild('label', $this->view->translate("#Biography"));
-        $newPage->addChild('uri', $this->view->translate('/works/biography'));
+        $newPage->addChild('uri', $this->view->translate('/biography'));
 
         $newPage = $pages->addChild('news');
         $newPage->addChild('label', $this->view->translate("#News"));
-        $newPage->addChild('uri', $this->view->translate('/works/news'));
+        $newPage->addChild('uri', $this->view->translate('/news'));
 
 //
 //        $config = new Zend_Config_Xml($sxe->asXML(), 'nav');
