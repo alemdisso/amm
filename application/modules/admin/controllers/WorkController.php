@@ -110,7 +110,6 @@ class Admin_WorkController extends Zend_Controller_Action
             $elementSelect->addMultiOption($editorId, $editorName);
         }
         $elementSelect->setValue($current);
-
     }
 
     private function initDbAndMappers()
@@ -119,12 +118,10 @@ class Admin_WorkController extends Zend_Controller_Action
         $this->workMapper = new Author_Collection_WorkMapper($this->db);
         $this->editorMapper = new Author_Collection_EditorMapper($this->db);
         $this->editionMapper = new Author_Collection_EditionMapper($this->db);
-
     }
 
     private function prizes($id)
     {
-
         $prizeMapper = new Author_Collection_PrizeMapper($this->db);
         $prizesIds = $prizeMapper->getAllPrizesOfWork($id);
 
@@ -143,49 +140,9 @@ class Admin_WorkController extends Zend_Controller_Action
                 $label .= " (" . $loopPrizeObj->getCategoryName() . ")";
             }
             $prizesLabels[$prizeId] = array('label' => $label);
-
-
         }
 
-
-//        $prizes = array(
-//                '1' => array(
-//                    'year' => '1997',
-//                    'name' => 'Prêmio Américas',
-//                    'category' =>  '',
-//                    'institution' => 'Fundalectura, Bogotá, Colômbia'
-//                ),
-//                '2' => array(
-//                    'year' => '1995',
-//                    'name' => 'Prêmio Melhores do Ano',
-//                    'category' =>  '',
-//                    'institution' => 'Biblioteca Nacional da Venezuela'
-//                ),
-//                '3' => array(
-//                    'year' => '1988',
-//                    'name' => 'Prêmio Bienal de São Paulo',
-//                    'category' =>  'Menção Honrosa - Uma das Cinco Melhores Obras do Biênio',
-//                    'institution' => 'Bienal de São Paulo'
-//                ),
-//        );
-//
-//        $prizesLabels = array();
-//        foreach ($prizes as $prizeId => $prize) {
-//            $label = "";
-//            $label = $prize['year'] . " - " . $prize['name'];
-//            if ($prize['institution']) {
-//                $label .= ", " . $prize['institution'];
-//            }
-//            if ($prize['category']) {
-//                $label .= " (" . $prize['category'] . ")";
-//            }
-//            $prizesLabels[$prizeId] = array('label' => $label);
-//        }
-
         return $prizesLabels;
-
-
     }
-
 
 }
