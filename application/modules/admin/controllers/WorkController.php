@@ -83,9 +83,8 @@ class Admin_WorkController extends Zend_Controller_Action
             );
         }
 
-        $prizesLabels = $this->prizes($id);
-
-
+        $prizeMapper = new Author_Collection_PrizeMapper($this->db);
+        $prizesLabels = $this->view->workPrizesLabels($id, $prizeMapper);
 
         $data = array(
             'id' => $id,

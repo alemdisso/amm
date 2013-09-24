@@ -64,6 +64,10 @@ class Works_EditionController extends Zend_Controller_Action
             $serieUri = "#";
         }
 
+        $prizeMapper = new Author_Collection_PrizeMapper($this->db);
+        $prizesLabels = $this->view->workPrizesLabels($workObj->getId(), $prizeMapper);
+
+
         $pageData = array(
             'title' => $workTitle,
             'mediumImageUri' => $coverFilePath,
@@ -75,9 +79,9 @@ class Works_EditionController extends Zend_Controller_Action
             'isbn' => $isbnLabel,
             'pages' => $pagesLabel,
 
-            'ecommerce' => '/submarino',
-            'moreAbout' => true,
-            'prizesLabels' => $this->prizes(),
+            'ecommerce' => false,
+            'moreAbout' => false,
+            'prizes' => $prizesLabels,
         );
 
         $this->view->pageData = $pageData;
