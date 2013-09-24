@@ -41,7 +41,7 @@ class Author_Collection_Prize {
         return $this->prizeName;
     } //getName
 
-    public function setPrizeName($illustrator)
+    public function setPrizeName($prizeName)
     {
         $validator = new Moxca_Util_ValidString();
         if ($validator->isValid($prizeName)) {

@@ -39,7 +39,7 @@ class Admin_PrizeController extends Zend_Controller_Action
                 $newPrize = $form->process($postData);
                 $this->_helper->getHelper('FlashMessenger')
                     ->addMessage($this->view->translate('#The record was successfully updated.'));
-                $this->_redirect('/admin/work/detail/?id=' . $newPrize->getId());
+                $this->_redirect('/admin/work/detail/?id=' . $newPrize->getWork());
             } else {
                 //form error: populate and go back
                 $form->populate($postData);
