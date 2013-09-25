@@ -501,6 +501,20 @@ h4 {
 	margin:0 0 30px 0;
 	}
 
+.slidingDiv {
+    height:120px;
+    background-color: #d1d1e0;
+    padding:20px;
+    margin-top:10px;
+    margin-bottom:12px;
+    border-bottom:5px solid #3399FF;
+}
+
+.show_hide {
+    display:none;
+}
+
+
 /* NOVIDADES */
 #novidades {
 	width:1000px;

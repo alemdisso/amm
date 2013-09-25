@@ -42,9 +42,8 @@ class Author_Form_EditionCreate extends Zend_Form
         $typesObj = new Author_Collection_WorkTypes();
         $titlesArray = $typesObj->allTitles();
 
-
         $element = new Zend_Form_Element_Radio('type');
-	$element->setLabel('#Tipo de livro?')
+	$element->setLabel('#Type')
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
@@ -147,7 +146,7 @@ class Author_Form_EditionCreate extends Zend_Form
 
             $editionMapper->insert($edition);
 
-            return $work->getId();
+            return $edition;
         }
     }
  }

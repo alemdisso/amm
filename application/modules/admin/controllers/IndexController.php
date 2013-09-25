@@ -65,6 +65,25 @@ class Admin_IndexController extends Zend_Controller_Action
     }
 
 
+     public function populateEditorsAction()
+    {
+        $this->_helper->layout->disableLayout();
+        $this->_helper->viewRenderer->setNoRender(TRUE);
+
+        $editorMapper = new Author_Collection_EditorMapper($this->db);
+        $list = $editorMapper->getAllEditorsAlphabeticallyOrdered();
+
+        $data = array();
+        foreach ($list as $editorId => $editorName) {
+            $data[] = array('id' => $editorId, 'name' => $editorName);
+        }
+
+        echo json_encode($data);
+
+
+    }
+
+
     private function initDbAndMappers()
     {
         $this->db = Zend_Registry::get('db');

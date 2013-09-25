@@ -1,26 +1,18 @@
 <?php
-class Author_Form_PagesChange extends Zend_Form
+class Author_Form_EditorCreate extends Zend_Form
 {
     public function init()
     {
         parent::init();
 
-
-
         // initialize form
-        $this->setName('pagesChangeForm')
-            ->setAction('/admin/edition/change-pages')
+        $this->setName('newEditorForm')
+            ->setAction('javascript:submitBudgetForm();')
             ->setMethod('post');
 
-        $element = new Zend_Form_Element_Hidden('id');
-        $element->addValidator('Int')
-            ->addFilter('StringTrim');
-        $this->addElement($element);
-        $element->setDecorators(array('ViewHelper'));
-
-        $element = new Zend_Form_Element_Text('pages');
-        $validator = new Moxca_Util_ValidPositiveInteger();
-        $element->setLabel(_('#Pages:'))
+        $element = new Zend_Form_Element_Text('name');
+        $titleValidator = new Moxca_Util_ValidTitle();
+        $element->setLabel(_('#Name:'))
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
@@ -28,7 +20,9 @@ class Author_Form_PagesChange extends Zend_Form
                     array('Label', array('tag' => 'div', 'tagClass' => 'label')),
                 ))
                 ->setOptions(array('class' => ''))
-                ->addValidator($validator)
+                ->setRequired(true)
+                ->addErrorMessage(_("#Name is required"))
+                ->addValidator($titleValidator)
                 ->addFilter('StringTrim');
         $this->addElement($element);
 
@@ -39,11 +33,8 @@ class Author_Form_PagesChange extends Zend_Form
                ->setDecorators(array('ViewHelper','Errors',
                     array(array('data' => 'HtmlTag'),
                     array('tag' => 'div','class' => '')),
-                    array('Label',
-                      array('tag' => 'div','tagClass' => '')
-                    ),
                   ))
-               ->setOptions(array('class' => ''));
+               ->setOptions(array('class' => 'submit'));
         $this->addElement($element);
 
 
@@ -53,18 +44,18 @@ class Author_Form_PagesChange extends Zend_Form
     public function process($data) {
 
         if ($this->isValid($data) !== true) {
-            throw new Author_Form_EditionCreateException('Invalid data!');
+            throw new Author_Form_EditorCreateException('Invalid data!');
         } else {
             $db = Zend_Registry::get('db');
-            $editionMapper = new Author_Collection_EditionMapper($db);
 
-            $editionId = $data['id'];
-            $edition = $editionMapper->findById($editionId);
+            $editorMapper = new Author_Collection_EditorMapper($db);
+            $editor = new Author_Collection_Editor();
+            $editor->SetName($data['name']);
+            $editor->SetCountry('BR');
 
-            $edition->setPages($data['pages']);
+            $editorMapper->insert($editor);
 
-            $editionMapper->update($edition);
-            return $edition;
+            return $editor;
         }
     }
  }

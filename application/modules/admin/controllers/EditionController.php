@@ -38,10 +38,10 @@ class Admin_EditionController extends Zend_Controller_Action
         if ($this->getRequest()->isPost()) {
             $postData = $this->getRequest()->getPost();
             if ($form->isValid($postData)) {
-                $id = $form->process($postData);
+                $newEdition = $form->process($postData);
                 $this->_helper->getHelper('FlashMessenger')
                     ->addMessage($this->view->translate('#The record was successfully updated.'));
-                $this->_redirect('/admin/work/detail/?id=' . $id);
+                $this->_redirect('/admin/work/detail/?id=' . $newEdition->getWork());
             } else {
                 //form error: populate and go back
                 $form->populate($postData);
@@ -78,19 +78,14 @@ class Admin_EditionController extends Zend_Controller_Action
         } else {
 
             $data = $this->_request->getParams();
-            $filters = array(
-                'id' => new Zend_Filter_Alnum(),
-            );
-            $validators = array(
-                'id' => new Moxca_Util_ValidId(),
-            );
-            $input = new Zend_Filter_Input($filters, $validators, $data);
-            if ($input->isValid()) {
-                $field = $form->getElement('id');
-                $field->setValue($input->id);
-            } else {
-                throw new Author_Collection_EditionException("Invalid edition to change cover");
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
             }
+
+            $field = $form->getElement('id');
+            $field->setValue($id);
             $this->view->pageTitle = $this->view->translate("#Change cover");
         }
     }

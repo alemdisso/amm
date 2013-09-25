@@ -51,5 +51,23 @@ class Author_Collection_Editor {
         return $this->uri;
     } //getUri
 
+    public function getCountry()
+    {
+        return $this->country;
+    } //getCountry
+
+    public function setCountry($country)
+    {
+        $validator = new Moxca_Util_ValidString();
+        if ($validator->isValid($country)) {
+            if ($this->country != $country) {
+                $this->country = $country;
+            }
+        } else {
+            throw new Author_Collection_WorkException("This ($country) is not a valid country.");
+        }
+
+    } //SetCountry
+
 
 }

@@ -1,19 +1,72 @@
-          <script type="text/javascript">
-            function populateEditorField() {
+        <script type="text/javascript">
 
-              $.getJSON('/works/helper/populate-editors', function(data) {
-                var html = '';
-                var len = data.length;
-                html += '<option value="0">(##choose an editor)</option>';
-                for (var i = 0; i< len; i++) {
-                  html += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
-                }
-                $('#editor').empty();
-                $('#editor').append(html);
-              });
+        $(document).ready(function(){
+
+            $("#newEditorDiv").hide();
+
+            $('#newEditorButton').click(function(){
+                $.ajax({
+                    type: 'get',
+                    url:'/admin/editor/create',
+                    success: function(successReturn){
+                    $('#newEditorDiv').html(successReturn);
+                    }
+                })
+                $("#newEditorDiv").slideToggle();
+            });
+            $('#hideNewEditorHref').click(function(){
+                $("#newEditorDiv").slideToggle();
+            });
+
+            $('#submit').click(function(){
+                $.ajax({
+                    type: 'post',
+                    url:'/admin/editor/create',
+                    success: function(successReturn){
+                    $('#newEditorDiv').html(successReturn);
+                    }
+                })
+                $("#newEditorDiv").slideToggle();
+            });
+        });
+
+        function submitBudgetForm()
+        {
+            $.post("/admin/editor/create", $("#newEditorForm").serialize(), function(successReturn){
+                $('#newEditorDiv').html(successReturn);
+                });
+            $("#newEditorDiv").slideToggle();
+        }
+
+        function populateEditorField() {
+            $.getJSON('/admin/index/populate-editors', function(data) {
+            var html = '';
+            var len = data.length;
+            html += '<option value="0">(##choose an editor)</option>';
+            for (var i = 0; i< len; i++) {
+                html += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
             }
-          </script>
+            $('#editor').empty();
+            $('#editor').append(html);
+            });
+        }
+        </script>
           <div id="MainHeader">
             <h1><?php print($this->translate('#Create edition')) ?></h1>
           </div>
-<?php echo $this->form; ?>
+<form id="newEditionForm" action="<?php echo $this->escape($this->form->getAction()); ?>" method="<?php echo $this->escape($this->form->getMethod()); ?>" enctype="<?php echo $this->escape($this->form->getEnctype()); ?>">
+<table>
+  <?php echo $this->form->id ?>
+  <?php echo $this->form->title ?>
+  <?php echo $this->form->cover ?>
+  <?php echo $this->form->type ?>
+  <?php echo $this->form->editor ?>
+          <div id="newEditorDiv" class="slidingDiv">
+          </div>
+    <p style="margin-top:-12px; margin-bottom: 12px;"><a href="#newEditionForm" id="newEditorButton"><?php echo $this->translate("#(new editor)") ?></a></p>
+
+  <?php echo $this->form->summary ?>
+  <?php echo $this->form->description ?>
+  <?php echo $this->form->submit ?>
+</div>
+</form>
