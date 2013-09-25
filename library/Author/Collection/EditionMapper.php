@@ -250,6 +250,21 @@ class Author_Collection_EditionMapper
 
     }
 
+   public function getSomeEditionFrom($serie)
+    {
+        $query = $this->db->prepare('SELECT id FROM author_collection_editions WHERE serie = :serie LIMIT 1;');
+        $query->bindValue(':serie', $serie, PDO::PARAM_STR);
+        $query->execute();
+        $resultPDO = $query->fetchAll();
+
+        $data = array();
+        foreach ($resultPDO as $row) {
+            $data[] = $row['id'];
+       }
+        return $data;
+
+    }
+
 
 
 

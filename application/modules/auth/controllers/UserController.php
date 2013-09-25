@@ -20,6 +20,9 @@ class Auth_UserController extends Zend_Controller_Action
     {
         $this->db = Zend_Registry::get('db');
         $this->userMapper = new Moxca_Auth_UserMapper($this->db);
+
+        $layoutHelper = $this->_helper->getHelper('Layout');
+        $this->view->setNestedLayout($layoutHelper, 'inner_admin');
     }
 
     public function createAction()

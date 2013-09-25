@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-24 18:12-0300\n"
-"PO-Revision-Date: 2013-09-24 18:13-0300\n"
+"POT-Creation-Date: 2013-09-24 19:26-0300\n"
+"PO-Revision-Date: 2013-09-24 19:26-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -57,6 +57,7 @@ msgstr "sem edições"
 #: application\modules/works/views/scripts/index/essays.phtml:7
 #: application\modules/works/views/scripts/index/fiction.phtml:7
 #: application\modules/works/views/scripts/index/serie.phtml:7
+#: application\modules/works/views/scripts/index/series.phtml:7
 #: application\modules/works/views/scripts/index/young.phtml:7
 #: application\modules/works/views/scripts/serie/explore.phtml:7
 msgid "#Works"
@@ -117,6 +118,7 @@ msgid "/works/essays"
 msgstr "/livros/ensaios"
 
 #: application\modules/admin/controllers/NavigationController.php:105
+#: application\modules/works/views/scripts/index/series.phtml:9
 msgid "#Series"
 msgstr "Coleções"
 
@@ -193,10 +195,15 @@ msgstr "Ana Maria Machado - Infantis"
 
 #: application\modules/works/controllers/IndexController.php:124
 #: application\modules/works/controllers/IndexController.php:175
+#: application\modules/works/controllers/IndexController.php:214
 msgid "#Ana Maria Machado - Essays"
 msgstr "Ana Maria Machado - Ensaios"
 
-#: application\modules/works/controllers/IndexController.php:208
+#: application\modules/works/controllers/IndexController.php:202
+msgid "/serie/"
+msgstr "/colecao"
+
+#: application\modules/works/controllers/IndexController.php:247
 msgid "#Ana Maria Machado - Young"
 msgstr "Ana Maria Machado - Juvenis"
 
@@ -1316,17 +1323,17 @@ msgstr "Alterar coleção de %s"
 msgid "#List of works"
 msgstr "Lista de obras"
 
-#: application\modules/admin/views/scripts/index/list.phtml:19
+#: application\modules/admin/views/scripts/index/list.phtml:18
 #: application\modules/admin/views/scripts/work/list.phtml:19
 msgid "#Title"
 msgstr "Título"
 
-#: application\modules/admin/views/scripts/index/list.phtml:20
+#: application\modules/admin/views/scripts/index/list.phtml:19
 #: application\modules/admin/views/scripts/work/list.phtml:20
 msgid "#Type"
 msgstr "Tipo"
 
-#: application\modules/admin/views/scripts/index/list.phtml:21
+#: application\modules/admin/views/scripts/index/list.phtml:20
 #: application\modules/admin/views/scripts/work/list.phtml:21
 msgid "#Editor"
 msgstr "Editor"
@@ -1472,6 +1479,10 @@ msgstr "Ficção"
 #: application\modules/works/views/scripts/index/index.phtml:29
 msgid "#Books by category"
 msgstr "Por categoria"
+
+#: application\modules/works/views/scripts/index/series-loop.phtml:8
+msgid "#list editions"
+msgstr "livros da coleção"
 
 #: application\modules/works/views/scripts/index/young.phtml:9
 msgid "#Young books"

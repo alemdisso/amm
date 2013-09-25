@@ -146,9 +146,6 @@ class Author_Collection_SerieMapper
 
     }
 
-
-
-
     private function setAttributeValue(Author_Collection_Serie $a, $fieldValue, $attributeName)
     {
         $attribute = new ReflectionProperty($a, $attributeName);
