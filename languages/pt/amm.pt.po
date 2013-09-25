@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-25 09:18-0300\n"
-"PO-Revision-Date: 2013-09-25 09:20-0300\n"
+"POT-Creation-Date: 2013-09-25 09:31-0300\n"
+"PO-Revision-Date: 2013-09-25 09:31-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -21,6 +21,7 @@ msgstr ""
 #: application\modules/admin/controllers/EditionController.php:71
 #: application\modules/admin/controllers/EditionController.php:222
 #: application\modules/admin/controllers/PrizeController.php:41
+#: application\modules/admin/controllers/WorkController.php:158
 #: application\modules/auth/controllers/UserController.php:39
 #: application\modules/auth/controllers/UserController.php:61
 msgid "#The record was successfully updated."
@@ -154,12 +155,12 @@ msgstr "/novidades"
 msgid "#Create prize"
 msgstr "Criar prêmio"
 
-#: application\modules/admin/controllers/WorkController.php:56
+#: application\modules/admin/controllers/WorkController.php:55
 msgid "#Change type"
 msgstr "Alterar classificação"
 
-#: application\modules/admin/controllers/WorkController.php:87
-#: application\modules/admin/controllers/WorkController.php:92
+#: application\modules/admin/controllers/WorkController.php:86
+#: application\modules/admin/controllers/WorkController.php:91
 msgid "#NI"
 msgstr "n.i."
 
@@ -1369,6 +1370,10 @@ msgstr "Logout"
 #, php-format
 msgid "#Change %s's type"
 msgstr "Alterar classificação de %s"
+
+#: application\modules/admin/views/scripts/work/detail.phtml:7
+msgid "#(change type)"
+msgstr "(alterar classificação)"
 
 #: application\modules/admin/views/scripts/work/detail.phtml:9
 msgid "#Description"
