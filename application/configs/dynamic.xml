@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configdata>
+  <nav>
+    <home>
+      <label>Ana Maria Machado</label>
+      <uri>/home</uri>
+      <pages>
+        <root>
+          <uri>/</uri>
+          <label>Ana Maria Machado</label>
+        </root>
+        <works>
+          <label>Livros</label>
+          <uri>/livros</uri>
+          <pages>
+            <children>
+              <label>Infantis</label>
+              <uri>/livros/infantis</uri>
+              <pages>
+                <edition-banho-sem-chuva>
+                  <label>Banho sem chuva</label>
+                  <uri>/explore/banho-sem-chuva</uri>
+                </edition-banho-sem-chuva>
+                <edition-menina-bonita-do-laco-de-fita>
+                  <label>Menina Bonita do Laço de Fita</label>
+                  <uri>/explore/menina-bonita-do-laco-de-fita</uri>
+                </edition-menina-bonita-do-laco-de-fita>
+                <edition-tatu-bobo>
+                  <label>Tatu bobo</label>
+                  <uri>/explore/tatu-bobo</uri>
+                </edition-tatu-bobo>
+                <edition-mico-maneco>
+                  <label>Mico Maneco</label>
+                  <uri>/explore/mico-maneco</uri>
+                </edition-mico-maneco>
+              </pages>
+            </children>
+            <young>
+              <label>Juvenis</label>
+              <uri>/livros/juvenis</uri>
+              <pages>
+                <edition-amigos-secretos>
+                  <label>Amigos secretos</label>
+                  <uri>/explore/amigos-secretos</uri>
+                </edition-amigos-secretos>
+                <edition-isso-ninguem-me-tira>
+                  <label>Isso ninguém me tira</label>
+                  <uri>/explore/isso-ninguem-me-tira</uri>
+                </edition-isso-ninguem-me-tira>
+                <edition-do-outro-lado-tem-segredos>
+                  <label>Do outro lado tem segredos</label>
+                  <uri>/explore/do-outro-lado-tem-segredos</uri>
+                </edition-do-outro-lado-tem-segredos>
+              </pages>
+            </young>
+            <fiction>
+              <label>Ficção</label>
+              <uri>/livros/ficcao</uri>
+              <pages>
+                <edition-o-mar-nunca-transborda>
+                  <label>O mar nunca transborda</label>
+                  <uri>/explore/o-mar-nunca-transborda</uri>
+                </edition-o-mar-nunca-transborda>
+                <edition-canteiros-de-saturno>
+                  <label>Canteiros de Saturno</label>
+                  <uri>/explore/canteiros-de-saturno</uri>
+                </edition-canteiros-de-saturno>
+                <edition-bisa-bia-bisa-bel>
+                  <label>Bisa Bia, bisa Bel</label>
+                  <uri>/explore/bisa-bia-bisa-bel</uri>
+                </edition-bisa-bia-bisa-bel>
+                <edition-aos-quatro-ventos>
+                  <label>Aos quatro ventos</label>
+                  <uri>/explore/aos-quatro-ventos</uri>
+                </edition-aos-quatro-ventos>
+              </pages>
+            </fiction>
+            <essays>
+              <label>Ensaios</label>
+              <uri>/livros/ensaios</uri>
+              <pages>
+                <edition-texturas>
+                  <label>Texturas</label>
+                  <uri>/explore/texturas</uri>
+                </edition-texturas>
+                <edition-o-recado-do-nome>
+                  <label>O recado do nome</label>
+                  <uri>/explore/o-recado-do-nome</uri>
+                </edition-o-recado-do-nome>
+              </pages>
+            </essays>
+            <series>
+              <label>Coleções</label>
+              <uri>/colecoes</uri>
+              <pages>
+                <serie-mico-maneco>
+                  <label>Mico Maneco</label>
+                  <uri>/colecao/mico-maneco</uri>
+                </serie-mico-maneco>
+              </pages>
+            </series>
+          </pages>
+        </works>
+        <biography>
+          <label>Biografia</label>
+          <uri>/works/biography</uri>
+        </biography>
+        <news>
+          <label>Novidades</label>
+          <uri>/works/news</uri>
+        </news>
+      </pages>
+    </home>
+  </nav>
+</configdata>

@@ -177,12 +177,12 @@ class Admin_EditionController extends Zend_Controller_Action
 
             $editionObj = $this->editionMapper->findById($id);
             $element = $form->getElement('serie');
-            $element->setValue($editionObj->getSerie());
             $this->populateSeriesSelect($element, $editionObj->getSerie(), $editionObj->getEditor());
+            $element->setValue($editionObj->getSerie());
 
             $workObj = $this->workMapper->findById($editionObj->getWork());
             $this->view->title = $workObj->getTitle();
-            $this->view->pageTitle = $this->view->translate("#Change isbn");
+            $this->view->pageTitle = $this->view->translate("#Change serie");
         }
     }
 

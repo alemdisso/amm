@@ -27,6 +27,35 @@ class Admin_WorkController extends Zend_Controller_Action
         $this->view->setNestedLayout($layoutHelper, 'inner_admin');
     }
 
+   public function changeTypeAction()
+    {
+        // cria form
+        $form = new Author_Form_WorkTypeChange;
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $this->processAndRedirect($form);
+            return;
+        } else {
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('id');
+            $element->setValue($id);
+
+            $workObj = $this->workMapper->findById($id);
+            $element = $form->getElement('type');
+            $element->setValue($workObj->getType());
+
+            $this->view->title = $workObj->getTitle();
+            $this->view->pageTitle = $this->view->translate("#Change type");
+        }
+    }
+
     public function detailAction()
     {
 
@@ -119,29 +148,31 @@ class Admin_WorkController extends Zend_Controller_Action
         $this->editionMapper = new Author_Collection_EditionMapper($this->db);
     }
 
-    private function prizes($id)
+    private function processAndRedirect($form)
     {
-        $prizeMapper = new Author_Collection_PrizeMapper($this->db);
-        $prizesIds = $prizeMapper->getAllPrizesOfWork($id);
+        $postData = $this->getRequest()->getPost();
+        if ($form->isValid($postData)) {
+            $workObj = $form->process($postData);
+            $workId = $workObj->getId();
+            $this->_helper->getHelper('FlashMessenger')
+                ->addMessage($this->view->translate('#The record was successfully updated.'));
+            $this->_redirect('/admin/work/detail/?id=' . $workId);
+        } else {
+            //form error: populate and go back
+            $form->populate($postData);
+            try {
+                $id = $this->view->checkIdFromGet($postData);
+            } catch (Exception $e) {
+                throw $e;
+            }
 
-        $prizesLabels = array();
-        foreach($prizesIds as $prizeId) {
-            $loopPrizeObj = $prizeMapper->findById($prizeId);
-            $label = "";
-            if ($loopPrizeObj->getYear()) {
-                $label = $loopPrizeObj->getYear() . " - ";
-            }
-            $label .= $loopPrizeObj->getPrizeName();
-            if ($loopPrizeObj->getInstitutionName()) {
-                $label .= ", " . $loopPrizeObj->getInstitutionName();
-            }
-            if ($loopPrizeObj->getCategoryName()) {
-                $label .= " (" . $loopPrizeObj->getCategoryName() . ")";
-            }
-            $prizesLabels[$prizeId] = array('label' => $label);
+            $workObj = $this->workMapper->findById($id);
+
+            $this->view->title = $workObj->getTitle();
+            $this->view->form = $form;
         }
 
-        return $prizesLabels;
     }
+
 
 }

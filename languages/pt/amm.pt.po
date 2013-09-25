@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-24 19:26-0300\n"
-"PO-Revision-Date: 2013-09-24 19:26-0300\n"
+"POT-Creation-Date: 2013-09-25 09:18-0300\n"
+"PO-Revision-Date: 2013-09-25 09:20-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -21,8 +21,8 @@ msgstr ""
 #: application\modules/admin/controllers/EditionController.php:71
 #: application\modules/admin/controllers/EditionController.php:222
 #: application\modules/admin/controllers/PrizeController.php:41
-#: application\modules/auth/controllers/UserController.php:36
-#: application\modules/auth/controllers/UserController.php:58
+#: application\modules/auth/controllers/UserController.php:39
+#: application\modules/auth/controllers/UserController.php:61
 msgid "#The record was successfully updated."
 msgstr "O registro foi atualizado com sucesso."
 
@@ -38,9 +38,12 @@ msgstr "Trocar imagem"
 
 #: application\modules/admin/controllers/EditionController.php:124
 #: application\modules/admin/controllers/EditionController.php:154
-#: application\modules/admin/controllers/EditionController.php:185
 msgid "#Change isbn"
 msgstr "Editar isbn"
+
+#: application\modules/admin/controllers/EditionController.php:185
+msgid "#Change serie"
+msgstr "Alterar coleção"
 
 #: application\modules/admin/controllers/EditionController.php:194
 #: application\modules/admin/controllers/EditionController.php:207
@@ -151,12 +154,16 @@ msgstr "/novidades"
 msgid "#Create prize"
 msgstr "Criar prêmio"
 
-#: application\modules/admin/controllers/WorkController.php:57
-#: application\modules/admin/controllers/WorkController.php:62
+#: application\modules/admin/controllers/WorkController.php:56
+msgid "#Change type"
+msgstr "Alterar classificação"
+
+#: application\modules/admin/controllers/WorkController.php:87
+#: application\modules/admin/controllers/WorkController.php:92
 msgid "#NI"
 msgstr "n.i."
 
-#: application\modules/auth/controllers/LoginController.php:40
+#: application\modules/auth/controllers/LoginController.php:44
 msgid "#You could not be logged in. Please try again."
 msgstr "Não foi possível fazer o login. Por favor tente novamente."
 
@@ -195,15 +202,15 @@ msgstr "Ana Maria Machado - Infantis"
 
 #: application\modules/works/controllers/IndexController.php:124
 #: application\modules/works/controllers/IndexController.php:175
-#: application\modules/works/controllers/IndexController.php:214
+#: application\modules/works/controllers/IndexController.php:216
 msgid "#Ana Maria Machado - Essays"
 msgstr "Ana Maria Machado - Ensaios"
 
-#: application\modules/works/controllers/IndexController.php:202
+#: application\modules/works/controllers/IndexController.php:203
 msgid "/serie/"
 msgstr "/colecao"
 
-#: application\modules/works/controllers/IndexController.php:247
+#: application\modules/works/controllers/IndexController.php:249
 msgid "#Ana Maria Machado - Young"
 msgstr "Ana Maria Machado - Juvenis"
 
@@ -1358,6 +1365,11 @@ msgstr "Atualizar navegação"
 msgid "#Logout"
 msgstr "Logout"
 
+#: application\modules/admin/views/scripts/work/change-type.phtml:2
+#, php-format
+msgid "#Change %s's type"
+msgstr "Alterar classificação de %s"
+
 #: application\modules/admin/views/scripts/work/detail.phtml:9
 msgid "#Description"
 msgstr "Descrição"
@@ -1480,7 +1492,7 @@ msgstr "Ficção"
 msgid "#Books by category"
 msgstr "Por categoria"
 
-#: application\modules/works/views/scripts/index/series-loop.phtml:8
+#: application\modules/works/views/scripts/index/series-loop.phtml:6
 msgid "#list editions"
 msgstr "livros da coleção"
 
