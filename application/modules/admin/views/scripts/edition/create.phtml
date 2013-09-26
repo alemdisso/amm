@@ -3,6 +3,8 @@
         $(document).ready(function(){
 
             $("#newEditorDiv").hide();
+            initEditorField();
+
 
             $('#newEditorButton').click(function(){
                 $.ajax({
@@ -38,7 +40,7 @@
             $("#newEditorDiv").slideToggle();
         }
 
-        function populateEditorField() {
+        function initEditorField() {
             $.getJSON('/admin/index/populate-editors', function(data) {
             var html = '';
             var len = data.length;

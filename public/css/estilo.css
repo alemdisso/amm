@@ -890,12 +890,12 @@ div.dataTables_filter {
 }
 
 #admin input {
-    width: 160px;
     padding: 7px 5px;
 
 }
 
 #admin .submit {
+    width: 120px;
     padding: 10px 8px;
     margin-top: 16px;
 
