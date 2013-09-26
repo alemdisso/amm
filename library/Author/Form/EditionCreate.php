@@ -34,7 +34,7 @@ class Author_Form_EditionCreate extends Zend_Form
         // ensure only 1 file
         $element->addValidator('Count', false, 1);
         // limit to 100K
-        $element->addValidator('Size', false, 102400);
+        $element->addValidator('Size', false, 2097152);
         // only JPEG, PNG, and GIFs
         $element->addValidator('Extension', false, 'jpg,png,gif,jpeg');
         $this->addElement($element);
@@ -54,8 +54,6 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->setSeparator('');
         $this->addElement($element);
 
-
-
         $element = new Zend_Form_Element_Select('editor');
         $element->setLabel('#Editor')
                 ->setDecorators(array(
@@ -67,7 +65,6 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->setOptions(array('class' => ''))
                 ->setRegisterInArrayValidator(false);
         $this->addElement($element);
-
 
         $element = new Zend_Form_Element_Textarea('summary');
         $element->setLabel('#Summary:')
@@ -142,7 +139,10 @@ class Author_Form_EditionCreate extends Zend_Form
             $location = $this->cover->getFileName();
             $location = str_replace('\\', '/', $location);
             $tmpArray = explode('/', $location);
-            $edition->setCover(end($tmpArray));
+            $coverFileName = end($tmpArray);
+            if ($coverFileName != "") {
+                $edition->setCover();
+            }
 
             $editionMapper->insert($edition);
 
