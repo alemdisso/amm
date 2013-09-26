@@ -12,7 +12,9 @@ public/index.php
 /temp/
 /application/*.php_
 /application/configs/_*.ini
+/application/configs/_bak_dynamic.xml
 /.git-rewrite/
 /application/configs/sandbox_application.ini
 /public/img/editions/raw/*
 /public/img/editions/tb/*
+

@@ -28,7 +28,7 @@ class Author_Form_EditorCreate extends Zend_Form
 
 
         // create submit button
-        $element = new Zend_Form_Element_Submit('submit');
+        $element = new Zend_Form_Element_Submit('submitEditor');
         $element->setLabel('#Submit') //Gravar
                ->setDecorators(array('ViewHelper','Errors',
                     array(array('data' => 'HtmlTag'),

@@ -97,9 +97,5 @@ class Auth_UserController extends Zend_Controller_Action
         }
     }
 
-    private function initUserMapper()
-    {
-         $this->userMapper = new Moxca_Auth_UserMapper($this->db);
-    }
 
-//}
+}

@@ -33,10 +33,6 @@
                   <label>Mico Maneco</label>
                   <uri>/explore/mico-maneco</uri>
                 </edition-mico-maneco>
-                <edition-abrindo-caminho>
-                  <label>Abrindo caminho</label>
-                  <uri>/explore/abrindo-caminho</uri>
-                </edition-abrindo-caminho>
               </pages>
             </children>
             <young>
@@ -55,10 +51,6 @@
                   <label>Do outro lado tem segredos</label>
                   <uri>/explore/do-outro-lado-tem-segredos</uri>
                 </edition-do-outro-lado-tem-segredos>
-                <edition-bisa-bia-bisa-bel>
-                  <label>Bisa Bia, bisa Bel</label>
-                  <uri>/explore/bisa-bia-bisa-bel</uri>
-                </edition-bisa-bia-bisa-bel>
               </pages>
             </young>
             <fiction>
@@ -73,6 +65,10 @@
                   <label>Canteiros de Saturno</label>
                   <uri>/explore/canteiros-de-saturno</uri>
                 </edition-canteiros-de-saturno>
+                <edition-bisa-bia-bisa-bel>
+                  <label>Bisa Bia, bisa Bel</label>
+                  <uri>/explore/bisa-bia-bisa-bel</uri>
+                </edition-bisa-bia-bisa-bel>
                 <edition-aos-quatro-ventos>
                   <label>Aos quatro ventos</label>
                   <uri>/explore/aos-quatro-ventos</uri>
@@ -97,10 +93,6 @@
               <label>Coleções</label>
               <uri>/colecoes</uri>
               <pages>
-                <serie-barquinho-de-papel>
-                  <label>Barquinho de Papel</label>
-                  <uri>/colecao/barquinho-de-papel</uri>
-                </serie-barquinho-de-papel>
                 <serie-mico-maneco>
                   <label>Mico Maneco</label>
                   <uri>/colecao/mico-maneco</uri>
@@ -111,11 +103,11 @@
         </works>
         <biography>
           <label>Biografia</label>
-          <uri>/biografia</uri>
+          <uri>/works/biography</uri>
         </biography>
         <news>
           <label>Novidades</label>
-          <uri>/novidades</uri>
+          <uri>/works/news</uri>
         </news>
       </pages>
     </home>

@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-25 18:21-0300\n"
-"PO-Revision-Date: 2013-09-25 18:22-0300\n"
+"POT-Creation-Date: 2013-09-26 12:02-0300\n"
+"PO-Revision-Date: 2013-09-26 12:02-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;translate;setLabel\n"
 "X-Poedit-Basepath: C:\\xampp\\htdocs\\amm\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: application\\modules\n"
@@ -29,7 +29,7 @@ msgid "#The record was successfully updated."
 msgstr "O registro foi atualizado com sucesso."
 
 #: application\modules/admin/controllers/EditionController.php:54
-#: application\modules/admin/views/scripts/edition/create.phtml:58
+#: application\modules/admin/views/scripts/edition/create.phtml:55
 msgid "#Create edition"
 msgstr "Criar edição"
 
@@ -263,6 +263,14 @@ msgid "#Email:"
 msgstr "Email"
 
 #: library\Moxca/Form/UserCreate.php:101
+#: library\Author/Form/CoverChange.php:34
+#: library\Author/Form/EditionCreate.php:102
+#: library\Author/Form/EditorCreate.php:32
+#: library\Author/Form/IsbnChange.php:38
+#: library\Author/Form/PagesChange.php:38
+#: library\Author/Form/PrizeCreate.php:81
+#: library\Author/Form/SerieChange.php:36
+#: library\Author/Form/WorkTypeChange.php:40
 msgid "#Submit"
 msgstr "Enviar"
 
@@ -1269,6 +1277,26 @@ msgstr "Título:"
 msgid "#Title is required"
 msgstr "O título é obrigatório"
 
+#: library\Author/Form/EditionCreate.php:46
+#: application\modules/admin/views/scripts/index/list.phtml:19
+#: application\modules/admin/views/scripts/work/list.phtml:20
+msgid "#Type"
+msgstr "Tipo"
+
+#: library\Author/Form/EditionCreate.php:60
+#: application\modules/admin/views/scripts/index/list.phtml:20
+#: application\modules/admin/views/scripts/work/list.phtml:21
+msgid "#Editor"
+msgstr "Editora"
+
+#: library\Author/Form/EditionCreate.php:73
+msgid "#Summary:"
+msgstr "Sumário:"
+
+#: library\Author/Form/EditionCreate.php:87
+msgid "#Description:"
+msgstr "Descrição:"
+
 #: library\Author/Form/EditorCreate.php:24
 msgid "#Name is required"
 msgstr "O nome é obrigatório"
@@ -1299,6 +1327,14 @@ msgstr "Categoria:"
 msgid "#Year:"
 msgstr "Ano:"
 
+#: library\Author/Form/SerieChange.php:22
+msgid "#Serie"
+msgstr "Coleçãp"
+
+#: library\Author/Form/WorkTypeChange.php:25
+msgid "#Type:"
+msgstr "Tipo:"
+
 #: application\modules/admin/views/scripts/edition/change-cover.phtml:2
 #, php-format
 msgid "#Change cover for %s"
@@ -1319,7 +1355,7 @@ msgstr "Mudar número de páginas de %s"
 msgid "#Change %s's serie"
 msgstr "Alterar coleção de %s"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:69
+#: application\modules/admin/views/scripts/edition/create.phtml:66
 msgid "#(new editor)"
 msgstr "(nova editora)"
 
@@ -1332,16 +1368,6 @@ msgstr "Lista de obras"
 #: application\modules/admin/views/scripts/work/list.phtml:19
 msgid "#Title"
 msgstr "Título"
-
-#: application\modules/admin/views/scripts/index/list.phtml:19
-#: application\modules/admin/views/scripts/work/list.phtml:20
-msgid "#Type"
-msgstr "Tipo"
-
-#: application\modules/admin/views/scripts/index/list.phtml:20
-#: application\modules/admin/views/scripts/work/list.phtml:21
-msgid "#Editor"
-msgstr "Editora"
 
 #: application\modules/admin/views/scripts/navigation/update.phtml:2
 msgid "#Navigation updated"
@@ -1406,7 +1432,7 @@ msgstr "(editar)"
 
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:6
 msgid "#Serie:"
-msgstr "Coleção"
+msgstr "Coleção: "
 
 #: application\modules/auth/views/scripts/user/create.phtml:2
 msgid "#New user"
@@ -1501,6 +1527,10 @@ msgstr "livros da coleção"
 #: application\modules/works/views/scripts/index/young.phtml:9
 msgid "#Young books"
 msgstr "Juvenis"
+
+#, fuzzy
+#~ msgid "#Serie..."
+#~ msgstr "Coleções"
 
 #~ msgid "#Invalid User Id from Get"
 #~ msgstr "Id inválido"

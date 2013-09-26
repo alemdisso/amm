@@ -22,7 +22,7 @@ class Author_Form_WorkTypeChange extends Zend_Form
         $titlesArray = $typesObj->allTitles();
 
         $element = new Zend_Form_Element_Radio('type');
-	$element->setLabel('#Tipo de livro?')
+	$element->setLabel('#Type:')
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
