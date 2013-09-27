@@ -126,6 +126,34 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->addFilter('StringTrim');
         $this->addElement($element);
 
+        $element = new Zend_Form_Element_Text('illustrator');
+        $validator = new Moxca_Util_ValidString();
+        $element->setLabel(_('#Illustrator:'))
+                ->setDecorators(array(
+                    'ViewHelper',
+                    'Errors',
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                ))
+                ->setOptions(array('class' => ''))
+                ->addValidator($validator)
+                ->addFilter('StringTrim');
+        $this->addElement($element);
+
+        $element = new Zend_Form_Element_Text('coverDesigner');
+        $validator = new Moxca_Util_ValidString();
+        $element->setLabel(_('#Cover designer:'))
+                ->setDecorators(array(
+                    'ViewHelper',
+                    'Errors',
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                ))
+                ->setOptions(array('class' => ''))
+                ->addValidator($validator)
+                ->addFilter('StringTrim');
+        $this->addElement($element);
+
          // create submit button
         $element = new Zend_Form_Element_Submit('submit');
         $element->setLabel('#Submit') //Gravar
@@ -169,6 +197,8 @@ class Author_Form_EditionCreate extends Zend_Form
             $edition = new Author_Collection_Edition($work->getId(), $data['editor']);
             $edition->setIsbn($data['isbn']);
             $edition->setPages($data['pages']);
+            $edition->setIllustrator($data['illustrator']);
+            $edition->setCoverDesigner($data['coverDesigner']);
 
             $location = $this->cover->getFileName();
             $location = str_replace('\\', '/', $location);

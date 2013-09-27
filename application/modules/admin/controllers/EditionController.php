@@ -38,16 +38,16 @@ class Admin_EditionController extends Zend_Controller_Action
         if ($this->getRequest()->isPost()) {
             $postData = $this->getRequest()->getPost();
             if ($form->isValid($postData)) {
-                if (!$postData['editor']) {
-                    die("KATSO!!!!!!!");
-                }
                 $newEdition = $form->process($postData);
                 $this->_helper->getHelper('FlashMessenger')
                     ->addMessage($this->view->translate('#The record was successfully updated.'));
                 $this->_redirect('/admin/work/detail/?id=' . $newEdition->getWork());
             } else {
                 //form error: populate and go back
+
+                $element = $form->getElement('editor');
                 $form->populate($postData);
+                $this->populateEditorsSelect($element, $postData['editor']);
                 $this->view->form = $form;
             }
         } else {
