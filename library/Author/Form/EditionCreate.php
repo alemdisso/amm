@@ -126,22 +126,22 @@ class Author_Form_EditionCreate extends Zend_Form
             $work->SetType($data['type']);
             $work->SetDescription($data['description']);
             $work->SetSummary($data['summary']);
-            $workMapper->insert($work);
-
-            $editionMapper = new Author_Collection_EditionMapper($db);
-            $edition = new Author_Collection_Edition($work->getId(), $data['editor']);
-
 
             if (!$this->cover->receive()) {
                 throw new Author_Form_EditionCreateException('Something wrong receiving cover file');
             }
+
+            $workMapper->insert($work);
+
+            $editionMapper = new Author_Collection_EditionMapper($db);
+            $edition = new Author_Collection_Edition($work->getId(), $data['editor']);
 
             $location = $this->cover->getFileName();
             $location = str_replace('\\', '/', $location);
             $tmpArray = explode('/', $location);
             $coverFileName = end($tmpArray);
             if ($coverFileName != "") {
-                $edition->setCover();
+                $edition->setCover($coverFileName);
             }
 
             $editionMapper->insert($edition);
