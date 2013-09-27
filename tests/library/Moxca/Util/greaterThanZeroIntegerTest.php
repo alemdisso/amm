@@ -1,12 +1,12 @@
 <?php
 
-class PositiveIntegerTest extends ControllerTestCase
+class greaterThanZeroIntegerTest extends ControllerTestCase
 {
     private $validator;
 
     public function setUp() {
         parent::setUp();
-        $this->validator = new Moxca_Util_ValidPositiveInteger();
+        $this->validator = new Moxca_Util_ValidGreaterThanZeroInteger();
     }
 
     public function testThatAPositiveIntegerValueIsValid() {
@@ -24,9 +24,9 @@ class PositiveIntegerTest extends ControllerTestCase
        $this->assertFalse($this->validator->isValid($notANumber));
     }
 
-    public function testThatZeroIsValid() {
+    public function testThatZeroIsInvalid() {
        $aNumber = 0;
-       $this->assertTrue($this->validator->isValid($aNumber));
+       $this->assertFalse($this->validator->isValid($aNumber));
     }
 
 

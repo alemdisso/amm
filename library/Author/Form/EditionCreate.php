@@ -54,8 +54,12 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->setSeparator('');
         $this->addElement($element);
 
+        $validator = new Moxca_Util_ValidGreaterThanZeroInteger;
         $element = new Zend_Form_Element_Select('editor');
         $element->setLabel('#Editor')
+                ->addValidator($validator)
+                ->setRequired(true)
+                ->addErrorMessage(_("#Editor is required"))
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
@@ -94,7 +98,35 @@ class Author_Form_EditionCreate extends Zend_Form
             ->addFilter('StringTrim');
         $this->addElement($element);
 
-        // create submit button
+       $element = new Zend_Form_Element_Text('isbn');
+        $validator = new Moxca_Util_ValidIsbn();
+        $element->setLabel(_('#ISBN:'))
+                ->setDecorators(array(
+                    'ViewHelper',
+                    'Errors',
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                ))
+                ->setOptions(array('class' => ''))
+                ->addValidator($validator)
+                ->addFilter('StringTrim');
+        $this->addElement($element);
+
+        $element = new Zend_Form_Element_Text('pages');
+        $validator = new Moxca_Util_ValidPositiveInteger();
+        $element->setLabel(_('#Pages:'))
+                ->setDecorators(array(
+                    'ViewHelper',
+                    'Errors',
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                ))
+                ->setOptions(array('class' => ''))
+                ->addValidator($validator)
+                ->addFilter('StringTrim');
+        $this->addElement($element);
+
+         // create submit button
         $element = new Zend_Form_Element_Submit('submit');
         $element->setLabel('#Submit') //Gravar
                ->setDecorators(array('ViewHelper','Errors',
@@ -135,6 +167,8 @@ class Author_Form_EditionCreate extends Zend_Form
 
             $editionMapper = new Author_Collection_EditionMapper($db);
             $edition = new Author_Collection_Edition($work->getId(), $data['editor']);
+            $edition->setIsbn($data['isbn']);
+            $edition->setPages($data['pages']);
 
             $location = $this->cover->getFileName();
             $location = str_replace('\\', '/', $location);

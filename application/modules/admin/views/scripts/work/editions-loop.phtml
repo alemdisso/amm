@@ -1,5 +1,4 @@
 <div class="float_left">
-    <a href="/explore/<?php echo $this->uri ?>"><?php echo $this->translate('#(goto work\'s page)')?></a></p>
     <?php echo $this->cover($this->editionId, $this->src) ?>
     <p><?php echo $this->editorName ?></p>
     <p><?php echo $this->translate('#ISBN:')?><?php echo $this->isbn ?> <a href="/admin/edition/change-isbn/?id=<?php echo $this->editionId ?>"><?php echo $this->translate('#(edit)')?></a></p>
@@ -7,4 +6,5 @@
     <p><?php echo $this->translate('#Serie:')?><?php echo $this->serie ?> <a href="/admin/edition/change-serie/?id=<?php echo $this->editionId ?>"><?php echo $this->translate('#(edit)')?></a></p>
     <p><?php echo $this->translate('#Illustrator:')?><?php echo $this->illustrator ?> <a href="/admin/edition/change-illustrator/?id=<?php echo $this->editionId ?>"><?php echo $this->translate('#(edit)')?></a></p>
     <p><?php echo $this->translate('#Cover designer:')?><?php echo $this->coverDesigner ?> <a href="/admin/edition/change-cover-designer/?id=<?php echo $this->editionId ?>"><?php echo $this->translate('#(edit)')?></a></p>
+    <a href="/explore/<?php echo $this->uri ?>"><?php echo $this->translate('#(goto work\'s page)')?></a></p>
 <div>
