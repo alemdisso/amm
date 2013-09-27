@@ -19,7 +19,7 @@ class Author_View_Helper_WorkPrizesLabels extends Zend_View_Helper_Abstract
             if ($loopPrizeObj->getCategoryName()) {
                 $label .= " (" . $loopPrizeObj->getCategoryName() . ")";
             }
-            $prizesLabels[$prizeId] = array('label' => $label);
+            $prizesLabels[$prizeId] = array('id' => $prizeId, 'label' => $label);
         }
 
         return $prizesLabels;

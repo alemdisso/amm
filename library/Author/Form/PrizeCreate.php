@@ -8,8 +8,6 @@ class Author_Form_PrizeCreate extends Zend_Form
         // initialize form
         $this->setName('newPrizeForm')
             ->setAction('/admin/prize/create')
-            ->setAttrib('enctype', 'multipart/form-data')
-            //->setAction('javascript:callEditionCreate();')
             ->setMethod('post');
 
         $element = new Zend_Form_Element_Hidden('work');
