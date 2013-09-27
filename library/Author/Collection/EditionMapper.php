@@ -99,7 +99,7 @@ class Author_Collection_EditionMapper
         $this->setAttributeValue($obj, $result['serie'], 'serie');
 //        $this->setAttributeValue($obj, $result['work'], 'work');
         $this->setAttributeValue($obj, $result['pages'], 'pages');
-        $this->setAttributeValue($obj, $result['cover'], 'coverImageFilename');
+        $this->setAttributeValue($obj, $result['cover'], 'cover');
         $this->setAttributeValue($obj, $result['isbn'], 'isbn');
         $this->setAttributeValue($obj, $result['illustrator'], 'illustrator');
         $this->setAttributeValue($obj, $result['cover_designer'], 'coverDesigner');

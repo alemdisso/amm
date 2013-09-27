@@ -7,7 +7,7 @@ class Author_Collection_Edition {
     protected $editor;
     protected $serie;
     protected $pages;
-    protected $coverImageFilename;
+    protected $cover;
     protected $isbn;
     protected $illustrator;
     protected $coverDesigner;
@@ -86,18 +86,18 @@ class Author_Collection_Edition {
 
     public function getCover()
     {
-        return $this->coverImageFilename;
+        return $this->cover;
     } //getCover
 
-    public function setCover($coverImageFilename)
+    public function setCover($cover)
     {
         $validator = new Moxca_Util_ValidFilename();
-        if ($validator->isValid($coverImageFilename)) {
-            if ($this->coverImageFilename != $coverImageFilename) {
-                $this->coverImageFilename = $coverImageFilename;
+        if (($validator->isValid($cover)) || ($cover == "")) {
+            if ($this->cover != $cover) {
+                $this->cover = $cover;
             }
         } else {
-            throw new Author_Collection_WorkException("This ($coverImageFilename) is not a valid coverImageFilename.");
+            throw new Author_Collection_WorkException("This ($cover) is not a valid cover filename.");
         }
 
     } //SetCover
@@ -112,7 +112,7 @@ class Author_Collection_Edition {
     public function setIsbn($isbn)
     {
         $validator = new Moxca_Util_ValidString();
-        if ($validator->isValid($isbn)) {
+        if (($validator->isValid($isbn)) || ($isbn == "")) {
             if ($this->isbn != $isbn) {
                 $this->isbn = $isbn;
             }
@@ -131,7 +131,7 @@ class Author_Collection_Edition {
     public function setIllustrator($illustrator)
     {
         $validator = new Moxca_Util_ValidString();
-        if ($validator->isValid($illustrator)) {
+        if (($validator->isValid($illustrator)) || ($illustrator == "")) {
             if ($this->illustrator != $illustrator) {
                 $this->illustrator = $illustrator;
             }
@@ -150,7 +150,7 @@ class Author_Collection_Edition {
     public function setCoverDesigner($coverDesigner)
     {
         $validator = new Moxca_Util_ValidString();
-        if ($validator->isValid($coverDesigner)) {
+        if (($validator->isValid($coverDesigner)) || ($coverDesigner == "")) {
             if ($this->coverDesigner != $coverDesigner) {
                 $this->coverDesigner = $coverDesigner;
             }

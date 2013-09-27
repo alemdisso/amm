@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-27 17:02-0300\n"
-"PO-Revision-Date: 2013-09-27 17:02-0300\n"
+"POT-Creation-Date: 2013-09-27 17:28-0300\n"
+"PO-Revision-Date: 2013-09-27 17:28-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -17,7 +17,7 @@ msgstr ""
 "X-Poedit-SearchPath-1: library\\Moxca\n"
 "X-Poedit-SearchPath-2: library\\Author\n"
 
-#: application\modules/admin/controllers/EditionController.php:46
+#: application\modules/admin/controllers/EditionController.php:43
 #: application\modules/admin/controllers/EditionController.php:74
 #: application\modules/admin/controllers/EditionController.php:280
 #: application\modules/admin/controllers/EditorController.php:42
@@ -30,7 +30,7 @@ msgid "#The record was successfully updated."
 msgstr "O registro foi atualizado com sucesso."
 
 #: application\modules/admin/controllers/EditionController.php:57
-#: application\modules/admin/views/scripts/edition/create.phtml:57
+#: application\modules/admin/views/scripts/edition/create.phtml:59
 msgid "#Create edition"
 msgstr "Criar edição"
 
@@ -203,6 +203,7 @@ msgid "#Serie: %s"
 msgstr "Coleção: %s"
 
 #: application\modules/works/controllers/EditionController.php:72
+#: library\Author/Form/EditionCreate.php:131
 #: library\Author/Form/IllustratorChange.php:23
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:7
 msgid "#Illustrator:"
@@ -210,6 +211,7 @@ msgstr "Ilustrador:"
 
 #: application\modules/works/controllers/EditionController.php:77
 #: library\Author/Form/CoverDesignerChange.php:23
+#: library\Author/Form/EditionCreate.php:145
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:8
 msgid "#Cover designer:"
 msgstr "Capa:"
@@ -289,7 +291,7 @@ msgstr "Email"
 #: library\Moxca/Form/UserCreate.php:101
 #: library\Author/Form/CoverChange.php:34
 #: library\Author/Form/CoverDesignerChange.php:38
-#: library\Author/Form/EditionCreate.php:131
+#: library\Author/Form/EditionCreate.php:159
 #: library\Author/Form/EditorCreate.php:32
 #: library\Author/Form/IllustratorChange.php:38
 #: library\Author/Form/IsbnChange.php:35
@@ -1397,7 +1399,7 @@ msgstr "Mudar número de páginas de %s"
 msgid "#Change %s's serie"
 msgstr "Alterar coleção de %s"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:68
+#: application\modules/admin/views/scripts/edition/create.phtml:70
 msgid "#(new editor)"
 msgstr "(nova editora)"
 
