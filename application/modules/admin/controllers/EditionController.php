@@ -90,6 +90,66 @@ class Admin_EditionController extends Zend_Controller_Action
         }
     }
 
+   public function changeCoverDesignerAction()
+    {
+        // cria form
+        $form = new Author_Form_CoverDesignerChange;
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $this->processAndRedirect($form);
+            return;
+        } else {
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('id');
+            $element->setValue($id);
+
+            $editionObj = $this->editionMapper->findById($id);
+            $element = $form->getElement('coverDesigner');
+            $element->setValue($editionObj->getCoverDesigner());
+
+            $workObj = $this->workMapper->findById($editionObj->getWork());
+            $this->view->title = $workObj->getTitle();
+            $this->view->pageTitle = $this->view->translate("#Change cover designer");
+        }
+    }
+
+   public function changeIllustratorAction()
+    {
+        // cria form
+        $form = new Author_Form_IllustratorChange;
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $this->processAndRedirect($form);
+            return;
+        } else {
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('id');
+            $element->setValue($id);
+
+            $editionObj = $this->editionMapper->findById($id);
+            $element = $form->getElement('illustrator');
+            $element->setValue($editionObj->getIllustrator());
+
+            $workObj = $this->workMapper->findById($editionObj->getWork());
+            $this->view->title = $workObj->getTitle();
+            $this->view->pageTitle = $this->view->translate("#Change illustrator");
+        }
+    }
+
    public function changeIsbnAction()
     {
         // cria form

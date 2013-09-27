@@ -99,6 +99,16 @@ class Admin_WorkController extends Zend_Controller_Action
                 $serieName = "";
             }
 
+            $illustrator = $loopEditionObj->getIllustrator();
+            if ($illustrator == "") {
+                $illustrator = $this->view->translate("#NI");
+            }
+
+            $coverDesigner = $loopEditionObj->getCoverDesigner();
+            if ($coverDesigner == "") {
+                $coverDesigner = $this->view->translate("#NI");
+            }
+
 
             $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
@@ -109,6 +119,8 @@ class Admin_WorkController extends Zend_Controller_Action
                     'isbn' => $isbn,
                     'pages' => $pages,
                     'serie' => $serieName,
+                    'illustrator' => $illustrator,
+                    'coverDesigner' => $coverDesigner,
             );
         }
 

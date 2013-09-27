@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-26 12:02-0300\n"
-"PO-Revision-Date: 2013-09-26 12:02-0300\n"
+"POT-Creation-Date: 2013-09-27 14:43-0300\n"
+"PO-Revision-Date: 2013-09-27 14:45-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -19,17 +19,17 @@ msgstr ""
 
 #: application\modules/admin/controllers/EditionController.php:43
 #: application\modules/admin/controllers/EditionController.php:71
-#: application\modules/admin/controllers/EditionController.php:217
+#: application\modules/admin/controllers/EditionController.php:277
 #: application\modules/admin/controllers/EditorController.php:42
 #: application\modules/admin/controllers/PrizeController.php:41
-#: application\modules/admin/controllers/WorkController.php:158
+#: application\modules/admin/controllers/WorkController.php:170
 #: application\modules/auth/controllers/UserController.php:39
 #: application\modules/auth/controllers/UserController.php:61
 msgid "#The record was successfully updated."
 msgstr "O registro foi atualizado com sucesso."
 
 #: application\modules/admin/controllers/EditionController.php:54
-#: application\modules/admin/views/scripts/edition/create.phtml:55
+#: application\modules/admin/views/scripts/edition/create.phtml:57
 msgid "#Create edition"
 msgstr "Criar edição"
 
@@ -39,16 +39,24 @@ msgid "#Change cover"
 msgstr "Trocar imagem"
 
 #: application\modules/admin/controllers/EditionController.php:119
+msgid "#Change cover designer"
+msgstr "Trocar designer da capa"
+
 #: application\modules/admin/controllers/EditionController.php:149
+msgid "#Change illustrator"
+msgstr "Editar ilustrador"
+
+#: application\modules/admin/controllers/EditionController.php:179
+#: application\modules/admin/controllers/EditionController.php:209
 msgid "#Change isbn"
 msgstr "Editar isbn"
 
-#: application\modules/admin/controllers/EditionController.php:180
+#: application\modules/admin/controllers/EditionController.php:240
 msgid "#Change serie"
 msgstr "Alterar coleção"
 
-#: application\modules/admin/controllers/EditionController.php:189
-#: application\modules/admin/controllers/EditionController.php:202
+#: application\modules/admin/controllers/EditionController.php:249
+#: application\modules/admin/controllers/EditionController.php:262
 msgid "#(choose an option)"
 msgstr "(escolha uma opção...)"
 
@@ -163,6 +171,8 @@ msgstr "Alterar classificação"
 
 #: application\modules/admin/controllers/WorkController.php:86
 #: application\modules/admin/controllers/WorkController.php:91
+#: application\modules/admin/controllers/WorkController.php:104
+#: application\modules/admin/controllers/WorkController.php:109
 msgid "#NI"
 msgstr "n.i."
 
@@ -264,9 +274,11 @@ msgstr "Email"
 
 #: library\Moxca/Form/UserCreate.php:101
 #: library\Author/Form/CoverChange.php:34
-#: library\Author/Form/EditionCreate.php:102
+#: library\Author/Form/CoverDesignerChange.php:38
+#: library\Author/Form/EditionCreate.php:99
 #: library\Author/Form/EditorCreate.php:32
-#: library\Author/Form/IsbnChange.php:38
+#: library\Author/Form/IllustratorChange.php:38
+#: library\Author/Form/IsbnChange.php:35
 #: library\Author/Form/PagesChange.php:38
 #: library\Author/Form/PrizeCreate.php:81
 #: library\Author/Form/SerieChange.php:36
@@ -1268,6 +1280,10 @@ msgstr "Tipo indefinido"
 msgid "#Upload an image:"
 msgstr "Enviar uma imagem"
 
+#: library\Author/Form/CoverDesignerChange.php:23
+msgid "#CoverDesigner:"
+msgstr "Capa:"
+
 #: library\Author/Form/EditionCreate.php:17
 msgid "#Title:"
 msgstr "Título:"
@@ -1283,17 +1299,17 @@ msgstr "O título é obrigatório"
 msgid "#Type"
 msgstr "Tipo"
 
-#: library\Author/Form/EditionCreate.php:60
+#: library\Author/Form/EditionCreate.php:58
 #: application\modules/admin/views/scripts/index/list.phtml:20
 #: application\modules/admin/views/scripts/work/list.phtml:21
 msgid "#Editor"
 msgstr "Editora"
 
-#: library\Author/Form/EditionCreate.php:73
+#: library\Author/Form/EditionCreate.php:70
 msgid "#Summary:"
 msgstr "Sumário:"
 
-#: library\Author/Form/EditionCreate.php:87
+#: library\Author/Form/EditionCreate.php:84
 msgid "#Description:"
 msgstr "Descrição:"
 
@@ -1301,7 +1317,12 @@ msgstr "Descrição:"
 msgid "#Name is required"
 msgstr "O nome é obrigatório"
 
-#: library\Author/Form/IsbnChange.php:23
+#: library\Author/Form/IllustratorChange.php:23
+#: application\modules/admin/views/scripts/work/editions-loop.phtml:7
+msgid "#Illustrator:"
+msgstr "Ilustrador:"
+
+#: library\Author/Form/IsbnChange.php:21
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:4
 msgid "#ISBN:"
 msgstr "ISBN:"
@@ -1335,10 +1356,20 @@ msgstr "Coleçãp"
 msgid "#Type:"
 msgstr "Tipo:"
 
+#: application\modules/admin/views/scripts/edition/change-cover-designer.phtml:2
+#, php-format
+msgid "#Change cover designer for %s"
+msgstr "Editar designer da capa de %s"
+
 #: application\modules/admin/views/scripts/edition/change-cover.phtml:2
 #, php-format
 msgid "#Change cover for %s"
 msgstr "Mudar imagem para %s"
+
+#: application\modules/admin/views/scripts/edition/change-illustrator.phtml:2
+#, php-format
+msgid "#Change illustrator for %s"
+msgstr "Mudar ilustrador de %s"
 
 #: application\modules/admin/views/scripts/edition/change-isbn.phtml:2
 #, php-format
@@ -1355,7 +1386,7 @@ msgstr "Mudar número de páginas de %s"
 msgid "#Change %s's serie"
 msgstr "Alterar coleção de %s"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:66
+#: application\modules/admin/views/scripts/edition/create.phtml:68
 msgid "#(new editor)"
 msgstr "(nova editora)"
 
@@ -1382,10 +1413,6 @@ msgid "#List works"
 msgstr "Listar obras"
 
 #: application\modules/admin/views/scripts/panel/panel.phtml:4
-msgid "#Update navigation"
-msgstr "Atualizar navegação"
-
-#: application\modules/admin/views/scripts/panel/panel.phtml:5
 msgid "#Logout"
 msgstr "Logout"
 
@@ -1427,12 +1454,18 @@ msgstr "Edições"
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:4
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:5
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:6
+#: application\modules/admin/views/scripts/work/editions-loop.phtml:7
+#: application\modules/admin/views/scripts/work/editions-loop.phtml:8
 msgid "#(edit)"
 msgstr "(editar)"
 
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:6
 msgid "#Serie:"
 msgstr "Coleção: "
+
+#: application\modules/admin/views/scripts/work/editions-loop.phtml:8
+msgid "#Cover designer:"
+msgstr "Capa:"
 
 #: application\modules/auth/views/scripts/user/create.phtml:2
 msgid "#New user"
@@ -1527,6 +1560,9 @@ msgstr "livros da coleção"
 #: application\modules/works/views/scripts/index/young.phtml:9
 msgid "#Young books"
 msgstr "Juvenis"
+
+#~ msgid "#Update navigation"
+#~ msgstr "Atualizar navegação"
 
 #, fuzzy
 #~ msgid "#Serie..."

@@ -1,13 +1,15 @@
 <?php
-class Author_Form_IsbnChange extends Zend_Form
+class Author_Form_CoverDesignerChange extends Zend_Form
 {
     public function init()
     {
         parent::init();
 
+
+
         // initialize form
-        $this->setName('isbnChangeForm')
-            ->setAction('/admin/edition/change-isbn')
+        $this->setName('coverDesignerChangeForm')
+            ->setAction('/admin/edition/change-cover-designer')
             ->setMethod('post');
 
         $element = new Zend_Form_Element_Hidden('id');
@@ -16,9 +18,9 @@ class Author_Form_IsbnChange extends Zend_Form
         $this->addElement($element);
         $element->setDecorators(array('ViewHelper'));
 
-        $element = new Zend_Form_Element_Text('isbn');
-        $validator = new Moxca_Util_ValidIsbn();
-        $element->setLabel(_('#ISBN:'))
+        $element = new Zend_Form_Element_Text('coverDesigner');
+        $validator = new Moxca_Util_ValidString();
+        $element->setLabel(_('#Cover designer:'))
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
@@ -29,6 +31,7 @@ class Author_Form_IsbnChange extends Zend_Form
                 ->addValidator($validator)
                 ->addFilter('StringTrim');
         $this->addElement($element);
+
 
         // create submit button
         $element = new Zend_Form_Element_Submit('submit');
@@ -51,9 +54,12 @@ class Author_Form_IsbnChange extends Zend_Form
         } else {
             $db = Zend_Registry::get('db');
             $editionMapper = new Author_Collection_EditionMapper($db);
+
             $editionId = $data['id'];
             $editionObj = $editionMapper->findById($editionId);
-            $editionObj->setIsbn($data['isbn']);
+
+            $editionObj->setCoverDesigner($data['coverDesigner']);
+
             $editionMapper->update($editionObj);
             return $editionObj;
         }

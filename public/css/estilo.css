@@ -502,7 +502,7 @@ h4 {
 	}
 
 .slidingDiv {
-    height:120px;
+    height:80px;
     background-color: #d1d1e0;
     padding:20px;
     margin-top:10px;
@@ -902,7 +902,7 @@ div.dataTables_filter {
 }
 
 #admin a.thumbnail_livro img {
-	width:96px;
+	width:160px;
 	height:auto;
 	}
 

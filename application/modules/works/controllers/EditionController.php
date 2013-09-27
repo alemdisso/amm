@@ -75,7 +75,7 @@ class Works_EditionController extends Zend_Controller_Action
             'description' => $workObj->getDescription(),
             'serieName' => $serieLabel,
             'serieUri' => $serieUri,
-            'ilustratorName' => 'Capa: Claudius',
+            'illustratorName' => 'Capa: Claudius',
             'isbn' => $isbnLabel,
             'pages' => $pagesLabel,
 
