@@ -15,8 +15,11 @@ $pageData = $this->pageData;
 <?php if ((isset($pageData['serieName'])) && ($pageData['serieName'])) { ?>
 <a href="/colecao/<?php echo $pageData['serieUri']?>"><?php echo $pageData['serieName']?></a><br />
 <?php } ?>
-<?php if ((isset($pageData['ilustratorName'])) && ($pageData['ilustratorName'])) { ?>
-<?php echo $pageData['ilustratorName']?><br />
+<?php if ((isset($pageData['illustrator'])) && ($pageData['illustrator'])) { ?>
+<?php echo $pageData['illustrator']?><br />
+<?php } ?>
+<?php if ((isset($pageData['coverDesigner'])) && ($pageData['coverDesigner'])) { ?>
+<?php echo $pageData['coverDesigner']?><br />
 <?php } ?>
 <?php if ((isset($pageData['isbn'])) && ($pageData['isbn'])) { ?>
 <?php echo $pageData['isbn']?><br />

@@ -67,6 +67,15 @@ class Works_EditionController extends Zend_Controller_Action
         $prizeMapper = new Author_Collection_PrizeMapper($this->db);
         $prizesLabels = $this->view->workPrizesLabels($workObj->getId(), $prizeMapper);
 
+        $illustratorLabel = "";
+        if ($editionObj->getIllustrator()) {
+            $illustratorLabel = $this->view->translate("#Illustrator:") . " " . $editionObj->getIllustrator();
+        }
+
+        $coverDesignerLabel = "";
+        if ($editionObj->getCoverDesigner()) {
+            $coverDesignerLabel = $this->view->translate("#Cover designer:") . " " . $editionObj->getCoverDesigner();
+        }
 
         $pageData = array(
             'title' => $workTitle,
@@ -75,7 +84,8 @@ class Works_EditionController extends Zend_Controller_Action
             'description' => $workObj->getDescription(),
             'serieName' => $serieLabel,
             'serieUri' => $serieUri,
-            'illustratorName' => 'Capa: Claudius',
+            'illustrator' => $illustratorLabel,
+            'coverDesigner' => $coverDesignerLabel,
             'isbn' => $isbnLabel,
             'pages' => $pagesLabel,
 
