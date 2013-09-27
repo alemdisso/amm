@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-27 15:09-0300\n"
-"PO-Revision-Date: 2013-09-27 15:09-0300\n"
+"POT-Creation-Date: 2013-09-27 15:13-0300\n"
+"PO-Revision-Date: 2013-09-27 15:13-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: application\modules/admin/controllers/EditionController.php:277
 #: application\modules/admin/controllers/EditorController.php:42
 #: application\modules/admin/controllers/PrizeController.php:41
-#: application\modules/admin/controllers/WorkController.php:170
+#: application\modules/admin/controllers/WorkController.php:171
 #: application\modules/auth/controllers/UserController.php:39
 #: application\modules/auth/controllers/UserController.php:61
 msgid "#The record was successfully updated."
@@ -1424,19 +1424,23 @@ msgstr "Logout"
 msgid "#Change %s's type"
 msgstr "Alterar classificação de %s"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:7
+#: application\modules/admin/views/scripts/work/detail.phtml:6
+msgid "#(goto work's page)"
+msgstr "(ir para a página do livro)"
+
+#: application\modules/admin/views/scripts/work/detail.phtml:8
 msgid "#(change type)"
 msgstr "(alterar classificação)"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:9
+#: application\modules/admin/views/scripts/work/detail.phtml:10
 msgid "#Description"
 msgstr "Descrição"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:12
+#: application\modules/admin/views/scripts/work/detail.phtml:13
 msgid "#Summary"
 msgstr "Sumário"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:15
+#: application\modules/admin/views/scripts/work/detail.phtml:16
 #: application\modules/works/views/scripts/index/children.phtml:12
 #: application\modules/works/views/scripts/index/essays.phtml:12
 #: application\modules/works/views/scripts/index/fiction.phtml:12
@@ -1446,11 +1450,11 @@ msgstr "Sumário"
 msgid "#Prizes"
 msgstr "Prêmios"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:17
+#: application\modules/admin/views/scripts/work/detail.phtml:18
 msgid "#Add prize"
 msgstr "Novo prêmio"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:19
+#: application\modules/admin/views/scripts/work/detail.phtml:20
 msgid "#Editions"
 msgstr "Edições"
 

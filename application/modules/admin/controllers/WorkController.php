@@ -113,6 +113,7 @@ class Admin_WorkController extends Zend_Controller_Action
             $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
             $editionsModel[$editionId] = array(
+                    'uri' => $workObj->getUri(),
                     'editionId' => $editionId,
                     'editorName' => $editorName,
                     'src' => $coverFilePath,
