@@ -35,7 +35,7 @@ class Author_Form_EditionCreate extends Zend_Form
         // ensure only 1 file
         $element->addValidator('Count', false, 1);
         // limit to 100K
-        $element->addValidator('Size', false, 2097152);
+        $element->addValidator('Size', false, 5242880);
         // only JPEG, PNG, and GIFs
         $element->addValidator('Extension', false, 'jpg,png,gif,jpeg');
         $this->addElement($element);
