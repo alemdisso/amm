@@ -5,8 +5,6 @@ class Author_Form_IllustratorChange extends Zend_Form
     {
         parent::init();
 
-
-
         // initialize form
         $this->setName('illustratorChangeForm')
             ->setAction('/admin/edition/change-illustrator')
@@ -32,16 +30,12 @@ class Author_Form_IllustratorChange extends Zend_Form
                 ->addFilter('StringTrim');
         $this->addElement($element);
 
-
         // create submit button
         $element = new Zend_Form_Element_Submit('submit');
         $element->setLabel('#Submit') //Gravar
                ->setDecorators(array('ViewHelper','Errors',
                     array(array('data' => 'HtmlTag'),
                     array('tag' => 'div','class' => '')),
-                    array('Label',
-                      array('tag' => 'div','tagClass' => '')
-                    ),
                   ))
                ->setOptions(array('class' => ''));
         $this->addElement($element);

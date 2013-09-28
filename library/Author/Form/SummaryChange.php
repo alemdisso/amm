@@ -1,5 +1,5 @@
 <?php
-class Author_Form_SerieChange extends Zend_Form
+class Author_Form_SummaryChange extends Zend_Form
 {
     public function init()
     {
@@ -8,8 +8,8 @@ class Author_Form_SerieChange extends Zend_Form
 
 
         // initialize form
-        $this->setName('serieChangeForm')
-            ->setAction('/admin/edition/change-serie')
+        $this->setName('summaryChangeForm')
+            ->setAction('/admin/work/change-summary')
             ->setMethod('post');
 
         $element = new Zend_Form_Element_Hidden('id');
@@ -18,18 +18,19 @@ class Author_Form_SerieChange extends Zend_Form
         $this->addElement($element);
         $element->setDecorators(array('ViewHelper'));
 
-        $element = new Zend_Form_Element_Select('serie');
-        $element->setLabel('#Serie')
-                ->setDecorators(array(
-                    'ViewHelper',
-                    'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
+        $element = new Zend_Form_Element_Textarea('summary');
+        $element->setLabel('#Summary:')
+              ->setDecorators(array(
+                  'ViewHelper',
+                  'Errors',
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input item_formulario')),
                     array('Label', array('tag' => 'div', 'tagClass' => 'label')),
-                ))
-                ->setOptions(array('class' => 'change'))
-                ->setRegisterInArrayValidator(false);
+              ))
+            ->setAttrib('rows','3')
+            ->setOptions(array('class' => ''))
+            ->setRequired(false)
+            ->addFilter('StringTrim');
         $this->addElement($element);
-
 
         // create submit button
         $element = new Zend_Form_Element_Submit('submit');
@@ -40,26 +41,23 @@ class Author_Form_SerieChange extends Zend_Form
                   ))
                ->setOptions(array('class' => ''));
         $this->addElement($element);
-
-
-
     }
 
     public function process($data) {
 
         if ($this->isValid($data) !== true) {
-            throw new Author_Form_EditionCreateException('Invalid data!');
+            throw new Author_Form_WorkCreateException('Invalid data!');
         } else {
             $db = Zend_Registry::get('db');
-            $editionMapper = new Author_Collection_EditionMapper($db);
+            $workMapper = new Author_Collection_WorkMapper($db);
 
-            $editionId = $data['id'];
-            $editionObj = $editionMapper->findById($editionId);
+            $workId = $data['id'];
+            $workObj = $workMapper->findById($workId);
 
-            $editionObj->setSerie($data['serie']);
+            $workObj->setSummary($data['summary']);
 
-            $editionMapper->update($editionObj);
-            return $editionObj;
+            $workMapper->update($workObj);
+            return $workObj;
         }
     }
  }

@@ -123,7 +123,7 @@ class Admin_EditionController extends Zend_Controller_Action
         }
     }
 
-   public function changeIllustratorAction()
+    public function changeIllustratorAction()
     {
         // cria form
         $form = new Author_Form_IllustratorChange;

@@ -27,7 +27,37 @@ class Admin_WorkController extends Zend_Controller_Action
         $this->view->setNestedLayout($layoutHelper, 'inner_admin');
     }
 
-   public function changeTypeAction()
+    public function changeSummaryAction()
+    {
+        // cria form
+        $form = new Author_Form_SummaryChange;
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $this->processAndRedirect($form);
+            return;
+        } else {
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('id');
+            $element->setValue($id);
+
+            $workObj = $this->workMapper->findById($id);
+            $element = $form->getElement('summary');
+            $element->setValue($workObj->getSummary());
+
+            $workObj = $this->workMapper->findById($workObj->getId());
+            $this->view->title = $workObj->getTitle();
+            $this->view->pageTitle = $this->view->translate("#Change summary");
+        }
+    }
+
+    public function changeTypeAction()
     {
         // cria form
         $form = new Author_Form_WorkTypeChange;

@@ -41,9 +41,6 @@ class Author_Form_WorkTypeChange extends Zend_Form
                ->setDecorators(array('ViewHelper','Errors',
                     array(array('data' => 'HtmlTag'),
                     array('tag' => 'div','class' => '')),
-                    array('Label',
-                      array('tag' => 'div','tagClass' => '')
-                    ),
                   ))
                ->setOptions(array('class' => ''));
         $this->addElement($element);
