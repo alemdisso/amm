@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-28 11:27-0300\n"
-"PO-Revision-Date: 2013-09-28 11:29-0300\n"
+"POT-Creation-Date: 2013-09-28 12:08-0300\n"
+"PO-Revision-Date: 2013-09-28 12:09-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: application\modules/admin/controllers/EditorController.php:42
 #: application\modules/admin/controllers/PrizeController.php:41
 #: application\modules/admin/controllers/PrizeController.php:73
-#: application\modules/admin/controllers/WorkController.php:219
+#: application\modules/admin/controllers/WorkController.php:280
 #: application\modules/auth/controllers/UserController.php:39
 #: application\modules/auth/controllers/UserController.php:61
 msgid "#The record was successfully updated."
@@ -167,22 +167,30 @@ msgstr "/novidades"
 msgid "#Create prize"
 msgstr "Criar prêmio"
 
-#: application\modules/admin/controllers/WorkController.php:55
+#: application\modules/admin/controllers/WorkController.php:57
+msgid "#Change description"
+msgstr "Editar descrição"
+
+#: application\modules/admin/controllers/WorkController.php:87
+msgid "#Change summary"
+msgstr "Editar sumário"
+
+#: application\modules/admin/controllers/WorkController.php:116
 msgid "#Change type"
 msgstr "Alterar classificação"
 
-#: application\modules/admin/controllers/WorkController.php:86
-#: application\modules/admin/controllers/WorkController.php:91
-#: application\modules/admin/controllers/WorkController.php:104
-#: application\modules/admin/controllers/WorkController.php:109
+#: application\modules/admin/controllers/WorkController.php:147
+#: application\modules/admin/controllers/WorkController.php:152
+#: application\modules/admin/controllers/WorkController.php:165
+#: application\modules/admin/controllers/WorkController.php:170
 msgid "#NI"
 msgstr "n.i."
 
-#: application\modules/admin/controllers/WorkController.php:169
+#: application\modules/admin/controllers/WorkController.php:230
 msgid "#The record was successfully removed."
 msgstr "O registro foi removido com sucesso."
 
-#: application\modules/admin/controllers/WorkController.php:199
+#: application\modules/admin/controllers/WorkController.php:260
 #: application\modules/admin/views/scripts/work/remove.phtml:5
 msgid "#Remove work"
 msgstr "Remover obra"
@@ -213,7 +221,7 @@ msgstr "Coleção: %s"
 
 #: application\modules/works/controllers/EditionController.php:72
 #: library\Author/Form/EditionCreate.php:132
-#: library\Author/Form/IllustratorChange.php:23
+#: library\Author/Form/IllustratorChange.php:21
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:7
 msgid "#Illustrator:"
 msgstr "Ilustrador:"
@@ -300,13 +308,15 @@ msgstr "Email"
 #: library\Moxca/Form/UserCreate.php:101
 #: library\Author/Form/CoverChange.php:34
 #: library\Author/Form/CoverDesignerChange.php:38
+#: library\Author/Form/DescriptionChange.php:37
 #: library\Author/Form/EditionCreate.php:160
 #: library\Author/Form/EditorCreate.php:32
-#: library\Author/Form/IllustratorChange.php:38
+#: library\Author/Form/IllustratorChange.php:35
 #: library\Author/Form/IsbnChange.php:35
 #: library\Author/Form/PagesChange.php:38
 #: library\Author/Form/PrizeCreate.php:79
 #: library\Author/Form/SerieChange.php:36
+#: library\Author/Form/SummaryChange.php:37
 #: library\Author/Form/WorkTypeChange.php:40
 msgid "#Submit"
 msgstr "Enviar"
@@ -1305,6 +1315,11 @@ msgstr "Tipo indefinido"
 msgid "#Upload an image:"
 msgstr "Enviar uma imagem"
 
+#: library\Author/Form/DescriptionChange.php:22
+#: library\Author/Form/EditionCreate.php:89
+msgid "#Description:"
+msgstr "Descrição:"
+
 #: library\Author/Form/EditionCreate.php:18
 msgid "#Title:"
 msgstr "Título:"
@@ -1331,12 +1346,9 @@ msgid "#Editor is required"
 msgstr "A editora é obrigatória"
 
 #: library\Author/Form/EditionCreate.php:75
+#: library\Author/Form/SummaryChange.php:22
 msgid "#Summary:"
 msgstr "Sumário:"
-
-#: library\Author/Form/EditionCreate.php:89
-msgid "#Description:"
-msgstr "Descrição:"
 
 #: library\Author/Form/EditionCreate.php:104
 #: library\Author/Form/IsbnChange.php:21
@@ -1454,6 +1466,12 @@ msgstr "Logout"
 msgid "#Edit prize"
 msgstr "Editar prêmio"
 
+#: application\modules/admin/views/scripts/work/change-description.phtml:2
+#: application\modules/admin/views/scripts/work/change-summary.phtml:2
+#, php-format
+msgid "#Change summary for %s"
+msgstr "Editar sumário de %s"
+
 #: application\modules/admin/views/scripts/work/change-type.phtml:2
 #, php-format
 msgid "#Change %s's type"
@@ -1467,11 +1485,19 @@ msgstr "(alterar classificação)"
 msgid "#Description"
 msgstr "Descrição"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:12
+#: application\modules/admin/views/scripts/work/detail.phtml:11
+msgid "#(change description)"
+msgstr "(editar descrição)"
+
+#: application\modules/admin/views/scripts/work/detail.phtml:13
 msgid "#Summary"
 msgstr "Sumário"
 
 #: application\modules/admin/views/scripts/work/detail.phtml:15
+msgid "#(change summary)"
+msgstr "(editar sumário)"
+
+#: application\modules/admin/views/scripts/work/detail.phtml:17
 #: application\modules/works/views/scripts/index/children.phtml:12
 #: application\modules/works/views/scripts/index/essays.phtml:12
 #: application\modules/works/views/scripts/index/fiction.phtml:12
@@ -1481,15 +1507,15 @@ msgstr "Sumário"
 msgid "#Prizes"
 msgstr "Prêmios"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:17
+#: application\modules/admin/views/scripts/work/detail.phtml:19
 msgid "#Add prize"
 msgstr "Novo prêmio"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:19
+#: application\modules/admin/views/scripts/work/detail.phtml:21
 msgid "#Editions"
 msgstr "Edições"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:22
+#: application\modules/admin/views/scripts/work/detail.phtml:24
 msgid "#(remove this work!)"
 msgstr "(remova essa obra!)"
 

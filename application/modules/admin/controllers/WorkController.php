@@ -27,6 +27,37 @@ class Admin_WorkController extends Zend_Controller_Action
         $this->view->setNestedLayout($layoutHelper, 'inner_admin');
     }
 
+
+    public function changeDescriptionAction()
+    {
+        // cria form
+        $form = new Author_Form_DescriptionChange;
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $this->processAndRedirect($form);
+            return;
+        } else {
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('id');
+            $element->setValue($id);
+
+            $workObj = $this->workMapper->findById($id);
+            $element = $form->getElement('description');
+            $element->setValue($workObj->getDescription());
+
+            $workObj = $this->workMapper->findById($workObj->getId());
+            $this->view->title = $workObj->getTitle();
+            $this->view->pageTitle = $this->view->translate("#Change description");
+        }
+    }
+
     public function changeSummaryAction()
     {
         // cria form
@@ -162,8 +193,8 @@ class Admin_WorkController extends Zend_Controller_Action
             'id' => $id,
             'title' => $workObj->getTitle(),
             'typeLabel' => $typeLabel,
-            'description' => $workObj->getDescription(),
-            'summary' => $workObj->getSummary(),
+            'description' => nl2br($workObj->getDescription()),
+            'summary' => nl2br($workObj->getSummary()),
             'editions' => $editionsModel,
             'prizes' => $prizesLabels,
         );

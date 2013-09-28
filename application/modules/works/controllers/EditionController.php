@@ -81,7 +81,7 @@ class Works_EditionController extends Zend_Controller_Action
             'title' => $workTitle,
             'mediumImageUri' => $coverFilePath,
             'editorName' => $editorObj->getName(),
-            'description' => $workObj->getDescription(),
+            'description' => nl2br($workObj->getDescription()),
             'serieName' => $serieLabel,
             'serieUri' => $serieUri,
             'illustrator' => $illustratorLabel,

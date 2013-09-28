@@ -8,9 +8,11 @@ $pageData = $this->pageData;
 
     <h3><?php echo $this->translate('#Description')?></h2>
     <p><?php echo $pageData['description']?></p>
+    <p><a href="/admin/work/change-description/?id=<?php echo $pageData['id'] ?>"><?php echo $this->translate("#(change description)") ?></a></p>
 
     <h3><?php echo $this->translate('#Summary')?></h2>
     <p><?php echo $pageData['summary']?></p>
+    <p> <a href="/admin/work/change-summary/?id=<?php echo $pageData['id'] ?>"><?php echo $this->translate("#(change summary)") ?></a></p>
 
     <h3><?php echo $this->translate('#Prizes')?></h2>
     <?php echo $this->prizesLoop($pageData['prizes']) ?>
