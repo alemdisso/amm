@@ -2,11 +2,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-28 11:27-0300\n"
-"PO-Revision-Date: 2013-09-28 11:29-0300\n"
+"POT-Creation-Date: 2013-09-28 11:44-0300\n"
+"PO-Revision-Date: 2013-09-28 11:44-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: Português\n"
+"Language: Inglês\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -27,47 +27,47 @@ msgstr ""
 #: application\modules/auth/controllers/UserController.php:39
 #: application\modules/auth/controllers/UserController.php:61
 msgid "#The record was successfully updated."
-msgstr "O registro foi atualizado com sucesso."
+msgstr ""
 
 #: application\modules/admin/controllers/EditionController.php:57
 #: application\modules/admin/views/scripts/edition/create.phtml:59
 msgid "#Create edition"
-msgstr "Criar edição"
+msgstr ""
 
 #: application\modules/admin/controllers/EditionController.php:92
 #: application\modules/admin/views/scripts/edition/cover.phtml:1
 msgid "#Change cover"
-msgstr "Trocar imagem"
+msgstr ""
 
 #: application\modules/admin/controllers/EditionController.php:122
 msgid "#Change cover designer"
-msgstr "Trocar designer da capa"
+msgstr ""
 
 #: application\modules/admin/controllers/EditionController.php:152
 msgid "#Change illustrator"
-msgstr "Editar ilustrador"
+msgstr ""
 
 #: application\modules/admin/controllers/EditionController.php:182
 #: application\modules/admin/controllers/EditionController.php:212
 msgid "#Change isbn"
-msgstr "Editar isbn"
+msgstr ""
 
 #: application\modules/admin/controllers/EditionController.php:243
 msgid "#Change serie"
-msgstr "Alterar coleção"
+msgstr ""
 
 #: application\modules/admin/controllers/EditionController.php:252
 #: application\modules/admin/controllers/EditionController.php:265
 msgid "#(choose an option)"
-msgstr "(escolha uma opção...)"
+msgstr ""
 
 #: application\modules/admin/controllers/EditorController.php:53
 msgid "#Create editor"
-msgstr "Criar editora"
+msgstr ""
 
 #: application\modules/admin/controllers/IndexController.php:45
 msgid "#no editions"
-msgstr "sem edições"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:44
 #: application\modules/works/views/scripts/edition/explore.phtml:7
@@ -79,11 +79,11 @@ msgstr "sem edições"
 #: application\modules/works/views/scripts/index/young.phtml:7
 #: application\modules/works/views/scripts/serie/explore.phtml:7
 msgid "#Works"
-msgstr "Livros"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:45
 msgid "/works"
-msgstr "/livros"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:49
 #: library\Author/Collection/WorkTypes.php:11
@@ -92,20 +92,20 @@ msgstr "/livros"
 #: application\modules/includes/views/scripts/include/footer.phtml:12
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Children"
-msgstr "Infantis"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:50
 msgid "/works/children"
-msgstr "/livros/infantis"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:54
 #: library\Author/Collection/WorkTypes.php:12
 msgid "#Young"
-msgstr "Juvenis"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:55
 msgid "/works/young"
-msgstr "/livros/juvenis"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:59
 #: library\Author/Collection/WorkTypes.php:13
@@ -114,11 +114,11 @@ msgstr "/livros/juvenis"
 #: application\modules/includes/views/scripts/include/footer.phtml:14
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Fiction"
-msgstr "Ficção"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:60
 msgid "/works/fiction"
-msgstr "/livros/ficcao"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:64
 #: application\modules/default/views/scripts/index/index.phtml:21
@@ -126,176 +126,176 @@ msgstr "/livros/ficcao"
 #: application\modules/includes/views/scripts/include/footer.phtml:15
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Essays"
-msgstr "Ensaios"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:65
 msgid "/works/essays"
-msgstr "/livros/ensaios"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:105
 #: application\modules/works/views/scripts/index/series.phtml:9
 msgid "#Series"
-msgstr "Coleções"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:106
 msgid "/series"
-msgstr "/colecoes"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:117
 #: application\modules/includes/views/scripts/include/header-login.phtml:12
 #: application\modules/includes/views/scripts/include/header.phtml:13
 msgid "#Biography"
-msgstr "Biografia"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:118
 msgid "/biography"
-msgstr "/biografia"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:121
 #: application\modules/includes/views/scripts/include/header-login.phtml:11
 #: application\modules/includes/views/scripts/include/header.phtml:12
 msgid "#News"
-msgstr "Novidades"
+msgstr ""
 
 #: application\modules/admin/controllers/NavigationController.php:122
 msgid "/news"
-msgstr "/novidades"
+msgstr ""
 
 #: application\modules/admin/controllers/PrizeController.php:59
 #: application\modules/admin/controllers/PrizeController.php:109
 #: application\modules/admin/views/scripts/prize/create.phtml:2
 msgid "#Create prize"
-msgstr "Criar prêmio"
+msgstr ""
 
 #: application\modules/admin/controllers/WorkController.php:55
 msgid "#Change type"
-msgstr "Alterar classificação"
+msgstr ""
 
 #: application\modules/admin/controllers/WorkController.php:86
 #: application\modules/admin/controllers/WorkController.php:91
 #: application\modules/admin/controllers/WorkController.php:104
 #: application\modules/admin/controllers/WorkController.php:109
 msgid "#NI"
-msgstr "n.i."
+msgstr ""
 
 #: application\modules/admin/controllers/WorkController.php:169
 msgid "#The record was successfully removed."
-msgstr "O registro foi removido com sucesso."
+msgstr ""
 
 #: application\modules/admin/controllers/WorkController.php:199
 #: application\modules/admin/views/scripts/work/remove.phtml:5
 msgid "#Remove work"
-msgstr "Remover obra"
+msgstr ""
 
 #: application\modules/auth/controllers/LoginController.php:44
 msgid "#You could not be logged in. Please try again."
-msgstr "Não foi possível fazer o login. Por favor tente novamente."
+msgstr ""
 
 #: application\modules/auth/controllers/UserController.php:14
 msgid "#Access denied"
-msgstr "Acesso negado"
+msgstr ""
 
 #: application\modules/works/controllers/EditionController.php:43
 #, php-format
 msgid "#ISBN: %s"
-msgstr "ISBN: %s"
+msgstr ""
 
 #: application\modules/works/controllers/EditionController.php:50
 #, php-format
 msgid "#%s pages"
-msgstr "%s páginas"
+msgstr ""
 
 #: application\modules/works/controllers/EditionController.php:60
 #: application\modules/works/controllers/IndexController.php:163
 #, php-format
 msgid "#Serie: %s"
-msgstr "Coleção: %s"
+msgstr ""
 
 #: application\modules/works/controllers/EditionController.php:72
 #: library\Author/Form/EditionCreate.php:132
 #: library\Author/Form/IllustratorChange.php:23
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:7
 msgid "#Illustrator:"
-msgstr "Ilustrador:"
+msgstr ""
 
 #: application\modules/works/controllers/EditionController.php:77
 #: library\Author/Form/CoverDesignerChange.php:23
 #: library\Author/Form/EditionCreate.php:146
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:8
 msgid "#Cover designer:"
-msgstr "Capa:"
+msgstr ""
 
 #: application\modules/works/controllers/EditionController.php:98
 #, php-format
 msgid "#Exploring %s"
-msgstr "Explorando %s"
+msgstr ""
 
 #: application\modules/works/controllers/IndexController.php:55
 msgid "#Ana Maria Machado - Fiction"
-msgstr "Ana Maria Machado - Ficção"
+msgstr ""
 
 #: application\modules/works/controllers/IndexController.php:91
 msgid "#Ana Maria Machado - Children"
-msgstr "Ana Maria Machado - Infantis"
+msgstr ""
 
 #: application\modules/works/controllers/IndexController.php:124
 #: application\modules/works/controllers/IndexController.php:175
 #: application\modules/works/controllers/IndexController.php:216
 msgid "#Ana Maria Machado - Essays"
-msgstr "Ana Maria Machado - Ensaios"
+msgstr ""
 
 #: application\modules/works/controllers/IndexController.php:203
 msgid "/serie/"
-msgstr "/colecao"
+msgstr ""
 
 #: application\modules/works/controllers/IndexController.php:249
 msgid "#Ana Maria Machado - Young"
-msgstr "Ana Maria Machado - Juvenis"
+msgstr ""
 
 #: library\Moxca/Access/Roles.php:10
 msgid "#Unknown"
-msgstr "Tipo indefinido"
+msgstr ""
 
 #: library\Moxca/Access/Roles.php:11
 msgid "#Guest"
-msgstr "Visitante"
+msgstr ""
 
 #: library\Moxca/Access/Roles.php:12
 msgid "#User"
-msgstr "Usuário"
+msgstr ""
 
 #: library\Moxca/Access/Roles.php:13
 msgid "#Assistant"
-msgstr "Assistente"
+msgstr ""
 
 #: library\Moxca/Access/Roles.php:14
 msgid "#Administrator"
-msgstr "Editor"
+msgstr ""
 
 #: library\Moxca/Access/Roles.php:15
 msgid "#System administrator"
-msgstr "Sysadmin"
+msgstr ""
 
 #: library\Moxca/Form/UserCreate.php:15
 #: library\Author/Form/EditorCreate.php:15
 msgid "#Name:"
-msgstr "Nome:"
+msgstr ""
 
 #: library\Moxca/Form/UserCreate.php:31
 msgid "#Role"
-msgstr "Papel"
+msgstr ""
 
 #: library\Moxca/Form/UserCreate.php:50
 msgid "#Login Name:"
-msgstr "Login"
+msgstr ""
 
 #: library\Moxca/Form/UserCreate.php:67 library\Moxca/Form/UserLogin.php:34
 msgid "#Password:"
-msgstr "Senha"
+msgstr ""
 
 #: library\Moxca/Form/UserCreate.php:84
 msgid "#Email:"
-msgstr "Email"
+msgstr ""
 
 #: library\Moxca/Form/UserCreate.php:101
 #: library\Author/Form/CoverChange.php:34
@@ -309,1167 +309,1167 @@ msgstr "Email"
 #: library\Author/Form/SerieChange.php:36
 #: library\Author/Form/WorkTypeChange.php:40
 msgid "#Submit"
-msgstr "Enviar"
+msgstr ""
 
 #: library\Moxca/Form/UserCreate.php:117 library\Moxca/Form/UserEdit.php:28
 #: library\Moxca/Form/UserLogin.php:66 library\Author/Form/WorkRemove.php:32
 msgid "#Invalid data!"
-msgstr "Dados inválidos"
+msgstr ""
 
 #: library\Moxca/Form/UserLogin.php:16
 msgid "#User:"
-msgstr "Usuário"
+msgstr ""
 
 #: library\Moxca/Form/UserLogin.php:51
 msgid "#Login"
-msgstr "Login"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Afghanistan"
-msgstr "Afeganistão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Albania"
-msgstr "Albânia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Algeria"
-msgstr "Algéria"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "American Samoa"
-msgstr "Samoa Americana"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Andorra"
-msgstr "Andorra"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Angola"
-msgstr "Angola"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Anguilla"
-msgstr "Anguila"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Antarctica"
-msgstr "Antarctica"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Antigua and Barbuda"
-msgstr "Antiga e Barbuda"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Argentina"
-msgstr "Argentina"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Armenia"
-msgstr "Armênia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Aruba"
-msgstr "Aruba"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Australia"
-msgstr "Austrália"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Austria"
-msgstr "Áustria"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Azerbaijan"
-msgstr "Azerbaijão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Bahamas"
-msgstr "Bahamas"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Bahrain"
-msgstr "Bahrein"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Bangladesh"
-msgstr "Bangladesh"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Barbados"
-msgstr "Barbados"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Belarus"
-msgstr "Bielorrússia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Belgium"
-msgstr "Bélgica"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Belize"
-msgstr "Belize"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Benin"
-msgstr "Benin"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Bermuda"
-msgstr "Bermuda"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Bhutan"
-msgstr "Butão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Bolivia"
-msgstr "Bolívia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Bosnia and Herzegovina"
-msgstr "Bósnia e Herzegovina"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Botswana"
-msgstr "Botsuana"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Bouvet Island"
-msgstr "Ilha Bouvet"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Brazil"
-msgstr "Brasil"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "British Indian Ocean Territory"
-msgstr "Território das Índias Ocidentais"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Brunei Darussalam"
-msgstr "Brunei"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Bulgaria"
-msgstr "Bulgária"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Burkina Faso"
-msgstr "Burkina Faso"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Burundi"
-msgstr "Burundi"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Cambodia"
-msgstr "Camboja"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Cameroon"
-msgstr "Camarões"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Canada"
-msgstr "Canadá"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Cape Verde"
-msgstr "Cabo Verde"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Cayman Islands"
-msgstr "Ilhas Cayman"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Central African Republic"
-msgstr "Centro-Africana, República"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Chad"
-msgstr "Chade"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Chile"
-msgstr "Chile"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "China"
-msgstr "China"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Christmas Island"
-msgstr "Ilha Christmas"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Cocos (Keeling) Islands"
-msgstr "Ilhas Cocos (Keeling)"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Colombia"
-msgstr "Colombia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Comoros"
-msgstr "Comores"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Congo"
-msgstr "Congo"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Congo, the Democratic Republic of the"
-msgstr "Congo-Kinshasa"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Cook Islands"
-msgstr "Ilhas Cook"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Costa Rica"
-msgstr "Costa Rica"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Cote D'Ivoire"
-msgstr "Costa do Marfim"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Croatia"
-msgstr "Croácia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Cuba"
-msgstr "Cuba"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Cyprus"
-msgstr "Chipre"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Czech Republic"
-msgstr "República Tcheca"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Denmark"
-msgstr "Dinamarca"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Djibouti"
-msgstr "Djibuti"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Dominica"
-msgstr "Dominica"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Dominican Republic"
-msgstr "Dominicana, República"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Ecuador"
-msgstr "Equador"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Egypt"
-msgstr "Egito"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "El Salvador"
-msgstr "El Salvador"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Equatorial Guinea"
-msgstr "Guiné Equatorial"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Eritrea"
-msgstr "Eritreia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Estonia"
-msgstr "Estônia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Ethiopia"
-msgstr "Etiópia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Falkland Islands (Malvinas)"
-msgstr "Ilhas Falkland"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Faroe Islands"
-msgstr "Ilhas Faroe"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Fiji"
-msgstr "Fiji"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Finland"
-msgstr "Finlândia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "France"
-msgstr "França"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "French Guiana"
-msgstr "Guiana Francesa"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "French Polynesia"
-msgstr "Polinésia Francesa"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "French Southern Territories"
-msgstr "Terras Austrais e Antárcticas Francesas"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Gabon"
-msgstr "Gabão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Gambia"
-msgstr "Gâmbia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Georgia"
-msgstr "Geórgia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Germany"
-msgstr "Alemanha"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Ghana"
-msgstr "Gana"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Gibraltar"
-msgstr "Gibraltar"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Greece"
-msgstr "Grécia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Greenland"
-msgstr "Groenlândia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Grenada"
-msgstr "Granada"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Guadeloupe"
-msgstr "Guadalupe"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Guam"
-msgstr "Guam"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Guatemala"
-msgstr "Guatemala"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Guinea"
-msgstr "Guiné"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Guinea-Bissau"
-msgstr "Guiné-Bissau"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Guyana"
-msgstr "Guiana"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Haiti"
-msgstr "Haiti"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Heard Island and Mcdonald Islands"
-msgstr "Ilha Heard e Ilhas McDonald"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Holy See (Vatican City State)"
-msgstr "Vaticano"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Honduras"
-msgstr "Honduras"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Hong Kong"
-msgstr "Hong Kong"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Hungary"
-msgstr "Hungria"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Iceland"
-msgstr "Islândia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "India"
-msgstr "Índia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Indonesia"
-msgstr "Indonésia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Iran, Islamic Republic of"
-msgstr "Irã"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Iraq"
-msgstr "Iraque"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Ireland"
-msgstr "Irlanda"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Israel"
-msgstr "Israel"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Italy"
-msgstr "Itália"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Jamaica"
-msgstr "Jamaica"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Japan"
-msgstr "Japão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Jordan"
-msgstr "Jordânia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Kazakhstan"
-msgstr "Cazaquistão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Kenya"
-msgstr "Quênia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Kiribati"
-msgstr "Quiribáti"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Korea, Democratic People's Republic of"
-msgstr "Coreia do Norte"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Korea, Republic of"
-msgstr "Coreia do Sul"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Kuwait"
-msgstr "Kuwait"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Kyrgyzstan"
-msgstr "Quirguistão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Lao People's Democratic Republic"
-msgstr "Laos"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Latvia"
-msgstr "Letônia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Lebanon"
-msgstr "Líbano"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Lesotho"
-msgstr "Lesoto"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Liberia"
-msgstr "Libéria"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Libyan Arab Jamahiriya"
-msgstr "Líbia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Liechtenstein"
-msgstr "Liechtenstein"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Lithuania"
-msgstr "Lituânia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Luxembourg"
-msgstr "Luxemburgo"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Macao"
-msgstr "Macau"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Macedonia, the Former Yugoslav Republic of"
-msgstr "Macedônia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Madagascar"
-msgstr "Madagascar"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Malawi"
-msgstr "Malauí"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Malaysia"
-msgstr "Malásia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Maldives"
-msgstr "Maldivas"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Mali"
-msgstr "Mali"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Malta"
-msgstr "Malta"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Marshall Islands"
-msgstr " Ilhas Marshall"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Martinique"
-msgstr "Martinica"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Mauritania"
-msgstr "Mauritânia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Mauritius"
-msgstr "Maurício"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Mayotte"
-msgstr "Mayotte"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Mexico"
-msgstr "México"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Micronesia, Federated States of"
-msgstr "Micronésia, Estados Federados da"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Moldova, Republic of"
-msgstr "Moldávia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Monaco"
-msgstr "Mônaco"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Mongolia"
-msgstr "Mongólia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Montenegro"
-msgstr "Montenegro"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Montserrat"
-msgstr "Montserrat"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Morocco"
-msgstr "Marrocos"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Mozambique"
-msgstr "Moçambique"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Myanmar"
-msgstr "Mianmar"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Namibia"
-msgstr "Namíbia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Nauru"
-msgstr "Nauru"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Nepal"
-msgstr "Nepal"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Netherlands"
-msgstr "Países Baixos"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Netherlands Antilles"
-msgstr "Antilhas Neerlandesas"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "New Caledonia"
-msgstr "Nova Caledônia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "New Zealand"
-msgstr "Nova Zelândia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Nicaragua"
-msgstr "Nicarágua"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Niger"
-msgstr "Níger"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Nigeria"
-msgstr "Nigéria"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Niue"
-msgstr "Niue"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Norfolk Island"
-msgstr "Ilha Norfolk"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Northern Mariana Islands"
-msgstr "Ilhas Marianas do Norte"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Norway"
-msgstr "Noruega"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Oman"
-msgstr "Omã"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Pakistan"
-msgstr "Paquistão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Palau"
-msgstr "Palau"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Palestinian Territory, Occupied"
-msgstr "Palestina"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Panama"
-msgstr "Panamá"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Papua New Guinea"
-msgstr "Papua Nova Guiné"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Paraguay"
-msgstr "Paraguai"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Peru"
-msgstr "Peru"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Philippines"
-msgstr "Filipinas"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Pitcairn"
-msgstr "Pitcairn"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Poland"
-msgstr "Polônia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Portugal"
-msgstr "Portugal"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Puerto Rico"
-msgstr "Porto Rico"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Qatar"
-msgstr "Qatar"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Reunion"
-msgstr "Ilhas da Reunião"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Romania"
-msgstr "Romênia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Russian Federation"
-msgstr "Rússia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Rwanda"
-msgstr "Ruanda"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Saint Helena"
-msgstr "Santa Helena"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Saint Kitts and Nevis"
-msgstr "São Cristóvão e Neves"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Saint Lucia"
-msgstr "Santa Lúcia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Saint Pierre and Miquelon"
-msgstr "São Pedro e Miquelão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Saint Vincent and the Grenadines"
-msgstr "São Vicente e Granadinas"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Samoa"
-msgstr "Samoa"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "San Marino"
-msgstr "São Marinho"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Sao Tome and Principe"
-msgstr "São Tomé e Príncipe"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Saudi Arabia"
-msgstr "Arábia Saudita"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Senegal"
-msgstr "Senegal"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Serbia and Montenegro"
-msgstr "Sérvia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Seychelles"
-msgstr "Seicheles"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Sierra Leone"
-msgstr "Serra Leoa"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Singapore"
-msgstr "Singapura"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Slovakia"
-msgstr "Eslováquia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Slovenia"
-msgstr "Eslovênia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Solomon Islands"
-msgstr "Ilhas Salomão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Somalia"
-msgstr "Somália"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "South Africa"
-msgstr "África do Sul"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "South Georgia and the South Sandwich Islands"
-msgstr " Ilhas Geórgia do Sul e Sanduíche do Sul"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Spain"
-msgstr "Espanha"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Sri Lanka"
-msgstr "Sri Lanka"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Sudan"
-msgstr "Sudão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Suriname"
-msgstr "Suriname"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Svalbard and Jan Mayen"
-msgstr "Esvalbarda"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Swaziland"
-msgstr "Suazilândia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Sweden"
-msgstr "Suécia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Switzerland"
-msgstr "Suíça"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Syrian Arab Republic"
-msgstr "Síria"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Taiwan, Province of China"
-msgstr "Taiwan"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Tajikistan"
-msgstr "Tajiquistão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Tanzania, United Republic of"
-msgstr "Tanzânia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Thailand"
-msgstr "Tailândia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Timor-Leste"
-msgstr "Timor-Leste"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Togo"
-msgstr "Togo"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Tokelau"
-msgstr "Toquelau"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Tonga"
-msgstr "Tonga"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Trinidad and Tobago"
-msgstr "Trinidad e Tobago"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Tunisia"
-msgstr "Tunísia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Turkey"
-msgstr "Turquia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Turkmenistan"
-msgstr "Turcomenistão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Turks and Caicos Islands"
-msgstr "Ilhas Turks e Caicos"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Tuvalu"
-msgstr "Tuvalu"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Uganda"
-msgstr "Uganda"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Ukraine"
-msgstr "Ucrânia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "United Arab Emirates"
-msgstr "Emirados Árabes Unidos"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "United Kingdom"
-msgstr "Reino Unido"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "United States"
-msgstr "Estados Unidos"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "United States Minor Outlying Islands"
-msgstr "United States Minor Outlying Islands"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Uruguay"
-msgstr "Uruguai"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Uzbekistan"
-msgstr "Usbequistão"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Vanuatu"
-msgstr "Vanuatu"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Venezuela"
-msgstr "Venezuela"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Viet Nam"
-msgstr "Vietnã"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Virgin Islands, British"
-msgstr "Ilhas Virgens Britânicas"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Virgin Islands, U.s."
-msgstr "Ilhas Vírgens"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Wallis and Futuna"
-msgstr "Wallis e Futuna"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Western Sahara"
-msgstr "Sahara Ocidental"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Yemen"
-msgstr "Íemen"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Zambia"
-msgstr "Zâmbia"
+msgstr ""
 
 #: library\Moxca/Util/Countries.php:5
 msgid "Zimbabwe"
-msgstr "Zimbábue"
+msgstr ""
 
 #: library\Moxca/View/Helper/CheckIdFromGet.php:18
 msgid "#Bad value to Id."
-msgstr "Bad value to Id."
+msgstr ""
 
 #: library\Author/Collection/WorkTypes.php:10
 msgid "#Nil"
-msgstr "Nula"
+msgstr ""
 
 #: library\Author/Collection/WorkTypes.php:14
 msgid "#Essay"
-msgstr "Ensaios"
+msgstr ""
 
 #: library\Author/Collection/WorkTypes.php:30
 msgid "#Unknown type"
-msgstr "Tipo indefinido"
+msgstr ""
 
 #: library\Author/Form/CoverChange.php:22
 #: library\Author/Form/EditionCreate.php:33
 msgid "#Upload an image:"
-msgstr "Enviar uma imagem"
+msgstr ""
 
 #: library\Author/Form/EditionCreate.php:18
 msgid "#Title:"
-msgstr "Título:"
+msgstr ""
 
 #: library\Author/Form/EditionCreate.php:27
 #: library\Author/Form/PrizeCreate.php:30
 msgid "#Title is required"
-msgstr "O título é obrigatório"
+msgstr ""
 
 #: library\Author/Form/EditionCreate.php:47
 #: application\modules/admin/views/scripts/index/list.phtml:19
 #: application\modules/admin/views/scripts/work/list.phtml:20
 msgid "#Type"
-msgstr "Tipo"
+msgstr ""
 
 #: library\Author/Form/EditionCreate.php:60
 #: application\modules/admin/views/scripts/index/list.phtml:20
 #: application\modules/admin/views/scripts/work/list.phtml:21
 msgid "#Editor"
-msgstr "Editora"
+msgstr ""
 
 #: library\Author/Form/EditionCreate.php:63
 msgid "#Editor is required"
-msgstr "A editora é obrigatória"
+msgstr ""
 
 #: library\Author/Form/EditionCreate.php:75
 msgid "#Summary:"
-msgstr "Sumário:"
+msgstr ""
 
 #: library\Author/Form/EditionCreate.php:89
 msgid "#Description:"
-msgstr "Descrição:"
+msgstr ""
 
 #: library\Author/Form/EditionCreate.php:104
 #: library\Author/Form/IsbnChange.php:21
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:4
 msgid "#ISBN:"
-msgstr "ISBN:"
+msgstr ""
 
 #: library\Author/Form/EditionCreate.php:118
 #: library\Author/Form/PagesChange.php:23
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:5
 msgid "#Pages:"
-msgstr "Páginas:"
+msgstr ""
 
 #: library\Author/Form/EditorCreate.php:24
 msgid "#Name is required"
-msgstr "O nome é obrigatório"
+msgstr ""
 
 #: library\Author/Form/PrizeCreate.php:21
 msgid "#Prize:"
-msgstr "Prêmio:"
+msgstr ""
 
 #: library\Author/Form/PrizeCreate.php:37
 msgid "#Institution:"
-msgstr "Instituição:"
+msgstr ""
 
 #: library\Author/Form/PrizeCreate.php:51
 msgid "#Category:"
-msgstr "Categoria:"
+msgstr ""
 
 #: library\Author/Form/PrizeCreate.php:65
 msgid "#Year:"
-msgstr "Ano:"
+msgstr ""
 
 #: library\Author/Form/SerieChange.php:22
 msgid "#Serie"
-msgstr "Coleçãp"
+msgstr ""
 
 #: library\Author/Form/WorkRemove.php:21
 msgid "#Confirm removal"
-msgstr "Confirmar remoção"
+msgstr ""
 
 #: library\Author/Form/WorkRemove.php:21
 msgid "#Don't remove"
-msgstr "Não remova"
+msgstr ""
 
 #: library\Author/Form/WorkTypeChange.php:25
 msgid "#Type:"
-msgstr "Tipo:"
+msgstr ""
 
 #: application\modules/admin/views/scripts/edition/change-cover-designer.phtml:2
 #, php-format
 msgid "#Change cover designer for %s"
-msgstr "Editar designer da capa de %s"
+msgstr ""
 
 #: application\modules/admin/views/scripts/edition/change-cover.phtml:2
 #, php-format
 msgid "#Change cover for %s"
-msgstr "Mudar imagem para %s"
+msgstr ""
 
 #: application\modules/admin/views/scripts/edition/change-illustrator.phtml:2
 #, php-format
 msgid "#Change illustrator for %s"
-msgstr "Mudar ilustrador de %s"
+msgstr ""
 
 #: application\modules/admin/views/scripts/edition/change-isbn.phtml:2
 #, php-format
 msgid "#Change isbn for %s"
-msgstr "Mudar isbn de %s"
+msgstr ""
 
 #: application\modules/admin/views/scripts/edition/change-pages.phtml:2
 #, php-format
 msgid "#Change pages for %s"
-msgstr "Mudar número de páginas de %s"
+msgstr ""
 
 #: application\modules/admin/views/scripts/edition/change-serie.phtml:2
 #, php-format
 msgid "#Change %s's serie"
-msgstr "Alterar coleção de %s"
+msgstr ""
 
 #: application\modules/admin/views/scripts/edition/create.phtml:70
 msgid "#(new editor)"
-msgstr "(nova editora)"
+msgstr ""
 
 #: application\modules/admin/views/scripts/index/list.phtml:13
 #: application\modules/admin/views/scripts/work/list.phtml:13
 msgid "#List of works"
-msgstr "Lista de obras"
+msgstr ""
 
 #: application\modules/admin/views/scripts/index/list.phtml:18
 #: application\modules/admin/views/scripts/work/list.phtml:19
 msgid "#Title"
-msgstr "Título"
+msgstr ""
 
 #: application\modules/admin/views/scripts/index/list.phtml:37
 msgid "#remove"
-msgstr "remover"
+msgstr ""
 
 #: application\modules/admin/views/scripts/navigation/update.phtml:2
 msgid "#Navigation updated"
-msgstr "Navegação atualizada"
+msgstr ""
 
 #: application\modules/admin/views/scripts/panel/panel.phtml:2
 msgid "#New Book"
-msgstr "Novo Livro"
+msgstr ""
 
 #: application\modules/admin/views/scripts/panel/panel.phtml:3
 msgid "#List works"
-msgstr "Listar obras"
+msgstr ""
 
 #: application\modules/admin/views/scripts/panel/panel.phtml:4
 msgid "#Logout"
-msgstr "Logout"
+msgstr ""
 
 #: application\modules/admin/views/scripts/prize/edit.phtml:2
 msgid "#Edit prize"
-msgstr "Editar prêmio"
+msgstr ""
 
 #: application\modules/admin/views/scripts/work/change-type.phtml:2
 #, php-format
 msgid "#Change %s's type"
-msgstr "Alterar classificação de %s"
+msgstr ""
 
 #: application\modules/admin/views/scripts/work/detail.phtml:7
 msgid "#(change type)"
-msgstr "(alterar classificação)"
+msgstr ""
 
 #: application\modules/admin/views/scripts/work/detail.phtml:9
 msgid "#Description"
-msgstr "Descrição"
+msgstr ""
 
 #: application\modules/admin/views/scripts/work/detail.phtml:12
 msgid "#Summary"
-msgstr "Sumário"
+msgstr ""
 
 #: application\modules/admin/views/scripts/work/detail.phtml:15
 #: application\modules/works/views/scripts/index/children.phtml:12
@@ -1479,19 +1479,19 @@ msgstr "Sumário"
 #: application\modules/works/views/scripts/index/young.phtml:12
 #: application\modules/works/views/scripts/serie/explore.phtml:47
 msgid "#Prizes"
-msgstr "Prêmios"
+msgstr ""
 
 #: application\modules/admin/views/scripts/work/detail.phtml:17
 msgid "#Add prize"
-msgstr "Novo prêmio"
+msgstr ""
 
 #: application\modules/admin/views/scripts/work/detail.phtml:19
 msgid "#Editions"
-msgstr "Edições"
+msgstr ""
 
 #: application\modules/admin/views/scripts/work/detail.phtml:22
 msgid "#(remove this work!)"
-msgstr "(remova essa obra!)"
+msgstr ""
 
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:4
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:5
@@ -1500,15 +1500,15 @@ msgstr "(remova essa obra!)"
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:8
 #: application\modules/admin/views/scripts/work/prizes-loop.phtml:1
 msgid "#(edit)"
-msgstr "(editar)"
+msgstr ""
 
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:6
 msgid "#Serie:"
-msgstr "Coleção: "
+msgstr ""
 
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:9
 msgid "#(goto work's page)"
-msgstr "(ir para a página do livro)"
+msgstr ""
 
 #: application\modules/admin/views/scripts/work/remove.phtml:8
 #, php-format
@@ -1516,21 +1516,20 @@ msgid ""
 "#Do you confirm removal of work %s (and all its editions)? This CAN'T be "
 "undone."
 msgstr ""
-"Confirma a remoção da obra %s e de suas edições? Isso NÂO pode ser desfeito."
 
 #: application\modules/auth/views/scripts/user/create.phtml:2
 msgid "#New user"
-msgstr "Novo usuário"
+msgstr ""
 
 #: application\modules/auth/views/scripts/user/edit.phtml:2
 msgid "#Edit user account"
-msgstr "Editar conta do usuário"
+msgstr ""
 
 #: application\modules/auth/views/scripts/user/success-create.phtml:2
 #: application\modules/auth/views/scripts/user/success-update.phtml:2
 #: application\modules/auth/views/scripts/user/success.phtml:2
 msgid "#Success!!!"
-msgstr "Sucesso!"
+msgstr ""
 
 #: application\modules/default/views/scripts/index/index.phtml:10
 #: application\modules/default/views/scripts/index/index.phtml:12
@@ -1539,42 +1538,42 @@ msgstr "Sucesso!"
 #: application\modules/includes/views/scripts/include/header.phtml:11
 #: application\modules/works/views/scripts/index/index.phtml:7
 msgid "#Books"
-msgstr "Livros"
+msgstr ""
 
 #: application\modules/default/views/scripts/index/index.phtml:13
 msgid "#Stories for all"
-msgstr "Mil histórias num só lugar"
+msgstr ""
 
 #: application\modules/default/views/scripts/index/index.phtml:19
 #: application\modules/includes/views/scripts/include/footer-home.phtml:11
 #: application\modules/includes/views/scripts/include/footer.phtml:13
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Young people"
-msgstr "Juvenis"
+msgstr ""
 
 #: application\modules/default/views/scripts/index/index.phtml:28
 #: application\modules/works/views/scripts/index/index.phtml:15
 #: application\modules/works/views/scripts/index/index.phtml:21
 msgid "#more about"
-msgstr "mais"
+msgstr ""
 
 #: application\modules/includes/views/scripts/include/header-login.phtml:5
 #: application\modules/includes/views/scripts/include/header.phtml:6
 msgid "#Home"
-msgstr "Principal"
+msgstr ""
 
 #: application\modules/includes/views/scripts/include/header-login.phtml:13
 msgid "#Contact"
-msgstr "Contato"
+msgstr ""
 
 #: application\modules/works/views/scripts/edition/explore.phtml:34
 #: application\modules/works/views/scripts/serie/explore.phtml:31
 msgid "#Buy online"
-msgstr "Compre online"
+msgstr ""
 
 #: application\modules/works/views/scripts/index/children.phtml:9
 msgid "#Children books"
-msgstr "Infantis"
+msgstr ""
 
 #: application\modules/works/views/scripts/index/children.phtml:12
 #: application\modules/works/views/scripts/index/essays.phtml:12
@@ -1582,7 +1581,7 @@ msgstr "Infantis"
 #: application\modules/works/views/scripts/index/serie.phtml:12
 #: application\modules/works/views/scripts/index/young.phtml:12
 msgid "#More about this work"
-msgstr "Curiosidades"
+msgstr ""
 
 #: application\modules/works/views/scripts/index/children.phtml:12
 #: application\modules/works/views/scripts/index/essays.phtml:12
@@ -1590,504 +1589,24 @@ msgstr "Curiosidades"
 #: application\modules/works/views/scripts/index/serie.phtml:12
 #: application\modules/works/views/scripts/index/young.phtml:12
 msgid "#Available in other language"
-msgstr "Disponível em outro idioma"
+msgstr ""
 
 #: application\modules/works/views/scripts/index/essays.phtml:9
 msgid "#Essays books"
-msgstr "Ensaios"
+msgstr ""
 
 #: application\modules/works/views/scripts/index/fiction.phtml:9
 msgid "#Fiction books"
-msgstr "Ficção"
+msgstr ""
 
 #: application\modules/works/views/scripts/index/index.phtml:29
 msgid "#Books by category"
-msgstr "Por categoria"
+msgstr ""
 
 #: application\modules/works/views/scripts/index/series-loop.phtml:6
 msgid "#list editions"
-msgstr "livros da coleção"
+msgstr ""
 
 #: application\modules/works/views/scripts/index/young.phtml:9
 msgid "#Young books"
-msgstr "Juvenis"
-
-#~ msgid "#CoverDesigner:"
-#~ msgstr "Capa:"
-
-#~ msgid "#Update navigation"
-#~ msgstr "Atualizar navegação"
-
-#, fuzzy
-#~ msgid "#Serie..."
-#~ msgstr "Coleções"
-
-#~ msgid "#Invalid User Id from Get"
-#~ msgstr "Id inválido"
-
-#, fuzzy
-#~ msgid "/works/biography"
-#~ msgstr "/livros/juvenis"
-
-#~ msgid "#Stories"
-#~ msgstr "Livros"
-
-#~ msgid "#Controller"
-#~ msgstr "Contrato"
-
-#~ msgid "#Window title"
-#~ msgstr "Ana Maria Machado"
-
-#~ msgid "#Dashboard"
-#~ msgstr "Panorama"
-
-#~ msgid "#MOXCA dashboard screen."
-#~ msgstr "Tela principal de administração"
-
-#~ msgid "#Projects"
-#~ msgstr "Projetos"
-
-#~ msgid "#Register"
-#~ msgstr "Register"
-
-#~ msgid "#Hello. Please login."
-#~ msgstr "Hello. Please login."
-
-#~ msgid "#Hi"
-#~ msgstr "Hi"
-
-#~ msgid "#Please login."
-#~ msgstr "Please login."
-
-#~ msgid "#Not defined"
-#~ msgstr "Indefinido"
-
-#~ msgid "#None action"
-#~ msgstr "(nenhuma ação)"
-
-#~ msgid "#Is a milestone"
-#~ msgstr "É um marco"
-
-#~ msgid "#Is not a milestone"
-#~ msgstr "Não é um marco"
-
-#~ msgid "#(not received)"
-#~ msgstr "(não recebido)"
-
-#~ msgid "#(not realized)"
-#~ msgstr "(não realizada)"
-
-#~ msgid "#(not started)"
-#~ msgstr "(não iniciada)"
-
-#~ msgid "#It needs a positive integer project id to populate project fields."
-#~ msgstr "It needs a positive integer project id to populate project fields."
-
-#~ msgid ""
-#~ "#It needs a positive integer project id to find other actions from same "
-#~ "project."
-#~ msgstr ""
-#~ "It needs a positive integer project id to find other actions from same "
-#~ "project."
-
-#~ msgid "#(undefined)"
-#~ msgstr "(indefinido)"
-
-#~ msgid "#(unknown date)"
-#~ msgstr "(data desconhecida)"
-
-#~ msgid "#Planning"
-#~ msgstr "Em Planejamento"
-
-#~ msgid "#In Execution"
-#~ msgstr "Em Execução"
-
-#~ msgid "#Received"
-#~ msgstr "Recebida"
-
-#~ msgid "#Done"
-#~ msgstr "Realizada"
-
-#~ msgid "#Delivered"
-#~ msgstr "Entregue"
-
-#~ msgid "#Complete"
-#~ msgstr "Completa"
-
-#~ msgid "#Aborted"
-#~ msgstr "Abortada"
-
-#~ msgid "#Social policies and improving public spending"
-#~ msgstr "Políticas sociais e melhoria dos gastos públicos"
-
-#~ msgid "#Inequality and poverty"
-#~ msgstr "Desigualdade e pobreza"
-
-#~ msgid "#Labor market, employment and income"
-#~ msgstr "Mercado de trabalho, emprego e rendimento"
-
-#~ msgid "#Local development and microenterprise"
-#~ msgstr "Desenvolvimento local e microempreendimento"
-
-#~ msgid "#Education, human resources and equity"
-#~ msgstr "Educação, recursos humanos e eqüidade"
-
-#~ msgid "#The metropolitan issue"
-#~ msgstr "A questão metropolitana"
-
-#~ msgid "#Corporate social responsibility"
-#~ msgstr "Responsabilidade social corporativa"
-
-#~ msgid "#Agreement"
-#~ msgstr "Convênio"
-
-#~ msgid "#Partnership term"
-#~ msgstr "Termo de parceria"
-
-#~ msgid "#Donation"
-#~ msgstr "Doação"
-
-#~ msgid "#Sponsorship"
-#~ msgstr "Patrocínio"
-
-#~ msgid "#Cooperation agreement"
-#~ msgstr "Acordo de cooperação"
-
-#~ msgid "#contract.nature.Other"
-#~ msgstr "Outras"
-
-#~ msgid "#Prospecting"
-#~ msgstr "Prospecção"
-
-#~ msgid "#project.status.type.Planning"
-#~ msgstr "Planejamento"
-
-#~ msgid "#Proposal"
-#~ msgstr "Proposta"
-
-#~ msgid "#Accountability"
-#~ msgstr "Prestação de contas"
-
-#~ msgid "#Canceled"
-#~ msgstr "Cancelado"
-
-#~ msgid "#Suspended"
-#~ msgstr "Suspenso"
-
-#~ msgid "#New action"
-#~ msgstr "Nova ação"
-
-#~ msgid "#Project:"
-#~ msgstr "Projeto:"
-
-#~ msgid "#Project"
-#~ msgstr "Projeto"
-
-#~ msgid "#Details of action "
-#~ msgstr "Detalhar ação"
-
-#~ msgid "#Acknowledge start"
-#~ msgstr "Confirmar início"
-
-#~ msgid "#New team member for action"
-#~ msgstr "Novo membro de equipe para a ação"
-
-#~ msgid "#Client"
-#~ msgstr "Cliente"
-
-#~ msgid "#Area"
-#~ msgstr "Área"
-
-#~ msgid "#Status"
-#~ msgstr "Status"
-
-#~ msgid "#% physical progress"
-#~ msgstr "% físico"
-
-#~ msgid "#% payables"
-#~ msgstr "% pagtos"
-
-#~ msgid "#% receivings"
-#~ msgstr "% receb"
-
-#~ msgid "#Options..."
-#~ msgstr "Opções..."
-
-#~ msgid "#Predict Receiving"
-#~ msgstr "Prever recebimento"
-
-#~ msgid "#Project details"
-#~ msgstr "Detalhes do projeto"
-
-#~ msgid "#There is no list of projects."
-#~ msgstr "Não existe uma lista de projetos."
-
-#~ msgid "#Create New Project"
-#~ msgstr "Criar novo projeto"
-
-#~ msgid "#Client:"
-#~ msgstr "Cliente:"
-
-#~ msgid "#Overhead:"
-#~ msgstr "Overhead"
-
-#~ msgid "#Area activity:"
-#~ msgstr "Área de atividade:"
-
-#~ msgid "#Management fee:"
-#~ msgstr "Taxa de administração"
-
-#~ msgid "#Our responsible:"
-#~ msgstr "Responsável pelo IETS:"
-
-#~ msgid "#Contract value:"
-#~ msgstr "Valor do contrato"
-
-#~ msgid "#Responsible at client:"
-#~ msgstr "Responsável no cliente:"
-
-#~ msgid "#Contract date:"
-#~ msgstr "Data do contrato"
-
-#~ msgid "#Receiving"
-#~ msgstr "Recebimentos"
-
-#~ msgid "#Payments"
-#~ msgstr "Pagamentos"
-
-#~ msgid "#Staff"
-#~ msgstr "Equipe"
-
-#~ msgid "#Actions"
-#~ msgstr "Ações"
-
-#~ msgid "#Product"
-#~ msgstr "Produto"
-
-#~ msgid "#Predicted date"
-#~ msgstr "Data prevista"
-
-#~ msgid "#Real date"
-#~ msgstr "Data real"
-
-#~ msgid "#Predicted value"
-#~ msgstr "Valor previsto"
-
-#~ msgid "#Real value"
-#~ msgstr "Valor real"
-
-#~ msgid "#Options"
-#~ msgstr "Opções"
-
-#~ msgid "#Notify receiving"
-#~ msgstr "Informar recebimento"
-
-#~ msgid "#Predict receiving"
-#~ msgstr "Prever recebimento"
-
-#~ msgid "#Create new product"
-#~ msgstr "Adicionar produto"
-
-#~ msgid "#Action"
-#~ msgstr "Ação"
-
-#~ msgid "#Payee"
-#~ msgstr "Beneficiado"
-
-#~ msgid "#Outlay details"
-#~ msgstr "Detalhes do pagamento"
-
-#~ msgid "#Predict outlay"
-#~ msgstr "Prever pagamento"
-
-#~ msgid "#There is no outlays related to this project."
-#~ msgstr "Não há pagamentos associados a esse projeto."
-
-#~ msgid "#Team"
-#~ msgstr "Equipe"
-
-#~ msgid "#Name"
-#~ msgstr "Nome"
-
-#~ msgid "#Phone number"
-#~ msgstr "Telefone"
-
-#~ msgid "#Contact details"
-#~ msgstr "Detalhes do contato"
-
-#~ msgid "#Add staff member"
-#~ msgstr "Incluir membro"
-
-#~ msgid "#Responsible"
-#~ msgstr "Responsável"
-
-#~ msgid "#Pred. begin date"
-#~ msgstr "Início prev."
-
-#~ msgid "#Real begin date"
-#~ msgstr "Início real"
-
-#~ msgid "#Pred. finish date"
-#~ msgstr "Término prev."
-
-#~ msgid "#Real finish date"
-#~ msgstr "Término real"
-
-#~ msgid "#Product details"
-#~ msgstr "Detalhes do produto"
-
-#~ msgid "#Em Planejamento"
-#~ msgstr "Teste"
-
-#, fuzzy
-#~ msgid "#Invalid phone number"
-#~ msgstr "Acrescentar telefone"
-
-#~ msgid "#Government"
-#~ msgstr "Poder público"
-
-#~ msgid "#Private Entity"
-#~ msgstr "Entidade Privada"
-
-#~ msgid "#Research Institute"
-#~ msgstr "Instituto de pesquisa"
-
-#~ msgid "#Non Governmental Organization"
-#~ msgstr "Organização Não Governamental"
-
-#~ msgid "#Particular"
-#~ msgstr "Particular"
-
-#~ msgid "#General"
-#~ msgstr "Geral"
-
-#~ msgid "#Supplier"
-#~ msgstr "Fornecedor"
-
-#~ msgid "#Email addresses"
-#~ msgstr "Emails"
-
-#~ msgid "#Create %s's email address"
-#~ msgstr "Adicionar email para %s"
-
-#~ msgid "#Service messengers"
-#~ msgstr "Serviços de mensagens"
-
-#~ msgid "#Create %s's service messenger"
-#~ msgstr "Adicionar serviço de %s"
-
-#~ msgid "#Create %s's phone number"
-#~ msgstr "Adicionar telefone de %s"
-
-#~ msgid "#Change %s's email address"
-#~ msgstr "Alterar email de %s"
-
-#~ msgid "#Service messenger"
-#~ msgstr "Serviço de mensagens"
-
-#~ msgid "#Contact:"
-#~ msgstr "Contato:"
-
-#~ msgid "#Relationship"
-#~ msgstr "Relação com o IETS"
-
-#~ msgid "#Phone Numbers"
-#~ msgstr "Telefones"
-
-#~ msgid "#Local Number"
-#~ msgstr "Número"
-
-#~ msgid "#Label"
-#~ msgstr "Tipo"
-
-#~ msgid "#Add phone number"
-#~ msgstr "Acrescentar telefone"
-
-#~ msgid "#Emails"
-#~ msgstr "Emails"
-
-#~ msgid "#Add email"
-#~ msgstr "Acrescentar email"
-
-#~ msgid "#Messengers"
-#~ msgstr "Serviços de mensagens"
-
-#~ msgid "#Service.Address"
-#~ msgstr "Conta"
-
-#~ msgid "#Add messenger"
-#~ msgstr "Adicionar serviço"
-
-#~ msgid "#Departament"
-#~ msgstr "Departamento"
-
-#~ msgid "#Create new linkage"
-#~ msgstr "Criar novo vínculo"
-
-#~ msgid "#Create linkage"
-#~ msgstr "Criar novo vínculo"
-
-#~ msgid "#Generic error message"
-#~ msgstr "Ocorreu um erro."
-
-#~ msgid "#No registered contacts"
-#~ msgstr "Não há contatos cadastrados"
-
-#~ msgid "#Contacts list was not found"
-#~ msgstr "Não foi encontrada uma lista de contatos"
-
-#~ msgid "#Add new contact"
-#~ msgstr "Adicionar contato"
-
-#~ msgid "#Success creating!"
-#~ msgstr "Sucesso ao adicionar o registro"
-
-#~ msgid "#Success updating!"
-#~ msgstr "Sucesso ao atualizar registro"
-
-#~ msgid "#Contacts in this institution"
-#~ msgstr "Contatos nessa instituição"
-
-#~ msgid "#Add new linkage"
-#~ msgstr "Adicionar vínculo"
-
-#~ msgid "#There is no data about this institution."
-#~ msgstr "Não há informações sobre essa instituição."
-
-#~ msgid "#Edit institution"
-#~ msgstr "Editar instituição"
-
-#~ msgid "#City"
-#~ msgstr "Cidade"
-
-#~ msgid "#institution.index.Relationship"
-#~ msgstr "Relação"
-
-#~ msgid "#No registered institutions."
-#~ msgstr "Não há instituições cadastradas."
-
-#~ msgid "#Institutions list was not found."
-#~ msgstr "Não existe lista de instituições cadastradas."
-
-#~ msgid "#Add new institution"
-#~ msgstr "Criar Nova Instituição"
-
-#~ msgid "Número Local"
-#~ msgstr "Número"
-
-#~ msgid "Rótulo"
-#~ msgstr "Tipo"
-
-#~ msgid "Conta"
-#~ msgstr "Conta"
-
-#~ msgid "My test"
-#~ msgstr "Contato:"
-
-#, fuzzy
-#~ msgid "Relação"
-#~ msgstr "Relação com o IETS"
-
-#, fuzzy
-#~ msgid "Code area"
-#~ msgstr "DDD"
+msgstr ""
