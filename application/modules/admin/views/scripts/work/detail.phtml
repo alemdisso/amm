@@ -18,6 +18,10 @@ $pageData = $this->pageData;
 
     <h3><?php echo $this->translate('#Editions')?></h2>
     <?php echo $this->editionsLoop($pageData['editions']) ?>
+    <hr>
+        <a href="/admin/work/remove/?id=<?php echo $pageData['id'] ?>"><?php echo $this->translate('#(remove this work!)')?></a></p>
+
+
 
 </div>
 <!-- /conteudo -->

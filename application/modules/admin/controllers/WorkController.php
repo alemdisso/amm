@@ -153,6 +153,54 @@ class Admin_WorkController extends Zend_Controller_Action
         $elementSelect->setValue($current);
     }
 
+    public function removeAction()
+    {
+        $form = new Author_Form_WorkRemove();
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $postData = $this->getRequest()->getPost();
+            if ($form->isValid($postData)) {
+                $submitButton = $form->getUnfilteredValue('Submit');
+
+                if ($submitButton) {
+                    $id = $form->process($postData);
+                    $this->_helper->getHelper('FlashMessenger')
+                        ->addMessage($this->view->translate('#The record was successfully removed.'));
+                    $this->_redirect('/admin/index/list');
+                } else {
+                    $id = $postData['id'];
+                    $this->_redirect('/admin/work/detail/?id=' . $id);
+                }
+            } else {
+                //form error: populate and go back
+                $this->view->form = $form;
+            }
+        } else {
+            // GET
+
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $workData = array();
+            $workObj = $this->workMapper->findById($id);
+            $idField = $form->getElement('id');
+            $idField->setValue($id);
+            $workData = array(
+                'id'   => $id,
+                'title' => $workObj->getTitle(),
+            );
+            $this->view->pageData = $workData;
+
+            $this->view->pageTitle = $this->view->translate("#Remove work");
+
+        }
+    }
+
     private function initDbAndMappers()
     {
         $this->db = Zend_Registry::get('db');

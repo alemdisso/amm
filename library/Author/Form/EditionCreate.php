@@ -10,6 +10,7 @@ class Author_Form_EditionCreate extends Zend_Form
             ->setAction('/admin/edition/create')
             ->setAttrib('enctype', 'multipart/form-data')
             //->setAction('javascript:callEditionCreate();')
+            ->setDecorators(array('FormElements',array('HtmlTag', array('tag' => 'div', 'class' => 'form')),'Form'))
             ->setMethod('post');
 
         $element = new Zend_Form_Element_Text('title');
@@ -19,7 +20,7 @@ class Author_Form_EditionCreate extends Zend_Form
                     'ViewHelper',
                     'Errors',
                     array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'label clear_both')),
                 ))
                 ->setOptions(array('class' => ''))
                 ->setRequired(true)

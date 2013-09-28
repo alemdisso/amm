@@ -159,9 +159,13 @@ class Author_Collection_EditionMapper
         if (!isset($this->identityMap[$obj])) {
             throw new Author_Collection_EditionMapperException('Object has no ID, cannot delete.');
         }
-        $query = $this->db->prepare('DELETE FROM author_collection_editions WHERE id = :id;');
+
+        $query = $this->db->prepare('DELETE FROM author_collection_prizes WHERE id = :id;');
         $query->bindValue(':id', $this->identityMap[$obj], PDO::PARAM_STR);
         $query->execute();
+
+
+
         unset($this->identityMap[$obj]);
     }
 

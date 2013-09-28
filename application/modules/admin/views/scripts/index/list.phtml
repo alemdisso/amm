@@ -34,7 +34,8 @@ foreach($worksList as $id => $workInfo) {
                   <td>
                     <?php print($workInfo['editorName']) ?></a>
                   </td>
-                  <td>
+                  <td><ul><li><a href="/admin/work/remove/?id=<?php echo $id ?>"><?php echo $this->translate('#remove')?></a></p>
+</li></ul>
                  </td>
                 </tr>
 <?php

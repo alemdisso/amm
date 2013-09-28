@@ -134,6 +134,15 @@ class Author_Collection_WorkMapper
         $query = $this->db->prepare('DELETE FROM author_collection_works WHERE id = :id;');
         $query->bindValue(':id', $this->identityMap[$obj], PDO::PARAM_STR);
         $query->execute();
+
+        $query = $this->db->prepare('DELETE FROM author_collection_prizes WHERE work = :work;');
+        $query->bindValue(':work', $this->identityMap[$obj], PDO::PARAM_STR);
+        $query->execute();
+
+        $query = $this->db->prepare('DELETE FROM author_collection_editions WHERE work = :work;');
+        $query->bindValue(':work', $this->identityMap[$obj], PDO::PARAM_STR);
+        $query->execute();
+
         unset($this->identityMap[$obj]);
     }
 

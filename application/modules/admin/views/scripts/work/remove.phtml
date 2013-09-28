@@ -1,0 +1,10 @@
+<?php
+  $pageData = $this->pageData;
+?>
+        <div id="conteudo">
+          <h1><?php echo $this->translate("#Remove work") ?></h1>
+        </div>
+          <p class="clear_both">
+              <?php echo sprintf($this->translate("#Do you confirm removal of work %s (and all its editions)? This CAN'T be undone."), "<strong>{$pageData['title']}</strong>") ?>
+          </p>
+        <?php echo $this->form; ?>
