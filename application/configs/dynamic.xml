@@ -47,10 +47,6 @@
                   <label>Amigos secretos</label>
                   <uri>/explore/amigos-secretos</uri>
                 </edition-amigos-secretos>
-                <edition-isso-ninguem-me-tira>
-                  <label>Isso ninguém me tira</label>
-                  <uri>/explore/isso-ninguem-me-tira</uri>
-                </edition-isso-ninguem-me-tira>
                 <edition-do-outro-lado-tem-segredos>
                   <label>Do outro lado tem segredos</label>
                   <uri>/explore/do-outro-lado-tem-segredos</uri>
@@ -65,10 +61,10 @@
               <label>Ficção</label>
               <uri>/livros/ficcao</uri>
               <pages>
-                <edition-o-mar-nunca-transborda>
-                  <label>O mar nunca transborda</label>
-                  <uri>/explore/o-mar-nunca-transborda</uri>
-                </edition-o-mar-nunca-transborda>
+                <edition-o-mar-nunca-transborda-para-fora>
+                  <label>O mar nunca transborda para fora</label>
+                  <uri>/explore/o-mar-nunca-transborda-para-fora</uri>
+                </edition-o-mar-nunca-transborda-para-fora>
                 <edition-canteiros-de-saturno>
                   <label>Canteiros de Saturno</label>
                   <uri>/explore/canteiros-de-saturno</uri>

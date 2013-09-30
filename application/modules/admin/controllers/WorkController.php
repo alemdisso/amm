@@ -88,6 +88,36 @@ class Admin_WorkController extends Zend_Controller_Action
         }
     }
 
+    public function changeTitleAction()
+    {
+        // cria form
+        $form = new Author_Form_TitleChange;
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $this->processAndRedirect($form);
+            return;
+        } else {
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('id');
+            $element->setValue($id);
+
+            $workObj = $this->workMapper->findById($id);
+            $element = $form->getElement('title');
+            $element->setValue($workObj->getTitle());
+
+            $workObj = $this->workMapper->findById($workObj->getId());
+            $this->view->title = $workObj->getTitle();
+            $this->view->pageTitle = $this->view->translate("#Change title");
+        }
+    }
+
     public function changeTypeAction()
     {
         // cria form
@@ -192,6 +222,7 @@ class Admin_WorkController extends Zend_Controller_Action
         $data = array(
             'id' => $id,
             'title' => $workObj->getTitle(),
+            'rawType' => $workObj->getType(),
             'typeLabel' => $typeLabel,
             'description' => nl2br($workObj->getDescription()),
             'summary' => nl2br($workObj->getSummary()),
