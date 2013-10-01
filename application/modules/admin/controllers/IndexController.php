@@ -65,7 +65,30 @@ class Admin_IndexController extends Zend_Controller_Action
     }
 
 
-     public function populateEditorsAction()
+    public function populateSeriesAction()
+    {
+        $this->_helper->layout->disableLayout();
+        $this->_helper->viewRenderer->setNoRender(TRUE);
+
+        $data = $this->_request->getParams();
+        try {
+            $editor = $this->view->checkIdFromGet($data, 'editor');
+        } catch (Exception $e) {
+            throw $e;
+        }
+
+        $serieMapper = new Author_Collection_SerieMapper($this->db);
+        $list = $serieMapper->getAllSeriesAlphabeticallyOrdered($editor);
+
+        $data = array();
+        foreach ($list as $serieId => $serieName) {
+            $data[] = array('id' => $serieId, 'name' => $serieName);
+        }
+        echo json_encode($data);
+
+    }
+
+    public function populateEditorsAction()
     {
         $this->_helper->layout->disableLayout();
         $this->_helper->viewRenderer->setNoRender(TRUE);
@@ -77,9 +100,7 @@ class Admin_IndexController extends Zend_Controller_Action
         foreach ($list as $editorId => $editorName) {
             $data[] = array('id' => $editorId, 'name' => $editorName);
         }
-
         echo json_encode($data);
-
 
     }
 

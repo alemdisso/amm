@@ -48,7 +48,7 @@ class LongStringTest extends ControllerTestCase
 
     public function testThatCanUseSomeOtherCharsAtString() {
        $validator = new Moxca_Util_ValidLongString();
-       $string = "ABCDE 50% ª º & sons. ";
+       $string = "ABCDE 50% ª º & sons. = * ";
        $this->assertTrue($validator->isValid($string));
     }
 

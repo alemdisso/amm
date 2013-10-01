@@ -24,8 +24,8 @@ class Author_Form_PagesChange extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
                 ->setOptions(array('class' => ''))
                 ->addValidator($validator)

@@ -1,13 +1,13 @@
 <?php
-class Author_Form_EditorCreate extends Zend_Form
+class Author_Form_SerieCreate extends Zend_Form
 {
     public function init()
     {
         parent::init();
 
         // initialize form
-        $this->setName('newEditorForm')
-            ->setAction('javascript:submitBudgetForm();')
+        $this->setName('newSerieForm')
+            ->setAction('javascript:submitSerieForm();')
             ->setMethod('post');
 
         $element = new Zend_Form_Element_Text('name');
@@ -28,7 +28,7 @@ class Author_Form_EditorCreate extends Zend_Form
 
 
         // create submit button
-        $element = new Zend_Form_Element_Submit('submitEditor');
+        $element = new Zend_Form_Element_Submit('submitSerie');
         $element->setLabel('#Submit') //Gravar
                ->setDecorators(array('ViewHelper','Errors',
                     array(array('data' => 'HtmlTag'),
@@ -44,18 +44,18 @@ class Author_Form_EditorCreate extends Zend_Form
     public function process($data) {
 
         if ($this->isValid($data) !== true) {
-            throw new Author_Form_EditorCreateException('Invalid data!');
+            throw new Author_Form_SerieCreateException('Invalid data!');
         } else {
             $db = Zend_Registry::get('db');
 
-            $editorMapper = new Author_Collection_EditorMapper($db);
-            $editor = new Author_Collection_Editor();
-            $editor->SetName($data['name']);
-            $editor->SetCountry('BR');
+            $serieMapper = new Author_Collection_SerieMapper($db);
+            $serie = new Author_Collection_Serie();
+            $serie->SetName($data['name']);
+            $serie->SetCountry('BR');
 
-            $editorMapper->insert($editor);
+            $serieMapper->insert($serie);
 
-            return $editor;
+            return $serie;
         }
     }
  }

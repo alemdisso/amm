@@ -18,3 +18,7 @@ public/index.php
 /public/img/editions/raw/*
 /public/img/editions/tb/*
 
+/public/js/tinymce/langs/
+/public/js/tinymce/skins/
+/public/js/tinymce/themes/
+/public/js/tinymce/js/

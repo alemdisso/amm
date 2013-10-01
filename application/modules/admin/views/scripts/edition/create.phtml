@@ -2,9 +2,14 @@
 
         $(document).ready(function(){
 
+            $("#newSerieDiv").hide();
             $("#newEditorDiv").hide();
             initEditorField();
+            initSeriesField($('#editor').val());
 
+            $('#editor').change(function(){
+                initSeriesField($('#editor').val());
+            });
 
             $('#newEditorButton').click(function(){
                 $.ajax({
@@ -30,9 +35,35 @@
                 })
                 $("#newEditorDiv").slideToggle();
             });
+
+            $('#newSerieButton').click(function(){
+                $.ajax({
+                    type: 'get',
+                    url:'/admin/serie/create',
+                    success: function(successReturn){
+                    $('#newSerieDiv').html(successReturn);
+                    }
+                })
+                $("#newSerieDiv").slideToggle();
+            });
+            $('#hideNewSerieHref').click(function(){
+                $("#newSerieDiv").slideToggle();
+            });
+
+            $('#submitEditor').click(function(){
+                $.ajax({
+                    type: 'post',
+                    url:'/admin/serie/create',
+                    success: function(successReturn){
+                    $('#newSerieDiv').html(successReturn);
+                    }
+                })
+                $("#newSerieDiv").slideToggle();
+            });
+
         });
 
-        function submitBudgetForm()
+        function submitEditorForm()
         {
             $.post("/admin/editor/create", $("#newEditorForm").serialize(), function(successReturn){
                 $('#newEditorDiv').html(successReturn);
@@ -40,18 +71,40 @@
             $("#newEditorDiv").slideToggle();
         }
 
+        function submitSerieForm()
+        {
+            $.post("/admin/serie/create", $("#newSerieForm").serialize(), function(successReturn){
+                $('#newSerieDiv').html(successReturn);
+                });
+            $("#newSerieDiv").slideToggle();
+        }
+
         function initEditorField() {
             var current = $('#editor').val();
             $.getJSON('/admin/index/populate-editors', function(data) {
             var html = '';
             var len = data.length;
-            html += '<option value="0">(##choose an editor)</option>';
+            html += '<option value="0"><?php echo $this->translate("#(choose an editor)") ?></option>';
             for (var i = 0; i< len; i++) {
                 html += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
             }
             $('#editor').empty();
             $('#editor').append(html);
             $('#editor').val(current);
+            });
+        }
+
+        function initSeriesField() {
+            var editor = $('#editor').val();
+            $.getJSON('/admin/index/populate-series/?editor='+editor, function(data) {
+            var html = '';
+            var len = data.length;
+            html += '<option value="0">(#choose a serie)</option>';
+            for (var i = 0; i< len; i++) {
+                html += '<option value="' + data[i].id + '">' + data[i].name + '</option>';
+            }
+            $('#serie').empty();
+            $('#serie').append(html);
             });
         }
         </script>
@@ -67,10 +120,12 @@
   <?php echo $this->form->editor ?>
           <div id="newEditorDiv" class="slidingDiv">
           </div>
-    <p style="margin-top:-12px; margin-bottom: 12px;"><a href="#newEditionForm" id="newEditorButton"><?php echo $this->translate("#(new editor)") ?></a></p>
-
+    <p style="margin-top:-12px; margin-bottom: 12px; margin-left: 32px;"><a href="#newEditionForm" id="newEditorButton"><?php echo $this->translate("#(new editor)") ?></a></p>
   <?php echo $this->form->summary ?>
   <?php echo $this->form->description ?>
+  <?php echo $this->form->serie ?>
+          <div id="newSerieDiv" class="slidingDiv">
+          </div>
   <?php echo $this->form->isbn ?>
   <?php echo $this->form->pages ?>
   <?php echo $this->form->illustrator ?>

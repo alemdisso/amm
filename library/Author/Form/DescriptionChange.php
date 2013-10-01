@@ -24,7 +24,7 @@ class Author_Form_DescriptionChange extends Zend_Form
                   'ViewHelper',
                   'Errors',
                     array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input item_formulario')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
               ))
             ->setAttrib('rows','8')
             ->setOptions(array('class' => ''))

@@ -22,8 +22,8 @@ class Author_Form_PrizeCreate extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
                 ->setOptions(array('class' => ''))
                 ->setRequired(true)
@@ -38,8 +38,8 @@ class Author_Form_PrizeCreate extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
                 ->setOptions(array('class' => ''))
                 ->addValidator($titleValidator)
@@ -52,8 +52,8 @@ class Author_Form_PrizeCreate extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
                 ->setOptions(array('class' => ''))
                 ->addValidator($titleValidator)
@@ -66,8 +66,8 @@ class Author_Form_PrizeCreate extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
                 ->setOptions(array('class' => ''))
                 ->addValidator($titleValidator)

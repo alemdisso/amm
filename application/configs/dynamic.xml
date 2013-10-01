@@ -61,10 +61,10 @@
               <label>Ficção</label>
               <uri>/livros/ficcao</uri>
               <pages>
-                <edition-o-mar-nunca-transborda-para-fora>
-                  <label>O mar nunca transborda para fora</label>
-                  <uri>/explore/o-mar-nunca-transborda-para-fora</uri>
-                </edition-o-mar-nunca-transborda-para-fora>
+                <edition-o-mar-nunca-transborda>
+                  <label>O mar nunca transborda</label>
+                  <uri>/explore/o-mar-nunca-transborda</uri>
+                </edition-o-mar-nunca-transborda>
                 <edition-canteiros-de-saturno>
                   <label>Canteiros de Saturno</label>
                   <uri>/explore/canteiros-de-saturno</uri>

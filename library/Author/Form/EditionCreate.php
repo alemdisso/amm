@@ -10,7 +10,7 @@ class Author_Form_EditionCreate extends Zend_Form
             ->setAction('/admin/edition/create')
             ->setAttrib('enctype', 'multipart/form-data')
             //->setAction('javascript:callEditionCreate();')
-            ->setDecorators(array('FormElements',array('HtmlTag', array('tag' => 'div', 'class' => 'form')),'Form'))
+            ->setElementDecorators(array('FormElements',array('HtmlTag', array('tag' => 'div', 'class' => 'form')),'Form'))
             ->setMethod('post');
 
         $element = new Zend_Form_Element_Text('title');
@@ -19,10 +19,10 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label clear_both')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin clear_both')),
                 ))
-                ->setOptions(array('class' => ''))
+//                ->setOptions(array('class' => ''))
                 ->setRequired(true)
                 ->addErrorMessage(_("#Title is required"))
                 ->addValidator($titleValidator)
@@ -31,6 +31,12 @@ class Author_Form_EditionCreate extends Zend_Form
 
         $element = new Zend_Form_Element_File('cover');
         $element->setLabel(_('#Upload an image:'))
+                ->setDecorators(array(
+                    'File',
+                    'Errors',
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
+                ))
                 ->setDestination(APPLICATION_PATH . '/../public/img/editions/raw');
         // ensure only 1 file
         $element->addValidator('Count', false, 1);
@@ -48,10 +54,11 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'option')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'option inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
 		->setMultiOptions($titlesArray)
+                ->setOptions(array('class' => ''))
                 ->setSeparator('');
         $this->addElement($element);
 
@@ -64,10 +71,10 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
-                ->setOptions(array('class' => ''))
+                ->setOptions(array('class' => 'choose'))
                 ->setRegisterInArrayValidator(false);
         $this->addElement($element);
 
@@ -76,8 +83,8 @@ class Author_Form_EditionCreate extends Zend_Form
               ->setDecorators(array(
                   'ViewHelper',
                   'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input item_formulario')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
               ))
             ->setAttrib('rows','3')
             ->setOptions(array('class' => ''))
@@ -90,13 +97,25 @@ class Author_Form_EditionCreate extends Zend_Form
               ->setDecorators(array(
                   'ViewHelper',
                   'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
               ))
             ->setAttrib('rows','8')
             ->setOptions(array('class' => ''))
             ->setRequired(false)
             ->addFilter('StringTrim');
+        $this->addElement($element);
+
+        $element = new Zend_Form_Element_Select('serie');
+        $element->setLabel('#Serie')
+                ->setDecorators(array(
+                    'ViewHelper',
+                    'Errors',
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
+                ))
+                ->setOptions(array('class' => 'change'))
+                ->setRegisterInArrayValidator(false);
         $this->addElement($element);
 
        $element = new Zend_Form_Element_Text('isbn');
@@ -105,10 +124,9 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
-                ->setOptions(array('class' => ''))
                 ->addValidator($validator)
                 ->addFilter('StringTrim');
         $this->addElement($element);
@@ -119,8 +137,8 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
                 ->setOptions(array('class' => ''))
                 ->addValidator($validator)
@@ -133,8 +151,8 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
                 ->setOptions(array('class' => ''))
                 ->addValidator($validator)
@@ -147,8 +165,8 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
                 ->setOptions(array('class' => ''))
                 ->addValidator($validator)
@@ -161,9 +179,9 @@ class Author_Form_EditionCreate extends Zend_Form
                ->setDecorators(array('ViewHelper','Errors',
                     array(array('data' => 'HtmlTag'),
                     array('tag' => 'div','class' => '')),
-                    array('Label',
-                      array('tag' => 'div','tagClass' => '')
-                    ),
+//                    array('Label',
+//                      array('tag' => 'div','tagClass' => '')
+//                    ),
                   ))
                ->setOptions(array('class' => 'submit'));
         $this->addElement($element);
@@ -197,6 +215,7 @@ class Author_Form_EditionCreate extends Zend_Form
             $editionMapper = new Author_Collection_EditionMapper($db);
             $edition = new Author_Collection_Edition($work->getId(), $data['editor']);
             $edition->setIsbn($data['isbn']);
+            $edition->setSerie($data['serie']);
             $edition->setPages($data['pages']);
             $edition->setIllustrator($data['illustrator']);
             $edition->setCoverDesigner($data['coverDesigner']);

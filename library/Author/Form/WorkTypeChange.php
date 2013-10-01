@@ -27,7 +27,7 @@ class Author_Form_WorkTypeChange extends Zend_Form
                     'ViewHelper',
                     'Errors',
                     array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'option')),
-                    array('Label', array('tag' => 'div', 'tagClass' => 'label')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
 		->setMultiOptions($titlesArray)
                 ->setSeparator('');

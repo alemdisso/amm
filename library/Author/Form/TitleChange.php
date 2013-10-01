@@ -24,7 +24,7 @@ class Author_Form_TitleChange extends Zend_Form
                 ->setDecorators(array(
                     'ViewHelper',
                     'Errors',
-                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'input')),
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
                     array('Label', array('tag' => 'div', 'tagClass' => 'label clear_both')),
                 ))
                 ->setOptions(array('class' => ''))

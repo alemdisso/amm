@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-28 12:08-0300\n"
-"PO-Revision-Date: 2013-09-28 13:04-0300\n"
+"POT-Creation-Date: 2013-09-30 18:55-0300\n"
+"PO-Revision-Date: 2013-09-30 18:55-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -23,14 +23,14 @@ msgstr ""
 #: application\modules/admin/controllers/EditorController.php:42
 #: application\modules/admin/controllers/PrizeController.php:41
 #: application\modules/admin/controllers/PrizeController.php:73
-#: application\modules/admin/controllers/WorkController.php:280
+#: application\modules/admin/controllers/WorkController.php:311
 #: application\modules/auth/controllers/UserController.php:39
 #: application\modules/auth/controllers/UserController.php:61
 msgid "#The record was successfully updated."
 msgstr "O registro foi atualizado com sucesso."
 
 #: application\modules/admin/controllers/EditionController.php:57
-#: application\modules/admin/views/scripts/edition/create.phtml:59
+#: application\modules/admin/views/scripts/edition/create.phtml:75
 msgid "#Create edition"
 msgstr "Criar edição"
 
@@ -175,22 +175,26 @@ msgstr "Editar descrição"
 msgid "#Change summary"
 msgstr "Editar sumário"
 
-#: application\modules/admin/controllers/WorkController.php:116
+#: application\modules/admin/controllers/WorkController.php:117
+msgid "#Change title"
+msgstr "Alterar título"
+
+#: application\modules/admin/controllers/WorkController.php:146
 msgid "#Change type"
 msgstr "Alterar classificação"
 
-#: application\modules/admin/controllers/WorkController.php:147
-#: application\modules/admin/controllers/WorkController.php:152
-#: application\modules/admin/controllers/WorkController.php:165
-#: application\modules/admin/controllers/WorkController.php:170
+#: application\modules/admin/controllers/WorkController.php:177
+#: application\modules/admin/controllers/WorkController.php:182
+#: application\modules/admin/controllers/WorkController.php:195
+#: application\modules/admin/controllers/WorkController.php:200
 msgid "#NI"
 msgstr "n.i."
 
-#: application\modules/admin/controllers/WorkController.php:230
+#: application\modules/admin/controllers/WorkController.php:261
 msgid "#The record was successfully removed."
 msgstr "O registro foi removido com sucesso."
 
-#: application\modules/admin/controllers/WorkController.php:260
+#: application\modules/admin/controllers/WorkController.php:291
 #: application\modules/admin/views/scripts/work/remove.phtml:5
 msgid "#Remove work"
 msgstr "Remover obra"
@@ -220,7 +224,7 @@ msgid "#Serie: %s"
 msgstr "Coleção: %s"
 
 #: application\modules/works/controllers/EditionController.php:72
-#: library\Author/Form/EditionCreate.php:132
+#: library\Author/Form/EditionCreate.php:149
 #: library\Author/Form/IllustratorChange.php:21
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:7
 msgid "#Illustrator:"
@@ -228,7 +232,7 @@ msgstr "Ilustrador:"
 
 #: application\modules/works/controllers/EditionController.php:77
 #: library\Author/Form/CoverDesignerChange.php:23
-#: library\Author/Form/EditionCreate.php:146
+#: library\Author/Form/EditionCreate.php:163
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:8
 msgid "#Cover designer:"
 msgstr "Capa:"
@@ -309,14 +313,15 @@ msgstr "Email"
 #: library\Author/Form/CoverChange.php:34
 #: library\Author/Form/CoverDesignerChange.php:38
 #: library\Author/Form/DescriptionChange.php:37
-#: library\Author/Form/EditionCreate.php:160
+#: library\Author/Form/EditionCreate.php:177
 #: library\Author/Form/EditorCreate.php:32
 #: library\Author/Form/IllustratorChange.php:35
 #: library\Author/Form/IsbnChange.php:35
 #: library\Author/Form/PagesChange.php:38
 #: library\Author/Form/PrizeCreate.php:79
-#: library\Author/Form/SerieChange.php:36
+#: library\Author/Form/SerieChange.php:34
 #: library\Author/Form/SummaryChange.php:37
+#: library\Author/Form/TitleChange.php:39
 #: library\Author/Form/WorkTypeChange.php:40
 msgid "#Submit"
 msgstr "Enviar"
@@ -1316,47 +1321,54 @@ msgid "#Upload an image:"
 msgstr "Enviar uma imagem"
 
 #: library\Author/Form/DescriptionChange.php:22
-#: library\Author/Form/EditionCreate.php:89
+#: library\Author/Form/EditionCreate.php:95
 msgid "#Description:"
 msgstr "Descrição:"
 
 #: library\Author/Form/EditionCreate.php:18
+#: library\Author/Form/TitleChange.php:23
 msgid "#Title:"
 msgstr "Título:"
 
 #: library\Author/Form/EditionCreate.php:27
 #: library\Author/Form/PrizeCreate.php:30
+#: library\Author/Form/TitleChange.php:32
 msgid "#Title is required"
 msgstr "O título é obrigatório"
 
-#: library\Author/Form/EditionCreate.php:47
+#: library\Author/Form/EditionCreate.php:53
 #: application\modules/admin/views/scripts/index/list.phtml:19
 #: application\modules/admin/views/scripts/work/list.phtml:20
 msgid "#Type"
 msgstr "Tipo"
 
-#: library\Author/Form/EditionCreate.php:60
+#: library\Author/Form/EditionCreate.php:66
 #: application\modules/admin/views/scripts/index/list.phtml:20
 #: application\modules/admin/views/scripts/work/list.phtml:21
 msgid "#Editor"
 msgstr "Editora"
 
-#: library\Author/Form/EditionCreate.php:63
+#: library\Author/Form/EditionCreate.php:69
 msgid "#Editor is required"
 msgstr "A editora é obrigatória"
 
-#: library\Author/Form/EditionCreate.php:75
+#: library\Author/Form/EditionCreate.php:81
 #: library\Author/Form/SummaryChange.php:22
 msgid "#Summary:"
 msgstr "Sumário:"
 
-#: library\Author/Form/EditionCreate.php:104
+#: library\Author/Form/EditionCreate.php:109
+#: library\Author/Form/SerieChange.php:20
+msgid "#Serie"
+msgstr "Coleção"
+
+#: library\Author/Form/EditionCreate.php:122
 #: library\Author/Form/IsbnChange.php:21
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:4
 msgid "#ISBN:"
 msgstr "ISBN:"
 
-#: library\Author/Form/EditionCreate.php:118
+#: library\Author/Form/EditionCreate.php:135
 #: library\Author/Form/PagesChange.php:23
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:5
 msgid "#Pages:"
@@ -1381,10 +1393,6 @@ msgstr "Categoria:"
 #: library\Author/Form/PrizeCreate.php:65
 msgid "#Year:"
 msgstr "Ano:"
-
-#: library\Author/Form/SerieChange.php:22
-msgid "#Serie"
-msgstr "Coleçãp"
 
 #: library\Author/Form/WorkRemove.php:21
 msgid "#Confirm removal"
@@ -1428,7 +1436,11 @@ msgstr "Mudar número de páginas de %s"
 msgid "#Change %s's serie"
 msgstr "Alterar coleção de %s"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:70
+#: application\modules/admin/views/scripts/edition/create.phtml:49
+msgid "#(choose an editor)"
+msgstr "(escolha uma editora...)"
+
+#: application\modules/admin/views/scripts/edition/create.phtml:86
 msgid "#(new editor)"
 msgstr "(nova editora)"
 
@@ -1472,10 +1484,19 @@ msgstr "Editar prêmio"
 msgid "#Change summary for %s"
 msgstr "Editar sumário de %s"
 
+#: application\modules/admin/views/scripts/work/change-title.phtml:2
+#, php-format
+msgid "#Change title for %s"
+msgstr "Mudar título de %s"
+
 #: application\modules/admin/views/scripts/work/change-type.phtml:2
 #, php-format
 msgid "#Change %s's type"
 msgstr "Alterar classificação de %s"
+
+#: application\modules/admin/views/scripts/work/detail.phtml:7
+msgid "/works/"
+msgstr "/livros/"
 
 #: application\modules/admin/views/scripts/work/detail.phtml:7
 msgid "#(change type)"

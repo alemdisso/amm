@@ -61,7 +61,6 @@ class Author_Collection_Edition {
         } else {
             throw new Author_Collection_WorkException("This ($serie) is not a valid serie.");
         }
-
     } //SetSerie
 
     public function getPages()
@@ -72,17 +71,14 @@ class Author_Collection_Edition {
     public function setPages($pages)
     {
         $validator = new Moxca_Util_ValidPositiveDecimal();
-        if ($validator->isValid($pages)) {
+        if (($validator->isValid($pages)) || ($pages == "")) {
             if ($this->pages != $pages) {
                 $this->pages = $pages;
             }
         } else {
             throw new Author_Collection_WorkException("This ($pages) is not a valid pages number.");
         }
-
     } //SetPages
-
-
 
     public function getCover()
     {
@@ -99,10 +95,7 @@ class Author_Collection_Edition {
         } else {
             throw new Author_Collection_WorkException("This ($cover) is not a valid cover filename.");
         }
-
     } //SetCover
-
-
 
     public function getIsbn()
     {
@@ -119,9 +112,7 @@ class Author_Collection_Edition {
         } else {
             throw new Author_Collection_WorkException("This ($isbn) is not a valid isbn.");
         }
-
     } //SetIsbn
-
 
     public function getIllustrator()
     {
@@ -141,7 +132,6 @@ class Author_Collection_Edition {
 
     } //SetIllustrator
 
-
     public function getCoverDesigner()
     {
         return $this->coverDesigner;
@@ -157,8 +147,6 @@ class Author_Collection_Edition {
         } else {
             throw new Author_Collection_WorkException("This ($coverDesigner) is not a valid coverDesigner.");
         }
-
     } //SetCoverDesigner
-
 
 }

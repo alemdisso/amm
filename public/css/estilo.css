@@ -880,24 +880,34 @@ div.dataTables_filter {
 #admin select {
     width: 60px;
     padding: 2px 5px;
-
 }
 
-#admin select.change {
+#admin select.choose {
     width: 160px;
     padding: 2px 5px;
-
 }
 
 #admin input {
     padding: 7px 5px;
-
 }
 
 #admin .submit {
     width: 120px;
     padding: 10px 8px;
-    margin-top: 16px;
+    margin-top: 4px;
+    margin-left: 32px;
+    margin-bottom: 14px;
+
+}
+
+#admin .labelAdmin {
+    margin-top: 12px;
+    margin-left: 32px;
+}
+
+#admin .inputAdmin {
+    margin-left: 32px;
+    padding: 2px 2px;
 
 }
 
@@ -906,3 +916,13 @@ div.dataTables_filter {
 	height:auto;
 	}
 
+#admin .selectAdmin {
+    width: 132px;
+
+}
+
+#admin types {
+    width:120px;
+    display:inline;
+    float:left;
+}
