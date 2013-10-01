@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-09-30 18:55-0300\n"
-"PO-Revision-Date: 2013-09-30 18:55-0300\n"
+"POT-Creation-Date: 2013-10-01 14:06-0300\n"
+"PO-Revision-Date: 2013-10-01 14:06-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -23,14 +23,15 @@ msgstr ""
 #: application\modules/admin/controllers/EditorController.php:42
 #: application\modules/admin/controllers/PrizeController.php:41
 #: application\modules/admin/controllers/PrizeController.php:73
-#: application\modules/admin/controllers/WorkController.php:311
+#: application\modules/admin/controllers/SerieController.php:42
+#: application\modules/admin/controllers/WorkController.php:312
 #: application\modules/auth/controllers/UserController.php:39
 #: application\modules/auth/controllers/UserController.php:61
 msgid "#The record was successfully updated."
 msgstr "O registro foi atualizado com sucesso."
 
 #: application\modules/admin/controllers/EditionController.php:57
-#: application\modules/admin/views/scripts/edition/create.phtml:75
+#: application\modules/admin/views/scripts/edition/create.phtml:112
 msgid "#Create edition"
 msgstr "Criar edição"
 
@@ -82,6 +83,7 @@ msgid "#Works"
 msgstr "Livros"
 
 #: application\modules/admin/controllers/NavigationController.php:45
+#: library\Author/View/Helper/TypeListLink.php:27
 msgid "/works"
 msgstr "/livros"
 
@@ -95,6 +97,7 @@ msgid "#Children"
 msgstr "Infantis"
 
 #: application\modules/admin/controllers/NavigationController.php:50
+#: library\Author/View/Helper/TypeListLink.php:11
 msgid "/works/children"
 msgstr "/livros/infantis"
 
@@ -104,6 +107,7 @@ msgid "#Young"
 msgstr "Juvenis"
 
 #: application\modules/admin/controllers/NavigationController.php:55
+#: library\Author/View/Helper/TypeListLink.php:23
 msgid "/works/young"
 msgstr "/livros/juvenis"
 
@@ -117,6 +121,7 @@ msgid "#Fiction"
 msgstr "Ficção"
 
 #: application\modules/admin/controllers/NavigationController.php:60
+#: library\Author/View/Helper/TypeListLink.php:19
 msgid "/works/fiction"
 msgstr "/livros/ficcao"
 
@@ -129,6 +134,7 @@ msgid "#Essays"
 msgstr "Ensaios"
 
 #: application\modules/admin/controllers/NavigationController.php:65
+#: library\Author/View/Helper/TypeListLink.php:15
 msgid "/works/essays"
 msgstr "/livros/ensaios"
 
@@ -167,6 +173,10 @@ msgstr "/novidades"
 msgid "#Create prize"
 msgstr "Criar prêmio"
 
+#: application\modules/admin/controllers/SerieController.php:53
+msgid "#Create serie"
+msgstr "Criar coleção"
+
 #: application\modules/admin/controllers/WorkController.php:57
 msgid "#Change description"
 msgstr "Editar descrição"
@@ -183,18 +193,18 @@ msgstr "Alterar título"
 msgid "#Change type"
 msgstr "Alterar classificação"
 
-#: application\modules/admin/controllers/WorkController.php:177
-#: application\modules/admin/controllers/WorkController.php:182
-#: application\modules/admin/controllers/WorkController.php:195
-#: application\modules/admin/controllers/WorkController.php:200
+#: application\modules/admin/controllers/WorkController.php:178
+#: application\modules/admin/controllers/WorkController.php:183
+#: application\modules/admin/controllers/WorkController.php:196
+#: application\modules/admin/controllers/WorkController.php:201
 msgid "#NI"
 msgstr "n.i."
 
-#: application\modules/admin/controllers/WorkController.php:261
+#: application\modules/admin/controllers/WorkController.php:262
 msgid "#The record was successfully removed."
 msgstr "O registro foi removido com sucesso."
 
-#: application\modules/admin/controllers/WorkController.php:291
+#: application\modules/admin/controllers/WorkController.php:292
 #: application\modules/admin/views/scripts/work/remove.phtml:5
 msgid "#Remove work"
 msgstr "Remover obra"
@@ -224,7 +234,7 @@ msgid "#Serie: %s"
 msgstr "Coleção: %s"
 
 #: application\modules/works/controllers/EditionController.php:72
-#: library\Author/Form/EditionCreate.php:149
+#: library\Author/Form/EditionCreate.php:150
 #: library\Author/Form/IllustratorChange.php:21
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:7
 msgid "#Illustrator:"
@@ -232,7 +242,7 @@ msgstr "Ilustrador:"
 
 #: application\modules/works/controllers/EditionController.php:77
 #: library\Author/Form/CoverDesignerChange.php:23
-#: library\Author/Form/EditionCreate.php:163
+#: library\Author/Form/EditionCreate.php:164
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:8
 msgid "#Cover designer:"
 msgstr "Capa:"
@@ -290,6 +300,7 @@ msgstr "Sysadmin"
 
 #: library\Moxca/Form/UserCreate.php:15
 #: library\Author/Form/EditorCreate.php:15
+#: library\Author/Form/SerieCreate.php:15
 msgid "#Name:"
 msgstr "Nome:"
 
@@ -313,13 +324,14 @@ msgstr "Email"
 #: library\Author/Form/CoverChange.php:34
 #: library\Author/Form/CoverDesignerChange.php:38
 #: library\Author/Form/DescriptionChange.php:37
-#: library\Author/Form/EditionCreate.php:177
+#: library\Author/Form/EditionCreate.php:178
 #: library\Author/Form/EditorCreate.php:32
 #: library\Author/Form/IllustratorChange.php:35
 #: library\Author/Form/IsbnChange.php:35
 #: library\Author/Form/PagesChange.php:38
 #: library\Author/Form/PrizeCreate.php:79
 #: library\Author/Form/SerieChange.php:34
+#: library\Author/Form/SerieCreate.php:32
 #: library\Author/Form/SummaryChange.php:37
 #: library\Author/Form/TitleChange.php:39
 #: library\Author/Form/WorkTypeChange.php:40
@@ -1321,7 +1333,7 @@ msgid "#Upload an image:"
 msgstr "Enviar uma imagem"
 
 #: library\Author/Form/DescriptionChange.php:22
-#: library\Author/Form/EditionCreate.php:95
+#: library\Author/Form/EditionCreate.php:96
 msgid "#Description:"
 msgstr "Descrição:"
 
@@ -1342,39 +1354,40 @@ msgstr "O título é obrigatório"
 msgid "#Type"
 msgstr "Tipo"
 
-#: library\Author/Form/EditionCreate.php:66
+#: library\Author/Form/EditionCreate.php:67
 #: application\modules/admin/views/scripts/index/list.phtml:20
 #: application\modules/admin/views/scripts/work/list.phtml:21
 msgid "#Editor"
 msgstr "Editora"
 
-#: library\Author/Form/EditionCreate.php:69
+#: library\Author/Form/EditionCreate.php:70
 msgid "#Editor is required"
 msgstr "A editora é obrigatória"
 
-#: library\Author/Form/EditionCreate.php:81
+#: library\Author/Form/EditionCreate.php:82
 #: library\Author/Form/SummaryChange.php:22
 msgid "#Summary:"
 msgstr "Sumário:"
 
-#: library\Author/Form/EditionCreate.php:109
+#: library\Author/Form/EditionCreate.php:110
 #: library\Author/Form/SerieChange.php:20
 msgid "#Serie"
 msgstr "Coleção"
 
-#: library\Author/Form/EditionCreate.php:122
+#: library\Author/Form/EditionCreate.php:123
 #: library\Author/Form/IsbnChange.php:21
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:4
 msgid "#ISBN:"
 msgstr "ISBN:"
 
-#: library\Author/Form/EditionCreate.php:135
+#: library\Author/Form/EditionCreate.php:136
 #: library\Author/Form/PagesChange.php:23
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:5
 msgid "#Pages:"
 msgstr "Páginas:"
 
 #: library\Author/Form/EditorCreate.php:24
+#: library\Author/Form/SerieCreate.php:24
 msgid "#Name is required"
 msgstr "O nome é obrigatório"
 
@@ -1436,11 +1449,11 @@ msgstr "Mudar número de páginas de %s"
 msgid "#Change %s's serie"
 msgstr "Alterar coleção de %s"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:49
+#: application\modules/admin/views/scripts/edition/create.phtml:87
 msgid "#(choose an editor)"
 msgstr "(escolha uma editora...)"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:86
+#: application\modules/admin/views/scripts/edition/create.phtml:123
 msgid "#(new editor)"
 msgstr "(nova editora)"
 
@@ -1493,10 +1506,6 @@ msgstr "Mudar título de %s"
 #, php-format
 msgid "#Change %s's type"
 msgstr "Alterar classificação de %s"
-
-#: application\modules/admin/views/scripts/work/detail.phtml:7
-msgid "/works/"
-msgstr "/livros/"
 
 #: application\modules/admin/views/scripts/work/detail.phtml:7
 msgid "#(change type)"
@@ -1658,6 +1667,9 @@ msgstr "livros da coleção"
 #: application\modules/works/views/scripts/index/young.phtml:9
 msgid "#Young books"
 msgstr "Juvenis"
+
+#~ msgid "/works/"
+#~ msgstr "/livros/"
 
 #~ msgid "#CoverDesigner:"
 #~ msgstr "Capa:"
