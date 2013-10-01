@@ -4,7 +4,10 @@ class Author_Collection_Edition {
 
     protected $id;
     protected $work;
+    protected $title;
+    protected $uri;
     protected $editor;
+    protected $country;
     protected $serie;
     protected $pages;
     protected $cover;
@@ -15,7 +18,10 @@ class Author_Collection_Edition {
     function __construct($work, $editor, $id=0) {
         $this->id = (int)$id;
         $this->work = $work;
+        $this->title = null;
+        $this->uri = null;
         $this->editor = $editor;
+        $this->country = null;
         $this->pages = null;
         $this->coverImageFileName = null;
         $this->isbn = null;
@@ -46,6 +52,31 @@ class Author_Collection_Edition {
         return $this->work;
     } //getWork
 
+    public function getTitle()
+    {
+        return $this->title;
+    } //getTitle
+
+    public function setTitle($title)
+    {
+        $validator = new Moxca_Util_ValidString();
+        if ($validator->isValid($title)) {
+            if ($this->title != $title) {
+                $this->title = $title;
+                $converter = new Moxca_Util_StringToAscii();
+                $this->uri = $converter->toAscii($this->title);
+            }
+        } else {
+            throw new Author_Collection_EditionException("This ($title) is not a valid title.");
+        }
+
+    } //SetTitle
+
+    public function getUri()
+    {
+        return $this->uri;
+    } //getUri
+
     public function getSerie()
     {
         return $this->serie;
@@ -62,6 +93,24 @@ class Author_Collection_Edition {
             throw new Author_Collection_WorkException("This ($serie) is not a valid serie.");
         }
     } //SetSerie
+
+    public function getCountry()
+    {
+        return $this->country;
+    } //getCountry
+
+    public function setCountry($country)
+    {
+        $validator = new Moxca_Util_ValidString();
+        if ($validator->isValid($country)) {
+            if ($this->country != $country) {
+                $this->country = $country;
+            }
+        } else {
+            throw new Author_Collection_WorkException("This ($country) is not a valid country.");
+        }
+
+    } //SetCountry
 
     public function getPages()
     {

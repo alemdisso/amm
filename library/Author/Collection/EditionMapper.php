@@ -29,11 +29,14 @@ class Author_Collection_EditionMapper
     public function insert(Author_Collection_Edition $obj)
     {
 
-        $query = $this->db->prepare("INSERT INTO author_collection_editions (work, editor, serie, pages, cover, isbn, illustrator, cover_designer)
-            VALUES (:work, :editor, :serie, :pages, :cover, :isbn, :illustrator, :cover_designer)");
+        $query = $this->db->prepare("INSERT INTO author_collection_editions (work, title, uri, editor, country, serie, pages, cover, isbn, illustrator, cover_designer)
+            VALUES (:work, :title, :uri, :editor, :country, :serie, :pages, :cover, :isbn, :illustrator, :cover_designer)");
 
         $query->bindValue(':work', $obj->getWork(), PDO::PARAM_STR);
+        $query->bindValue(':title', $obj->getTitle(), PDO::PARAM_STR);
+        $query->bindValue(':uri', $obj->getUri(), PDO::PARAM_STR);
         $query->bindValue(':editor', $obj->getEditor(), PDO::PARAM_STR);
+        $query->bindValue(':country', $obj->getCountry(), PDO::PARAM_STR);
         $query->bindValue(':serie', $obj->getSerie(), PDO::PARAM_STR);
         $query->bindValue(':pages', $obj->getPages(), PDO::PARAM_STR);
         $query->bindValue(':cover', $obj->getCover(), PDO::PARAM_STR);
@@ -54,12 +57,16 @@ class Author_Collection_EditionMapper
             throw new Author_Collection_EditionMapperException('Object has no ID, cannot update.');
         }
 
-        $query = $this->db->prepare("UPDATE author_collection_editions SET work = :work, editor = :editor, serie = :serie, pages = :pages
+        $query = $this->db->prepare("UPDATE author_collection_editions SET work = :work, title = :title
+             , uri = :uri, editor = :editor, country = :country, serie = :serie, pages = :pages
              , cover = :cover, isbn = :isbn, illustrator = :illustrator, cover_designer = :cover_designer
             WHERE id = :id;");
 
         $query->bindValue(':work', $obj->getWork(), PDO::PARAM_STR);
+        $query->bindValue(':title', $obj->getTitle(), PDO::PARAM_STR);
+        $query->bindValue(':uri', $obj->getUri(), PDO::PARAM_STR);
         $query->bindValue(':editor', $obj->getEditor(), PDO::PARAM_STR);
+        $query->bindValue(':country', $obj->getCountry(), PDO::PARAM_STR);
         $query->bindValue(':serie', $obj->getSerie(), PDO::PARAM_STR);
         $query->bindValue(':pages', $obj->getPages(), PDO::PARAM_STR);
         $query->bindValue(':cover', $obj->getCover(), PDO::PARAM_STR);
@@ -86,7 +93,7 @@ class Author_Collection_EditionMapper
             $this->identityMap->next();
         }
 
-        $query = $this->db->prepare('SELECT work, editor, serie, pages, cover, isbn, illustrator, cover_designer FROM author_collection_editions WHERE id = :id;');
+        $query = $this->db->prepare('SELECT work, title, uri, editor, country, serie, pages, cover, isbn, illustrator, cover_designer FROM author_collection_editions WHERE id = :id;');
         $query->bindValue(':id', $id, PDO::PARAM_STR);
         $query->execute();
         $result = $query->fetch();
@@ -97,7 +104,9 @@ class Author_Collection_EditionMapper
         $obj = new Author_Collection_Edition($result['work'], $result['editor']);
         $this->setAttributeValue($obj, $id, 'id');
         $this->setAttributeValue($obj, $result['serie'], 'serie');
-//        $this->setAttributeValue($obj, $result['work'], 'work');
+        $this->setAttributeValue($obj, $result['title'], 'title');
+        $this->setAttributeValue($obj, $result['uri'], 'uri');
+        $this->setAttributeValue($obj, $result['country'], 'country');
         $this->setAttributeValue($obj, $result['pages'], 'pages');
         $this->setAttributeValue($obj, $result['cover'], 'cover');
         $this->setAttributeValue($obj, $result['isbn'], 'isbn');
@@ -132,9 +141,8 @@ class Author_Collection_EditionMapper
 
     public function findByUri($uri)
     {
-        $query = $this->db->prepare('SELECT e.id FROM author_collection_works w
-                                     LEFT JOIN author_collection_editions e ON w.id = e.work
-                                     WHERE w.uri=:uri LIMIT 1;');
+        $query = $this->db->prepare('SELECT e.id FROM author_collection_editions e
+                                     WHERE e.uri=:uri LIMIT 1;');
         $query->bindValue(':uri', $uri, PDO::PARAM_STR);
         $query->execute();
 

@@ -163,6 +163,7 @@ class Admin_WorkController extends Zend_Controller_Action
         $workObj = $this->workMapper->findById($id);
 
         $typeLabel = $this->view->typeLabel($workObj, new Author_Collection_WorkTypes, $this->view);
+        $typeListLink = $this->view->typeListLink($workObj, $this->view);
 
         $editionsIds = $this->editionMapper->getAllEditionsOfWork($id);
 
@@ -222,8 +223,8 @@ class Admin_WorkController extends Zend_Controller_Action
         $data = array(
             'id' => $id,
             'title' => $workObj->getTitle(),
-            'rawType' => $workObj->getType(),
             'typeLabel' => $typeLabel,
+            'typeListLink' => $typeListLink,
             'description' => nl2br($workObj->getDescription()),
             'summary' => nl2br($workObj->getSummary()),
             'editions' => $editionsModel,

@@ -214,6 +214,7 @@ class Author_Form_EditionCreate extends Zend_Form
 
             $editionMapper = new Author_Collection_EditionMapper($db);
             $edition = new Author_Collection_Edition($work->getId(), $data['editor']);
+            $edition->SetTitle($data['title']);
             $edition->setIsbn($data['isbn']);
             $edition->setSerie($data['serie']);
             $edition->setPages($data['pages']);
