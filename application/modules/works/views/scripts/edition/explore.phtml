@@ -29,7 +29,7 @@ $pageData = $this->pageData;
 <?php } ?>
 </small></p>
 
-<?php if (isset($pageData['ecommerce'])) { ?>
+<?php if ((isset($pageData['ecommerce'])) && ($pageData['ecommerce'])){ ?>
 <form>
 <input type="submit" value="<?php echo $this->translate("#Buy online") ?>" />
 </form>
