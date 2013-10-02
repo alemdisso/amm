@@ -40,6 +40,9 @@ $pageData = $this->pageData;
 <div class="box_conteudo" style="margin-top:20px;"><img src="/img/icone_livro_mais.png" align="absmiddle" /> <a href=""><strong>Mais curiosidades sobre este livro</strong></a></div>
 <!-- /mais sobre o livro -->
 <?php } ?>
+
+<?php if ((is_array($pageData['prizes'])) && (count($pageData['prizes']))){ ?>
+<!-- premios -->
 <div class="box_conteudo">
 <h4 class="premio">Pr&ecirc;mios</h4>
 <ul>
@@ -47,6 +50,7 @@ $pageData = $this->pageData;
 </ul>
 </div>
 <!-- /premios -->
+<?php } ?>
 
 </div>
 <!-- /conteudo -->
