@@ -34,13 +34,16 @@ class Works_IndexController extends Zend_Controller_Action
 
             $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
+            $prizeMapper = new Author_Collection_PrizeMapper($this->db);
+            $prizesLabels = $this->view->workPrizesLabels($loopWorkObj->getId(), $prizeMapper);
+
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
                     'coverSrc' => $coverFilePath,
                     'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),
-                    'prizes' => array(),
+                    'prizes' => $prizesLabels,
                     'moreAbout' => false,
                     'otherLanguages' => false,
             );
@@ -69,13 +72,16 @@ class Works_IndexController extends Zend_Controller_Action
 
             $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
+            $prizeMapper = new Author_Collection_PrizeMapper($this->db);
+            $prizesLabels = $this->view->workPrizesLabels($loopWorkObj->getId(), $prizeMapper);
+
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
                     'coverSrc' => $coverFilePath,
                     'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),
-                    'prizes' => array(),
+                    'prizes' => $prizesLabels,
                     'moreAbout' => false,
                     'otherLanguages' => false,
             );
@@ -103,13 +109,16 @@ class Works_IndexController extends Zend_Controller_Action
 
             $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
+            $prizeMapper = new Author_Collection_PrizeMapper($this->db);
+            $prizesLabels = $this->view->workPrizesLabels($loopWorkObj->getId(), $prizeMapper);
+
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
                     'coverSrc' => $coverFilePath,
                     'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),
-                    'prizes' => array(),
+                    'prizes' => $prizesLabels,
                     'moreAbout' => false,
                     'otherLanguages' => false,
             );
@@ -147,13 +156,16 @@ class Works_IndexController extends Zend_Controller_Action
 
             $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
+            $prizeMapper = new Author_Collection_PrizeMapper($this->db);
+            $prizesLabels = $this->view->workPrizesLabels($loopWorkObj->getId(), $prizeMapper);
+
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
                     'coverSrc' => $coverFilePath,
                     'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),
-                    'prizes' => array(),
+                    'prizes' => $prizesLabels,
                     'moreAbout' => false,
                     'otherLanguages' => false,
             );
@@ -206,8 +218,6 @@ class Works_IndexController extends Zend_Controller_Action
             }
         }
 
-
-
         $pageData = array(
             'seriesData' => $seriesData,
         );
@@ -228,13 +238,16 @@ class Works_IndexController extends Zend_Controller_Action
 
             $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
+            $prizeMapper = new Author_Collection_PrizeMapper($this->db);
+            $prizesLabels = $this->view->workPrizesLabels($loopWorkObj->getId(), $prizeMapper);
+
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
                     'coverSrc' => $coverFilePath,
                     'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),
-                    'prizes' => array(),
+                    'prizes' => $prizesLabels,
                     'moreAbout' => false,
                     'otherLanguages' => false,
             );
@@ -244,7 +257,6 @@ class Works_IndexController extends Zend_Controller_Action
         $pageData = array(
             'editionsData' => $editionsData,
         );
-
         $this->view->pageData = $pageData;
         $this->view->pageTitle = $this->view->translate("#Ana Maria Machado - Young");
 
