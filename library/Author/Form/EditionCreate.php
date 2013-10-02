@@ -40,7 +40,6 @@ class Author_Form_EditionCreate extends Zend_Form
                 ->setDestination(APPLICATION_PATH . '/../public/img/editions/raw');
         // ensure only 1 file
         $element->addValidator('Count', false, 1);
-        // limit to 100K
         $element->addValidator('Size', false, 5242880);
         // only JPEG, PNG, and GIFs
         $element->addValidator('Extension', false, 'jpg,png,gif,jpeg');
@@ -220,6 +219,7 @@ class Author_Form_EditionCreate extends Zend_Form
             $edition->setPages($data['pages']);
             $edition->setIllustrator($data['illustrator']);
             $edition->setCoverDesigner($data['coverDesigner']);
+            $edition->setCountry('BR');
 
             $location = $this->cover->getFileName();
             $location = str_replace('\\', '/', $location);

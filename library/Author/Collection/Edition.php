@@ -21,7 +21,7 @@ class Author_Collection_Edition {
         $this->title = null;
         $this->uri = null;
         $this->editor = $editor;
-        $this->country = null;
+        $this->country = 'BR';
         $this->pages = null;
         $this->coverImageFileName = null;
         $this->isbn = null;

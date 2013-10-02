@@ -261,7 +261,7 @@ class Works_IndexController extends Zend_Controller_Action
             'rightSpecialUri' => '/explore/a-audacia-dessa-mulher',
             'rightSpecialTitle' => 'A audácia dessa mulher',
             'rightSpecialSummary' => 'Um romance que engloba varias vertentes e vem do século XIX aos nossos dias.',
-            'rightSpecialImageUri' => '/img/marcacao_destaque_livro2.png',
+            'rightSpecialImageUri' => '/img/special/audacia_crop.png',
         );
 
         $this->view->pageData = $pageData;

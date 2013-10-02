@@ -20,10 +20,10 @@ class IndexController extends Zend_Controller_Action
     {
 
         $pageData = array(
-            'worksSpecialUri' => '/explore/aos-quatro-ventos',
-            'worksSpecialTitle' => 'Aos Quatro Ventos',
-            'worksSpecialSummary' => 'Finalista do Premio Jabuti, Camara Brasileira do Livro.',
-            'worksSpecialImageUri' => '/img/marcacao_capa.png',
+            'worksSpecialUri' => '/explore/canteiros-de-saturno',
+            'worksSpecialTitle' => 'Canteiros de Saturno',
+            'worksSpecialSummary' => 'Um livro sobre o tempo e seu efeito sobre as pessoas',
+            'worksSpecialImageUri' => '/img/special/canteiros_home.png',
         );
 
 

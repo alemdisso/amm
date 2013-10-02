@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-01 14:06-0300\n"
-"PO-Revision-Date: 2013-10-01 14:06-0300\n"
+"POT-Creation-Date: 2013-10-02 14:00-0300\n"
+"PO-Revision-Date: 2013-10-02 14:00-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -234,7 +234,7 @@ msgid "#Serie: %s"
 msgstr "Coleção: %s"
 
 #: application\modules/works/controllers/EditionController.php:72
-#: library\Author/Form/EditionCreate.php:150
+#: library\Author/Form/EditionCreate.php:149
 #: library\Author/Form/IllustratorChange.php:21
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:7
 msgid "#Illustrator:"
@@ -242,7 +242,7 @@ msgstr "Ilustrador:"
 
 #: application\modules/works/controllers/EditionController.php:77
 #: library\Author/Form/CoverDesignerChange.php:23
-#: library\Author/Form/EditionCreate.php:164
+#: library\Author/Form/EditionCreate.php:163
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:8
 msgid "#Cover designer:"
 msgstr "Capa:"
@@ -321,10 +321,10 @@ msgid "#Email:"
 msgstr "Email"
 
 #: library\Moxca/Form/UserCreate.php:101
-#: library\Author/Form/CoverChange.php:34
+#: library\Author/Form/CoverChange.php:33
 #: library\Author/Form/CoverDesignerChange.php:38
 #: library\Author/Form/DescriptionChange.php:37
-#: library\Author/Form/EditionCreate.php:178
+#: library\Author/Form/EditionCreate.php:177
 #: library\Author/Form/EditorCreate.php:32
 #: library\Author/Form/IllustratorChange.php:35
 #: library\Author/Form/IsbnChange.php:35
@@ -1333,7 +1333,7 @@ msgid "#Upload an image:"
 msgstr "Enviar uma imagem"
 
 #: library\Author/Form/DescriptionChange.php:22
-#: library\Author/Form/EditionCreate.php:96
+#: library\Author/Form/EditionCreate.php:95
 msgid "#Description:"
 msgstr "Descrição:"
 
@@ -1348,39 +1348,39 @@ msgstr "Título:"
 msgid "#Title is required"
 msgstr "O título é obrigatório"
 
-#: library\Author/Form/EditionCreate.php:53
+#: library\Author/Form/EditionCreate.php:52
 #: application\modules/admin/views/scripts/index/list.phtml:19
 #: application\modules/admin/views/scripts/work/list.phtml:20
 msgid "#Type"
 msgstr "Tipo"
 
-#: library\Author/Form/EditionCreate.php:67
+#: library\Author/Form/EditionCreate.php:66
 #: application\modules/admin/views/scripts/index/list.phtml:20
 #: application\modules/admin/views/scripts/work/list.phtml:21
 msgid "#Editor"
 msgstr "Editora"
 
-#: library\Author/Form/EditionCreate.php:70
+#: library\Author/Form/EditionCreate.php:69
 msgid "#Editor is required"
 msgstr "A editora é obrigatória"
 
-#: library\Author/Form/EditionCreate.php:82
+#: library\Author/Form/EditionCreate.php:81
 #: library\Author/Form/SummaryChange.php:22
 msgid "#Summary:"
 msgstr "Sumário:"
 
-#: library\Author/Form/EditionCreate.php:110
+#: library\Author/Form/EditionCreate.php:109
 #: library\Author/Form/SerieChange.php:20
 msgid "#Serie"
 msgstr "Coleção"
 
-#: library\Author/Form/EditionCreate.php:123
+#: library\Author/Form/EditionCreate.php:122
 #: library\Author/Form/IsbnChange.php:21
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:4
 msgid "#ISBN:"
 msgstr "ISBN:"
 
-#: library\Author/Form/EditionCreate.php:136
+#: library\Author/Form/EditionCreate.php:135
 #: library\Author/Form/PagesChange.php:23
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:5
 msgid "#Pages:"
@@ -1528,11 +1528,8 @@ msgid "#(change summary)"
 msgstr "(editar sumário)"
 
 #: application\modules/admin/views/scripts/work/detail.phtml:17
-#: application\modules/works/views/scripts/index/children.phtml:12
-#: application\modules/works/views/scripts/index/essays.phtml:12
-#: application\modules/works/views/scripts/index/fiction.phtml:12
-#: application\modules/works/views/scripts/index/serie.phtml:12
-#: application\modules/works/views/scripts/index/young.phtml:12
+#: application\modules/works/views/scripts/edition/list-legend.phtml:1
+#: application\modules/works/views/scripts/edition/list-legend.phtml:2
 #: application\modules/works/views/scripts/serie/explore.phtml:47
 msgid "#Prizes"
 msgstr "Prêmios"
@@ -1628,25 +1625,21 @@ msgstr "Contato"
 msgid "#Buy online"
 msgstr "Compre online"
 
-#: application\modules/works/views/scripts/index/children.phtml:9
-msgid "#Children books"
-msgstr "Infantis"
-
-#: application\modules/works/views/scripts/index/children.phtml:12
-#: application\modules/works/views/scripts/index/essays.phtml:12
-#: application\modules/works/views/scripts/index/fiction.phtml:12
-#: application\modules/works/views/scripts/index/serie.phtml:12
-#: application\modules/works/views/scripts/index/young.phtml:12
+#: application\modules/works/views/scripts/edition/list-legend.phtml:1
 msgid "#More about this work"
 msgstr "Curiosidades"
 
-#: application\modules/works/views/scripts/index/children.phtml:12
-#: application\modules/works/views/scripts/index/essays.phtml:12
-#: application\modules/works/views/scripts/index/fiction.phtml:12
-#: application\modules/works/views/scripts/index/serie.phtml:12
-#: application\modules/works/views/scripts/index/young.phtml:12
+#: application\modules/works/views/scripts/edition/list-legend.phtml:1
 msgid "#Available in other language"
 msgstr "Disponível em outro idioma"
+
+#: application\modules/works/views/scripts/edition/list-legend.phtml:2
+msgid "#Awarded books"
+msgstr "Livros premiados"
+
+#: application\modules/works/views/scripts/index/children.phtml:9
+msgid "#Children books"
+msgstr "Infantis"
 
 #: application\modules/works/views/scripts/index/essays.phtml:9
 msgid "#Essays books"
