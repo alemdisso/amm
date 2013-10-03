@@ -12,7 +12,7 @@ class Admin_EditionController extends Zend_Controller_Action
         try {
             $checker = new Moxca_Access_PrivilegeChecker();
         } catch (Exception $e) {
-            throw $e;
+            $this->_redirect('/auth/login');
         }
         $this->view->pageTitle = "";
     }
