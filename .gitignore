@@ -23,5 +23,6 @@ public/index.php
 /public/js/tinymce/themes/
 /public/js/tinymce/js/
 /public/js/tinymce/plugins/
+/public/js/jquery.pajinate*.*
 
 /public/img/special/*

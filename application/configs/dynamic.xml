@@ -18,89 +18,661 @@
               <uri>/livros/infantis</uri>
               <pages>
                 <edition-banho-sem-chuva>
-                  <label>Banho sem chuva</label>
+                  <label>Banho Sem Chuva</label>
                   <uri>/explore/banho-sem-chuva</uri>
                 </edition-banho-sem-chuva>
-                <edition-menina-bonita-do-laco-de-fita>
-                  <label>Menina Bonita do Laço de Fita</label>
-                  <uri>/explore/menina-bonita-do-laco-de-fita</uri>
-                </edition-menina-bonita-do-laco-de-fita>
-                <edition-tatu-bobo>
-                  <label>Tatu bobo</label>
-                  <uri>/explore/tatu-bobo</uri>
-                </edition-tatu-bobo>
+                <edition-boladas-e-amigos>
+                  <label>Boladas e Amigos</label>
+                  <uri>/explore/boladas-e-amigos</uri>
+                </edition-boladas-e-amigos>
+                <edition-brincadeira-de-sombra>
+                  <label>Brincadeira de Sombra</label>
+                  <uri>/explore/brincadeira-de-sombra</uri>
+                </edition-brincadeira-de-sombra>
+                <edition-cabe-na-mala>
+                  <label>Cabe na Mala</label>
+                  <uri>/explore/cabe-na-mala</uri>
+                </edition-cabe-na-mala>
+                <edition-com-prazer-e-alegria>
+                  <label>Com Prazer e Alegria</label>
+                  <uri>/explore/com-prazer-e-alegria</uri>
+                </edition-com-prazer-e-alegria>
+                <edition-dia-de-chuva>
+                  <label>Dia de Chuva</label>
+                  <uri>/explore/dia-de-chuva</uri>
+                </edition-dia-de-chuva>
+                <edition-eu-era-um-dragao>
+                  <label>Eu era um Dragão</label>
+                  <uri>/explore/eu-era-um-dragao</uri>
+                </edition-eu-era-um-dragao>
+                <edition-fim-de-semana>
+                  <label>Fim de semana</label>
+                  <uri>/explore/fim-de-semana</uri>
+                </edition-fim-de-semana>
+                <edition-fome-danada>
+                  <label>Fome Danada</label>
+                  <uri>/explore/fome-danada</uri>
+                </edition-fome-danada>
+                <edition-mare-baixa-mare-alta>
+                  <label>Maré Baixa, Maré Alta</label>
+                  <uri>/explore/mare-baixa-mare-alta</uri>
+                </edition-mare-baixa-mare-alta>
+                <edition-menino-poti>
+                  <label>Menino Poti</label>
+                  <uri>/explore/menino-poti</uri>
+                </edition-menino-poti>
                 <edition-mico-maneco>
                   <label>Mico Maneco</label>
                   <uri>/explore/mico-maneco</uri>
                 </edition-mico-maneco>
+                <edition-no-barraco-do-carrapato>
+                  <label>No Barraco do Carrapato</label>
+                  <uri>/explore/no-barraco-do-carrapato</uri>
+                </edition-no-barraco-do-carrapato>
+                <edition-no-imenso-mar-azul->
+                  <label>No Imenso Mar Azul  </label>
+                  <uri>/explore/no-imenso-mar-azul-</uri>
+                </edition-no-imenso-mar-azul->
+                <edition-o-palhaco-espalhafato>
+                  <label>O Palhaço Espalhafato</label>
+                  <uri>/explore/o-palhaco-espalhafato</uri>
+                </edition-o-palhaco-espalhafato>
+                <edition-pena-de-pato-e-de-tico-tico>
+                  <label>Pena de Pato e de Tico-tico</label>
+                  <uri>/explore/pena-de-pato-e-de-tico-tico</uri>
+                </edition-pena-de-pato-e-de-tico-tico>
+                <edition-quando-eu-crescer->
+                  <label>Quando eu crescer...  </label>
+                  <uri>/explore/quando-eu-crescer-</uri>
+                </edition-quando-eu-crescer->
+                <edition-quem-sou-eu>
+                  <label>Quem sou eu?</label>
+                  <uri>/explore/quem-sou-eu</uri>
+                </edition-quem-sou-eu>
+                <edition-o-rato-roeu-a-roupa>
+                  <label>O Rato Roeu a Roupa</label>
+                  <uri>/explore/o-rato-roeu-a-roupa</uri>
+                </edition-o-rato-roeu-a-roupa>
+                <edition-surpresa-na-sombra->
+                  <label>Surpresa na Sombra </label>
+                  <uri>/explore/surpresa-na-sombra-</uri>
+                </edition-surpresa-na-sombra->
+                <edition-tatu-bobo>
+                  <label>Tatu Bobo</label>
+                  <uri>/explore/tatu-bobo</uri>
+                </edition-tatu-bobo>
+                <edition-o-tesouro-da-raposa>
+                  <label>O Tesouro da Raposa</label>
+                  <uri>/explore/o-tesouro-da-raposa</uri>
+                </edition-o-tesouro-da-raposa>
+                <edition-troca-troca>
+                  <label>Troca-Troca</label>
+                  <uri>/explore/troca-troca</uri>
+                </edition-troca-troca>
+                <edition-um-dragao-no-piquenique>
+                  <label>Um Dragão no Piquenique</label>
+                  <uri>/explore/um-dragao-no-piquenique</uri>
+                </edition-um-dragao-no-piquenique>
+                <edition-um-dois-tres-agora-e-sua-vez->
+                  <label>Um, dois, três, agora é sua vez! </label>
+                  <uri>/explore/um-dois-tres-agora-e-sua-vez-</uri>
+                </edition-um-dois-tres-agora-e-sua-vez->
+                <edition-uma-arara-e-sete-papagaios>
+                  <label>Uma Arara e Sete Papagaios</label>
+                  <uri>/explore/uma-arara-e-sete-papagaios</uri>
+                </edition-uma-arara-e-sete-papagaios>
+                <edition-uma-gota-de-magica>
+                  <label>Uma Gota de Mágica</label>
+                  <uri>/explore/uma-gota-de-magica</uri>
+                </edition-uma-gota-de-magica>
+                <edition-a-zabumba-do-quati>
+                  <label>A Zabumba do Quati</label>
+                  <uri>/explore/a-zabumba-do-quati</uri>
+                </edition-a-zabumba-do-quati>
+                <edition-alguns-medos-e-seus-segredos>
+                  <label>Alguns Medos e Seus Segredos</label>
+                  <uri>/explore/alguns-medos-e-seus-segredos</uri>
+                </edition-alguns-medos-e-seus-segredos>
+                <edition-a-arara-e-o-guarana>
+                  <label>A Arara e o Guaraná</label>
+                  <uri>/explore/a-arara-e-o-guarana</uri>
+                </edition-a-arara-e-o-guarana>
+                <edition-avental-que-o-vento-leva>
+                  <label>Avental Que o Vento Leva</label>
+                  <uri>/explore/avental-que-o-vento-leva</uri>
+                </edition-avental-que-o-vento-leva>
+                <edition-balas-bombons-caramelos>
+                  <label>Balas, Bombons, Caramelos</label>
+                  <uri>/explore/balas-bombons-caramelos</uri>
+                </edition-balas-bombons-caramelos>
+                <edition-besouro-e-prata>
+                  <label>Besouro e Prata</label>
+                  <uri>/explore/besouro-e-prata</uri>
+                </edition-besouro-e-prata>
+                <edition-beto-o-carneiro->
+                  <label>Beto, o Carneiro </label>
+                  <uri>/explore/beto-o-carneiro-</uri>
+                </edition-beto-o-carneiro->
+                <edition-camilao-o-comilao>
+                  <label>Camilão, o Comilão</label>
+                  <uri>/explore/camilao-o-comilao</uri>
+                </edition-camilao-o-comilao>
+                <edition-currupaco-papaco->
+                  <label>Currupaco Papaco </label>
+                  <uri>/explore/currupaco-papaco-</uri>
+                </edition-currupaco-papaco->
+                <edition-curvo-ou-reto-olhar-secreto>
+                  <label>Curvo ou reto: olhar secreto</label>
+                  <uri>/explore/curvo-ou-reto-olhar-secreto</uri>
+                </edition-curvo-ou-reto-olhar-secreto>
+                <edition-dedo-mindinho>
+                  <label>Dedo Mindinho</label>
+                  <uri>/explore/dedo-mindinho</uri>
+                </edition-dedo-mindinho>
+                <edition-um-dia-desses->
+                  <label>Um Dia Desses </label>
+                  <uri>/explore/um-dia-desses-</uri>
+                </edition-um-dia-desses->
+                <edition-o-distraido-sabido->
+                  <label>O Distraído Sabido </label>
+                  <uri>/explore/o-distraido-sabido-</uri>
+                </edition-o-distraido-sabido->
+                <edition-doroteia-a-centopeia->
+                  <label>Dorotéia, a Centopéia </label>
+                  <uri>/explore/doroteia-a-centopeia-</uri>
+                </edition-doroteia-a-centopeia->
+                <edition-o-elefantinho-malcriado->
+                  <label>O Elefantinho Malcriado </label>
+                  <uri>/explore/o-elefantinho-malcriado-</uri>
+                </edition-o-elefantinho-malcriado->
+                <edition-o-elfo-e-a-sereia->
+                  <label>O Elfo e a Sereia  </label>
+                  <uri>/explore/o-elfo-e-a-sereia-</uri>
+                </edition-o-elfo-e-a-sereia->
+                <edition-era-uma-vez-tres>
+                  <label>Era Uma Vez Três</label>
+                  <uri>/explore/era-uma-vez-tres</uri>
+                </edition-era-uma-vez-tres>
+                <edition-esta-casa-e-minha>
+                  <label>Esta Casa é Minha</label>
+                  <uri>/explore/esta-casa-e-minha</uri>
+                </edition-esta-casa-e-minha>
+                <edition-a-galinha-que-criava-um-ratinho>
+                  <label>A Galinha Que Criava Um Ratinho</label>
+                  <uri>/explore/a-galinha-que-criava-um-ratinho</uri>
+                </edition-a-galinha-que-criava-um-ratinho>
+                <edition-o-gato-do-mato-e-o-cachorro-do-morro>
+                  <label>O Gato do Mato e o Cachorro do Morro</label>
+                  <uri>/explore/o-gato-do-mato-e-o-cachorro-do-morro</uri>
+                </edition-o-gato-do-mato-e-o-cachorro-do-morro>
+                <edition-o-gato-massame-e-aquilo-que-ele-ve->
+                  <label>O Gato Massamê e Aquilo Que Ele Vê </label>
+                  <uri>/explore/o-gato-massame-e-aquilo-que-ele-ve-</uri>
+                </edition-o-gato-massame-e-aquilo-que-ele-ve->
+                <edition-gente-bicho-planta-o-mundo-me-encanta>
+                  <label>Gente, Bicho, Planta: o Mundo me Encanta</label>
+                  <uri>/explore/gente-bicho-planta-o-mundo-me-encanta</uri>
+                </edition-gente-bicho-planta-o-mundo-me-encanta>
+                <edition-a-grande-aventura-de-maria-fumaca>
+                  <label>A Grande Aventura de Maria Fumaça</label>
+                  <uri>/explore/a-grande-aventura-de-maria-fumaca</uri>
+                </edition-a-grande-aventura-de-maria-fumaca>
+                <edition-jabuti-sabido-e-macaco-metido->
+                  <label>Jabuti Sabido e Macaco Metido   </label>
+                  <uri>/explore/jabuti-sabido-e-macaco-metido-</uri>
+                </edition-jabuti-sabido-e-macaco-metido->
+                <edition-a-jararaca-a-perereca-e-a-tiririca>
+                  <label>A Jararaca, a Perereca e a Tiririca</label>
+                  <uri>/explore/a-jararaca-a-perereca-e-a-tiririca</uri>
+                </edition-a-jararaca-a-perereca-e-a-tiririca>
+                <edition-jeca-o-tatu>
+                  <label>Jeca, o Tatu</label>
+                  <uri>/explore/jeca-o-tatu</uri>
+                </edition-jeca-o-tatu>
+                <edition-a-maravilhosa-ponte-do-meu-irmao->
+                  <label>A Maravilhosa Ponte do Meu Irmão  </label>
+                  <uri>/explore/a-maravilhosa-ponte-do-meu-irmao-</uri>
+                </edition-a-maravilhosa-ponte-do-meu-irmao->
+                <edition-maria-sapeba->
+                  <label>Maria Sapeba </label>
+                  <uri>/explore/maria-sapeba-</uri>
+                </edition-maria-sapeba->
+                <edition-mas-que-festa>
+                  <label>Mas Que Festa!</label>
+                  <uri>/explore/mas-que-festa</uri>
+                </edition-mas-que-festa>
+                <edition-menina-bonita-do-laco-de-fita>
+                  <label>Menina Bonita do Laço de Fita</label>
+                  <uri>/explore/menina-bonita-do-laco-de-fita</uri>
+                </edition-menina-bonita-do-laco-de-fita>
+                <edition-meu-reino-por-um-cavalo->
+                  <label>Meu Reino por um Cavalo </label>
+                  <uri>/explore/meu-reino-por-um-cavalo-</uri>
+                </edition-meu-reino-por-um-cavalo->
+                <edition-a-minhoca-da-sorte>
+                  <label>A Minhoca da Sorte</label>
+                  <uri>/explore/a-minhoca-da-sorte</uri>
+                </edition-a-minhoca-da-sorte>
+                <edition-o-natal-de-manuel->
+                  <label>O Natal de Manuel </label>
+                  <uri>/explore/o-natal-de-manuel-</uri>
+                </edition-o-natal-de-manuel->
+                <edition-o-pavao-do-abre-e-fecha>
+                  <label>O Pavão do Abre-e-Fecha</label>
+                  <uri>/explore/o-pavao-do-abre-e-fecha</uri>
+                </edition-o-pavao-do-abre-e-fecha>
+                <edition-quem-foi-que-fez->
+                  <label>Quem foi que fez? </label>
+                  <uri>/explore/quem-foi-que-fez-</uri>
+                </edition-quem-foi-que-fez->
+                <edition-quem-perde-ganha->
+                  <label>Quem Perde Ganha </label>
+                  <uri>/explore/quem-perde-ganha-</uri>
+                </edition-quem-perde-ganha->
+                <edition-quenco-o-pato>
+                  <label>Quenco, o Pato</label>
+                  <uri>/explore/quenco-o-pato</uri>
+                </edition-quenco-o-pato>
+                <edition-quem-me-dera>
+                  <label>Quem me Dera</label>
+                  <uri>/explore/quem-me-dera</uri>
+                </edition-quem-me-dera>
+                <edition-o-segredo-da-oncinha>
+                  <label>O Segredo da Oncinha</label>
+                  <uri>/explore/o-segredo-da-oncinha</uri>
+                </edition-o-segredo-da-oncinha>
+                <edition-severino-faz-chover>
+                  <label>Severino Faz Chover</label>
+                  <uri>/explore/severino-faz-chover</uri>
+                </edition-severino-faz-chover>
+                <edition-um-gato-no-telhado>
+                  <label>Um Gato no Telhado</label>
+                  <uri>/explore/um-gato-no-telhado</uri>
+                </edition-um-gato-no-telhado>
+                <edition-um-pra-la-outro-pra-ca>
+                  <label>Um pra lá, Outro pra cá</label>
+                  <uri>/explore/um-pra-la-outro-pra-ca</uri>
+                </edition-um-pra-la-outro-pra-ca>
+                <edition-uma-historia-de-pascoa->
+                  <label>Uma História de Páscoa </label>
+                  <uri>/explore/uma-historia-de-pascoa-</uri>
+                </edition-uma-historia-de-pascoa->
+                <edition-uma-noite-sem-igual->
+                  <label>Uma Noite Sem Igual </label>
+                  <uri>/explore/uma-noite-sem-igual-</uri>
+                </edition-uma-noite-sem-igual->
+                <edition-a-velha-misteriosa>
+                  <label>A Velha Misteriosa</label>
+                  <uri>/explore/a-velha-misteriosa</uri>
+                </edition-a-velha-misteriosa>
+                <edition-a-velhinha-maluquete->
+                  <label>A Velhinha Maluquete </label>
+                  <uri>/explore/a-velhinha-maluquete-</uri>
+                </edition-a-velhinha-maluquete->
                 <edition-abrindo-caminho>
-                  <label>Abrindo caminho</label>
+                  <label>Abrindo Caminho</label>
                   <uri>/explore/abrindo-caminho</uri>
                 </edition-abrindo-caminho>
+                <edition-beijos-magicos->
+                  <label>Beijos Mágicos </label>
+                  <uri>/explore/beijos-magicos-</uri>
+                </edition-beijos-magicos->
+                <edition-bento-que-bento-e-o-frade->
+                  <label>Bento que Bento é o Frade </label>
+                  <uri>/explore/bento-que-bento-e-o-frade-</uri>
+                </edition-bento-que-bento-e-o-frade->
+                <edition-cade-meu-travesseiro->
+                  <label>Cadê meu travesseiro? </label>
+                  <uri>/explore/cade-meu-travesseiro-</uri>
+                </edition-cade-meu-travesseiro->
+                <edition-a-cidade-arte-para-as-criancas->
+                  <label>A Cidade: arte para as crianças </label>
+                  <uri>/explore/a-cidade-arte-para-as-criancas-</uri>
+                </edition-a-cidade-arte-para-as-criancas->
+                <edition-de-carta-em-carta->
+                  <label>De Carta em Carta </label>
+                  <uri>/explore/de-carta-em-carta-</uri>
+                </edition-de-carta-em-carta->
+                <edition-de-fora-da-arca->
+                  <label>De Fora da Arca </label>
+                  <uri>/explore/de-fora-da-arca-</uri>
+                </edition-de-fora-da-arca->
+                <edition-delicias-e-gostosuras->
+                  <label>Delícias e Gostosuras </label>
+                  <uri>/explore/delicias-e-gostosuras-</uri>
+                </edition-delicias-e-gostosuras->
+                <edition-gente-bem-diferente>
+                  <label>Gente Bem Diferente</label>
+                  <uri>/explore/gente-bem-diferente</uri>
+                </edition-gente-bem-diferente>
+                <edition-historia-meio-ao-contrario->
+                  <label>História Meio ao Contrário </label>
+                  <uri>/explore/historia-meio-ao-contrario-</uri>
+                </edition-historia-meio-ao-contrario->
+                <edition-o-menino-pedro-e-seu-boi-voador>
+                  <label>O Menino Pedro e seu Boi Voador</label>
+                  <uri>/explore/o-menino-pedro-e-seu-boi-voador</uri>
+                </edition-o-menino-pedro-e-seu-boi-voador>
+                <edition-nas-asas-do-mar>
+                  <label>Nas asas do mar</label>
+                  <uri>/explore/nas-asas-do-mar</uri>
+                </edition-nas-asas-do-mar>
+                <edition-palavras-palavrinhas-palavroes->
+                  <label>Palavras, Palavrinhas, Palavrões  </label>
+                  <uri>/explore/palavras-palavrinhas-palavroes-</uri>
+                </edition-palavras-palavrinhas-palavroes->
+                <edition-palmas-para-joao-cristiano>
+                  <label>Palmas para João Cristiano</label>
+                  <uri>/explore/palmas-para-joao-cristiano</uri>
+                </edition-palmas-para-joao-cristiano>
+                <edition-passarinho-me-contou->
+                  <label>Passarinho me Contou </label>
+                  <uri>/explore/passarinho-me-contou-</uri>
+                </edition-passarinho-me-contou->
+                <edition-ponto-de-vista>
+                  <label>Ponto de Vista</label>
+                  <uri>/explore/ponto-de-vista</uri>
+                </edition-ponto-de-vista>
+                <edition-portinholas->
+                  <label>Portinholas   </label>
+                  <uri>/explore/portinholas-</uri>
+                </edition-portinholas->
+                <edition-a-princesa-que-escolhia>
+                  <label>A Princesa que Escolhia</label>
+                  <uri>/explore/a-princesa-que-escolhia</uri>
+                </edition-a-princesa-que-escolhia>
+                <edition-o-principe-que-bocejava>
+                  <label>O Príncipe que Bocejava</label>
+                  <uri>/explore/o-principe-que-bocejava</uri>
+                </edition-o-principe-que-bocejava>
+                <edition-procura-se-lobo>
+                  <label>Procura-se Lobo</label>
+                  <uri>/explore/procura-se-lobo</uri>
+                </edition-procura-se-lobo>
+                <edition-que-lambanca>
+                  <label>Que Lambança!</label>
+                  <uri>/explore/que-lambanca</uri>
+                </edition-que-lambanca>
+                <edition-senhora-dos-mares->
+                  <label>Senhora dos Mares </label>
+                  <uri>/explore/senhora-dos-mares-</uri>
+                </edition-senhora-dos-mares->
+                <edition-um-montao-de-unicornios>
+                  <label>Um Montão de Unicórnios</label>
+                  <uri>/explore/um-montao-de-unicornios</uri>
+                </edition-um-montao-de-unicornios>
+                <edition-um-natal-que-nao-termina>
+                  <label>Um Natal Que não Termina</label>
+                  <uri>/explore/um-natal-que-nao-termina</uri>
+                </edition-um-natal-que-nao-termina>
+                <edition-vamos-brincar-de-escola->
+                  <label>Vamos Brincar de Escola ?</label>
+                  <uri>/explore/vamos-brincar-de-escola-</uri>
+                </edition-vamos-brincar-de-escola->
+                <edition-raul-da-ferrugem-azul->
+                  <label>Raul da Ferrugem Azul </label>
+                  <uri>/explore/raul-da-ferrugem-azul-</uri>
+                </edition-raul-da-ferrugem-azul->
+                <edition-fiz-voar-o-meu-chapeu->
+                  <label>Fiz Voar o meu Chapéu </label>
+                  <uri>/explore/fiz-voar-o-meu-chapeu-</uri>
+                </edition-fiz-voar-o-meu-chapeu->
+                <edition-a-peleja>
+                  <label>A Peleja</label>
+                  <uri>/explore/a-peleja</uri>
+                </edition-a-peleja>
+                <edition-um-aviao-e-uma-viola>
+                  <label>Um Avião e uma Viola</label>
+                  <uri>/explore/um-aviao-e-uma-viola</uri>
+                </edition-um-aviao-e-uma-viola>
+                <edition-abc-do-brasil>
+                  <label>ABC do Brasil</label>
+                  <uri>/explore/abc-do-brasil</uri>
+                </edition-abc-do-brasil>
+                <edition-os-anjos-pintores->
+                  <label>Os Anjos Pintores </label>
+                  <uri>/explore/os-anjos-pintores-</uri>
+                </edition-os-anjos-pintores->
+                <edition-explorando-a-america-latina->
+                  <label>Explorando a América Latina </label>
+                  <uri>/explore/explorando-a-america-latina-</uri>
+                </edition-explorando-a-america-latina->
+                <edition-manos-malucos-i->
+                  <label>Manos Malucos I </label>
+                  <uri>/explore/manos-malucos-i-</uri>
+                </edition-manos-malucos-i->
+                <edition-o-menino-que-virou-escritor->
+                  <label>O Menino que Virou Escritor </label>
+                  <uri>/explore/o-menino-que-virou-escritor-</uri>
+                </edition-o-menino-que-virou-escritor->
+                <edition-manos-malucos-ii>
+                  <label>Manos Malucos II</label>
+                  <uri>/explore/manos-malucos-ii</uri>
+                </edition-manos-malucos-ii>
+                <edition-na-praia-e-no-luar-tartaruga-quer-o-mar->
+                  <label>Na Praia e No Luar, Tartaruga Quer o Mar </label>
+                  <uri>/explore/na-praia-e-no-luar-tartaruga-quer-o-mar-</uri>
+                </edition-na-praia-e-no-luar-tartaruga-quer-o-mar->
+                <edition-nao-se-mata-na-mata-lembrancas-de-rondon>
+                  <label>Não se mata na Mata: lembranças de Rondon</label>
+                  <uri>/explore/nao-se-mata-na-mata-lembrancas-de-rondon</uri>
+                </edition-nao-se-mata-na-mata-lembrancas-de-rondon>
+                <edition-piadinhas-infames->
+                  <label>Piadinhas Infames </label>
+                  <uri>/explore/piadinhas-infames-</uri>
+                </edition-piadinhas-infames->
+                <edition-o-que-e->
+                  <label>O Que É? </label>
+                  <uri>/explore/o-que-e-</uri>
+                </edition-o-que-e->
               </pages>
             </children>
             <young>
               <label>Juvenis</label>
               <uri>/livros/juvenis</uri>
               <pages>
+                <edition-amigo-e-comigo>
+                  <label>Amigo é Comigo</label>
+                  <uri>/explore/amigo-e-comigo</uri>
+                </edition-amigo-e-comigo>
                 <edition-amigos-secretos>
-                  <label>Amigos secretos</label>
+                  <label>Amigos Secretos</label>
                   <uri>/explore/amigos-secretos</uri>
                 </edition-amigos-secretos>
-                <edition-do-outro-lado-tem-segredos>
-                  <label>Do outro lado tem segredos</label>
-                  <uri>/explore/do-outro-lado-tem-segredos</uri>
-                </edition-do-outro-lado-tem-segredos>
+                <edition-bem-do-seu-tamanho>
+                  <label>Bem do Seu Tamanho</label>
+                  <uri>/explore/bem-do-seu-tamanho</uri>
+                </edition-bem-do-seu-tamanho>
                 <edition-bisa-bia-bisa-bel>
-                  <label>Bisa Bia, bisa Bel</label>
+                  <label>Bisa Bia, Bisa Bel</label>
                   <uri>/explore/bisa-bia-bisa-bel</uri>
                 </edition-bisa-bia-bisa-bel>
+                <edition-o-canto-da-praca>
+                  <label>O Canto da Praça</label>
+                  <uri>/explore/o-canto-da-praca</uri>
+                </edition-o-canto-da-praca>
+                <edition-de-olho-nas-penas>
+                  <label>De Olho nas Penas</label>
+                  <uri>/explore/de-olho-nas-penas</uri>
+                </edition-de-olho-nas-penas>
+                <edition-do-outro-lado-tem-segredos->
+                  <label>Do Outro Lado Tem Segredos </label>
+                  <uri>/explore/do-outro-lado-tem-segredos-</uri>
+                </edition-do-outro-lado-tem-segredos->
+                <edition-do-outro-mundo>
+                  <label>Do Outro Mundo</label>
+                  <uri>/explore/do-outro-mundo</uri>
+                </edition-do-outro-mundo>
+                <edition-era-uma-vez-um-tirano>
+                  <label>Era Uma Vez Um Tirano</label>
+                  <uri>/explore/era-uma-vez-um-tirano</uri>
+                </edition-era-uma-vez-um-tirano>
+                <edition-isso-ninguem-me-tira>
+                  <label>Isso Ninguém Me Tira</label>
+                  <uri>/explore/isso-ninguem-me-tira</uri>
+                </edition-isso-ninguem-me-tira>
+                <edition-mensagem-para-voce>
+                  <label>Mensagem para você</label>
+                  <uri>/explore/mensagem-para-voce</uri>
+                </edition-mensagem-para-voce>
+                <edition-o-misterio-da-ilha>
+                  <label>O Mistério da Ilha</label>
+                  <uri>/explore/o-misterio-da-ilha</uri>
+                </edition-o-misterio-da-ilha>
+                <edition-misterios-do-mar-oceano>
+                  <label>Mistérios do Mar Oceano</label>
+                  <uri>/explore/misterios-do-mar-oceano</uri>
+                </edition-misterios-do-mar-oceano>
+                <edition-tudo-ao-mesmo-tempo-agora>
+                  <label>Tudo Ao Mesmo Tempo Agora</label>
+                  <uri>/explore/tudo-ao-mesmo-tempo-agora</uri>
+                </edition-tudo-ao-mesmo-tempo-agora>
+                <edition-uma-vontade-louca>
+                  <label>Uma Vontade Louca</label>
+                  <uri>/explore/uma-vontade-louca</uri>
+                </edition-uma-vontade-louca>
+                <edition-hoje-tem-espetaculo>
+                  <label>Hoje Tem Espetáculo</label>
+                  <uri>/explore/hoje-tem-espetaculo</uri>
+                </edition-hoje-tem-espetaculo>
+                <edition-os-tres-mosqueteiros>
+                  <label>Os Três Mosqueteiros</label>
+                  <uri>/explore/os-tres-mosqueteiros</uri>
+                </edition-os-tres-mosqueteiros>
               </pages>
             </young>
             <fiction>
               <label>Ficção</label>
               <uri>/livros/ficcao</uri>
               <pages>
-                <edition-o-mar-nunca-transborda>
-                  <label>O mar nunca transborda</label>
-                  <uri>/explore/o-mar-nunca-transborda</uri>
-                </edition-o-mar-nunca-transborda>
+                <edition-alice-e-ulisses->
+                  <label>Alice e Ulisses </label>
+                  <uri>/explore/alice-e-ulisses-</uri>
+                </edition-alice-e-ulisses->
+                <edition-tropical-sol-da-liberdade>
+                  <label>Tropical Sol da Liberdade</label>
+                  <uri>/explore/tropical-sol-da-liberdade</uri>
+                </edition-tropical-sol-da-liberdade>
                 <edition-canteiros-de-saturno>
                   <label>Canteiros de Saturno</label>
                   <uri>/explore/canteiros-de-saturno</uri>
                 </edition-canteiros-de-saturno>
                 <edition-aos-quatro-ventos>
-                  <label>Aos quatro ventos</label>
+                  <label>Aos Quatro Ventos</label>
                   <uri>/explore/aos-quatro-ventos</uri>
                 </edition-aos-quatro-ventos>
+                <edition-o-mar-nunca-transborda>
+                  <label>O Mar Nunca Transborda</label>
+                  <uri>/explore/o-mar-nunca-transborda</uri>
+                </edition-o-mar-nunca-transborda>
+                <edition-a-audacia-dessa-mulher>
+                  <label>A Audácia Dessa Mulher</label>
+                  <uri>/explore/a-audacia-dessa-mulher</uri>
+                </edition-a-audacia-dessa-mulher>
+                <edition-para-sempre>
+                  <label>Para sempre</label>
+                  <uri>/explore/para-sempre</uri>
+                </edition-para-sempre>
+                <edition-palavra-de-honra>
+                  <label>Palavra de Honra</label>
+                  <uri>/explore/palavra-de-honra</uri>
+                </edition-palavra-de-honra>
+                <edition-infamia>
+                  <label>Infâmia</label>
+                  <uri>/explore/infamia</uri>
+                </edition-infamia>
               </pages>
             </fiction>
             <essays>
               <label>Ensaios</label>
               <uri>/livros/ensaios</uri>
               <pages>
-                <edition-texturas>
-                  <label>Texturas</label>
-                  <uri>/explore/texturas</uri>
-                </edition-texturas>
-                <edition-o-recado-do-nome>
-                  <label>O recado do nome</label>
-                  <uri>/explore/o-recado-do-nome</uri>
-                </edition-o-recado-do-nome>
+                <edition-recado-do-nome->
+                  <label>Recado do Nome </label>
+                  <uri>/explore/recado-do-nome-</uri>
+                </edition-recado-do-nome->
+                <edition-silenciosa-algazarra->
+                  <label>Silenciosa Algazarra </label>
+                  <uri>/explore/silenciosa-algazarra-</uri>
+                </edition-silenciosa-algazarra->
               </pages>
             </essays>
             <series>
               <label>Coleções</label>
               <uri>/colecoes</uri>
               <pages>
+                <serie-abre-o-olho>
+                  <label>Abre o olho</label>
+                  <uri>/colecao/abre-o-olho</uri>
+                </serie-abre-o-olho>
+                <serie-abrindo-caminho>
+                  <label>Abrindo Caminho</label>
+                  <uri>/colecao/abrindo-caminho</uri>
+                </serie-abrindo-caminho>
+                <serie-adivinhe-so>
+                  <label>Adivinhe Só</label>
+                  <uri>/colecao/adivinhe-so</uri>
+                </serie-adivinhe-so>
+                <serie-ana-maria-machado-atica-br>
+                  <label>Ana Maria Machado</label>
+                  <uri>/colecao/ana-maria-machado-atica-br</uri>
+                </serie-ana-maria-machado-atica-br>
+                <serie-ana-maria-machado-moderna-br>
+                  <label>Ana Maria Machado</label>
+                  <uri>/colecao/ana-maria-machado-moderna-br</uri>
+                </serie-ana-maria-machado-moderna-br>
+                <serie-arte-para-criancas>
+                  <label>Arte para Crianças</label>
+                  <uri>/colecao/arte-para-criancas</uri>
+                </serie-arte-para-criancas>
                 <serie-barquinho-de-papel>
                   <label>Barquinho de Papel</label>
                   <uri>/colecao/barquinho-de-papel</uri>
                 </serie-barquinho-de-papel>
+                <serie-batutinha>
+                  <label>Batutinha</label>
+                  <uri>/colecao/batutinha</uri>
+                </serie-batutinha>
+                <serie-celeste>
+                  <label>Celeste</label>
+                  <uri>/colecao/celeste</uri>
+                </serie-celeste>
+                <serie-gato-escondido>
+                  <label>Gato Escondido</label>
+                  <uri>/colecao/gato-escondido</uri>
+                </serie-gato-escondido>
+                <serie-girassol>
+                  <label>Girassol</label>
+                  <uri>/colecao/girassol</uri>
+                </serie-girassol>
+                <serie-isto-ou-aquilo>
+                  <label>Isto ou Aquilo</label>
+                  <uri>/colecao/isto-ou-aquilo</uri>
+                </serie-isto-ou-aquilo>
                 <serie-mico-maneco>
                   <label>Mico Maneco</label>
                   <uri>/colecao/mico-maneco</uri>
                 </serie-mico-maneco>
+                <serie-para-gostar-de-ler-junior>
+                  <label>Para Gostar de Ler Junior</label>
+                  <uri>/colecao/para-gostar-de-ler-junior</uri>
+                </serie-para-gostar-de-ler-junior>
+                <serie-primeiras-historias>
+                  <label>Primeiras Histórias</label>
+                  <uri>/colecao/primeiras-historias</uri>
+                </serie-primeiras-historias>
+                <serie-sinal-verde>
+                  <label>Sinal Verde</label>
+                  <uri>/colecao/sinal-verde</uri>
+                </serie-sinal-verde>
+                <serie-teatro-jovem>
+                  <label>Teatro Jovem</label>
+                  <uri>/colecao/teatro-jovem</uri>
+                </serie-teatro-jovem>
+                <serie-uni-duni-te>
+                  <label>Uni duni tê</label>
+                  <uri>/colecao/uni-duni-te</uri>
+                </serie-uni-duni-te>
               </pages>
             </series>
           </pages>
