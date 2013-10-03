@@ -5,6 +5,7 @@ class Author_Collection_Edition {
     protected $id;
     protected $work;
     protected $title;
+    protected $prefix;
     protected $uri;
     protected $editor;
     protected $country;
@@ -19,6 +20,7 @@ class Author_Collection_Edition {
         $this->id = (int)$id;
         $this->work = $work;
         $this->title = null;
+        $this->prefix = "";
         $this->uri = null;
         $this->editor = $editor;
         $this->country = 'BR';
@@ -47,24 +49,61 @@ class Author_Collection_Edition {
         return $this->editor;
     } //getName
 
+    public function getPrefix()
+    {
+        return $this->prefix;
+    } //getPrefix
+
     public function getWork()
     {
         return $this->work;
     } //getWork
 
-    public function getTitle()
+    public function getTitle($raw = false)
     {
-        return $this->title;
+        if (($this->prefix) && (!$raw)) {
+            return $this->prefix . " " . $this->title;
+
+        } else {
+            return $this->title;
+        }
     } //getTitle
 
     public function setTitle($title)
     {
+        $prefix = "";
         $validator = new Moxca_Util_ValidString();
         if ($validator->isValid($title)) {
             if ($this->title != $title) {
+                $words = explode(" ", $title);
+                if (count($words) > 1) {
+                    $first = $words[0];
+
+                    switch(strtolower($first)) {
+                        case "o":
+                        case "os":
+                        case "a":
+                        case "as":
+                        case "um":
+                        case "uns":
+                        case "uma":
+                        case "umas":
+                            unset($words[0]);
+                            $prefix = $first;
+                            break;
+
+                        default:
+                            break;
+                    }
+
+                    $title = implode(" ", $words);
+                }
+
                 $this->title = $title;
+                $this->prefix = $prefix;
+
                 $converter = new Moxca_Util_StringToAscii();
-                $this->uri = $converter->toAscii($this->title);
+                $this->uri = $converter->toAscii($this->getTitle());
             }
         } else {
             throw new Author_Collection_EditionException("This ($title) is not a valid title.");

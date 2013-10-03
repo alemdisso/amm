@@ -926,3 +926,45 @@ div.dataTables_filter {
     display:inline;
     float:left;
 }
+
+#page_container ul li {
+    list-style: none;
+    margin-left: -2px;
+}
+
+.page_navigation , .alt_page_navigation{
+	padding-bottom: 10px;
+}
+
+.page_navigation a, .alt_page_navigation a{
+	padding:3px 5px;
+	margin:1px;
+	color:white;
+	text-decoration: none;
+	float: left;
+	font-family: Tahoma;
+	font-size: 12px;
+	background-color:#17416c;
+
+}
+.active_page{
+	background-color:white !important;
+	color:black !important;
+}
+
+.no_more{
+	background-color:#72a8c0 !important;
+	color:black !important;
+}
+
+.page_link{
+    text-align: center;
+    width: 16px;
+    height: 20px;
+}
+
+.first_link, .previous_link, .last_link, .next_link  {
+    text-align: center;
+    width: 27px;
+    height: 20px;
+}

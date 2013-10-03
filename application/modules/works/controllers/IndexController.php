@@ -25,26 +25,20 @@ class Works_IndexController extends Zend_Controller_Action
 
     public function fictionAction()
     {
-        $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_FICTION);
+        $editionsIds = $this->editionMapper->getAllEditionsOfTypeAlphabeticallyOrdered(Author_Collection_WorkTypeConstants::TYPE_FICTION);
         $this->buildEditionsListPage($editionsIds, "#Fiction");
     }
 
     public function childrenAction()
     {
-        $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_CHILDREN);
+        $editionsIds = $this->editionMapper->getAllEditionsOfTypeAlphabeticallyOrdered(Author_Collection_WorkTypeConstants::TYPE_CHILDREN);
         $this->buildEditionsListPage($editionsIds, "#Children");
     }
 
     public function essaysAction()
     {
-        $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_ESSAY);
+        $editionsIds = $this->editionMapper->getAllEditionsOfTypeAlphabeticallyOrdered(Author_Collection_WorkTypeConstants::TYPE_ESSAY);
         $this->buildEditionsListPage($editionsIds, "#Essays");
-    }
-
-    public function paginationAction()
-    {
-        $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_CHILDREN);
-        $this->buildEditionsListPage($editionsIds, "teste de paginacione");
     }
 
     public function serieAction()
@@ -66,43 +60,6 @@ class Works_IndexController extends Zend_Controller_Action
             $serieLabel = "";
         }
         $this->buildEditionsListPage($editionsIds, $serieLabel);
-
-//
-//        $editionsIds = $this->editionMapper->getAllEditionsOfSerie($uri);
-//        $editionsData = array();
-//        foreach ($editionsIds as $editionId) {
-//            $loopEditionObj = $this->editionMapper->findById($editionId);
-//            $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
-//            $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
-//
-//            $coverFilePath = $this->view->coverFilePath($loopEditionObj);
-//
-//            $prizeMapper = new Author_Collection_PrizeMapper($this->db);
-//            $prizesLabels = $this->view->workPrizesLabels($loopWorkObj->getId(), $prizeMapper);
-//
-//            $editionsData[$editionId] = array(
-//                    'title' => $loopWorkObj->getTitle(),
-//                    'coverSrc' => $coverFilePath,
-//                    'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
-//                    'summary' => $loopWorkObj->getSummary(),
-//                    'editorName' => $loopEditorObj->getName(),
-//                    'prizes' => $prizesLabels,
-//                    'moreAbout' => false,
-//                    'otherLanguages' => false,
-//            );
-//        }
-//
-//        if (count($editionsData) > 0) {
-//            $serieLabel = sprintf($this->view->translate("#Serie: %s"), $serieObj->getName());
-//        } else {
-//            $serieLabel = "";
-//        }
-//
-//
-//        $pageData = array(
-//            'serieLabel' => $serieLabel,
-//            'editionsData' => $editionsData,
-//        );
 
         $this->view->pageTitle = $serieLabel;
 
@@ -143,9 +100,11 @@ class Works_IndexController extends Zend_Controller_Action
         );
 
         $this->view->pageData = $pageData;
-        $this->view->pageTitle = $this->view->translate("#Ana Maria Machado - Essays");
+        $this->view->pageTitle = $this->view->translate("#Series");
 
     }
+
+//
 
     public function youngAction()
     {

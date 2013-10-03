@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-02 14:00-0300\n"
-"PO-Revision-Date: 2013-10-02 14:00-0300\n"
+"POT-Creation-Date: 2013-10-03 17:19-0300\n"
+"PO-Revision-Date: 2013-10-03 17:20-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -72,12 +72,8 @@ msgstr "sem edições"
 
 #: application\modules/admin/controllers/NavigationController.php:44
 #: application\modules/works/views/scripts/edition/explore.phtml:7
-#: application\modules/works/views/scripts/index/children.phtml:7
-#: application\modules/works/views/scripts/index/essays.phtml:7
-#: application\modules/works/views/scripts/index/fiction.phtml:7
-#: application\modules/works/views/scripts/index/serie.phtml:7
+#: application\modules/works/views/scripts/index/editions-of-type.phtml:16
 #: application\modules/works/views/scripts/index/series.phtml:7
-#: application\modules/works/views/scripts/index/young.phtml:7
 #: application\modules/works/views/scripts/serie/explore.phtml:7
 msgid "#Works"
 msgstr "Livros"
@@ -139,6 +135,7 @@ msgid "/works/essays"
 msgstr "/livros/ensaios"
 
 #: application\modules/admin/controllers/NavigationController.php:105
+#: application\modules/works/controllers/IndexController.php:103
 #: application\modules/works/views/scripts/index/series.phtml:9
 msgid "#Series"
 msgstr "Coleções"
@@ -228,7 +225,7 @@ msgid "#%s pages"
 msgstr "%s páginas"
 
 #: application\modules/works/controllers/EditionController.php:60
-#: application\modules/works/controllers/IndexController.php:163
+#: application\modules/works/controllers/IndexController.php:58
 #, php-format
 msgid "#Serie: %s"
 msgstr "Coleção: %s"
@@ -252,27 +249,9 @@ msgstr "Capa:"
 msgid "#Exploring %s"
 msgstr "Explorando %s"
 
-#: application\modules/works/controllers/IndexController.php:55
-msgid "#Ana Maria Machado - Fiction"
-msgstr "Ana Maria Machado - Ficção"
-
-#: application\modules/works/controllers/IndexController.php:91
-msgid "#Ana Maria Machado - Children"
-msgstr "Ana Maria Machado - Infantis"
-
-#: application\modules/works/controllers/IndexController.php:124
-#: application\modules/works/controllers/IndexController.php:175
-#: application\modules/works/controllers/IndexController.php:216
-msgid "#Ana Maria Machado - Essays"
-msgstr "Ana Maria Machado - Ensaios"
-
-#: application\modules/works/controllers/IndexController.php:203
+#: application\modules/works/controllers/IndexController.php:92
 msgid "/serie/"
 msgstr "/colecao/"
-
-#: application\modules/works/controllers/IndexController.php:249
-msgid "#Ana Maria Machado - Young"
-msgstr "Ana Maria Machado - Juvenis"
 
 #: library\Moxca/Access/Roles.php:10
 msgid "#Unknown"
@@ -1637,17 +1616,21 @@ msgstr "Disponível em outro idioma"
 msgid "#Awarded books"
 msgstr "Livros premiados"
 
-#: application\modules/works/views/scripts/index/children.phtml:9
-msgid "#Children books"
-msgstr "Infantis"
+#: application\modules/works/views/scripts/index/editions-of-type.phtml:7
+msgid "#First"
+msgstr "Prim."
 
-#: application\modules/works/views/scripts/index/essays.phtml:9
-msgid "#Essays books"
-msgstr "Ensaios"
+#: application\modules/works/views/scripts/index/editions-of-type.phtml:8
+msgid "#Prev"
+msgstr "Ant."
 
-#: application\modules/works/views/scripts/index/fiction.phtml:9
-msgid "#Fiction books"
-msgstr "Ficção"
+#: application\modules/works/views/scripts/index/editions-of-type.phtml:9
+msgid "#Last"
+msgstr "Últ."
+
+#: application\modules/works/views/scripts/index/editions-of-type.phtml:10
+msgid "#Next"
+msgstr "Próx."
 
 #: application\modules/works/views/scripts/index/index.phtml:29
 msgid "#Books by category"
@@ -1657,9 +1640,29 @@ msgstr "Por categoria"
 msgid "#list editions"
 msgstr "livros da coleção"
 
-#: application\modules/works/views/scripts/index/young.phtml:9
-msgid "#Young books"
-msgstr "Juvenis"
+#~ msgid "#Ana Maria Machado - Fiction"
+#~ msgstr "Ana Maria Machado - Ficção"
+
+#~ msgid "#Ana Maria Machado - Children"
+#~ msgstr "Ana Maria Machado - Infantis"
+
+#~ msgid "#Ana Maria Machado - Essays"
+#~ msgstr "Ana Maria Machado - Ensaios"
+
+#~ msgid "#Ana Maria Machado - Young"
+#~ msgstr "Ana Maria Machado - Juvenis"
+
+#~ msgid "#Children books"
+#~ msgstr "Infantis"
+
+#~ msgid "#Essays books"
+#~ msgstr "Ensaios"
+
+#~ msgid "#Fiction books"
+#~ msgstr "Ficção"
+
+#~ msgid "#Young books"
+#~ msgstr "Juvenis"
 
 #~ msgid "/works/"
 #~ msgstr "/livros/"
