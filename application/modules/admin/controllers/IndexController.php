@@ -28,7 +28,43 @@ class Admin_IndexController extends Zend_Controller_Action
         $this->view->setNestedLayout($layoutHelper, 'inner_admin');
     }
 
-    public function listAction()
+    public function listPostsAction()
+    {
+        $posts = $this->postMapper->getAllIds();
+
+        $postsData = array();
+        foreach ($posts as $postId) {
+            $loopPostObj = $this->postMapper->findById($postId);
+
+            $loopEditionObj = $this->editionMapper->findByPost($postId);
+            if (!is_null($loopEditionObj)) {
+                $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
+                $editorName = $loopEditorObj->getName();
+            } else {
+                $loopEditorObj = null;
+                $editorName = $this->view->translate("#no editions");
+                $editorName = "(<em>$editorName</em>)";
+            }
+
+            $typeLabel = $this->view->typeLabel($loopPostObj, new Author_Collection_PostTypes, $this->view);
+
+            $postsData[$postId] = array('title' => $this->view->postTitleAndPrefix($loopPostObj),
+                    'typeLabel' => $typeLabel,
+                    'editorName' => $editorName,
+            );
+        }
+
+
+        $data = array(
+            'postsList' => $postsData,
+        );
+
+
+        $this->view->pageData = $data;
+
+    }
+
+    public function listWorksAction()
     {
         $works = $this->workMapper->getAllIds();
 
@@ -48,7 +84,7 @@ class Admin_IndexController extends Zend_Controller_Action
 
             $typeLabel = $this->view->typeLabel($loopWorkObj, new Author_Collection_WorkTypes, $this->view);
 
-            $worksData[$workId] = array('title' => $loopWorkObj->getTitle(),
+            $worksData[$workId] = array('title' => $this->view->workTitleAndPrefix($loopWorkObj),
                     'typeLabel' => $typeLabel,
                     'editorName' => $editorName,
             );

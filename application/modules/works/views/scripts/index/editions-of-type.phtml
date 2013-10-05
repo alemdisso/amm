@@ -7,8 +7,16 @@
                                         nav_label_first: '<?php echo $this->translate("#First") ?>',
                                         nav_label_prev: '<?php echo $this->translate("#Prev") ?>',
                                         nav_label_last: '<?php echo $this->translate("#Last") ?>',
-                                        nav_label_next: '<?php echo $this->translate("#Next") ?>'
+                                        nav_label_next: '<?php echo $this->translate("#Next") ?>',
+                                        nav_label_info: '<?php echo $this->translate("#Showing {0}-{1} of {2} results") ?>'
 				});
+
+        $('.page_link').live('click', function(e) {
+            e.preventDefault();
+            jQuery('html, body').animate({scrollTop: top}, 800);
+
+        return false;
+        });
     });
 </script>
 
@@ -24,6 +32,7 @@
 </ul>
 <!-- paginacao -->
 <div class="page_navigation"></div>
+<div class="info_text"></div>
 <!-- /paginacao -->
 </div>
 </div>

@@ -1,5 +1,5 @@
 <?php
-class Novidades_IndexController extends Zend_Controller_Action
+class Blog_PostController extends Zend_Controller_Action
 {
     public function init()
     {
@@ -8,7 +8,7 @@ class Novidades_IndexController extends Zend_Controller_Action
         $layout->nestedLayout = 'inner_novidades';
     }
 
-    public function indexAction()
+    public function detailAction()
     {
 
     }

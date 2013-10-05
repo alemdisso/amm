@@ -955,6 +955,14 @@ div.dataTables_filter {
 .no_more{
 	background-color:#72a8c0 !important;
 	color:black !important;
+        pointer-events:none;
+}
+
+.info_text{
+    text-align: left;
+    display:block;
+    padding-top: 8px;
+    clear: both;
 }
 
 .page_link{

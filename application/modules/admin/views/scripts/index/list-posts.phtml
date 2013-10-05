@@ -1,0 +1,73 @@
+<?php
+$pageData = $this->pageData;
+$postsList = $pageData['postsList'];
+?>
+<script>
+$(function() {
+      $('#Posts').dataTable( {
+         "iDisplayLength": -1,
+         "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "Todos"]],
+	 "sPaginationType": "full_numbers",
+        "oLanguage": {
+                "sEmptyTable":      "Sem dados disponíveis na tabela",
+                "sInfo":            "Exibindo de _START_ a _END_ do total de _TOTAL_ registros",
+                "sInfoEmpty":       "Sem registros a exibir",
+                "sInfoFiltered":    " - filtrado do total de _MAX_ registros",
+                "sInfoPostFix":     "", /* appended to sInfo at all times */
+                "sInfoThousands":   ".",
+                "sLengthMenu":      "Exibir até _MENU_ registros",
+                "sLoadingRecords":  "Aguarde - carregando...",
+                "sProcessing":      "Aguarde - processando...",
+                "sSearch":          "Filtrar:",
+                "sUrl":             "",
+                "sZeroRecords":     "Sem resultados para a busca",
+                "oPaginate": {
+                    "sFirst":         "Primeiro",
+                    "sPrevious":      "Anterior",
+                    "sNext":          "Próximo",
+                    "sLast":          "Último"
+                }
+            }
+   });
+});
+</script>
+
+
+
+<!-- conteudo -->
+<div id="conteudo">
+<h1><?php echo $this->translate("#List of posts") ?></h1>
+<div id="container" style="width:800px; margin:0 auto;">
+           <table id="Posts" class="display">
+              <thead>
+                <tr>
+                  <th><?php echo $this->translate("#Title") ?></th>
+                  <th><?php echo $this->translate("#Status") ?></th>
+                  <th><?php echo $this->translate("#Date") ?></th>
+                  <th width="1%">&nbsp;</th>
+                </tr>
+              </thead>
+<?php
+foreach($postsList as $id => $postInfo) {
+?>
+                <tr>
+                  <td>
+                    <a href="/admin/post/detail/?id=<?php print($id) ?>"><?php print($postInfo['title']) ?></a>
+                  </td>
+                  <td>
+                    <?php print($postInfo['statusLabel']) ?></a>
+                  </td>
+                  <td>
+                    <?php print($postInfo['creationDate']) ?></a>
+                  </td>
+                  <td><ul><li><a href="/admin/post/remove/?id=<?php echo $id ?>"><?php echo $this->translate('#remove')?></a></p>
+</li></ul>
+                 </td>
+                </tr>
+<?php
+}
+?>
+           </table>
+    </div>
+</div>
+<!-- /conteudo -->

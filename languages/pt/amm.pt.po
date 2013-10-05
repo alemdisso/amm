@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-03 17:19-0300\n"
-"PO-Revision-Date: 2013-10-03 17:20-0300\n"
+"POT-Creation-Date: 2013-10-04 12:50-0300\n"
+"PO-Revision-Date: 2013-10-04 12:54-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -72,7 +72,7 @@ msgstr "sem edições"
 
 #: application\modules/admin/controllers/NavigationController.php:44
 #: application\modules/works/views/scripts/edition/explore.phtml:7
-#: application\modules/works/views/scripts/index/editions-of-type.phtml:16
+#: application\modules/works/views/scripts/index/editions-of-type.phtml:17
 #: application\modules/works/views/scripts/index/series.phtml:7
 #: application\modules/works/views/scripts/serie/explore.phtml:7
 msgid "#Works"
@@ -1631,6 +1631,10 @@ msgstr "Últ."
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:10
 msgid "#Next"
 msgstr "Próx."
+
+#: application\modules/works/views/scripts/index/editions-of-type.phtml:11
+msgid "#Showing {0}-{1} of {2} results"
+msgstr "Mostrando {0} a {1} de {2} encontrados"
 
 #: application\modules/works/views/scripts/index/index.phtml:29
 msgid "#Books by category"
