@@ -5,7 +5,7 @@ class Blog_IndexController extends Zend_Controller_Action
     {
         $layoutHelper = $this->_helper->getHelper('Layout');
         $layout = $layoutHelper->getLayoutInstance();
-        $layout->nestedLayout = 'inner_novidades';
+        $layout->nestedLayout = 'inner_blog';
     }
 
     public function indexAction()

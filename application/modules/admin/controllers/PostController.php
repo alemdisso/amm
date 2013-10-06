@@ -37,7 +37,7 @@ class Admin_PostController extends Zend_Controller_Action
                 $newPost = $form->process($postData);
                 $this->_helper->getHelper('FlashMessenger')
                     ->addMessage($this->view->translate('#The record was successfully updated.'));
-                $this->_redirect('/admin/post/detail/?id=' . $newPost->getId());
+                $this->_redirect('/admin/index/list-posts');
             } else {
                 //form error: populate and go back
                 $form->populate($postData);

@@ -41,8 +41,24 @@ class Moxca_Form_PostCreate extends Zend_Form
                     array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
                 ))
 		->setMultiOptions($titlesArray)
-                ->setOptions(array('class' => ''))
+                ->setOptions(array('class' => 'choose'))
                 ->setSeparator('');
+        $this->addElement($element);
+
+        $mapper = new Moxca_Blog_CategoryMapper();
+        $labelsArray = $mapper->getAllCategoriesAlphabeticallyOrdered();
+
+        $element = new Zend_Form_Element_Select('category');
+        $element->setLabel('#Category')
+                ->setDecorators(array(
+                    'ViewHelper',
+                    'Errors',
+                    array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                    array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
+                ))
+		->setMultiOptions($labelsArray)
+                ->setOptions(array('class' => 'choose'))
+                ->setRegisterInArrayValidator(false);
         $this->addElement($element);
 
         $element = new Zend_Form_Element_Textarea('content');
@@ -88,12 +104,13 @@ class Moxca_Form_PostCreate extends Zend_Form
             $post->setTitle($data['title']);
             $post->setStatus($data['status']);
             $post->setContent($data['content']);
+            $post->setCategory($data['category']);
 
 //            $converter = new Moxca_Util_DateConverter();
 //            $dateForMysql = $converter->convertDateToMySQLFormat($baselineBeginDate);
             $post->setCreationDate(date("Y-m-d H:i:s", time()));
+            $post->setPublicationDate(date("Y-m-d H:i:s", time()));
             $post->setAuthor($user->getId());
-
 
             $postMapper->insert($post);
 

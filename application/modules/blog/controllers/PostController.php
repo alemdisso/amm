@@ -1,16 +1,56 @@
 <?php
 class Blog_PostController extends Zend_Controller_Action
 {
-    public function init()
+
+    private $postMapper;
+    private $db;
+
+    public function postDispatch()
     {
-        $layoutHelper = $this->_helper->getHelper('Layout');
-        $layout = $layoutHelper->getLayoutInstance();
-        $layout->nestedLayout = 'inner_novidades';
+        if (isset($this->view->pageTitle)) {
+            $this->_helper->layout()->getView()->headTitle($this->view->pageTitle . " :: Ana Maria Machado");
+        }
     }
 
-    public function detailAction()
+    public function init()
+    {
+        $this->initDbAndMappers();
+
+        $this->view->activateNavigation($this->_request, $this->view);
+
+        $layoutHelper = $this->_helper->getHelper('Layout');
+        $this->view->setNestedLayout($layoutHelper, 'inner_blog');
+    }
+
+    public function exploreAction()
     {
 
+        $data = $this->_request->getParams();
+        try {
+            $uri = $this->view->checkUriFromGet($data);
+        } catch (Exception $e) {
+            throw $e;
+        }
+        $postObj = $this->postMapper->findByUri($uri);
+
+        $publicationDate = $this->view->splitDateFromDateTime($postObj->getPublicationDate());
+
+        $postTitle = $postObj->getTitle();
+
+        $pageData = array(
+            'title' => $postTitle,
+            'publicationDate' => $this->view->formatDateToShow($publicationDate, "."),
+            'content' => $postObj->getContent(),
+        );
+
+        $this->view->pageData = $pageData;
+        $this->view->pageTitle = $postTitle;
+    }
+
+    private function initDbAndMappers()
+    {
+        $this->db = Zend_Registry::get('db');
+        $this->postMapper = new Moxca_Blog_PostMapper($this->db);
     }
 }
 

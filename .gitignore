@@ -17,12 +17,13 @@ public/index.php
 /application/configs/sandbox_application.ini
 /public/img/editions/raw/*
 /public/img/editions/tb/*
+/public/img/uploads/*
 
-/public/js/tinymce/langs/
-/public/js/tinymce/skins/
-/public/js/tinymce/themes/
-/public/js/tinymce/js/
-/public/js/tinymce/plugins/
+/public/js/tinymce/langs/*
+/public/js/tinymce/skins/*
+/public/js/tinymce/themes/*
+/public/js/tinymce/js/*
+/public/js/tinymce/plugins/*
 /public/js/jquery.pajinate*.*
 
 /public/img/special/*

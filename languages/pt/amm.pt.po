@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-04 12:50-0300\n"
-"PO-Revision-Date: 2013-10-04 12:54-0300\n"
+"POT-Creation-Date: 2013-10-06 16:32-0300\n"
+"PO-Revision-Date: 2013-10-06 16:32-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -21,6 +21,7 @@ msgstr ""
 #: application\modules/admin/controllers/EditionController.php:74
 #: application\modules/admin/controllers/EditionController.php:280
 #: application\modules/admin/controllers/EditorController.php:42
+#: application\modules/admin/controllers/PostController.php:39
 #: application\modules/admin/controllers/PrizeController.php:41
 #: application\modules/admin/controllers/PrizeController.php:73
 #: application\modules/admin/controllers/SerieController.php:42
@@ -67,12 +68,13 @@ msgid "#Create editor"
 msgstr "Criar editora"
 
 #: application\modules/admin/controllers/IndexController.php:45
+#: application\modules/admin/controllers/IndexController.php:81
 msgid "#no editions"
 msgstr "sem edições"
 
 #: application\modules/admin/controllers/NavigationController.php:44
 #: application\modules/works/views/scripts/edition/explore.phtml:7
-#: application\modules/works/views/scripts/index/editions-of-type.phtml:17
+#: application\modules/works/views/scripts/index/editions-of-type.phtml:24
 #: application\modules/works/views/scripts/index/series.phtml:7
 #: application\modules/works/views/scripts/serie/explore.phtml:7
 msgid "#Works"
@@ -163,6 +165,11 @@ msgstr "Novidades"
 #: application\modules/admin/controllers/NavigationController.php:122
 msgid "/news"
 msgstr "/novidades"
+
+#: application\modules/admin/controllers/PostController.php:55
+#: application\modules/admin/views/scripts/post/create.phtml:31
+msgid "#Create post"
+msgstr "Criar post"
 
 #: application\modules/admin/controllers/PrizeController.php:59
 #: application\modules/admin/controllers/PrizeController.php:109
@@ -277,6 +284,80 @@ msgstr "Editor"
 msgid "#System administrator"
 msgstr "Sysadmin"
 
+#: library\Moxca/Blog/PostStatus.php:10
+#: library\Author/Collection/WorkTypes.php:10
+msgid "#Nil"
+msgstr "Nula"
+
+#: library\Moxca/Blog/PostStatus.php:11
+msgid "#Draft"
+msgstr "Rascunho"
+
+#: library\Moxca/Blog/PostStatus.php:12
+msgid "#Ready"
+msgstr "Pronto"
+
+#: library\Moxca/Blog/PostStatus.php:13
+msgid "#Published"
+msgstr "Publicado"
+
+#: library\Moxca/Blog/PostStatus.php:14
+msgid "#Protected"
+msgstr "Protegido"
+
+#: library\Moxca/Blog/PostStatus.php:15
+msgid "#Archived"
+msgstr "Arquivado"
+
+#: library\Moxca/Blog/PostStatus.php:32
+#: library\Author/Collection/WorkTypes.php:30
+msgid "#Unknown type"
+msgstr "Tipo indefinido"
+
+#: library\Moxca/Form/PostCreate.php:18
+#: library\Author/Form/EditionCreate.php:18
+#: library\Author/Form/TitleChange.php:23
+msgid "#Title:"
+msgstr "Título:"
+
+#: library\Moxca/Form/PostCreate.php:27
+#: library\Author/Form/EditionCreate.php:27
+#: library\Author/Form/PrizeCreate.php:30
+#: library\Author/Form/TitleChange.php:32
+msgid "#Title is required"
+msgstr "O título é obrigatório"
+
+#: library\Moxca/Form/PostCreate.php:36
+#: application\modules/admin/views/scripts/index/list-posts.phtml:45
+msgid "#Status"
+msgstr "Status"
+
+#: library\Moxca/Form/PostCreate.php:52
+msgid "#Category"
+msgstr "Categoria"
+
+#: library\Moxca/Form/PostCreate.php:65
+msgid "#Content:"
+msgstr "Conteúdo:"
+
+#: library\Moxca/Form/PostCreate.php:80 library\Moxca/Form/UserCreate.php:101
+#: library\Author/Form/CoverChange.php:33
+#: library\Author/Form/CoverDesignerChange.php:38
+#: library\Author/Form/DescriptionChange.php:37
+#: library\Author/Form/EditionCreate.php:177
+#: library\Author/Form/EditorCreate.php:32
+#: library\Author/Form/IllustratorChange.php:35
+#: library\Author/Form/IsbnChange.php:35
+#: library\Author/Form/PagesChange.php:38
+#: library\Author/Form/PrizeCreate.php:79
+#: library\Author/Form/SerieChange.php:34
+#: library\Author/Form/SerieCreate.php:32
+#: library\Author/Form/SummaryChange.php:37
+#: library\Author/Form/TitleChange.php:39
+#: library\Author/Form/WorkTypeChange.php:40
+msgid "#Submit"
+msgstr "Enviar"
+
 #: library\Moxca/Form/UserCreate.php:15
 #: library\Author/Form/EditorCreate.php:15
 #: library\Author/Form/SerieCreate.php:15
@@ -298,24 +379,6 @@ msgstr "Senha"
 #: library\Moxca/Form/UserCreate.php:84
 msgid "#Email:"
 msgstr "Email"
-
-#: library\Moxca/Form/UserCreate.php:101
-#: library\Author/Form/CoverChange.php:33
-#: library\Author/Form/CoverDesignerChange.php:38
-#: library\Author/Form/DescriptionChange.php:37
-#: library\Author/Form/EditionCreate.php:177
-#: library\Author/Form/EditorCreate.php:32
-#: library\Author/Form/IllustratorChange.php:35
-#: library\Author/Form/IsbnChange.php:35
-#: library\Author/Form/PagesChange.php:38
-#: library\Author/Form/PrizeCreate.php:79
-#: library\Author/Form/SerieChange.php:34
-#: library\Author/Form/SerieCreate.php:32
-#: library\Author/Form/SummaryChange.php:37
-#: library\Author/Form/TitleChange.php:39
-#: library\Author/Form/WorkTypeChange.php:40
-msgid "#Submit"
-msgstr "Enviar"
 
 #: library\Moxca/Form/UserCreate.php:117 library\Moxca/Form/UserEdit.php:28
 #: library\Moxca/Form/UserLogin.php:66 library\Author/Form/WorkRemove.php:32
@@ -1294,17 +1357,9 @@ msgstr "Zimbábue"
 msgid "#Bad value to Id."
 msgstr "Bad value to Id."
 
-#: library\Author/Collection/WorkTypes.php:10
-msgid "#Nil"
-msgstr "Nula"
-
 #: library\Author/Collection/WorkTypes.php:14
 msgid "#Essay"
 msgstr "Ensaios"
-
-#: library\Author/Collection/WorkTypes.php:30
-msgid "#Unknown type"
-msgstr "Tipo indefinido"
 
 #: library\Author/Form/CoverChange.php:22
 #: library\Author/Form/EditionCreate.php:33
@@ -1316,25 +1371,14 @@ msgstr "Enviar uma imagem"
 msgid "#Description:"
 msgstr "Descrição:"
 
-#: library\Author/Form/EditionCreate.php:18
-#: library\Author/Form/TitleChange.php:23
-msgid "#Title:"
-msgstr "Título:"
-
-#: library\Author/Form/EditionCreate.php:27
-#: library\Author/Form/PrizeCreate.php:30
-#: library\Author/Form/TitleChange.php:32
-msgid "#Title is required"
-msgstr "O título é obrigatório"
-
 #: library\Author/Form/EditionCreate.php:52
-#: application\modules/admin/views/scripts/index/list.phtml:19
+#: application\modules/admin/views/scripts/index/list-works.phtml:45
 #: application\modules/admin/views/scripts/work/list.phtml:20
 msgid "#Type"
 msgstr "Tipo"
 
 #: library\Author/Form/EditionCreate.php:66
-#: application\modules/admin/views/scripts/index/list.phtml:20
+#: application\modules/admin/views/scripts/index/list-works.phtml:46
 #: application\modules/admin/views/scripts/work/list.phtml:21
 msgid "#Editor"
 msgstr "Editora"
@@ -1436,19 +1480,29 @@ msgstr "(escolha uma editora...)"
 msgid "#(new editor)"
 msgstr "(nova editora)"
 
-#: application\modules/admin/views/scripts/index/list.phtml:13
-#: application\modules/admin/views/scripts/work/list.phtml:13
-msgid "#List of works"
-msgstr "Lista de obras"
+#: application\modules/admin/views/scripts/index/list-posts.phtml:39
+msgid "#List of posts"
+msgstr "Lista de posts"
 
-#: application\modules/admin/views/scripts/index/list.phtml:18
+#: application\modules/admin/views/scripts/index/list-posts.phtml:44
+#: application\modules/admin/views/scripts/index/list-works.phtml:44
 #: application\modules/admin/views/scripts/work/list.phtml:19
 msgid "#Title"
 msgstr "Título"
 
-#: application\modules/admin/views/scripts/index/list.phtml:37
+#: application\modules/admin/views/scripts/index/list-posts.phtml:46
+msgid "#Date"
+msgstr "Data"
+
+#: application\modules/admin/views/scripts/index/list-posts.phtml:63
+#: application\modules/admin/views/scripts/index/list-works.phtml:63
 msgid "#remove"
 msgstr "remover"
+
+#: application\modules/admin/views/scripts/index/list-works.phtml:39
+#: application\modules/admin/views/scripts/work/list.phtml:13
+msgid "#List of works"
+msgstr "Lista de obras"
 
 #: application\modules/admin/views/scripts/navigation/update.phtml:2
 msgid "#Navigation updated"
@@ -1463,6 +1517,14 @@ msgid "#List works"
 msgstr "Listar obras"
 
 #: application\modules/admin/views/scripts/panel/panel.phtml:4
+msgid "#New Post"
+msgstr "Novo post"
+
+#: application\modules/admin/views/scripts/panel/panel.phtml:5
+msgid "#List posts"
+msgstr "Listar posts"
+
+#: application\modules/admin/views/scripts/panel/panel.phtml:6
 msgid "#Logout"
 msgstr "Logout"
 
@@ -1761,9 +1823,6 @@ msgstr "livros da coleção"
 #~ msgid "#In Execution"
 #~ msgstr "Em Execução"
 
-#~ msgid "#Received"
-#~ msgstr "Recebida"
-
 #~ msgid "#Done"
 #~ msgstr "Realizada"
 
@@ -1839,9 +1898,6 @@ msgstr "livros da coleção"
 #~ msgid "#Project:"
 #~ msgstr "Projeto:"
 
-#~ msgid "#Project"
-#~ msgstr "Projeto"
-
 #~ msgid "#Details of action "
 #~ msgstr "Detalhar ação"
 
@@ -1856,9 +1912,6 @@ msgstr "livros da coleção"
 
 #~ msgid "#Area"
 #~ msgstr "Área"
-
-#~ msgid "#Status"
-#~ msgstr "Status"
 
 #~ msgid "#% physical progress"
 #~ msgstr "% físico"
@@ -1925,9 +1978,6 @@ msgstr "livros da coleção"
 
 #~ msgid "#Predicted date"
 #~ msgstr "Data prevista"
-
-#~ msgid "#Real date"
-#~ msgstr "Data real"
 
 #~ msgid "#Predicted value"
 #~ msgstr "Valor previsto"
@@ -2043,9 +2093,6 @@ msgstr "livros da coleção"
 
 #~ msgid "#Service messenger"
 #~ msgstr "Serviço de mensagens"
-
-#~ msgid "#Contact:"
-#~ msgstr "Contato:"
 
 #~ msgid "#Relationship"
 #~ msgstr "Relação com o IETS"

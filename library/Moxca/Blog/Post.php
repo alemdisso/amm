@@ -7,6 +7,8 @@ class Moxca_Blog_Post {
     protected $uri;
     protected $summary;
     protected $content;
+    protected $category;
+    protected $publicationDate;
     protected $creationDate;
     protected $lastEditionDate;
     protected $author;
@@ -19,6 +21,8 @@ class Moxca_Blog_Post {
         $this->uri = "";
         $this->summary = "";
         $this->content = "";
+        $this->category = "";
+        $this->publicationDate = null;
         $this->creationDate = null;
         $this->lastEditionDate = null;
         $this->author = null;
@@ -92,6 +96,40 @@ class Moxca_Blog_Post {
         }
     } //SetContent
 
+    public function getCategory()
+    {
+        return $this->category;
+    } //getCategory
+
+    public function setCategory($category)
+    {
+        $validator = new Moxca_Util_ValidPositiveDecimal();
+        if ($validator->isValid($category)) {
+            if ($this->category != $category) {
+                $this->category = $category;
+            }
+        } else {
+            throw new Moxca_Blog_PostException("This ($category) is not a valid category.");
+        }
+    } //SetCategory
+
+    public function getPublicationDate()
+    {
+        return $this->publicationDate;
+    } //GetPublicationDate
+
+    public function setPublicationDate($publicationDate)
+    {
+        $dateValidator = new Moxca_Util_ValidDate();
+        if (($dateValidator->isValid($publicationDate)) || (is_null($publicationDate))) {
+            if ($this->publicationDate != $publicationDate) {
+                $this->publicationDate = $publicationDate;
+            }
+        } else {
+            throw new Moxca_Blog_PostException("This ($publicationDate) is not a valid date.");
+        }
+    } //SetPublicationDate
+
     public function getCreationDate()
     {
         return $this->creationDate;
@@ -99,15 +137,13 @@ class Moxca_Blog_Post {
 
     public function setCreationDate($creationDate)
     {
-        if ($creationDate != "") {
-            $dateValidator = new Moxca_Util_ValidDate();
-            if ($dateValidator->isValid($creationDate)) {
-                if ($this->creationDate != $creationDate) {
-                    $this->creationDate = $creationDate;
-                }
-            } else {
-                throw new Moxca_Blog_PostException("This ($creationDate) is not a valid date.");
+        $dateValidator = new Moxca_Util_ValidDate();
+        if (($dateValidator->isValid($creationDate)) || (is_null($creationDate))) {
+            if ($this->creationDate != $creationDate) {
+                $this->creationDate = $creationDate;
             }
+        } else {
+            throw new Moxca_Blog_PostException("This ($creationDate) is not a valid date.");
         }
     } //SetCreationDate
 

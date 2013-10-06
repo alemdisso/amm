@@ -408,7 +408,6 @@ h4 {
 	height:auto;
 	}
 
-
 #livros h2.categoria {
 	font-family:arial;
 	font-size:18px;
@@ -525,6 +524,15 @@ h4 {
 #novidades #conteudo {
 	margin:30px 0 30px 30px;
 	}
+
+#novidades img.img_blog {
+	border:2px solid #fff9cb;
+	width:320px;
+	height:auto;
+        float: left;
+        margin-right: 12px;
+	}
+
 
 /* BIOGRAFIA */
 #biografia {

@@ -1,15 +1,15 @@
+<?php
+$pageData = $this->pageData;
+?>
 <!-- conteudo -->
 <div id="conteudo">
 
 <h1><img src="/img/icone_novidades.png" align="absmiddle" alt="Novidades" /> Novidades</h1>
 
-<a href=""><img src="/img/marcacao_thumbnail.png" class="float_left" /></a>
-<h3>Ana Maria Machado e Ruth Rocha no Salao do Livro Infantil em Belo Horizonte</h3>
-<p>28.08.2012 | <a href="" title=""><strong>Leitura</strong></a> | <a href="" title=""><img src="/img/icone_comentario.png" align="absmiddle" /> <strong>Comente</strong></a></p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque quam ac eros gravida auctor. Nam a tristique enim. Ut tristique diam quis magna vehicula vitae consequat dui pretium. Pellentesque ligula nisl, tristique at pellentesque et, condimentum vel urna.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque quam ac eros gravida auctor. Nam a tristique enim. Ut tristique diam quis magna vehicula vitae consequat dui pretium. Pellentesque ligula nisl, tristique at pellentesque et, condimentum vel urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque quam ac eros gravida auctor. Nam a tristique enim. Ut tristique diam quis magna vehicula vitae consequat dui pretium. Pellentesque ligula nisl, tristique at pellentesque et, condimentum vel urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque quam ac eros gravida auctor. Nam a tristique enim. Ut tristique diam quis magna vehicula vitae consequat dui pretium. Pellentesque ligula nisl, tristique at pellentesque et, condimentum vel urna.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque quam ac eros gravida auctor. Nam a tristique enim. Ut tristique diam quis magna vehicula vitae consequat dui pretium. Pellentesque ligula nisl, tristique at pellentesque et, condimentum vel urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pellentesque quam ac eros gravida auctor. Nam a tristique enim. Ut tristique diam quis magna vehicula vitae consequat dui pretium. Pellentesque ligula nisl, tristique at pellentesque et, condimentum vel urna.</p>
 
+<h3><?php echo $pageData['title'] ?></h3>
+<p><?php echo $pageData['publicationDate'] ?> | <a href="" title=""><strong>Leitura</strong></a> | <a href="" title=""><img src="/img/icone_comentario.png" align="absmiddle" /> <strong>Comente</strong></a></p>
+<div class="xpto"><?php echo $pageData['content'] ?></div>
 <!-- tags -->
 <p>Tags: <a href="" class="tag_2">encontro-literario</a>, <a href="" class="tag_2">palestra</a>, <a href="" class="tag_2">livros</a>, <a href="" class="tag_2">escola</a>, <a href="" class="tag_2">luva</a>, <a href="" class="tag_2">infamia</a></p>
 <!-- /tags -->

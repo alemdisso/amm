@@ -100,50 +100,6 @@ class Works_EditionController extends Zend_Controller_Action
 
         $this->view->keywords = $keywords;
 
-
-    }
-
-
-
-    private function prizes()
-    {
-        $prizes = array(
-                '1' => array(
-                    'year' => '1997',
-                    'name' => 'Prêmio Américas',
-                    'category' =>  '',
-                    'institution' => 'Fundalectura, Bogotá, Colômbia'
-                ),
-                '2' => array(
-                    'year' => '1995',
-                    'name' => 'Prêmio Melhores do Ano',
-                    'category' =>  '',
-                    'institution' => 'Biblioteca Nacional da Venezuela'
-                ),
-                '3' => array(
-                    'year' => '1988',
-                    'name' => 'Prêmio Bienal de São Paulo',
-                    'category' =>  'Menção Honrosa - Uma das Cinco Melhores Obras do Biênio',
-                    'institution' => 'Bienal de São Paulo'
-                ),
-        );
-
-        $prizesLabels = array();
-        foreach ($prizes as $prizeId => $prize) {
-            $label = "";
-            $label = $prize['year'] . " - " . $prize['name'];
-            if ($prize['institution']) {
-                $label .= ", " . $prize['institution'];
-            }
-            if ($prize['category']) {
-                $label .= " (" . $prize['category'] . ")";
-            }
-            $prizesLabels[$prizeId] = $label;
-        }
-
-        return $prizesLabels;
-
-
     }
 
     private function initDbAndMappers()

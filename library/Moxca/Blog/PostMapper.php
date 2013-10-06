@@ -28,16 +28,19 @@ class Moxca_Blog_PostMapper
     public function insert(Moxca_Blog_Post $obj)
     {
 
-        $query = $this->db->prepare("INSERT INTO moxca_blog_posts
-                            (uri, title, content, summary, creation_date,
+        $query = $this->db->prepare("INSERT INTO moxca_blog_posts (uri, title, summary,
+                            content, category, publication_date, creation_date,
                             last_edition_date, author, author_name, status)
-                            VALUES (:uri, :title, :content, :summary, :creation_date,
-                            :last_edition_date, :author, :author_name, :status)");
+                            VALUES (:uri, :title, :summary, :content, :category,
+                            :publication_date, :creation_date, :last_edition_date,
+                            :author, :author_name, :status)");
 
         $query->bindValue(':uri', $obj->getUri(), PDO::PARAM_STR);
         $query->bindValue(':title', $obj->getTitle(true), PDO::PARAM_STR);
-        $query->bindValue(':content', $obj->getContent(), PDO::PARAM_STR);
         $query->bindValue(':summary', $obj->getSummary(), PDO::PARAM_STR);
+        $query->bindValue(':content', $obj->getContent(), PDO::PARAM_STR);
+        $query->bindValue(':category', $obj->getCategory(), PDO::PARAM_STR);
+        $query->bindValue(':publication_date', $obj->getPublicationDate(), PDO::PARAM_STR);
         $query->bindValue(':creation_date', $obj->getCreationDate(), PDO::PARAM_STR);
         $query->bindValue(':last_edition_date', $obj->getLastEditionDate(), PDO::PARAM_STR);
         $query->bindValue(':author', $obj->getAuthor(), PDO::PARAM_STR);
@@ -58,14 +61,17 @@ class Moxca_Blog_PostMapper
         }
 
         $query = $this->db->prepare("UPDATE moxca_blog_posts SET uri = :uri, title = :title
-            , content = :content, summary = :summary, creation_date = :creation_date
+            , summary = :summary, content = :content, category = :category
+            , publication_date = :publication_date, creation_date = :creation_date
             , last_edition_date = :last_edition_date, author = :author
             , author_name = :author_name, status = :status WHERE id = :id;");
 
         $query->bindValue(':uri', $obj->getUri(), PDO::PARAM_STR);
         $query->bindValue(':title', $obj->getTitle(true), PDO::PARAM_STR);
-        $query->bindValue(':content', $obj->getContent(), PDO::PARAM_STR);
         $query->bindValue(':summary', $obj->getSummary(), PDO::PARAM_STR);
+        $query->bindValue(':content', $obj->getContent(), PDO::PARAM_STR);
+        $query->bindValue(':category', $obj->getCategory(), PDO::PARAM_STR);
+        $query->bindValue(':publication_date', $obj->getPublicationDate(), PDO::PARAM_STR);
         $query->bindValue(':creation_date', $obj->getCreationDate(), PDO::PARAM_STR);
         $query->bindValue(':last_edition_date', $obj->getLastEditionDate(), PDO::PARAM_STR);
         $query->bindValue(':author', $obj->getAuthor(), PDO::PARAM_STR);
@@ -90,7 +96,8 @@ class Moxca_Blog_PostMapper
             $this->identityMap->next();
         }
 
-        $query = $this->db->prepare('SELECT uri, title, content, summary, creation_date,
+        $query = $this->db->prepare('SELECT uri, title, summary, content,
+                            category, publication_date, creation_date,
                             last_edition_date, author, author_name, status
                             FROM moxca_blog_posts WHERE id = :id;');
         $query->bindValue(':id', $id, PDO::PARAM_STR);
@@ -107,8 +114,10 @@ class Moxca_Blog_PostMapper
         $this->setAttributeValue($obj, $id, 'id');
         $this->setAttributeValue($obj, $result['title'], 'title');
         $this->setAttributeValue($obj, $result['uri'], 'uri');
-        $this->setAttributeValue($obj, $result['content'], 'content');
         $this->setAttributeValue($obj, $result['summary'], 'summary');
+        $this->setAttributeValue($obj, $result['content'], 'content');
+        $this->setAttributeValue($obj, $result['category'], 'category');
+        $this->setAttributeValue($obj, $result['publication_date'], 'publicationDate');
         $this->setAttributeValue($obj, $result['creation_date'], 'creationDate');
         $this->setAttributeValue($obj, $result['last_edition_date'], 'lastEditionDate');
         $this->setAttributeValue($obj, $result['author'], 'author');

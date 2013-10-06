@@ -7,6 +7,7 @@ class Admin_IndexController extends Zend_Controller_Action
     private $editorMapper;
     private $editionMapper;
     private $workMapper;
+    private $postMapper;
 
     public function preDispatch()
     {
@@ -30,27 +31,20 @@ class Admin_IndexController extends Zend_Controller_Action
 
     public function listPostsAction()
     {
+        $this->postMapper = new Moxca_Blog_PostMapper($this->db);
         $posts = $this->postMapper->getAllIds();
 
         $postsData = array();
         foreach ($posts as $postId) {
             $loopPostObj = $this->postMapper->findById($postId);
 
-            $loopEditionObj = $this->editionMapper->findByPost($postId);
-            if (!is_null($loopEditionObj)) {
-                $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
-                $editorName = $loopEditorObj->getName();
-            } else {
-                $loopEditorObj = null;
-                $editorName = $this->view->translate("#no editions");
-                $editorName = "(<em>$editorName</em>)";
-            }
+            $creationDate = $this->view->splitDateFromDateTime($loopPostObj->getCreationDate());
+            $statusLabel = $this->view->postStatusLabel($loopPostObj, new Moxca_Blog_PostStatus, $this->view);
 
-            $typeLabel = $this->view->typeLabel($loopPostObj, new Author_Collection_PostTypes, $this->view);
-
-            $postsData[$postId] = array('title' => $this->view->postTitleAndPrefix($loopPostObj),
-                    'typeLabel' => $typeLabel,
-                    'editorName' => $editorName,
+            $postsData[$postId] = array(
+                    'title' => $loopPostObj->getTitle(),
+                    'creationDate' => $this->view->formatDateToShow($creationDate, "."),
+                    'statusLabel' => $statusLabel,
             );
         }
 
