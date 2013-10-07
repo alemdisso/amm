@@ -7,6 +7,7 @@ class Admin_NavigationController extends Zend_Controller_Action
     private $editionMapper;
     private $serieMapper;
     private $workMapper;
+    private $postMapper;
 
     public function preDispatch()
     {
@@ -29,6 +30,7 @@ class Admin_NavigationController extends Zend_Controller_Action
         $this->editorMapper = new Author_Collection_EditorMapper($this->db);
         $this->editionMapper = new Author_Collection_EditionMapper($this->db);
         $this->serieMapper = new Author_Collection_SerieMapper($this->db);
+        $this->postMapper = new Moxca_Blog_PostMapper($this->db);
     }
 
     public function updateAction()
@@ -45,29 +47,17 @@ class Admin_NavigationController extends Zend_Controller_Action
         $works->addChild('uri', $this->view->translate('/works'));
         $worksPages = $works->addChild('pages');
 
-        $childrenNode = $worksPages->addChild('children');
-        $childrenNode->addChild('label', $this->view->translate("#Children"));
-        $childrenNode->addChild('uri', $this->view->translate('/works/children'));
+        $childrenNode = $this->addPage($worksPages, 'children', '#Children', '/works/children');
         $childrenPages = $childrenNode->addChild('pages');
 
-        $youngNode = $worksPages->addChild('young');
-        $youngNode->addChild('label', $this->view->translate("#Young"));
-        $youngNode->addChild('uri', $this->view->translate('/works/young'));
+        $youngNode = $this->addPage($worksPages, 'young', '#Young', '/works/young');
         $youngPages = $youngNode->addChild('pages');
 
-        $fictionNode = $worksPages->addChild('fiction');
-        $fictionNode->addChild('label', $this->view->translate("#Fiction"));
-        $fictionNode->addChild('uri', $this->view->translate('/works/fiction'));
+        $fictionNode = $this->addPage($worksPages, 'fiction', '#Fiction', '/works/fiction');
         $fictionPages = $fictionNode->addChild('pages');
 
-        $essaysNode = $worksPages->addChild('essays');
-        $essaysNode->addChild('label', $this->view->translate("#Essays"));
-        $essaysNode->addChild('uri', $this->view->translate('/works/essays'));
+        $essaysNode = $this->addPage($worksPages, 'essays', '#Essays', '/works/essays');
         $essaysPages = $essaysNode->addChild('pages');
-
-
-//        $works = $pages->works;
-//        $worksPages = $works->pages;
 
         $editionsIds = $this->editionMapper->getAllIds();
         foreach ($editionsIds as $editionId) {
@@ -76,59 +66,62 @@ class Admin_NavigationController extends Zend_Controller_Action
 
             switch($loopWorkObj->getType()) {
                 case Author_Collection_WorkTypeConstants::TYPE_CHILDREN:
-                    $edition = $childrenPages->addChild('edition-' . $loopWorkObj->getUri());
+                    $nodePages = $childrenPages;
                     break;
 
                 case Author_Collection_WorkTypeConstants::TYPE_YOUNG:
-                    $edition = $youngPages->addChild('edition-' . $loopWorkObj->getUri());
+                    $nodePages = $youngPages;
                     break;
 
                 case Author_Collection_WorkTypeConstants::TYPE_FICTION:
-                    $edition = $fictionPages->addChild('edition-' . $loopWorkObj->getUri());
+                    $nodePages = $fictionPages;
                     break;
 
                 case Author_Collection_WorkTypeConstants::TYPE_ESSAY:
-                    $edition = $essaysPages->addChild('edition-' . $loopWorkObj->getUri());
+                    $nodePages = $essaysPages;
                     break;
 
                 default:
-                    $edition = $worksPages->addChild('edition-' . $loopWorkObj->getUri());
+                    $nodePages = $worksPages;
                     break;
 
             }
 
-            $edition->addChild('label', $loopWorkObj->getTitle());
-            $edition->addChild('uri', '/explore/' . $loopWorkObj->getUri());
+            $edition = $this->addPage($nodePages, 'edition-' . $loopWorkObj->getUri(), $loopWorkObj->getTitle(), '/explore/' . $loopWorkObj->getUri());
         }
 
-        $series = $worksPages->addChild('series');
-        $series->addChild('label', $this->view->translate("#Series"));
-        $series->addChild('uri', $this->view->translate('/series'));
+        $series = $this->addPage($worksPages, 'series', '#Series', '/series');
+
         $seriesPages = $series->addChild('pages');
         $seriesIds = $this->serieMapper->getAllIds();
         foreach ($seriesIds as $serieId) {
             $loopSerieObj = $this->serieMapper->findById($serieId);
-            $serie = $seriesPages->addChild('serie-' . $loopSerieObj->getUri());
-            $serie->addChild('label', $loopSerieObj->getName());
-            $serie->addChild('uri', '/colecao/' . $loopSerieObj->getUri());
+            $serie = $this->addPage($seriesPages, 'serie-' . $loopSerieObj->getUri(), $loopSerieObj->getName(), '/colecao/' . $loopSerieObj->getUri());
         }
 
-        $newPage = $pages->addChild('biography');
-        $newPage->addChild('label', $this->view->translate("#Biography"));
-        $newPage->addChild('uri', $this->view->translate('/biography'));
+        $this->addPage($pages, 'biography', '#Biography', '/biography');
+        $newsNode = $this->addPage($pages, 'news', '#News', '/news');
+        $newsPages = $newsNode->addChild('pages');
 
-        $newPage = $pages->addChild('news');
-        $newPage->addChild('label', $this->view->translate("#News"));
-        $newPage->addChild('uri', $this->view->translate('/news'));
+        $postsIds = $this->postMapper->getAllPublishedIds();
+        foreach ($postsIds as $postId) {
+            $loopPostObj = $this->postMapper->findById($postId);
+            $serie = $this->addPage($newsPages, 'post-' . $loopPostObj->getUri(), $loopPostObj->getTitle(), '/novidades/' . $loopPostObj->getUri());
+        }
 
-//
-//        $config = new Zend_Config_Xml($sxe->asXML(), 'nav');
-//        $navigation = new Zend_Navigation($config);
-//        $this->view->navigation($navigation);
-//        file_put_contents(APPLICATION_PATH . '/configs/dynamic.xml', $sxe->asXML());
+
+
         $this->saveXMLFile(APPLICATION_PATH . '/configs/dynamic.xml', $sxe);
 
 
+    }
+
+    private function addPage($node, $id, $label, $uri)
+    {
+        $newPage = $node->addChild($id);
+        $newPage->addChild('label', $this->view->translate($label));
+        $newPage->addChild('uri', $this->view->translate($uri));
+        return ($newPage);
     }
 
     private function saveXMLFile($filename, $xml)

@@ -43,10 +43,8 @@ class Blog_IndexController extends Zend_Controller_Action
 
         }
 
-
         $pageData = array('postsData' => $postsData);
         $this->view->pageData = $pageData;
-
 
     }
 

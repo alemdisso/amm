@@ -209,6 +209,24 @@ class Moxca_Blog_PostMapper
 
     }
 
+    public function getAllPublishedIds()
+    {
+        $query = $this->db->prepare('SELECT p.id FROM moxca_blog_posts p
+                                     WHERE p.status = :published ORDER BY publication_date DESC;');
+        $query->bindValue(':published', Moxca_Blog_PostStatusConstants::STATUS_PUBLISHED, PDO::PARAM_INT);
+        $query->execute();
+        $resultPDO = $query->fetchAll();
+
+        $result = array();
+        foreach ($resultPDO as $row) {
+            if (!is_null($row['id'])) {
+                $result[] = $row['id'];
+            }
+        }
+        return $result;
+
+    }
+
 
 
     private function setAttributeValue(Moxca_Blog_Post $a, $fieldValue, $attributeName)
