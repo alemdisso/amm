@@ -97,8 +97,6 @@ class Moxca_Form_PostCreate extends Zend_Form
             $db = Zend_Registry::get('db');
             $postMapper = new Moxca_Blog_PostMapper($db);
 
-            $user = Zend_Registry::get('user');
-
             $post = new Moxca_Blog_Post();
 
             $post->setTitle($data['title']);
@@ -106,10 +104,10 @@ class Moxca_Form_PostCreate extends Zend_Form
             $post->setContent($data['content']);
             $post->setCategory($data['category']);
 
-//            $converter = new Moxca_Util_DateConverter();
-//            $dateForMysql = $converter->convertDateToMySQLFormat($baselineBeginDate);
             $post->setCreationDate(date("Y-m-d H:i:s", time()));
             $post->setPublicationDate(date("Y-m-d H:i:s", time()));
+
+            $user = Zend_Registry::get('user');
             $post->setAuthor($user->getId());
 
             $postMapper->insert($post);

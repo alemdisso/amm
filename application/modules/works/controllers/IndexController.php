@@ -132,7 +132,6 @@ class Works_IndexController extends Zend_Controller_Action
     private function buildEditionsListPage($editionsIds, $title)
     {
         $editionsData = array();
-        $editionsModel = array();
         foreach ($editionsIds as $editionId) {
             $loopEditionObj = $this->editionMapper->findById($editionId);
             $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
@@ -157,7 +156,6 @@ class Works_IndexController extends Zend_Controller_Action
 
         $pageData = array(
             'editionsData' => $editionsData,
-            'editionsModel' => $editionsModel,
             'pageTitle' => $this->view->translate($title),
         );
 

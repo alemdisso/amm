@@ -166,9 +166,6 @@ class Admin_WorkController extends Zend_Controller_Action
         $typeListLink = $this->view->typeListLink($workObj, $this->view);
 
         $editionsIds = $this->editionMapper->getAllEditionsOfWork($id);
-
-        $editionsModel = array();
-
         foreach($editionsIds as $editionId) {
             $loopEditionObj = $this->editionMapper->findById($editionId);
             $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());

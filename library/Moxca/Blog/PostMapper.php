@@ -96,9 +96,8 @@ class Moxca_Blog_PostMapper
             $this->identityMap->next();
         }
 
-        $query = $this->db->prepare('SELECT uri, title, summary, content,
-                            category, publication_date, creation_date,
-                            last_edition_date, author, author_name, status
+        $query = $this->db->prepare('SELECT uri, title, summary, content, publication_date,
+                            creation_date, last_edition_date, author, author_name, status
                             FROM moxca_blog_posts WHERE id = :id;');
         $query->bindValue(':id', $id, PDO::PARAM_STR);
         $query->execute();
@@ -116,7 +115,7 @@ class Moxca_Blog_PostMapper
         $this->setAttributeValue($obj, $result['uri'], 'uri');
         $this->setAttributeValue($obj, $result['summary'], 'summary');
         $this->setAttributeValue($obj, $result['content'], 'content');
-        $this->setAttributeValue($obj, $result['category'], 'category');
+        $this->setAttributeValue($obj, $this->findCategoryById($id), 'category');
         $this->setAttributeValue($obj, $result['publication_date'], 'publicationDate');
         $this->setAttributeValue($obj, $result['creation_date'], 'creationDate');
         $this->setAttributeValue($obj, $result['last_edition_date'], 'lastEditionDate');
@@ -126,6 +125,8 @@ class Moxca_Blog_PostMapper
 
 
         $this->identityMap[$obj] = $id;
+
+
 
         return $obj;
 
@@ -152,6 +153,30 @@ class Moxca_Blog_PostMapper
 
     }
 
+    public function findCategoryById($id)
+    {
+
+        $query = $this->db->prepare('SELECT tx.term
+                FROM moxca_blog_term_relationships tr
+                LEFT JOIN moxca_blog_terms_taxonomy tx ON tr.term_taxonomy = tx.id
+                WHERE tr.object = :id
+                AND tx.taxonomy =  \'category\'');
+        $query->bindValue(':id', $id, PDO::PARAM_STR);
+        $query->execute();
+
+        $result = $query->fetch();
+
+        if (empty($result)) {
+            $termId = null;
+        } else {
+            $termId = $result['term'];
+        }
+
+        return $termId;
+
+
+    }
+
     public function delete(Moxca_Blog_Post $obj)
     {
         if (!isset($this->identityMap[$obj])) {
@@ -163,6 +188,28 @@ class Moxca_Blog_PostMapper
 
         unset($this->identityMap[$obj]);
     }
+
+
+    public function getLastPublishedPosts($limit=10)
+    {
+        $query = $this->db->prepare('SELECT p.id FROM moxca_blog_posts p
+                                     WHERE p.status = :published ORDER BY publication_date DESC LIMIT :limit;');
+        $query->bindValue(':published', Moxca_Blog_PostStatusConstants::STATUS_PUBLISHED, PDO::PARAM_INT);
+        $query->bindValue(':limit', $limit, PDO::PARAM_INT);
+        $query->execute();
+        $resultPDO = $query->fetchAll();
+
+        $result = array();
+        foreach ($resultPDO as $row) {
+            if (!is_null($row['id'])) {
+                $result[] = $row['id'];
+            }
+        }
+        return $result;
+
+    }
+
+
 
     private function setAttributeValue(Moxca_Blog_Post $a, $fieldValue, $attributeName)
     {
