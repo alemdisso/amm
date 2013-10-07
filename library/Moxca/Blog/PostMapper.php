@@ -156,7 +156,7 @@ class Moxca_Blog_PostMapper
     public function findCategoryById($id)
     {
 
-        $query = $this->db->prepare('SELECT tx.term
+        $query = $this->db->prepare('SELECT tx.term_id
                 FROM moxca_blog_term_relationships tr
                 LEFT JOIN moxca_blog_terms_taxonomy tx ON tr.term_taxonomy = tx.id
                 WHERE tr.object = :id
@@ -169,7 +169,7 @@ class Moxca_Blog_PostMapper
         if (empty($result)) {
             $termId = null;
         } else {
-            $termId = $result['term'];
+            $termId = $result['term_id'];
         }
 
         return $termId;

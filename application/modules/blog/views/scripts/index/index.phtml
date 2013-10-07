@@ -5,9 +5,9 @@ $pageData = $this->pageData;
 <div id="conteudo">
 
 <h1><img src="/img/icone_novidades.png" align="absmiddle" alt="<?php echo $this->translate("#Blog title") ?>" /> <?php echo $this->translate("#Blog title") ?></h1>
-
+<div id="index">
 <?php $this->postsLoop($pageData['postsData']); ?>
-
+</div>
 
 <!-- paginacao -->
 <!--<div id="paginacao" class="clearfix">

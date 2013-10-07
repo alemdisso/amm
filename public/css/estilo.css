@@ -344,6 +344,12 @@ h4 {
 	margin-bottom:5px;
 	}
 
+#item img.img_blog {
+	border:20px solid #0009cb;
+	}
+
+
+
 #biografia_home {
 	height:130px;
 	padding:0 35px 0 20px;
@@ -525,7 +531,15 @@ h4 {
 	margin:30px 0 30px 30px;
 	}
 
-#novidades img.img_blog {
+#novidades #conteudo #index img {
+	border:2px solid #fff9cb;
+	width:320px;
+	height:auto;
+        float: left;
+        margin-right: 12px;
+	}
+
+#novidades #conteudo #explore img {
 	border:2px solid #fff9cb;
 	width:320px;
 	height:auto;

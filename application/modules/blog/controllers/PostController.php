@@ -3,6 +3,7 @@ class Blog_PostController extends Zend_Controller_Action
 {
 
     private $postMapper;
+    private $taxonomyMapper;
     private $db;
 
     public function postDispatch()
@@ -36,11 +37,13 @@ class Blog_PostController extends Zend_Controller_Action
         $publicationDate = $this->view->splitDateFromDateTime($postObj->getPublicationDate());
 
         $postTitle = $postObj->getTitle();
+        $categoryData = $this->view->CategoryTermAndUri($postObj->getCategory(), $this->taxonomyMapper);
 
         $pageData = array(
             'title' => $postTitle,
             'publicationDate' => $this->view->formatDateToShow($publicationDate, "."),
             'content' => $postObj->getContent(),
+            'categoryModel' => $categoryData,
         );
 
         $this->view->pageData = $pageData;
@@ -51,6 +54,7 @@ class Blog_PostController extends Zend_Controller_Action
     {
         $this->db = Zend_Registry::get('db');
         $this->postMapper = new Moxca_Blog_PostMapper($this->db);
+        $this->taxonomyMapper = new Moxca_Blog_TaxonomyMapper($this->db);
     }
 }
 
