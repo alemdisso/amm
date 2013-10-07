@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-06 16:32-0300\n"
-"PO-Revision-Date: 2013-10-06 16:32-0300\n"
+"POT-Creation-Date: 2013-10-07 10:33-0300\n"
+"PO-Revision-Date: 2013-10-07 10:33-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -25,7 +25,7 @@ msgstr ""
 #: application\modules/admin/controllers/PrizeController.php:41
 #: application\modules/admin/controllers/PrizeController.php:73
 #: application\modules/admin/controllers/SerieController.php:42
-#: application\modules/admin/controllers/WorkController.php:312
+#: application\modules/admin/controllers/WorkController.php:309
 #: application\modules/auth/controllers/UserController.php:39
 #: application\modules/auth/controllers/UserController.php:61
 msgid "#The record was successfully updated."
@@ -67,8 +67,7 @@ msgstr "(escolha uma opção...)"
 msgid "#Create editor"
 msgstr "Criar editora"
 
-#: application\modules/admin/controllers/IndexController.php:45
-#: application\modules/admin/controllers/IndexController.php:81
+#: application\modules/admin/controllers/IndexController.php:75
 msgid "#no editions"
 msgstr "sem edições"
 
@@ -197,18 +196,18 @@ msgstr "Alterar título"
 msgid "#Change type"
 msgstr "Alterar classificação"
 
-#: application\modules/admin/controllers/WorkController.php:178
-#: application\modules/admin/controllers/WorkController.php:183
-#: application\modules/admin/controllers/WorkController.php:196
-#: application\modules/admin/controllers/WorkController.php:201
+#: application\modules/admin/controllers/WorkController.php:175
+#: application\modules/admin/controllers/WorkController.php:180
+#: application\modules/admin/controllers/WorkController.php:193
+#: application\modules/admin/controllers/WorkController.php:198
 msgid "#NI"
 msgstr "n.i."
 
-#: application\modules/admin/controllers/WorkController.php:262
+#: application\modules/admin/controllers/WorkController.php:259
 msgid "#The record was successfully removed."
 msgstr "O registro foi removido com sucesso."
 
-#: application\modules/admin/controllers/WorkController.php:292
+#: application\modules/admin/controllers/WorkController.php:289
 #: application\modules/admin/views/scripts/work/remove.phtml:5
 msgid "#Remove work"
 msgstr "Remover obra"
@@ -1625,6 +1624,10 @@ msgstr "Editar conta do usuário"
 #: application\modules/auth/views/scripts/user/success.phtml:2
 msgid "#Success!!!"
 msgstr "Sucesso!"
+
+#: application\modules/blog/views/scripts/index/index.phtml:7
+msgid "#Blog title"
+msgstr "Novidades"
 
 #: application\modules/default/views/scripts/index/index.phtml:10
 #: application\modules/default/views/scripts/index/index.phtml:12
