@@ -29,7 +29,7 @@ class Admin_SerieController extends Zend_Controller_Action
 
    public function createAction()
     {
-        $this->_helper->layout->disableLayout();
+            $this->_helper->layout->disableLayout();
         // cria form
         $form = new Author_Form_SerieCreate;
         $this->view->form = $form;
@@ -49,6 +49,18 @@ class Admin_SerieController extends Zend_Controller_Action
                 $this->view->form = $form;
             }
         } else {
+            $data = $this->_request->getParams();
+            try {
+                $editorId = $this->view->checkIdFromGet($data, 'serieEditor');
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('serieEditor');
+            $element->setValue($editorId);
+
+
+
             $element = $form->getElement('serie');
             $this->view->pageTitle = $this->view->translate("#Create serie");
         }

@@ -41,6 +41,53 @@ class Moxca_Blog_TaxonomyMapper
 
     }
 
+    public function insertCategory($termId)
+    {
+
+        $query = $this->db->prepare("INSERT INTO moxca_blog_terms_taxonomy (term_id, taxonomy, count)
+            VALUES (:termId, 'category', 0)");
+
+        $query->bindValue(':termId', $termId, PDO::PARAM_INT);
+
+        $query->execute();
+
+    }
+
+    public function insertPostCategoryRelationShip(Moxca_Blog_Post $obj)
+    {
+
+        $termTaxonomy = $this->existsCategory($obj->getCategory());
+        if (!$termTaxonomy) {
+            $termTaxonomy = $this->insertCategory($obj->getCategory());
+        }
+        $query = $this->db->prepare("INSERT INTO moxca_blog_term_relationships (object, term_taxonomy)
+            VALUES (:postId, :termTaxonomy)");
+
+        $query->bindValue(':postId', $obj->getId(), PDO::PARAM_STR);
+        $query->bindValue(':termTaxonomy', $termTaxonomy, PDO::PARAM_STR);
+
+        $query->execute();
+
+
+    }
+
+    public function existsCategory($termId)
+    {
+        $query = $this->db->prepare("SELECT id FROM moxca_blog_terms_taxonomy WHERE term_id = :termId AND taxonomy = 'category';");
+
+        $query->bindValue(':termId', $termId, PDO::PARAM_INT);
+        $query->execute();
+
+        $result = $query->fetch();
+
+        if (!empty($result)) {
+            $row = current($result);
+            return $row['id'];
+        } else {
+            return false;
+        }
+    }
+
     public function update(Moxca_Blog_Taxonomy $obj)
     {
         if (!isset($this->identityMap[$obj])) {

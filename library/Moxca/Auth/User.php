@@ -108,9 +108,6 @@ class Moxca_Auth_User
             case Moxca_Access_RolesConstants::ROLE_USER:
             case Moxca_Access_RolesConstants::ROLE_ASSISTANT:
             case Moxca_Access_RolesConstants::ROLE_ADMINISTRATOR:
-            case Moxca_Access_RolesConstants::ROLE_CONTROLLER:
-            case Moxca_Access_RolesConstants::ROLE_COORDINATOR:
-            case Moxca_Access_RolesConstants::ROLE_DIRECTOR:
             case Moxca_Access_RolesConstants::ROLE_SYSADMIN:
                 $this->role = (int) $role;
                 break;

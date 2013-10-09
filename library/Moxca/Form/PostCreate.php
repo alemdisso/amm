@@ -105,7 +105,7 @@ class Moxca_Form_PostCreate extends Zend_Form
             $post->setCategory($data['category']);
 
             $post->setCreationDate(date("Y-m-d H:i:s", time()));
-            $post->setPublicationDate(date("Y-m-d H:i:s", time()));
+            //$post->setPublicationDate(date("Y-m-d H:i:s", time()));
 
             $user = Zend_Registry::get('user');
             $post->setAuthor($user->getId());

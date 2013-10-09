@@ -60,8 +60,10 @@ foreach($postsList as $id => $postInfo) {
                   <td>
                     <?php print($postInfo['creationDate']) ?></a>
                   </td>
-                  <td><ul><li><a href="/admin/post/remove/?id=<?php echo $id ?>"><?php echo $this->translate('#remove')?></a></p>
-</li></ul>
+                  <td><ul>
+                          <li><a href="/admin/post/remove/?id=<?php echo $id ?>"><?php echo $this->translate('#remove')?></a></li>
+                          <li><a href="/admin/post/edit/?id=<?php echo $id ?>"><?php echo $this->translate('#edit')?></a></li>
+                      </ul>
                  </td>
                 </tr>
 <?php

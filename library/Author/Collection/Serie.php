@@ -28,6 +28,24 @@ class Author_Collection_Serie {
         }
     } //SetId
 
+    public function getCountry()
+    {
+        return $this->country;
+    } //getCountry
+
+    public function setCountry($country)
+    {
+        $validator = new Moxca_Util_ValidString();
+        if ($validator->isValid($country)) {
+            if ($this->country != $country) {
+                $this->country = $country;
+            }
+        } else {
+            throw new Author_Collection_WorkException("This ($country) is not a valid country.");
+        }
+
+    } //SetCountry
+
     public function getEditor()
     {
         return $this->editor;
@@ -37,8 +55,8 @@ class Author_Collection_Serie {
     {
         $validator = new Moxca_Util_ValidPositiveDecimal();
         if ($validator->isValid($editor)) {
-            if ($this->pages != $editor) {
-                $this->pages = $editor;
+            if ($this->editor != $editor) {
+                $this->editor = $editor;
             }
         } else {
             throw new Author_Collection_WorkException("This ($editor) is not a valid editor.");

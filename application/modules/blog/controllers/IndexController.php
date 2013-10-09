@@ -35,7 +35,7 @@ class Blog_IndexController extends Zend_Controller_Action
             $postsData[$postId] = array(
                 'title' => $loopPostObj->getTitle(),
                 'uri' => $loopPostObj->getUri(),
-                'content' => nl2br($loopPostObj->getContent()),
+                'content' => $loopPostObj->getContent(),
                 'publicationDate' => $this->view->formatDateToShow($publicationDate, "."),
                 'categoryModel' => $categoryData,
                 'commentsCount' => 0,

@@ -32,16 +32,26 @@ class Blog_PostController extends Zend_Controller_Action
         } catch (Exception $e) {
             throw $e;
         }
+
         $postObj = $this->postMapper->findByUri($uri);
 
-        $publicationDate = $this->view->splitDateFromDateTime($postObj->getPublicationDate());
+        if (!$this->view->canSeePost($postObj)) {
+            $this->_redirect('/');
+        }
+
+        if (!is_null($postObj->getPublicationDate())) {
+            $publicationDate = $this->view->splitDateFromDateTime($postObj->getPublicationDate());
+            $publicationLabel = $this->view->formatDateToShow($publicationDate, ".");
+        } else {
+            $publicationLabel = $this->view->translate("#Not published");
+        }
 
         $postTitle = $postObj->getTitle();
         $categoryData = $this->view->CategoryTermAndUri($postObj->getCategory(), $this->taxonomyMapper);
 
         $pageData = array(
             'title' => $postTitle,
-            'publicationDate' => $this->view->formatDateToShow($publicationDate, "."),
+            'publicationDate' => $publicationLabel,
             'content' => $postObj->getContent(),
             'categoryModel' => $categoryData,
         );

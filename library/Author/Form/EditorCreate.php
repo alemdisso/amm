@@ -7,7 +7,7 @@ class Author_Form_EditorCreate extends Zend_Form
 
         // initialize form
         $this->setName('newEditorForm')
-            ->setAction('javascript:submitBudgetForm();')
+            ->setAction('javascript:submitEditorForm();')
             ->setMethod('post');
 
         $element = new Zend_Form_Element_Text('name');

@@ -124,7 +124,7 @@ class Author_Collection_Edition {
     public function setSerie($serie)
     {
         $validator = new Moxca_Util_ValidPositiveDecimal();
-        if ($validator->isValid($serie)) {
+        if (($validator->isValid($serie)) || ($serie == "")) {
             if ($this->serie != $serie) {
                 $this->serie = $serie;
             }

@@ -4,62 +4,67 @@
 
             $("#newSerieDiv").hide();
             $("#newEditorDiv").hide();
+
             initEditorField();
-            initSeriesField($('#editor').val());
+            initSeriesField();
 
             $('#editor').change(function(){
-                initSeriesField($('#editor').val());
+                initSeriesField();
             });
 
-            $('#newEditorButton').click(function(){
+            $('#newEditorClick').click(function(){
                 $.ajax({
                     type: 'get',
                     url:'/admin/editor/create',
                     success: function(successReturn){
                     $('#newEditorDiv').html(successReturn);
                     }
-                })
+                });
                 $("#newEditorDiv").slideToggle();
             });
-            $('#hideNewEditorHref').click(function(){
-                $("#newEditorDiv").slideToggle();
-            });
-
-            $('#submitEditor').click(function(){
-                $.ajax({
-                    type: 'post',
-                    url:'/admin/editor/create',
-                    success: function(successReturn){
-                    $('#newEditorDiv').html(successReturn);
-                    }
-                })
+            $('#hideNewEditorClick').click(function(){
                 $("#newEditorDiv").slideToggle();
             });
 
-            $('#newSerieButton').click(function(){
+//            $('#submitEditor').click(function(){
+//                alert("UFA NENEM");
+//                $.ajax({
+//                    type: 'post',
+//                    url:'/admin/editor/create',
+//                    success: function(successReturn){
+//                    $('#newEditorDiv').html(successReturn);
+//                    }
+//                })
+//                $("#newEditorDiv").slideToggle();
+//            });
+
+            $('#newSerieClick').click(function(){
+                var current = $('#editor').val();
+
                 $.ajax({
                     type: 'get',
-                    url:'/admin/serie/create',
+                    data: 'serieEditor=' + current,
+                    url:'/admin/serie/create/serieEditor=',
                     success: function(successReturn){
                     $('#newSerieDiv').html(successReturn);
                     }
                 })
                 $("#newSerieDiv").slideToggle();
             });
-            $('#hideNewSerieHref').click(function(){
+            $('#hideNewSerieClick').click(function(){
                 $("#newSerieDiv").slideToggle();
             });
 
-            $('#submitEditor').click(function(){
-                $.ajax({
-                    type: 'post',
-                    url:'/admin/serie/create',
-                    success: function(successReturn){
-                    $('#newSerieDiv').html(successReturn);
-                    }
-                })
-                $("#newSerieDiv").slideToggle();
-            });
+//            $('#submitEditor').click(function(){
+//                $.ajax({
+//                    type: 'post',
+//                    url:'/admin/serie/create',
+//                    success: function(successReturn){
+//                    $('#newSerieDiv').html(successReturn);
+//                    }
+//                })
+//                $("#newSerieDiv").slideToggle();
+//            });
 
         });
 
@@ -69,14 +74,6 @@
                 $('#newEditorDiv').html(successReturn);
                 });
             $("#newEditorDiv").slideToggle();
-        }
-
-        function submitSerieForm()
-        {
-            $.post("/admin/serie/create", $("#newSerieForm").serialize(), function(successReturn){
-                $('#newSerieDiv').html(successReturn);
-                });
-            $("#newSerieDiv").slideToggle();
         }
 
         function initEditorField() {
@@ -94,7 +91,7 @@
             });
         }
 
-        function initSeriesField() {
+        function initSeriesField(serie) {
             var editor = $('#editor').val();
             $.getJSON('/admin/index/populate-series/?editor='+editor, function(data) {
             var html = '';
@@ -105,6 +102,8 @@
             }
             $('#serie').empty();
             $('#serie').append(html);
+            $('#serie').val(serie);
+            alert("SSSS" + serie)
             });
         }
         </script>
@@ -117,15 +116,18 @@
   <?php echo $this->form->title ?>
   <?php echo $this->form->cover ?>
   <?php echo $this->form->type ?>
+          <a name="anchorNewEditor" ></a>
   <?php echo $this->form->editor ?>
-          <div id="newEditorDiv" class="slidingDiv">
+          <div id="newEditorDiv" name="newEditorDiv" class="slidingDiv">
           </div>
-    <p style="margin-top:-12px; margin-bottom: 12px; margin-left: 32px;"><a href="#newEditionForm" id="newEditorButton"><?php echo $this->translate("#(new editor)") ?></a></p>
+    <p style="margin-top:-12px; margin-bottom: 12px; margin-left: 32px;"><a href="#anchorNewEditor" id="newEditorClick"><?php echo $this->translate("#(new editor)") ?></a></p>
   <?php echo $this->form->summary ?>
   <?php echo $this->form->description ?>
+          <a name="anchorNewSerie" ></a>
   <?php echo $this->form->serie ?>
           <div id="newSerieDiv" class="slidingDiv">
           </div>
+    <p style="margin-top:-12px; margin-bottom: 12px; margin-left: 32px;"><a href="#anchorNewSerie" id="newSerieClick"><?php echo $this->translate("#(new serie)") ?></a></p>
   <?php echo $this->form->isbn ?>
   <?php echo $this->form->pages ?>
   <?php echo $this->form->illustrator ?>

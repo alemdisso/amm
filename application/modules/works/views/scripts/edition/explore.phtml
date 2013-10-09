@@ -8,7 +8,6 @@ $pageData = $this->pageData;
 
 <a href="<?php echo $pageData['mediumImageUri']?>"><?php $this->exploreCover($pageData['mediumImageUri']) ?></a>
 <h3><?php echo $pageData['title']?></h3>
-<p><strong><?php echo $pageData['editorName']?></strong></p>
 <p><?php echo $pageData['description']?></p>
 
 <p><small>
@@ -21,13 +20,18 @@ $pageData = $this->pageData;
 <?php if ((isset($pageData['coverDesigner'])) && ($pageData['coverDesigner'])) { ?>
 <?php echo $pageData['coverDesigner']?><br />
 <?php } ?>
+<?php if ((isset($pageData['editorName'])) && ($pageData['editorName'])) { ?>
+<?php echo $pageData['editorName']?><br />
+<?php } ?>
 <?php if ((isset($pageData['isbn'])) && ($pageData['isbn'])) { ?>
 <?php echo $pageData['isbn']?><br />
 <?php } ?>
 <?php if ((isset($pageData['pages'])) && ($pageData['pages'])) { ?>
 <?php echo $pageData['pages']?><br />
 <?php } ?>
-</small></p>
+
+
+    </small></p>
 
 <?php if ((isset($pageData['ecommerce'])) && ($pageData['ecommerce'])){ ?>
 <form>

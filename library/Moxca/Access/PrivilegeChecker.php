@@ -22,7 +22,10 @@ class Moxca_Access_PrivilegeChecker
             $action = $controllerInstance->getRequest()->getActionName();
             $controller = $controllerInstance->getRequest()->getControllerName();
         } else {
-            die("$module=, $action, $controller");
+            $module = $controllerInstance->getRequest()->getModuleName();
+            $action = $controllerInstance->getRequest()->getActionName();
+            $controller = $controllerInstance->getRequest()->getControllerName();
+//            die("$module, $action, $controller");
         }
         $moduleLevel = "moxca:" . $module;
         $controllerLevel = $moduleLevel . "." . $controller;

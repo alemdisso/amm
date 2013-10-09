@@ -7,8 +7,15 @@ class Author_Form_SerieCreate extends Zend_Form
 
         // initialize form
         $this->setName('newSerieForm')
-            ->setAction('javascript:submitSerieForm();')
+            ->setAction("javascript:submitSerieForm();")
+//            ->setAction('/admin/serie/create')
             ->setMethod('post');
+
+        $element = new Zend_Form_Element_Hidden('serieEditor');
+        $element->addValidator('Int')
+            ->addFilter('StringTrim');
+        $this->addElement($element);
+        $element->setDecorators(array('ViewHelper'));
 
         $element = new Zend_Form_Element_Text('name');
         $titleValidator = new Moxca_Util_ValidTitle();
@@ -48,9 +55,12 @@ class Author_Form_SerieCreate extends Zend_Form
         } else {
             $db = Zend_Registry::get('db');
 
+
+
             $serieMapper = new Author_Collection_SerieMapper($db);
             $serie = new Author_Collection_Serie();
             $serie->SetName($data['name']);
+            $serie->SetEditor($data['serieEditor']);
             $serie->SetCountry('BR');
 
             $serieMapper->insert($serie);

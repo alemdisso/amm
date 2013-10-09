@@ -59,7 +59,8 @@ class Admin_PrizeController extends Zend_Controller_Action
             $this->view->pageTitle = $this->view->translate("#Create prize");
         }
     }
-   public function editAction()
+
+    public function editAction()
     {
         // cria form
         $form = new Author_Form_PrizeEdit;

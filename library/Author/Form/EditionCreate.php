@@ -4,7 +4,6 @@ class Author_Form_EditionCreate extends Zend_Form
     public function init()
     {
         parent::init();
-
         // initialize form
         $this->setName('newEditionForm')
             ->setAction('/admin/edition/create')

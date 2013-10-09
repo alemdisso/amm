@@ -257,7 +257,7 @@ class Admin_WorkController extends Zend_Controller_Action
                     $id = $form->process($postData);
                     $this->_helper->getHelper('FlashMessenger')
                         ->addMessage($this->view->translate('#The record was successfully removed.'));
-                    $this->_redirect('/admin/index/list');
+                    $this->_redirect('/admin/index/list-works');
                 } else {
                     $id = $postData['id'];
                     $this->_redirect('/admin/work/detail/?id=' . $id);

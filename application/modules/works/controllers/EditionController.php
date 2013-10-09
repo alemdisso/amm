@@ -77,10 +77,15 @@ class Works_EditionController extends Zend_Controller_Action
             $coverDesignerLabel = $this->view->translate("#Cover designer:") . " " . $editionObj->getCoverDesigner();
         }
 
+        $editorLabel = "";
+        if ($editionObj->getEditor()) {
+            $editorLabel = $this->view->translate("#Editor:") . " " . $editorObj->getName();
+        }
+
         $pageData = array(
             'title' => $workTitle,
             'mediumImageUri' => $coverFilePath,
-            'editorName' => $editorObj->getName(),
+            'editorName' => $editorLabel,
             'description' => nl2br($workObj->getDescription()),
             'serieName' => $serieLabel,
             'serieUri' => $serieUri,

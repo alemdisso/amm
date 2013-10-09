@@ -719,7 +719,7 @@
             </edition-tapete-magico>
             <series>
               <label>Coleções</label>
-              <uri>/colecoes</uri>
+              <uri>/series</uri>
               <pages>
                 <serie-abre-o-olho>
                   <label>Abre o olho</label>
@@ -757,6 +757,10 @@
                   <label>Celeste</label>
                   <uri>/colecao/celeste</uri>
                 </serie-celeste>
+                <serie-direct>
+                  <label>direct</label>
+                  <uri>/colecao/direct</uri>
+                </serie-direct>
                 <serie-gato-escondido>
                   <label>Gato Escondido</label>
                   <uri>/colecao/gato-escondido</uri>
@@ -799,20 +803,28 @@
         </works>
         <biography>
           <label>Biografia</label>
-          <uri>/biografia</uri>
+          <uri>/biography</uri>
         </biography>
         <news>
           <label>Novidades</label>
           <uri>/novidades</uri>
           <pages>
+            <post-a-historia-poderia-ser-outra>
+              <label>A história poderia ser outra</label>
+              <uri>/novidades/a-historia-poderia-ser-outra</uri>
+            </post-a-historia-poderia-ser-outra>
+            <post-inicialmente-um-rascunho2>
+              <label>Inicialmente um rascunho2</label>
+              <uri>/novidades/inicialmente-um-rascunho2</uri>
+            </post-inicialmente-um-rascunho2>
             <post-infamia-recebe-premio-em-passo-fundo>
               <label>Infâmia recebe prêmio em Passo Fundo</label>
               <uri>/novidades/infamia-recebe-premio-em-passo-fundo</uri>
             </post-infamia-recebe-premio-em-passo-fundo>
-            <post-ana-maria-participa-de-debate-na-bienal>
-              <label>Ana Maria participa de debate na Bienal</label>
-              <uri>/novidades/ana-maria-participa-de-debate-na-bienal</uri>
-            </post-ana-maria-participa-de-debate-na-bienal>
+            <post-ana-maria-participa-de-debate-na-bienal-do-livro>
+              <label>Ana Maria participa de debate na Bienal do Livro</label>
+              <uri>/novidades/ana-maria-participa-de-debate-na-bienal-do-livro</uri>
+            </post-ana-maria-participa-de-debate-na-bienal-do-livro>
           </pages>
         </news>
       </pages>

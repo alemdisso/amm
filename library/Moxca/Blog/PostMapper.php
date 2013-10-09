@@ -29,9 +29,9 @@ class Moxca_Blog_PostMapper
     {
 
         $query = $this->db->prepare("INSERT INTO moxca_blog_posts (uri, title, summary,
-                            content, category, publication_date, creation_date,
+                            content, publication_date, creation_date,
                             last_edition_date, author, author_name, status)
-                            VALUES (:uri, :title, :summary, :content, :category,
+                            VALUES (:uri, :title, :summary, :content,
                             :publication_date, :creation_date, :last_edition_date,
                             :author, :author_name, :status)");
 
@@ -39,7 +39,6 @@ class Moxca_Blog_PostMapper
         $query->bindValue(':title', $obj->getTitle(true), PDO::PARAM_STR);
         $query->bindValue(':summary', $obj->getSummary(), PDO::PARAM_STR);
         $query->bindValue(':content', $obj->getContent(), PDO::PARAM_STR);
-        $query->bindValue(':category', $obj->getCategory(), PDO::PARAM_STR);
         $query->bindValue(':publication_date', $obj->getPublicationDate(), PDO::PARAM_STR);
         $query->bindValue(':creation_date', $obj->getCreationDate(), PDO::PARAM_STR);
         $query->bindValue(':last_edition_date', $obj->getLastEditionDate(), PDO::PARAM_STR);
@@ -47,10 +46,18 @@ class Moxca_Blog_PostMapper
         $query->bindValue(':author_name', $obj->getAuthorName(), PDO::PARAM_STR);
         $query->bindValue(':status', $obj->getStatus(), PDO::PARAM_STR);
 
+
         $query->execute();
 
         $obj->setId((int)$this->db->lastInsertId());
         $this->identityMap[$obj] = $obj->getId();
+
+        $taxonomyMapper = new Moxca_Blog_TaxonomyMapper($this->db);
+        $taxonomyMapper->insertPostCategoryRelationShip($obj);
+
+
+
+
 
     }
 

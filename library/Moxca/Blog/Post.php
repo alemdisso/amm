@@ -207,25 +207,31 @@ class Moxca_Blog_Post {
 
     public function setStatus($status)
     {
-        switch ($status) {
-            case Moxca_Blog_PostStatusConstants::STATUS_NIL:
-            case Moxca_Blog_PostStatusConstants::STATUS_DRAFT:
-            case Moxca_Blog_PostStatusConstants::STATUS_PUBLISHED:
-            case Moxca_Blog_PostStatusConstants::STATUS_PROTECTED:
-            case Moxca_Blog_PostStatusConstants::STATUS_ARCHIVED:
-                $this->status = (int)$status;
-                break;
+        if ($status != $this->status) {
+            switch ($status) {
+                case Moxca_Blog_PostStatusConstants::STATUS_NIL:
+                case Moxca_Blog_PostStatusConstants::STATUS_DRAFT:
+                case Moxca_Blog_PostStatusConstants::STATUS_PROTECTED:
+                case Moxca_Blog_PostStatusConstants::STATUS_ARCHIVED:
+                    $this->status = (int)$status;
+                    break;
 
-            case null:
-            case "":
-            case 0:
-            case false:
-                $this->status = null;
-                break;
+                case Moxca_Blog_PostStatusConstants::STATUS_PUBLISHED:
+                    $this->publicationDate = date("Y-m-d H:i:s", time());
+                    $this->status = (int)$status;
+                    break;
 
-            default:
-                throw new Moxca_Blog_ProjectException("Invalid project status.");
-                break;
+                case null:
+                case "":
+                case 0:
+                case false:
+                    $this->status = null;
+                    break;
+
+                default:
+                    throw new Moxca_Blog_ProjectException("Invalid project status.");
+                    break;
+            }
         }
     }
 

@@ -1,7 +1,7 @@
           <script type="text/javascript">
             $(document).ready(function(){
 
-                $('#hideNewEditorHref').click(function(){
+                $('#hideNewEditorClick').click(function(){
                     $("#newEditorDiv").slideToggle();
                 });
 
@@ -9,3 +9,4 @@
 
           </script>
 <?php echo $this->form; ?>
+<p style="margin-top:-12px; margin-bottom: 12px; margin-left: 32px;"><a href="#newEditionForm" id="hideNewEditorClick"><?php echo $this->translate("#(hide)") ?></a></p>
