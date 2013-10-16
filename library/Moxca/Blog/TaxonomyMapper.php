@@ -12,35 +12,6 @@ class Moxca_Blog_TaxonomyMapper
         $this->identityMap = new SplObjectStorage;
     }
 
-    public function getAllIds()
-    {
-        $query = $this->db->prepare('SELECT id FROM moxca_blog_categories WHERE 1=1;');
-        $query->execute();
-        $resultPDO = $query->fetchAll();
-
-        $result = array();
-        foreach ($resultPDO as $row) {
-            $result[] = $row['id'];
-        }
-        return $result;
-
-    }
-
-    public function insert(Moxca_Blog_Taxonomy $obj)
-    {
-
-        $query = $this->db->prepare("INSERT INTO moxca_blog_categories (label)
-            VALUES (:label)");
-
-        $query->bindValue(':label', $obj->getLabel(), PDO::PARAM_STR);
-
-        $query->execute();
-
-        $obj->setId((int)$this->db->lastInsertId());
-        $this->identityMap[$obj] = $obj->getId();
-
-    }
-
     public function insertCategory($termId)
     {
 
@@ -104,48 +75,6 @@ class Moxca_Blog_TaxonomyMapper
             throw new Moxca_Blog_TaxonomyException("sql failed");
         }
 
-    }
-
-    public function findById($id)
-    {
-        $this->identityMap->rewind();
-        while ($this->identityMap->valid()) {
-            if ($this->identityMap->getInfo() == $id) {
-                return $this->identityMap->current();
-            }
-            $this->identityMap->next();
-        }
-
-        $query = $this->db->prepare('SELECT label FROM moxca_blog_categories WHERE id = :id;');
-        $query->bindValue(':id', $id, PDO::PARAM_STR);
-        $query->execute();
-
-        $result = $query->fetch();
-
-        if (empty($result)) {
-            throw new Moxca_Blog_TaxonomyMapperException(sprintf('There is no taxonomy with id #%d.', $id));
-        }
-        $uri = $result['uri'];
-
-        $obj = new Moxca_Blog_Taxonomy();
-        $this->setAttributeValue($obj, $id, 'id');
-        $this->setAttributeValue($obj, $result['label'], 'label');
-
-        $this->identityMap[$obj] = $id;
-
-        return $obj;
-
-    }
-
-    public function delete(Moxca_Blog_Taxonomy $obj)
-    {
-        if (!isset($this->identityMap[$obj])) {
-            throw new Moxca_Blog_TaxonomyMapperException('Object has no ID, cannot delete.');
-        }
-        $query = $this->db->prepare('DELETE FROM moxca_blog_categories WHERE id = :id;');
-        $query->bindValue(':id', $this->identityMap[$obj], PDO::PARAM_INT);
-        $query->execute();
-        unset($this->identityMap[$obj]);
     }
 
     public function getAllCategoriesAlphabeticallyOrdered()
