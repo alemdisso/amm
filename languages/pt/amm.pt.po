@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-09 15:49-0300\n"
-"PO-Revision-Date: 2013-10-09 15:50-0300\n"
+"POT-Creation-Date: 2013-10-12 18:34-0300\n"
+"PO-Revision-Date: 2013-10-15 10:43-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -22,7 +22,7 @@ msgstr ""
 #: application\modules/admin/controllers/EditionController.php:280
 #: application\modules/admin/controllers/EditorController.php:42
 #: application\modules/admin/controllers/PostController.php:39
-#: application\modules/admin/controllers/PostController.php:63
+#: application\modules/admin/controllers/PostController.php:86
 #: application\modules/admin/controllers/PrizeController.php:41
 #: application\modules/admin/controllers/PrizeController.php:74
 #: application\modules/admin/controllers/SerieController.php:42
@@ -90,10 +90,20 @@ msgstr "/livros"
 msgid "#Create post"
 msgstr "Criar post"
 
-#: application\modules/admin/controllers/PostController.php:96
+#: application\modules/admin/controllers/PostController.php:119
 #: application\modules/admin/views/scripts/post/edit.phtml:6
 msgid "#Edit post"
 msgstr "Editar post"
+
+#: application\modules/admin/controllers/PostController.php:136
+#: application\modules/admin/controllers/WorkController.php:259
+msgid "#The record was successfully removed."
+msgstr "O registro foi removido com sucesso."
+
+#: application\modules/admin/controllers/PostController.php:166
+#: application\modules/admin/views/scripts/post/remove.phtml:5
+msgid "#Remove post"
+msgstr "Remover post"
 
 #: application\modules/admin/controllers/PrizeController.php:59
 #: application\modules/admin/controllers/PrizeController.php:110
@@ -127,10 +137,6 @@ msgstr "Alterar classificação"
 #: application\modules/admin/controllers/WorkController.php:198
 msgid "#NI"
 msgstr "n.i."
-
-#: application\modules/admin/controllers/WorkController.php:259
-msgid "#The record was successfully removed."
-msgstr "O registro foi removido com sucesso."
 
 #: application\modules/admin/controllers/WorkController.php:289
 #: application\modules/admin/views/scripts/work/remove.phtml:5
@@ -295,6 +301,20 @@ msgstr "Conteúdo:"
 msgid "#Submit"
 msgstr "Enviar"
 
+#: library\Moxca/Form/PostRemove.php:21 library\Author/Form/WorkRemove.php:21
+msgid "#Confirm removal"
+msgstr "Confirmar remoção"
+
+#: library\Moxca/Form/PostRemove.php:21 library\Author/Form/WorkRemove.php:21
+msgid "#Don't remove"
+msgstr "Não remova"
+
+#: library\Moxca/Form/PostRemove.php:32 library\Moxca/Form/UserCreate.php:117
+#: library\Moxca/Form/UserEdit.php:28 library\Moxca/Form/UserLogin.php:66
+#: library\Author/Form/WorkRemove.php:32
+msgid "#Invalid data!"
+msgstr "Dados inválidos"
+
 #: library\Moxca/Form/UserCreate.php:15
 #: library\Author/Form/EditorCreate.php:15
 #: library\Author/Form/SerieCreate.php:22
@@ -316,11 +336,6 @@ msgstr "Senha"
 #: library\Moxca/Form/UserCreate.php:84
 msgid "#Email:"
 msgstr "Email"
-
-#: library\Moxca/Form/UserCreate.php:117 library\Moxca/Form/UserEdit.php:28
-#: library\Moxca/Form/UserLogin.php:66 library\Author/Form/WorkRemove.php:32
-msgid "#Invalid data!"
-msgstr "Dados inválidos"
 
 #: library\Moxca/Form/UserLogin.php:16
 msgid "#User:"
@@ -1387,14 +1402,6 @@ msgstr "Categoria:"
 msgid "#Year:"
 msgstr "Ano:"
 
-#: library\Author/Form/WorkRemove.php:21
-msgid "#Confirm removal"
-msgstr "Confirmar remoção"
-
-#: library\Author/Form/WorkRemove.php:21
-msgid "#Don't remove"
-msgstr "Não remova"
-
 #: library\Author/Form/WorkTypeChange.php:25
 msgid "#Type:"
 msgstr "Tipo:"
@@ -1514,6 +1521,27 @@ msgstr "Listar posts"
 msgid "#Logout"
 msgstr "Logout"
 
+#: application\modules/admin/views/scripts/post/detail.phtml:8
+msgid "#Content"
+msgstr "Conteúdo"
+
+#: application\modules/admin/views/scripts/post/detail.phtml:10
+msgid "#(edit post)"
+msgstr "(editar post)"
+
+#: application\modules/admin/views/scripts/post/detail.phtml:13
+msgid "#(remove this post!)"
+msgstr "(remova esse post!)"
+
+#: application\modules/admin/views/scripts/post/detail.phtml:14
+msgid "#(goto post's page)"
+msgstr "(ir para a página do post)"
+
+#: application\modules/admin/views/scripts/post/remove.phtml:8
+#, php-format
+msgid "#Do you confirm removal of post %s? This CAN'T be undone."
+msgstr "Confirma a remoção do post %s? Isso NÂO pode ser desfeito."
+
 #: application\modules/admin/views/scripts/prize/edit.phtml:2
 msgid "#Edit prize"
 msgstr "Editar prêmio"
@@ -1612,7 +1640,7 @@ msgstr "Editar conta do usuário"
 msgid "#Success!!!"
 msgstr "Sucesso!"
 
-#: application\modules/blog/views/scripts/index/index.phtml:7
+#: application\modules/blog/views/scripts/index/index.phtml:6
 #: application\modules/blog/views/scripts/post/explore.phtml:7
 #: application\modules/default/views/scripts/index/index.phtml:42
 #: application\modules/includes/views/scripts/include/footer-home.phtml:17

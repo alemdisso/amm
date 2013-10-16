@@ -50,7 +50,7 @@ class Works_IndexController extends Zend_Controller_Action
             throw $e;
         }
 
-        $editionsIds = $this->editionMapper->getAllEditionsOfSerie($uri);
+        $editionsIds = $this->editionMapper->getAllEditionsOfSerieByUri($uri);
 
         $serieMapper = new Author_Collection_SerieMapper($this->db);
         $serieObj = $serieMapper->findByUri($uri);

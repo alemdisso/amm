@@ -243,7 +243,7 @@ class Author_Collection_EditionMapper
     }
 
 
-    public function getAllEditionsOfSerie($serie)
+    public function getAllEditionsOfSerieByUri($serie)
     {
         $query = $this->db->prepare('SELECT e.id FROM author_collection_series s
                                      LEFT JOIN author_collection_editions e ON s.id = e.serie

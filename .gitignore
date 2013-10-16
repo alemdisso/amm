@@ -6,7 +6,9 @@ application/Bootstrap.php
 application/configs/application.ini
 public/index.php
 
-/nbproject/**/* 
+/nbproject/**/*
+nbproject/private/**/*
+nbproject/project.properties
 /tests/log/**/*
 /nbproject/
 /temp/
@@ -27,3 +29,4 @@ public/index.php
 /public/js/jquery.pajinate*.*
 
 /public/img/special/*
+/public/js/admin/
