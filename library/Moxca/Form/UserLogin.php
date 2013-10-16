@@ -7,7 +7,7 @@ class Moxca_Form_UserLogin extends Zend_Form
         // initialize form
         $this->setName('loginForm')
             ->setAction('/auth/login')
-            ->setDecorators(array('FormElements',array('HtmlTag', array('tag' => 'div', 'class' => '')),'Form'))
+            ->setDecorators(array('FormElements',array('HtmlTag', array('tag' => 'div', 'class' => 'form')),'Form'))
             ->setMethod('post');
 
         // create text input for name
@@ -17,10 +17,10 @@ class Moxca_Form_UserLogin extends Zend_Form
               ->setDecorators(array(
                   'ViewHelper',
                   'Errors',
-                  array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => '')),
-                  array('Label', array('tag' => 'div', 'tagClass' => '')),
+                  array(array('data' => 'HtmlTag'), array('tagClass' => 'div', 'class' => 'inputAdmin')),
+                  array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
               ))
-            ->setOptions(array('class' => ''))
+//            ->setOptions(array('class' => ''))
             ->setRequired(true)
             ->addValidator($loginValidator)
             ->addFilter('StringTrim')
@@ -35,10 +35,10 @@ class Moxca_Form_UserLogin extends Zend_Form
               ->setDecorators(array(
                   'ViewHelper',
                   'Errors',
-                  array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class' => '')),
-                  array('Label', array('tag' => 'div', 'tagClass' => '')),
+                  array(array('data' => 'HtmlTag'), array('tag' => 'div', 'class' => 'inputAdmin')),
+                  array('Label', array('tag' => 'div', 'tagClass' => 'labelAdmin')),
               ))
-            ->setOptions(array('class' => ''))
+//            ->setOptions(array('class' => ''))
             ->setRequired(true)
             ->addValidator($passwordValidator)
             ->addFilter('StringTrim')

@@ -27,3 +27,4 @@ public/index.php
 /public/js/jquery.pajinate*.*
 
 /public/img/special/*
+/public/js/admin/
