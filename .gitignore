@@ -7,6 +7,7 @@ application/configs/application.ini
 public/index.php
 
 library/Moxca
+library/Author
 
 /nbproject/**/*
 nbproject/private/**/*
