@@ -6,6 +6,8 @@ application/Bootstrap.php
 application/configs/application.ini
 public/index.php
 
+library/Moxca/**/*
+
 /nbproject/**/*
 nbproject/private/**/*
 nbproject/project.properties
