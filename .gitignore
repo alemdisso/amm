@@ -6,12 +6,14 @@ application/Bootstrap.php
 application/configs/application.ini
 public/index.php
 
-library/Moxca
-library/Author
+
+library/Moxca/
+library/Author/
 
 /nbproject/**/*
 nbproject/private/**/*
 nbproject/project.properties
+
 /tests/log/**/*
 /nbproject/
 /temp/
