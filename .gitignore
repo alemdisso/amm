@@ -6,6 +6,9 @@ application/Bootstrap.php
 application/configs/application.ini
 public/index.php
 
+/library/Author/
+/library/Moxca/
+
 /nbproject/**/* 
 /tests/log/**/*
 /nbproject/
