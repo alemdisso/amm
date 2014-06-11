@@ -162,7 +162,7 @@ class Admin_WorkController extends Zend_Controller_Action
 
         $workObj = $this->workMapper->findById($id);
 
-        $typeLabel = $this->view->typeLabel($workObj, new Author_Collection_WorkTypes, $this->view);
+        $typeLabel = $this->view->typeLabel($workObj->getType(), new Author_Collection_WorkTypes, $this->view);
         $typeListLink = $this->view->typeListLink($workObj, $this->view);
 
         $editionsIds = $this->editionMapper->getAllEditionsOfWork($id);
