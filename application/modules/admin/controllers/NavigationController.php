@@ -87,7 +87,9 @@ class Admin_NavigationController extends Zend_Controller_Action
 
             }
 
-            $edition = $this->addPage($nodePages, 'edition-' . $loopWorkObj->getUri(), $loopWorkObj->getTitle(), '/explore/' . $loopWorkObj->getUri());
+            $exploreString = $this->view->translate('/explore');
+
+            $edition = $this->addPage($nodePages, 'edition-' . $loopWorkObj->getUri(), $loopWorkObj->getTitle(), $exploreString . '/' . $loopWorkObj->getUri());
         }
 
         $series = $this->addPage($worksPages, 'series', $this->view->translate("#Series"), '/series');

@@ -55,5 +55,26 @@ class Blog_IndexController extends Zend_Controller_Action
         $this->taxonomyMapper = new Moxca_Taxonomy_TaxonomyMapper($this->db);
 
     }
+
+    private function buildPostsModel($postsIds)
+    {
+        $postsData = array();
+        if (is_array($postsIds)) {
+            foreach ($postsIds as $postId) {
+                $loopPostObj = $this->postMapper->findById($postId);
+
+                $postsData[$postId] = array(
+                        'title' => $loopPostObj->getTitle(),
+                        'exploreUri' => '/novidades/' . $loopPostObj->getUri(),
+                );
+            }
+        }
+
+        return $postsData;
+    }
+
+
+
+
 }
 

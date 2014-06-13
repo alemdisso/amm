@@ -115,11 +115,11 @@ class Works_IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         $pageData = array(
-            'leftSpecialUri' => '/explore/menina-bonita-do-laco-de-fita',
+            'leftSpecialUri' => '/livro/menina-bonita-do-laco-de-fita',
             'leftSpecialTitle' => 'Menina bonita do laço de fita',
             'leftSpecialSummary' => 'História de uma menina que, de tão bonita, deixa até um coelho apaixonado.',
             'leftSpecialImageUri' => '/img/marcacao_destaque_livro1.png',
-            'rightSpecialUri' => '/explore/audacia-dessa-mulher',
+            'rightSpecialUri' => '/livro/audacia-dessa-mulher',
             'rightSpecialTitle' => 'A audácia dessa mulher',
             'rightSpecialSummary' => 'Um romance que engloba varias vertentes e vem do século XIX aos nossos dias.',
             'rightSpecialImageUri' => '/img/special/audacia_crop.png',
@@ -145,7 +145,7 @@ class Works_IndexController extends Zend_Controller_Action
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
                     'coverSrc' => $coverFilePath,
-                    'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
+                    'exploreUri' => $this->translate('/explore') . '/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),
                     'prizes' => $prizesLabels,

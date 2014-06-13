@@ -19,7 +19,7 @@ class IndexController extends Zend_Controller_Action
     {
 
         $pageData = array(
-            'worksSpecialUri' => '/explore/canteiros-de-saturno',
+            'worksSpecialUri' => '/livro/canteiros-de-saturno',
             'worksSpecialTitle' => 'Canteiros de Saturno',
             'worksSpecialSummary' => 'Um livro sobre o tempo e seu efeito sobre as pessoas',
             'worksSpecialImageUri' => '/img/special/canteiros_home.png',
