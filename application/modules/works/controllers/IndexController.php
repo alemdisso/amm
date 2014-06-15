@@ -145,7 +145,7 @@ class Works_IndexController extends Zend_Controller_Action
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
                     'coverSrc' => $coverFilePath,
-                    'exploreUri' => $this->translate('/explore') . '/' . $loopWorkObj->getUri(),
+                    'exploreUri' => $this->view->translate('/explore') . '/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),
                     'prizes' => $prizesLabels,

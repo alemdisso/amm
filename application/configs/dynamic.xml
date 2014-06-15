@@ -829,25 +829,53 @@
           <label>Novidades</label>
           <uri>/novidades</uri>
           <pages>
+            <category-abl>
+              <label>ABL</label>
+              <uri>/novidades-em/abl</uri>
+            </category-abl>
+            <category-Agenda>
+              <label>Agenda</label>
+              <uri>/novidades-em/Agenda</uri>
+            </category-Agenda>
+            <category-biografia>
+              <label>Biografia</label>
+              <uri>/novidades-em/biografia</uri>
+            </category-biografia>
+            <category-Escola>
+              <label>Escola</label>
+              <uri>/novidades-em/Escola</uri>
+            </category-Escola>
+            <category-Histórias>
+              <label>Histórias</label>
+              <uri>/novidades-em/Histórias</uri>
+            </category-Histórias>
+            <category-Leitor>
+              <label>Leitor</label>
+              <uri>/novidades-em/Leitor</uri>
+            </category-Leitor>
+            <category-Leitura>
+              <label>Leitura</label>
+              <uri>/novidades-em/Leitura</uri>
+            </category-Leitura>
             <post-autora-encontra-leitores-na-bienal-do-livro>
               <label>Autora encontra leitores na Bienal do Livro</label>
-              <uri>/novidades/autora-encontra-leitores-na-bienal-do-livro</uri>
+              <uri>/post/autora-encontra-leitores-na-bienal-do-livro</uri>
             </post-autora-encontra-leitores-na-bienal-do-livro>
             <post-nova-situacao>
               <label>nova situação</label>
-              <uri>/novidades/nova-situacao</uri>
+              <uri>/post/nova-situacao</uri>
             </post-nova-situacao>
             <post-inicialmente-um-rascunho2>
               <label>Inicialmente um rascunho2</label>
-              <uri>/novidades/inicialmente-um-rascunho2</uri>
+              <uri>/post/inicialmente-um-rascunho2</uri>
             </post-inicialmente-um-rascunho2>
             <post-infamia-recebe-premio-em-passo-fundo>
               <label>Infâmia recebe prêmio em Passo Fundo</label>
-              <uri>/novidades/infamia-recebe-premio-em-passo-fundo</uri>
+              <uri>/post/infamia-recebe-premio-em-passo-fundo</uri>
             </post-infamia-recebe-premio-em-passo-fundo>
             <post-ana-maria-participa-de-debate-na-bienal-do-livro>
               <label>Ana Maria participa de debate na Bienal do Livro</label>
-              <uri>/novidades/ana-maria-participa-de-debate-na-bienal-do-livro</uri>
+              <uri>/post/ana-maria-participa-de-debate-na-bienal-do-livro</uri>
             </post-ana-maria-participa-de-debate-na-bienal-do-livro>
           </pages>
         </news>

@@ -55,10 +55,15 @@ class Works_EditionController extends Zend_Controller_Action
         $serie = $editionObj->getSerie();
         if ($serie > 0) {
             $serieMapper = new Author_Collection_SerieMapper($this->db);
-            $serieObj = $serieMapper->findById($serie);
-            $serieName = $serieObj->getName();
-            $serieLabel = sprintf($this->view->translate("#Serie: %s"), $serieName);
-            $serieUri = $serieObj->getUri();
+            try {
+                $serieObj = $serieMapper->findById($serie);
+                $serieName = $serieObj->getName();
+                $serieLabel = sprintf($this->view->translate("#Serie: %s"), $serieName);
+                $serieUri = $serieObj->getUri();
+            } catch (Exception $e) {
+                $serieLabel = "";
+                $serieUri = "#";
+            }
         } else {
             $serieLabel = "";
             $serieUri = "#";
