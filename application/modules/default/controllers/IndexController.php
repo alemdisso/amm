@@ -10,6 +10,8 @@ class IndexController extends Zend_Controller_Action
 
     public function init()
     {
+        $this->initDbAndMappers();
+
         $layoutHelper = $this->_helper->getHelper('Layout');
         $this->view->setNestedLayout($layoutHelper, 'inner_home');
     }
@@ -25,14 +27,41 @@ class IndexController extends Zend_Controller_Action
             'worksSpecialImageUri' => '/img/special/canteiros_home.png',
         );
 
-        $blogData = array(
-            'firstPostUri' => 'silenciosa-algazarra',
-            'firstPostTitle' => '!#! Silenciosa Algazarra sera tema de conversa com professores na PUC/RJ',
-            'firstPostDate' => '15.06.2014',
-            'secondPostUri' => 'mais-um-post',
-            'secondPostTitle' => 'Mais um título de um post',
-            'secondPostDate' => '14.06.2014',
-        );
+        $postsIds = $this->postMapper->getLastPublishedPosts(2);
+
+        $blogData = array();
+        $blogData['firstPostUri'] = null;
+        $blogData['firstPostTitle'] = null;
+        $blogData['firstPostDate'] = null;
+        $blogData['secondPostUri'] = null;
+        $blogData['secondPostTitle'] = null;
+        $blogData['secondPostDate'] = null;
+
+        if (count($postsIds) > 0) {
+            $postObj = $this->postMapper->findById($postsIds[0]);
+            $publicationDate = $this->view->splitDateFromDateTime($postObj->getPublicationDate());
+
+            $blogData['firstPostUri'] = $postObj->getUri();
+            $blogData['firstPostTitle'] = $postObj->getTitle();
+            $blogData['firstPostDate'] = $this->view->formatDateToShow($publicationDate, ".");
+            if (count($postsIds) > 1) {
+                $postObj = $this->postMapper->findById($postsIds[1]);
+                $publicationDate = $this->view->splitDateFromDateTime($postObj->getPublicationDate());
+
+                $blogData['secondPostUri'] = $postObj->getUri();
+                $blogData['secondPostTitle'] = $postObj->getTitle();
+                $blogData['secondPostDate'] = $this->view->formatDateToShow($publicationDate, ".");
+            }
+        }
+
+//        $blogData = array(
+//            'firstPostUri' => 'silenciosa-algazarra',
+//            'firstPostTitle' => '!#! Silenciosa Algazarra sera tema de conversa com professores na PUC/RJ',
+//            'firstPostDate' => '15.06.2014',
+//            'secondPostUri' => 'mais-um-post',
+//            'secondPostTitle' => 'Mais um título de um post',
+//            'secondPostDate' => '14.06.2014',
+//        );
 
         $bioData = array(
             'excerpt' => 'Considerada pela crítica como uma das mais versáteis e completas das escritoras brasileiras contemporâneas, Ana Maria Machado...',
@@ -48,6 +77,13 @@ class IndexController extends Zend_Controller_Action
 
         $this->view->pageTitle = "Ana Maria Machado";
   }
+
+    private function initDbAndMappers()
+    {
+        $this->db = Zend_Registry::get('db');
+        $this->postMapper = new Moxca_Blog_PostMapper($this->db);
+
+    }
 
 
 }
