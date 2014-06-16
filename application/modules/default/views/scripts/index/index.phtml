@@ -1,5 +1,8 @@
 <?php
 $pageData = $this->pageData;
+$worksData = $pageData['worksData'];
+$blogData = $pageData['blogData'];
+$bioData = $pageData['bioData'];
 ?>
 <!-- conteudo -->
 <div id="conteudo" class="conteudo_1coluna">
@@ -23,11 +26,11 @@ $pageData = $this->pageData;
 
 <div class="coluna3 clearfix">
 <div class="float_left">
-<h3><a href="<?php echo $pageData['worksSpecialUri']?>" title="<?php echo $pageData['worksSpecialTitle'] ?>"><?php echo $pageData['worksSpecialTitle']?></h3>
-<p><?php echo $pageData['worksSpecialSummary']?></p>
-<p><a href="<?php echo $pageData['worksSpecialUri']?>" title="<?php echo $this->translate("#more about") ?>" class="mais"> <?php echo $this->translate("#more about") ?></a></p>
+<h3><a href="<?php echo $worksData['worksSpecialUri']?>" title="<?php echo $worksData['worksSpecialTitle'] ?>"><?php echo $worksData['worksSpecialTitle']?></h3>
+<p><?php echo $worksData['worksSpecialSummary']?></p>
+<p><a href="<?php echo $worksData['worksSpecialUri']?>" title="<?php echo $this->translate("#more about") ?>" class="mais"> <?php echo $this->translate("#more about") ?></a></p>
 </div>
-<a href="<?php echo $pageData['worksSpecialUri']?>" class="float_right" title="<?php echo $pageData['worksSpecialTitle']?>"><img src="<?php echo $pageData['worksSpecialImageUri']?>" alt="<?php echo $pageData['worksSpecialTitle']?>" /></a>
+<a href="<?php echo $worksData['worksSpecialUri']?>" class="float_right" title="<?php echo $worksData['worksSpecialTitle']?>"><img src="<?php echo $worksData['worksSpecialImageUri']?>" alt="<?php echo $worksData['worksSpecialTitle']?>" /></a>
 </div>
 
 </div>
@@ -37,21 +40,22 @@ $pageData = $this->pageData;
 <div id="novidades_home">
 
 <div class="coluna1 clearfix">
-<img src="img/icone_novidades.png" align="top" class="float_left" />
+<a href="/novidades" title="<?php echo $this->translate("#Blog title") ?>"><img src="img/icone_novidades.png" align="top" class="float_left" /></a>
 <div class="float_left">
-<h2><?php echo $this->translate("#Blog title") ?></h2>
-<h4>O que a Ana anda aprontando por a&iacute;</h4>
+<h2><a href="/novidades" title="<?php echo $this->translate("#Blog title") ?>"><?php echo $this->translate("#Blog title") ?></h2>
+<h4><a href="/novidades" title="<?php echo $this->translate("#Blog title") ?>"><?php echo $this->translate("#Home blog tagline") ?></a></h4>
+<h4></h4>
 </div>
 </div>
 
 <div class="coluna2">
 <!-- item de repeticao -->
-<h3><a href="" title="">Silenciosa Algazarra sera tema de conversa com professores na PUC/RJ</a></h3>
-<p>28.08.2012 | <a href="" title=""><strong>2 coment&aacute;rios</strong></a></p>
+<h3><a href="<?php echo $this->translate("/post") ?>/<?php echo $blogData['firstPostUri']?>" title="<?php echo $blogData['firstPostTitle']?>"><?php echo $blogData['firstPostTitle']?></a></h3>
+<p><?php echo $blogData['firstPostDate']?></p>
 <!-- /item de repeticao -->
 <!-- item de repeticao -->
-<h3><a href="" title="">Ana Maria Machado e Ruth Rocha no Salao do Livro Infantil em Belo Horizonte</a></h3>
-<p>28.08.2012 | <a href="" title=""><strong>Comente</strong></a></p>
+<h3><a href="<?php echo $this->translate("/post") ?>/<?php echo $blogData['secondPostUri']?>" title="<?php echo $blogData['secondPostTitle']?>"><?php echo $blogData['secondPostTitle']?></a></h3>
+<p><?php echo $blogData['secondPostDate']?></p>
 <!-- /item de repeticao -->
 </div>
 
@@ -62,16 +66,16 @@ $pageData = $this->pageData;
 <div id="biografia_home">
 
 <div class="coluna1 clearfix">
-<img src="img/icone_biografia.png" align="top" class="float_left" />
+<a href="/biografia" title="<?php echo $this->translate("#Biography") ?>"><img src="img/icone_biografia.png" align="top" class="float_left" /></a>
 <div class="float_left">
-<h2>Biografia</h2>
-<h4>Um resumo da vida e obra da artista</h4>
+<h2><a href="/biografia" title="<?php echo $this->translate("#Biography") ?>"><?php echo $this->translate("#Biography") ?></h2>
+<h4><a href="/biografia" title="<?php echo $this->translate("#Biography") ?>"><?php echo $this->translate("#Home biography tagline") ?></a></h4>
 </div>
 </div>
 
 <div class="coluna2">
-<p>Meu nome e Ana Maria Machado e eu vivo inventando historias. E dessas que eu escrevo, algumas viram livros. </p>
-<p><a href="" title="Mais" class="mais">mais</a></p>
+<p><?php echo $bioData['excerpt']?></p>
+<p><a href="/biografia" title="<?php echo $this->translate("#more about") ?>" class="mais"><?php echo $this->translate("#more about") ?></a></p>
 </div>
 
 </div>
@@ -82,16 +86,16 @@ $pageData = $this->pageData;
 
 <div class="coluna1 clearfix">
 <img src="img/icone_contato.png" align="top" class="float_left" />
-<div class="float_left"><h2>Contato</h2>
-<h4>Tire suas d&uacute;vidas ou entre em contato</h4>
+<div class="float_left"><h2><?php echo $this->translate("#Frequently asked questions") ?></h2>
+<h4><?php echo $this->translate("#Get answers here") ?></h4>
 </div>
 </div>
 
 <div class="coluna2">
-<p>A resposta para a sua duvida pode estar aqui:</p>
+<p><?php echo $this->translate("#Answers to frequently asked questions:") ?></p>
 <form>
 <select class="duvidas">
-<option selected="selected">Selecione</option>
+<option selected="selected"><?php echo $this->translate("#(choose)") ?></option>
 </select>
 </form>
 </div>

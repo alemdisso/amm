@@ -10,21 +10,8 @@ class Includes_IncludeController extends Zend_Controller_Action
 
     public function categoriesAction()
     {
-        $ids = $this->taxonomyMapper->getAllCategoriesAlphabeticallyOrdered();
-        $idsCount = count($ids);
 
-        foreach ($ids as $id => $term) {
-            $idsCount--;
-            $termAndUri = $this->taxonomyMapper->getTermAndUri($id);
-            $categoriesModel[$id] = array(
-                'label' => $termAndUri['term'],
-                'uri' => $termAndUri['uri'],
-                'last' => ($idsCount > 0 ? false : true),
-            );
-
-        }
-
-
+        $categoriesModel = $this->fetchCategories($this->taxonomyMapper);
 
         $pageData = array(
             'categories' => $categoriesModel,
@@ -66,6 +53,14 @@ class Includes_IncludeController extends Zend_Controller_Action
 
     public function footerAction()
     {
+        $categoriesModel = $this->fetchCategories($this->taxonomyMapper);
+
+        $pageData = array(
+            'categories' => $categoriesModel,
+        );
+
+        $this->view->pageData = $pageData;
+
 
 
     }
@@ -73,12 +68,50 @@ class Includes_IncludeController extends Zend_Controller_Action
     public function footerHomeAction()
     {
 
+        $categoriesModel = $this->fetchCategories($this->taxonomyMapper);
+
+        $pageData = array(
+            'categories' => $categoriesModel,
+        );
+
+        $this->view->pageData = $pageData;
+
     }
 
     private function initDbAndMappers()
     {
         $this->db = Zend_Registry::get('db');
         $this->taxonomyMapper = new Author_Collection_TaxonomyMapper($this->db);
+    }
+
+    private function fetchCategories($taxonomyMapper)
+    {
+        $ids = $taxonomyMapper->getAllCategoriesAlphabeticallyOrdered();
+        $idsCount = count($ids);
+        $categoriesModel = array();
+        $lastInsertedId = null;
+
+        foreach ($ids as $id => $term) {
+            $publishedIds = $this->taxonomyMapper->getPublishedPostsByCategory($term);
+            if (count($publishedIds)) {
+                $termAndUri = $taxonomyMapper->getTermAndUri($id);
+                $categoriesModel[$id] = array(
+                    'label' => $termAndUri['term'],
+                    'uri' => $termAndUri['uri'],
+                    'last' => false,
+                );
+                $lastInsertedId = $id;
+            }
+
+        }
+        if ($lastInsertedId) {
+            $categoriesModel[$lastInsertedId]['last'] = true;
+        }
+
+
+        return ($categoriesModel);
+
+
     }
 
 }

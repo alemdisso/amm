@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-15 12:07-0300\n"
-"PO-Revision-Date: 2014-06-15 14:39-0300\n"
+"POT-Creation-Date: 2014-06-16 10:45-0300\n"
+"PO-Revision-Date: 2014-06-16 10:47-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -72,7 +72,7 @@ msgstr "Criar editora"
 msgid "#no editions"
 msgstr "sem edições"
 
-#: application\modules/admin/controllers/NavigationController.php:46
+#: application\modules/admin/controllers/NavigationController.php:47
 #: application\modules/works/views/scripts/edition/explore.phtml:7
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:24
 #: application\modules/works/views/scripts/index/series.phtml:7
@@ -80,22 +80,51 @@ msgstr "sem edições"
 msgid "#Works"
 msgstr "Livros"
 
-#: application\modules/admin/controllers/NavigationController.php:47
+#: application\modules/admin/controllers/NavigationController.php:48
 #: library\Author/View/Helper/TypeListLink.php:27
 msgid "/works"
 msgstr "/livros"
 
-#: application\modules/admin/controllers/NavigationController.php:90
+#: application\modules/admin/controllers/NavigationController.php:91
 #: application\modules/works/controllers/IndexController.php:148
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:9
 msgid "/explore"
 msgstr "/livro"
 
-#: application\modules/admin/controllers/NavigationController.php:95
+#: application\modules/admin/controllers/NavigationController.php:96
 #: application\modules/works/controllers/IndexController.php:103
 #: application\modules/works/views/scripts/index/series.phtml:9
 msgid "#Series"
 msgstr "Coleções"
+
+#: application\modules/admin/controllers/NavigationController.php:105
+#: application\modules/default/views/scripts/index/index.phtml:69
+#: application\modules/default/views/scripts/index/index.phtml:71
+#: application\modules/default/views/scripts/index/index.phtml:72
+#: application\modules/includes/views/scripts/include/footer-home.phtml:26
+#: application\modules/includes/views/scripts/include/footer.phtml:25
+#: application\modules/includes/views/scripts/include/header-login.phtml:12
+#: application\modules/includes/views/scripts/include/header.phtml:13
+msgid "#Biography"
+msgstr "Biografia"
+
+#: application\modules/admin/controllers/NavigationController.php:105
+msgid "/biography"
+msgstr "/biografia"
+
+#: application\modules/admin/controllers/NavigationController.php:112
+#: application\modules/blog/views/helpers/CategoryHrefTerm.php:10
+#: application\modules/includes/views/scripts/include/categories-loop-li.phtml:1
+#: application\modules/includes/views/scripts/include/categories-loop.phtml:2
+msgid "/blog/index/category"
+msgstr "/novidades-em"
+
+#: application\modules/admin/controllers/NavigationController.php:119
+#: application\modules/blog/views/scripts/index/posts-loop.phtml:4
+#: application\modules/default/views/scripts/index/index.phtml:53
+#: application\modules/default/views/scripts/index/index.phtml:57
+msgid "/post"
+msgstr "/post"
 
 #: application\modules/admin/controllers/PostController.php:48
 #: application\modules/admin/views/scripts/post/create.phtml:7
@@ -242,7 +271,7 @@ msgstr "Nula"
 
 #: library\Moxca/Author/Collection/WorkTypes.php:11
 #: library\Author/Collection/WorkTypes.php:11
-#: application\modules/default/views/scripts/index/index.phtml:18
+#: application\modules/default/views/scripts/index/index.phtml:21
 #: application\modules/includes/views/scripts/include/footer-home.phtml:10
 #: application\modules/includes/views/scripts/include/footer.phtml:12
 #: application\modules/works/views/scripts/index/index.phtml:30
@@ -256,7 +285,7 @@ msgstr "Juvenis"
 
 #: library\Moxca/Author/Collection/WorkTypes.php:13
 #: library\Author/Collection/WorkTypes.php:13
-#: application\modules/default/views/scripts/index/index.phtml:20
+#: application\modules/default/views/scripts/index/index.phtml:23
 #: application\modules/includes/views/scripts/include/footer-home.phtml:12
 #: application\modules/includes/views/scripts/include/footer.phtml:14
 #: application\modules/works/views/scripts/index/index.phtml:30
@@ -1438,6 +1467,7 @@ msgstr "Bad value to Term"
 
 #: library\Author/Form/CharacterAdd.php:23
 #: library\Author/Form/ThemeChange.php:23
+#: application\modules/default/views/scripts/index/index.phtml:98
 msgid "#(choose)"
 msgstr "(escolha...)"
 
@@ -1710,58 +1740,87 @@ msgstr "Editar conta do usuário"
 msgid "#Success!!!"
 msgstr "Sucesso!"
 
+#: application\modules/blog/views/scripts/index/category.phtml:6
 #: application\modules/blog/views/scripts/index/index.phtml:6
 #: application\modules/blog/views/scripts/post/explore.phtml:7
-#: application\modules/default/views/scripts/index/index.phtml:42
+#: application\modules/default/views/scripts/index/index.phtml:43
+#: application\modules/default/views/scripts/index/index.phtml:45
+#: application\modules/default/views/scripts/index/index.phtml:46
 #: application\modules/includes/views/scripts/include/footer-home.phtml:17
 #: application\modules/includes/views/scripts/include/footer.phtml:19
 msgid "#Blog title"
 msgstr "Novidades"
 
-#: application\modules/blog/views/scripts/index/posts-loop.phtml:4
-msgid "/news"
-msgstr "/novidades"
+#: application\modules/blog/views/scripts/index/category.phtml:13
+msgid "#No posts found with this criteria."
+msgstr "Nada foi encontrado com esse critério de busca."
 
-#: application\modules/default/views/scripts/index/index.phtml:10
-#: application\modules/default/views/scripts/index/index.phtml:12
 #: application\modules/default/views/scripts/index/index.phtml:13
+#: application\modules/default/views/scripts/index/index.phtml:15
+#: application\modules/default/views/scripts/index/index.phtml:16
+#: application\modules/includes/views/scripts/include/footer-home.phtml:9
+#: application\modules/includes/views/scripts/include/footer.phtml:11
 #: application\modules/includes/views/scripts/include/header-login.phtml:10
 #: application\modules/includes/views/scripts/include/header.phtml:11
 #: application\modules/works/views/scripts/index/index.phtml:7
 msgid "#Books"
 msgstr "Livros"
 
-#: application\modules/default/views/scripts/index/index.phtml:13
+#: application\modules/default/views/scripts/index/index.phtml:16
 msgid "#Stories for all"
 msgstr "Mil histórias num só lugar"
 
-#: application\modules/default/views/scripts/index/index.phtml:19
+#: application\modules/default/views/scripts/index/index.phtml:22
 #: application\modules/includes/views/scripts/include/footer-home.phtml:11
 #: application\modules/includes/views/scripts/include/footer.phtml:13
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Young people"
 msgstr "Juvenis"
 
-#: application\modules/default/views/scripts/index/index.phtml:21
+#: application\modules/default/views/scripts/index/index.phtml:24
 #: application\modules/includes/views/scripts/include/footer-home.phtml:13
 #: application\modules/includes/views/scripts/include/footer.phtml:15
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Essays"
 msgstr "Ensaios"
 
-#: application\modules/default/views/scripts/index/index.phtml:28
+#: application\modules/default/views/scripts/index/index.phtml:31
+#: application\modules/default/views/scripts/index/index.phtml:78
 #: application\modules/works/views/scripts/index/index.phtml:15
 #: application\modules/works/views/scripts/index/index.phtml:21
 msgid "#more about"
 msgstr "mais"
 
-#: application\modules/includes/views/scripts/include/categories-loop.phtml:2
-msgid "/blog/index/category"
-msgstr "/novidades-em"
+#: application\modules/default/views/scripts/index/index.phtml:46
+msgid "#Home blog tagline"
+msgstr "O que a Ana tem aprontado por aí"
+
+#: application\modules/default/views/scripts/index/index.phtml:72
+msgid "#Home biography tagline"
+msgstr "Um resumo da vida e obra da artista"
+
+#: application\modules/default/views/scripts/index/index.phtml:89
+#: application\modules/includes/views/scripts/include/footer-home.phtml:27
+#: application\modules/includes/views/scripts/include/footer.phtml:26
+msgid "#Frequently asked questions"
+msgstr "Perguntas frequentes"
+
+#: application\modules/default/views/scripts/index/index.phtml:90
+msgid "#Get answers here"
+msgstr "Tire suas dúvidas"
+
+#: application\modules/default/views/scripts/index/index.phtml:95
+msgid "#Answers to frequently asked questions:"
+msgstr "Respostas para dúvidas frequentes:"
 
 #: application\modules/includes/views/scripts/include/categories.phtml:9
 msgid "#Categories"
 msgstr "Categorias"
+
+#: application\modules/includes/views/scripts/include/footer-home.phtml:30
+#: application\modules/includes/views/scripts/include/footer.phtml:29
+msgid "#Copyright notice"
+msgstr "&copy;2014 Ana Maria Machado. Todos os direitos reservados."
 
 #: application\modules/includes/views/scripts/include/header-login.phtml:5
 #: application\modules/includes/views/scripts/include/header.phtml:6
@@ -1772,11 +1831,6 @@ msgstr "Principal"
 #: application\modules/includes/views/scripts/include/header.phtml:12
 msgid "#News"
 msgstr "Novidades"
-
-#: application\modules/includes/views/scripts/include/header-login.phtml:12
-#: application\modules/includes/views/scripts/include/header.phtml:13
-msgid "#Biography"
-msgstr "Biografia"
 
 #: application\modules/includes/views/scripts/include/header-login.phtml:13
 msgid "#Contact"
@@ -1827,11 +1881,11 @@ msgstr "Por categoria"
 msgid "#list editions"
 msgstr "livros da coleção"
 
+#~ msgid "/news"
+#~ msgstr "/novidades"
+
 #~ msgid "/series"
 #~ msgstr "/colecoes"
-
-#~ msgid "/biography"
-#~ msgstr "/biografia"
 
 #~ msgid "#Ana Maria Machado - Fiction"
 #~ msgstr "Ana Maria Machado - Ficção"

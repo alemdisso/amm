@@ -1,3 +1,6 @@
+<?php
+$pageData = $this->pageData;
+?>
 <div id="rodape">
 
 <div class="box_tag">
@@ -6,7 +9,7 @@
 </div>
 
 <ul class="box_rodape">
-	<li><a href="/livros" class="uppercase" title="Livros">Livros</a></li>
+	<li><a href="/livros" class="uppercase" title="<?php echo $this->translate("#Books") ?>"><?php echo $this->translate("#Books") ?></a></li>
 <li><a href="/livros/infantis" title="<?php echo $this->translate("#Children") ?>"><?php echo $this->translate("#Children") ?></a></li>
 <li><a href="/livros/juvenis" title="<?php echo $this->translate("#Young people") ?>"><?php echo $this->translate("#Young people") ?></a></li>
 <li><a href="/livros/ficcao" title="<?php echo $this->translate("#Fiction") ?>"><?php echo $this->translate("#Fiction") ?></a></li>
@@ -15,18 +18,14 @@
 
 <ul class="box_rodape" style="width:190px;">
     <li><a href="/novidades" class="uppercase" title="<?php echo $this->translate("#Blog title") ?>"><?php echo $this->translate("#Blog title") ?></a></li>
-    <li><a href="">Leitura</a></li>
-    <li><a href="">Professor</a></li>
-    <li><a href="">Agenda</a></li>
-    <li><a href="">Academia Brasileira de Letras</a></li>
-    <li><a href="">Exposi&ccedil;&atilde;o Virtual</a></li>
+    <?php echo $this->categoriesLoopLi($pageData['categories']) ?>
 </ul>
 
 <ul class="box_rodape" style="width:70px;margin-left:0;">
-	<li><a href="/biografia" class="uppercase" title="Biografia">Biografia</a></li>
-	<li><a href="/contato" class="uppercase" title="Contato">Contato</a></li>
+	<li><a href="/biografia" class="uppercase" title="<?php echo $this->translate("#Biography") ?>"><?php echo $this->translate("#Biography") ?></a></li>
+	<li><a href="/respostas" class="uppercase" title="<?php echo $this->translate("#Frequently asked questions") ?>"><?php echo $this->translate("#Frequently asked questions") ?></a></li>
 </ul>
 
-<p class="clear_both">&copy;2013 Ana Maria Machado. Todos os direitos reservados.</p>
+<p class="clear_both"><?php echo $this->translate("#Copyright notice") ?></p>
 
 </div>

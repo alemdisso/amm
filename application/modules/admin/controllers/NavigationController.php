@@ -102,7 +102,7 @@ class Admin_NavigationController extends Zend_Controller_Action
             $serie = $this->addPage($seriesPages, 'serie-' . $loopSerieObj->getUri(), $loopSerieObj->getName(), '/colecao/' . $loopSerieObj->getUri());
         }
 
-        $this->addPage($pages, 'biography', '#Biography', '/biography');
+        $this->addPage($pages, 'biography', $this->view->translate("#Biography"), $this->view->translate("/biography"));
         $newsNode = $this->addPage($pages, 'news', '#News', '/news');
         $newsPages = $newsNode->addChild('pages');
 

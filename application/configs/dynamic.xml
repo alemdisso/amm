@@ -823,11 +823,11 @@
         </works>
         <biography>
           <label>Biografia</label>
-          <uri>/biography</uri>
+          <uri>/biografia</uri>
         </biography>
         <news>
           <label>Novidades</label>
-          <uri>/novidades</uri>
+          <uri>/news</uri>
           <pages>
             <category-abl>
               <label>ABL</label>
