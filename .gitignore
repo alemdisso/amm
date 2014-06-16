@@ -26,11 +26,8 @@ nbproject/project.properties
 /public/img/editions/tb/*
 /public/img/uploads/*
 
-/public/js/tinymce/langs/*
-/public/js/tinymce/skins/*
-/public/js/tinymce/themes/*
-/public/js/tinymce/js/*
-/public/js/tinymce/plugins/*
+/public/js/tinymce
+
 /public/js/jquery.pajinate*.*
 
 /public/img/special/*
