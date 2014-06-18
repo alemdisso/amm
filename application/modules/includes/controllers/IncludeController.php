@@ -19,6 +19,11 @@ class Includes_IncludeController extends Zend_Controller_Action
 
         $this->view->pageData = $pageData;
 
+    }
+
+    public function worksCategoriesAction()
+    {
+
 
     }
 
