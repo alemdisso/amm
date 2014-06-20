@@ -16,7 +16,7 @@ $pageData = $this->pageData;
 
     <h3><?php echo $this->translate('#Keywords')?></h2>
     <?php echo $this->keywordsLoop($pageData['keywords']) ?>
-    <p><a href="/admin/keyword/create/?work=<?php echo $pageData['id'] ?>"><?php echo $this->translate("#Add keyword") ?></a></p>
+    <p><a href="/admin/work/create-keyword/?id=<?php echo $pageData['id'] ?>"><?php echo $this->translate("#Add keyword") ?></a></p>
 
     <h3><?php echo $this->translate('#Prizes')?></h2>
     <?php echo $this->prizesLoop($pageData['prizes']) ?>

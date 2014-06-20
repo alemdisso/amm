@@ -1,0 +1,484 @@
+@charset "utf-8";
+
+html, body {
+	height:100%; /* keep footer at the bottom */
+	font-family: "MuseoSans100", Arial, Helvetica, sans-serif;
+	font-size: 17px;
+	color:#000;
+	background: #fff;
+	margin:0;
+	padding:0;
+}
+#tudo { /* keep footer at the bottom */
+	min-height:100%; 
+	position:relative;
+}
+.pagina {
+	margin: 0 auto;
+	padding: 0 ;
+}	
+.inner {
+	position:relative;
+}
+a {
+	color: #0099cc;
+	text-decoration: none;
+}
+a:hover {
+	color: #0099cc;
+	text-decoration:underline;
+}
+a img {
+	border:none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	margin-bottom:0.5em;
+}
+h1, h2, h3, h4 {
+	font-family: "HoratioB", Arial, Helvetica, sans-serif;
+	color:#99cc00;
+	text-transform:uppercase;
+}
+h1 {
+	font-size: 24px;
+}
+h2 {
+	font-size: 24px;
+}
+h3 {
+	font-size: 24px;
+}
+strong {
+	font-weight:normal;	
+	font-family: "MuseoSans900", Arial, Helvetica, sans-serif;
+}
+.ico {
+	font-family: "Entypo", Arial, Helvetica, sans-serif;
+}
+.clear {
+	clear:both;
+	float:none;	
+}
+/* -----------------------------------------------------------------   HEADER */
+header {
+	height: 54px;
+	background:#99cc00;
+	color:#fff;
+}
+header .pagina .inner {
+	padding:0 30px
+}
+header a {
+	color:#fff;
+	display:inline-block;
+	padding:28px 0 0 0;
+	height:26px;
+	overflow:hidden;
+	vertical-align:top;
+	line-height:18px;
+}
+header a:hover {
+	color:#fff;
+}
+header a.selected {
+	background:url(../img/headerSelected.png) no-repeat center bottom;
+	/*border-bottom:4px solid #669900;*/
+}
+header .separador {
+	display:inline-block;
+	padding:28px 0 0 0;
+	height:26px;
+	line-height:18px;
+	/*color:#669900;*/	
+}
+header #logo {
+	position:absolute;
+	display: block;
+	overflow: hidden;
+	width: 245px;
+	height: 38px;
+	top: 9px;
+	right: 30px;
+	line-height: 1000em;
+	background: url(../img/logoHeader.png) 0 0 no-repeat;
+}
+
+/* -------------------------------------------------------------- MAIN */
+.main {
+	padding-bottom:190px;   /* Height of the footer element */
+}
+.main .inner {
+	margin:0;	
+	padding:0 30px;
+}
+.main h2 a {
+	
+}
+
+.submenu p {
+	margin: 0.5em 0 0 0;
+	font-size:15px;	
+}
+
+/* -------------------------------------------------------------- FOOTER */
+footer {
+	height:120px;
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+}
+footer .inner {
+	padding:10px 30px 0 30px;
+}
+footer #legalize {
+	font-size:12px;
+	color:#999;	
+}
+
+
+/* -----------------------------------------------------------   TABLES */
+table {
+	width:100%;	
+	border-bottom:1px solid #666;
+}
+table th {
+	text-transform:uppercase;
+	font-size:11px;
+	color:#999;
+	font-weight:normal;
+	border-bottom:1px solid #666;
+	padding:5px;
+	text-align:left;
+}
+table tr th {
+	text-transform:uppercase;
+	font-size:11px;
+	color:#999;
+	font-weight:normal;
+	border-bottom:1px solid #666;
+	padding:5px;
+	text-align:left;
+}
+table th a {
+	color:#999;
+}
+table th a:hover {
+	color:#999;
+}
+table th.paginacao {
+	text-align:right;
+	padding:0.4em;	
+	font-size:11px;
+	text-transform:lowercase;
+	color:#999;
+}
+.paginacao {
+	text-align:right;
+	padding:0 5px;
+	margin-top:5px;
+	font-size:11px;
+	text-transform:lowercase;
+	color:#999;
+}
+table tr td {
+	border-bottom:1px solid #ccc;
+	padding:5px;
+}
+table tr td.ativo {
+	text-align:center;	
+}
+table tr td.actions {
+	text-align:center;	
+}
+table tr td.actions .ico {
+	font-size:32px;
+	line-height:1px;
+}
+
+/* ----------------------------------------------------  FORMS */
+
+input {
+	width:450px;
+	border:3px solid #ccc;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+}
+label { 
+	width:160px; 
+	display:inline-block;
+	font-family: "MuseoSans100", Arial, Helvetica, sans-serif;
+	text-align: left;
+	padding:5px;
+	margin:0;
+}
+.clientes.acesso label {
+	width: 75px;	
+}
+.input {
+	clear: both;
+	margin: 0;
+	padding: .5em 0;
+	vertical-align: text-top;	
+}
+.input input {
+	width:400px;
+	padding:0.2em 0.5em;
+}
+.textarea textarea {
+	width:450px;
+	padding:0.2em 0.5em;
+	border:3px solid #ccc;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+}
+.checkbox input{
+	width:auto;
+	padding:0.2em 0.5em;
+	margin:0 10px 0 180px
+}
+.select select{
+	width:auto;
+	padding:0.2em 0.5em;
+	border:3px solid #ccc;
+	-moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+}
+.file input {
+	width:auto;	
+}
+.radio input {
+	width:auto;
+	margin: .5em 10px .5em 180px;
+}
+.radio label {
+	font-family: "MuseoSans100", Arial, Helvetica, sans-serif;
+	text-align: right;
+	width:auto;
+}
+.button input, .submit input {
+	background:#33b5e5;
+	width:240px;
+	border:none;
+	border-bottom:4px #0099cc solid;
+	height:45px;
+	color:#fff;
+	font-family: "HoratioB", Arial, Helvetica, sans-serif;
+	font-size:18px;	
+	margin:20px 0 10px 170px;
+	font-weight:normal;
+	text-transform:uppercase;
+}
+
+/* --------------------------------------------------------- MESSAGES */
+.message {
+	background: #ff4444; /*#E4AB00;*/
+	color: #fff;
+	font-family: "MuseoSans100", Arial, Helvetica, sans-serif;
+	padding:5px 20px;
+	margin:20px 0 0 0;
+}
+.error-message {
+	background: none; /*#E4AB00;*/
+	color: #ff4444;
+	font-family: "MuseoSans100", Arial, Helvetica, sans-serif;
+	padding:5px 20px;
+	margin:0 0 0 170px;
+	width:auto;
+}
+
+/* --------------------------------------------------------- tinymce */
+p.referencia {
+	text-align:right;
+	font-size:0.75em;
+}
+
+h3.subTitulo {
+	color:#000;	
+}
+
+/* --------------------------------------------------------- USUARIOS ACESSO */
+
+.usuarios #recuperarSenha {
+	margin-left:170px;	
+	font-size:14px;
+}
+
+/* --------------------------------------------------------- PERGUNTAS */
+.perguntas .submit {
+	margin-top:40px;
+	border-top: 1px solid #ccc;
+}
+.perguntas .button input, .perguntas .submit input {
+	margin:20px 0 10px 0;
+}
+.perguntas form label.inlineBlock {
+	width:auto;	
+}
+.perguntas .error-message {
+	margin-left:0;
+	display:inline-block;
+}
+.perguntas #left {
+	width:61.8%;
+	float:left;
+}
+.perguntas #left .inner {
+	padding:0 15px 0 0;
+}
+.perguntas #right {
+	width:38.2%;
+	float:left;
+}
+.perguntas #right .inner {
+	padding:0 0 0 15px;
+}
+.perguntas #left .resposta {
+	background:#f2f2f2;
+	padding:10px 150px 10px 30px;
+	margin:10px 0;
+}
+.perguntas #left .resposta.correta {
+	background:#99cc00 url(../img/respostaCorreta.png) no-repeat right center;
+	color:#fff;
+}
+.perguntas #right h3 {
+	color:#000;
+}
+
+/* --------------------------------------------------------- AVALIACAO */
+.avaliacao .main  {
+	margin-top:1em;
+}
+.avaliacao #left {
+	width:61.8%;
+	float:left;
+	margin-top:0.5em;
+}
+.avaliacao #left .inner {
+	padding:0 15px 0 0;
+}
+.avaliacao #right {
+	width:38.2%;
+	float:left;
+}
+.avaliacao #right .inner {
+	padding:0 0 0 15px;
+}
+.avaliacao #left .resposta {
+	background:#f2f2f2;
+	padding:10px 150px 10px 30px;
+	margin:10px 0;
+}
+.avaliacao #left .resposta.correta {
+	background:#99cc00 url(../img/respostaCorreta.png) no-repeat right center;
+	color:#fff;
+}
+.avaliacao #right h3 {
+	color:#000;
+}
+.avaliacao.index .input.button {
+	/*text-align:center;*/
+}
+.avaliacao.index .input.button button {
+	background:#33b5e5;
+	width:80%;
+	border:none;
+	border-bottom:5px #0099cc solid;
+	height:72px;
+	color:#fff;
+	font-family: "HoratioB", Arial, Helvetica, sans-serif;
+	font-size:24px;	
+	line-height:24px;
+	margin:24px auto;
+	font-weight:normal;
+	text-transform:uppercase;
+	display:block;
+	-moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+/* Media Queries */
+@media screen and (max-width: 480px) {
+	
+	#phones {
+		display:block;	
+	}
+	
+	#largeDisplay,
+	#default,
+	#portraitTablets,
+	#phonesToTablets {
+		display:none;	
+	}
+	
+				
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+	
+	#phonesToTablets {
+		display:block;	
+	}
+	
+	#largeDisplay,
+	#default,
+	#portraitTablets,
+	#phones {
+		display:none;	
+	}
+	
+}
+
+@media (min-width: 768px) and (max-width: 979px ) {
+	
+	#portraitTablets {
+		display:block;	
+	}
+	
+	#largeDisplay,
+	#default,
+	#phonesToTablets,
+	#phones {
+		display:none;	
+	}
+	
+}
+
+@media (min-width: 980px) and (max-width: 1199px  ) {
+	
+	#default {
+		display:block;	
+	}
+	
+	#largeDisplay,
+	#portraitTablets,
+	#phonesToTablets,
+	#phones {
+		display:none;	
+	}
+}
+
+@media (min-width: 1200px) {
+	
+	#largeDisplay {
+		display:block;	
+	}
+	
+	#default,
+	#portraitTablets,
+	#phonesToTablets,
+	#phones {
+		display:none;	
+	}
+}
