@@ -58,6 +58,34 @@ class Admin_IndexController extends Zend_Controller_Action
 
     }
 
+    public function listQuestionsAction()
+    {
+        $this->questionMapper = new Moxca_Faq_QuestionMapper($this->db);
+        $questions = $this->questionMapper->getAllIds();
+
+        $questionsData = array();
+        foreach ($questions as $questionId) {
+            $loopQuestionObj = $this->questionMapper->findById($questionId);
+
+            $statusLabel = $this->view->questionStatusLabel($loopQuestionObj, new Moxca_Faq_QuestionStatus, $this->view);
+
+            $questionsData[$questionId] = array(
+                    'title' => $loopQuestionObj->getTitle(),
+                    'creationDate' => "---",
+                    'statusLabel' => $statusLabel,
+            );
+        }
+
+
+        $data = array(
+            'questionsList' => $questionsData,
+        );
+
+
+        $this->view->pageData = $data;
+
+    }
+
     public function listWorksAction()
     {
         $works = $this->workMapper->getAllIds();
