@@ -54,22 +54,31 @@ class IndexController extends Zend_Controller_Action
             }
         }
 
-//        $blogData = array(
-//            'firstPostUri' => 'silenciosa-algazarra',
-//            'firstPostTitle' => '!#! Silenciosa Algazarra sera tema de conversa com professores na PUC/RJ',
-//            'firstPostDate' => '15.06.2014',
-//            'secondPostUri' => 'mais-um-post',
-//            'secondPostTitle' => 'Mais um título de um post',
-//            'secondPostDate' => '14.06.2014',
-//        );
 
         $bioData = array(
             'excerpt' => 'Considerada pela crítica como uma das mais versáteis e completas das escritoras brasileiras contemporâneas, Ana Maria Machado...',
         );
+
+        $faqData = array(
+            '1' => array(
+                'id' => '1',
+                'title' => 'aaaaaa',
+            ),
+            '2' => array(
+                'id' => '2',
+                'title' => 'bbbbbb',
+            ),
+            '3' => array(
+                'id' => '3',
+                'title' => 'cccccc',
+            ),
+        );
+
         $pageData = array(
             'worksData' => $worksData,
             'blogData' => $blogData,
             'bioData' => $bioData,
+            'faqData' => $faqData,
         );
 
 

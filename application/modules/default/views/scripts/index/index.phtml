@@ -3,6 +3,7 @@ $pageData = $this->pageData;
 $worksData = $pageData['worksData'];
 $blogData = $pageData['blogData'];
 $bioData = $pageData['bioData'];
+$faqData = $pageData['faqData'];
 ?>
 <!-- conteudo -->
 <div id="conteudo" class="conteudo_1coluna">
@@ -94,8 +95,12 @@ $bioData = $pageData['bioData'];
 <div class="coluna2">
 <p><?php echo $this->translate("#Answers to frequently asked questions:") ?></p>
 <form>
-<select class="duvidas">
+<select class="duvidas" id="gotoFaq">
 <option selected="selected"><?php echo $this->translate("#(choose)") ?></option>
+
+<?php
+$this->faqsLoop($faqData);
+?>
 </select>
 </form>
 </div>
@@ -105,3 +110,16 @@ $bioData = $pageData['bioData'];
 
 </div>
 <!-- /conteudo -->
+        <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            $('#gotoFaq').change(function(){
+                var current = $(this).val();
+
+                window.location = '/respostas/?id=' + current;
+
+            });
+        });
+
+        </script>

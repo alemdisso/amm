@@ -1,0 +1,51 @@
+<?php
+$pageData = $this->pageData;
+$faqData = $pageData['faqData'];
+
+?>
+<!-- conteudo -->
+<div id="conteudo">
+
+<h1><img src="/img/icone_contato.png" align="absmiddle" alt="<?php echo $this->translate("#Frequently asked questions") ?>" /> <?php echo $this->translate("#Frequently asked questions") ?></h1>
+
+<p><?php echo $this->translate("#No momento não temos como responder a mensagens enviadas através do site. Procuramos identificar quais são as dúvidas mais frequentes, e responde-las abaixo.") ?></p>
+
+<form id="callQuestionAndAnswer" >
+<select id="questionToShow" >
+<option selected="selected"><?php echo $this->translate("#(the answer you are looking may be here)") ?></option>
+<?php
+$this->faqsLoop($faqData);
+?>
+</select>
+
+
+</form>
+
+<div id="questionAndAnswer"></div>
+
+
+</div>
+<!-- /conteudo -->
+        <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            $("#questionAndAnswer").hide();
+
+
+            $('#questionToShow').change(function(){
+                var current = $(this).val();
+
+                $.ajax({
+                    type: 'get',
+                    url:'/faq/question/show/?id=' + current,
+
+                    success: function(successReturn){
+                    $('#questionAndAnswer').html(successReturn);
+                    }
+                });
+                $("#questionAndAnswer").show();
+            });
+        });
+
+        </script>
