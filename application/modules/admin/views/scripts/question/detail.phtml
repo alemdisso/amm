@@ -5,8 +5,10 @@ $pageData = $this->pageData;
 <div id="conteudo">
     <h1><?php echo $pageData['title'] ?></h1>
 
-    <h3><?php echo $this->translate('#Content')?></h2>
-    <p><?php echo $pageData['content']?></p>
+    <h3><?php echo $this->translate('#Question')?></h2>
+    <p><?php echo $pageData['question']?></p>
+    <h3><?php echo $this->translate('#Answer')?></h2>
+    <p><?php echo $pageData['answer']?></p>
     <p> <a href="/admin/question/edit/?id=<?php echo $pageData['id'] ?>"><?php echo $this->translate("#(edit question)") ?></a></p>
 
     <hr>

@@ -65,7 +65,10 @@ class Admin_QuestionController extends Zend_Controller_Action
             'id' => $id,
             'uri' => $questionObj->getUri(),
             'title' => $questionObj->getTitle(),
-            'content' => $questionObj->getContent(),
+            'question' => $questionObj->getQuestion(),
+            'answer' => $questionObj->getAnswer(),
+            'status' => $questionObj->getStatus(),
+            'rank' => $questionObj->getRank(),
         );
 
         $this->view->pageData = $data;
@@ -112,6 +115,9 @@ class Admin_QuestionController extends Zend_Controller_Action
 
             $element = $form->getElement('answer');
             $element->setValue($questionObj->getAnswer());
+
+            $element = $form->getElement('rank');
+            $element->setValue($questionObj->getRank());
 
             $this->view->pageTitle = $this->view->translate("#Edit question");
         }

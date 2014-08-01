@@ -71,7 +71,7 @@ class Admin_IndexController extends Zend_Controller_Action
 
             $questionsData[$questionId] = array(
                     'title' => $loopQuestionObj->getTitle(),
-                    'creationDate' => "---",
+                    'rank' => $loopQuestionObj->getRank(),
                     'statusLabel' => $statusLabel,
             );
         }

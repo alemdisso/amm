@@ -41,6 +41,7 @@ $(function() {
            <table id="Questions" class="display">
               <thead>
                 <tr>
+                  <th><?php echo $this->translate("#Rank") ?></th>
                   <th><?php echo $this->translate("#Title") ?></th>
                   <th><?php echo $this->translate("#Status") ?></th>
                   <th width="1%">&nbsp;</th>
@@ -50,6 +51,9 @@ $(function() {
 foreach($questionsList as $id => $questionInfo) {
 ?>
                 <tr>
+                  <td>
+                    <?php print($questionInfo['rank']) ?>
+                  </td>
                   <td>
                     <a href="/admin/question/detail/?id=<?php print($id) ?>"><?php print($questionInfo['title']) ?></a>
                   </td>

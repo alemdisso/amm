@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-06-20 15:48-0300\n"
-"PO-Revision-Date: 2014-06-20 15:49-0300\n"
+"POT-Creation-Date: 2014-08-01 11:54-0300\n"
+"PO-Revision-Date: 2014-08-01 11:55-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -27,6 +27,8 @@ msgstr ""
 #: application\modules/admin/controllers/PostController.php:86
 #: application\modules/admin/controllers/PrizeController.php:41
 #: application\modules/admin/controllers/PrizeController.php:74
+#: application\modules/admin/controllers/QuestionController.php:39
+#: application\modules/admin/controllers/QuestionController.php:89
 #: application\modules/admin/controllers/SerieController.php:42
 #: application\modules/admin/controllers/WorkController.php:342
 #: application\modules/auth/controllers/UserController.php:39
@@ -70,7 +72,7 @@ msgstr "(escolha uma opção...)"
 msgid "#Create editor"
 msgstr "Criar editora"
 
-#: application\modules/admin/controllers/IndexController.php:75
+#: application\modules/admin/controllers/IndexController.php:103
 msgid "#no editions"
 msgstr "sem edições"
 
@@ -146,6 +148,7 @@ msgid "#Edit post"
 msgstr "Editar post"
 
 #: application\modules/admin/controllers/PostController.php:136
+#: application\modules/admin/controllers/QuestionController.php:139
 #: application\modules/admin/controllers/WorkController.php:292
 msgid "#The record was successfully removed."
 msgstr "O registro foi removido com sucesso."
@@ -160,6 +163,21 @@ msgstr "Remover post"
 #: application\modules/admin/views/scripts/prize/create.phtml:2
 msgid "#Create prize"
 msgstr "Criar prêmio"
+
+#: application\modules/admin/controllers/QuestionController.php:48
+#: application\modules/admin/views/scripts/question/create.phtml:10
+msgid "#Create question"
+msgstr "Criar pergunta"
+
+#: application\modules/admin/controllers/QuestionController.php:122
+#: application\modules/admin/views/scripts/question/edit.phtml:9
+msgid "#Edit question"
+msgstr "Editar pergunta"
+
+#: application\modules/admin/controllers/QuestionController.php:169
+#: application\modules/admin/views/scripts/question/remove.phtml:5
+msgid "#Remove question"
+msgstr "Remover pergunta"
 
 #: application\modules/admin/controllers/SerieController.php:65
 msgid "#Create serie"
@@ -278,11 +296,13 @@ msgid "#System administrator"
 msgstr "Sysadmin"
 
 #: library\Moxca/Blog/PostStatus.php:10
+#: library\Moxca/Faq/QuestionStatus.php:10
 #: library\Author/Collection/WorkTypes.php:10
 msgid "#Nil"
 msgstr "Nula"
 
 #: library\Moxca/Blog/PostStatus.php:11
+#: library\Moxca/Faq/QuestionStatus.php:11
 msgid "#Draft"
 msgstr "Rascunho"
 
@@ -299,21 +319,29 @@ msgid "#Protected"
 msgstr "Protegido"
 
 #: library\Moxca/Blog/PostStatus.php:15
+#: library\Moxca/Faq/QuestionStatus.php:13
 msgid "#Archived"
 msgstr "Arquivado"
 
 #: library\Moxca/Blog/PostStatus.php:32
+#: library\Moxca/Faq/QuestionStatus.php:28
 #: library\Author/Collection/WorkTypes.php:30
 msgid "#Unknown type"
 msgstr "Tipo indefinido"
 
+#: library\Moxca/Faq/QuestionStatus.php:12
+msgid "#Active"
+msgstr "Ativa"
+
 #: library\Moxca/Form/PostCreate.php:18
+#: library\Moxca/Form/QuestionCreate.php:18
 #: library\Author/Form/EditionCreate.php:17
 #: library\Author/Form/TitleChange.php:23
 msgid "#Title:"
 msgstr "Título:"
 
 #: library\Moxca/Form/PostCreate.php:27
+#: library\Moxca/Form/QuestionCreate.php:27
 #: library\Author/Form/EditionCreate.php:26
 #: library\Author/Form/PrizeCreate.php:30
 #: library\Author/Form/TitleChange.php:32
@@ -321,7 +349,9 @@ msgid "#Title is required"
 msgstr "O título é obrigatório"
 
 #: library\Moxca/Form/PostCreate.php:36
+#: library\Moxca/Form/QuestionCreate.php:78
 #: application\modules/admin/views/scripts/index/list-posts.phtml:45
+#: application\modules/admin/views/scripts/index/list-questions.phtml:46
 msgid "#Status"
 msgstr "Status"
 
@@ -330,10 +360,13 @@ msgid "#Category"
 msgstr "Categoria"
 
 #: library\Moxca/Form/PostCreate.php:65
+#: library\Moxca/Form/QuestionCreate.php:33
 msgid "#Content:"
 msgstr "Conteúdo:"
 
-#: library\Moxca/Form/PostCreate.php:80 library\Moxca/Form/UserCreate.php:101
+#: library\Moxca/Form/PostCreate.php:80
+#: library\Moxca/Form/QuestionCreate.php:92
+#: library\Moxca/Form/UserCreate.php:101
 #: library\Author/Form/CharacterAdd.php:59
 #: library\Author/Form/CoverChange.php:33
 #: library\Author/Form/CoverDesignerChange.php:38
@@ -354,23 +387,35 @@ msgid "#Submit"
 msgstr "Enviar"
 
 #: library\Moxca/Form/PostRemove.php:21
+#: library\Moxca/Form/QuestionRemove.php:21
 #: library\Author/Form/CharacterRemove.php:27
 #: library\Author/Form/WorkRemove.php:21
 msgid "#Confirm removal"
 msgstr "Confirmar remoção"
 
 #: library\Moxca/Form/PostRemove.php:21
+#: library\Moxca/Form/QuestionRemove.php:21
 #: library\Author/Form/CharacterRemove.php:27
 #: library\Author/Form/WorkRemove.php:21
 msgid "#Don't remove"
 msgstr "Não remova"
 
-#: library\Moxca/Form/PostRemove.php:32 library\Moxca/Form/UserCreate.php:117
-#: library\Moxca/Form/UserEdit.php:28 library\Moxca/Form/UserLogin.php:66
+#: library\Moxca/Form/PostRemove.php:32
+#: library\Moxca/Form/QuestionRemove.php:32
+#: library\Moxca/Form/UserCreate.php:117 library\Moxca/Form/UserEdit.php:28
+#: library\Moxca/Form/UserLogin.php:66
 #: library\Author/Form/CharacterRemove.php:39
 #: library\Author/Form/WorkRemove.php:32
 msgid "#Invalid data!"
 msgstr "Dados inválidos"
+
+#: library\Moxca/Form/QuestionCreate.php:47
+msgid "#Answer:"
+msgstr "Resposta:"
+
+#: library\Moxca/Form/QuestionCreate.php:62
+msgid "#Rank:"
+msgstr "Ordem:"
 
 #: library\Moxca/Form/UserCreate.php:15
 #: library\Author/Form/EditorCreate.php:15
@@ -1568,6 +1613,7 @@ msgid "#List of posts"
 msgstr "Lista de posts"
 
 #: application\modules/admin/views/scripts/index/list-posts.phtml:44
+#: application\modules/admin/views/scripts/index/list-questions.phtml:45
 #: application\modules/admin/views/scripts/index/list-works.phtml:44
 #: application\modules/admin/views/scripts/work/list.phtml:19
 msgid "#Title"
@@ -1578,13 +1624,23 @@ msgid "#Date"
 msgstr "Data"
 
 #: application\modules/admin/views/scripts/index/list-posts.phtml:64
+#: application\modules/admin/views/scripts/index/list-questions.phtml:64
 #: application\modules/admin/views/scripts/index/list-works.phtml:63
 msgid "#remove"
 msgstr "remover"
 
 #: application\modules/admin/views/scripts/index/list-posts.phtml:65
+#: application\modules/admin/views/scripts/index/list-questions.phtml:65
 msgid "#edit"
 msgstr "editar"
+
+#: application\modules/admin/views/scripts/index/list-questions.phtml:39
+msgid "#List of questions"
+msgstr "Lista de perguntas"
+
+#: application\modules/admin/views/scripts/index/list-questions.phtml:44
+msgid "#Rank"
+msgstr "Ordem"
 
 #: application\modules/admin/views/scripts/index/list-works.phtml:39
 #: application\modules/admin/views/scripts/work/list.phtml:13
@@ -1616,6 +1672,14 @@ msgid "#List posts"
 msgstr "Listar posts"
 
 #: application\modules/admin/views/scripts/panel/panel.phtml:6
+msgid "#New Question"
+msgstr "Nova Pergunta"
+
+#: application\modules/admin/views/scripts/panel/panel.phtml:7
+msgid "#List questions"
+msgstr "Listar Perguntas"
+
+#: application\modules/admin/views/scripts/panel/panel.phtml:8
 msgid "#Logout"
 msgstr "Logout"
 
@@ -1643,6 +1707,31 @@ msgstr "Confirma a remoção do post %s? Isso NÂO pode ser desfeito."
 #: application\modules/admin/views/scripts/prize/edit.phtml:2
 msgid "#Edit prize"
 msgstr "Editar prêmio"
+
+#: application\modules/admin/views/scripts/question/detail.phtml:8
+msgid "#Question"
+msgstr "Pergunta"
+
+#: application\modules/admin/views/scripts/question/detail.phtml:10
+msgid "#Answer"
+msgstr "Resposta"
+
+#: application\modules/admin/views/scripts/question/detail.phtml:12
+msgid "#(edit question)"
+msgstr "(editar pergunta)"
+
+#: application\modules/admin/views/scripts/question/detail.phtml:15
+msgid "#(remove this question!)"
+msgstr "(remova essa pergunta!)"
+
+#: application\modules/admin/views/scripts/question/detail.phtml:16
+msgid "#(goto question's page)"
+msgstr "(ir para a página da pergunta)"
+
+#: application\modules/admin/views/scripts/question/remove.phtml:8
+#, php-format
+msgid "#Do you confirm removal of question %s? This CAN'T be undone."
+msgstr "Confirma a remoção da pergunta %s? Isso NÂO pode ser desfeito."
 
 #: application\modules/admin/views/scripts/work/change-description.phtml:2
 #: application\modules/admin/views/scripts/work/change-summary.phtml:2
@@ -1975,9 +2064,6 @@ msgstr "livros da coleção"
 #~ msgid "#Not defined"
 #~ msgstr "Indefinido"
 
-#~ msgid "#None action"
-#~ msgstr "(nenhuma ação)"
-
 #~ msgid "#Is a milestone"
 #~ msgstr "É um marco"
 
@@ -2186,9 +2272,6 @@ msgstr "livros da coleção"
 #~ msgid "#Create new product"
 #~ msgstr "Adicionar produto"
 
-#~ msgid "#Action"
-#~ msgstr "Ação"
-
 #~ msgid "#Payee"
 #~ msgstr "Beneficiado"
 
@@ -2348,9 +2431,6 @@ msgstr "livros da coleção"
 
 #~ msgid "#There is no data about this institution."
 #~ msgstr "Não há informações sobre essa instituição."
-
-#~ msgid "#Edit institution"
-#~ msgstr "Editar instituição"
 
 #~ msgid "#City"
 #~ msgstr "Cidade"
