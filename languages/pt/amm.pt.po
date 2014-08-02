@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-01 17:07-0300\n"
-"PO-Revision-Date: 2014-08-01 17:07-0300\n"
+"POT-Creation-Date: 2014-08-02 09:48-0300\n"
+"PO-Revision-Date: 2014-08-02 09:49-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -37,7 +37,7 @@ msgid "#The record was successfully updated."
 msgstr "O registro foi atualizado com sucesso."
 
 #: application\modules/admin/controllers/EditionController.php:57
-#: application\modules/admin/views/scripts/edition/create.phtml:116
+#: application\modules/admin/views/scripts/edition/create.phtml:104
 msgid "#Create edition"
 msgstr "Criar edição"
 
@@ -1587,19 +1587,19 @@ msgstr "Mudar número de páginas de %s"
 msgid "#Change %s's serie"
 msgstr "Alterar coleção de %s"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:84
+#: application\modules/admin/views/scripts/edition/create.phtml:72
 msgid "#(choose an editor)"
 msgstr "(escolha uma editora...)"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:100
+#: application\modules/admin/views/scripts/edition/create.phtml:88
 msgid "#(choose a serie)"
 msgstr "(escolha uma coleção...)"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:128
+#: application\modules/admin/views/scripts/edition/create.phtml:116
 msgid "#(new editor)"
 msgstr "(nova editora)"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:135
+#: application\modules/admin/views/scripts/edition/create.phtml:123
 msgid "#(new serie)"
 msgstr "(nova coleção)"
 
@@ -1891,6 +1891,12 @@ msgstr "O que a Ana tem aprontado por aí"
 #: application\modules/default/views/scripts/index/index.phtml:73
 msgid "#Home biography tagline"
 msgstr "Um resumo da vida e obra da artista"
+
+#: application\modules/default/views/scripts/index/index.phtml:89
+#: application\modules/default/views/scripts/index/index.phtml:90
+#: application\modules/default/views/scripts/index/index.phtml:91
+msgid "#Faq title"
+msgstr "Respostas"
 
 #: application\modules/default/views/scripts/index/index.phtml:90
 #: application\modules/faq/views/scripts/index/index.phtml:9
