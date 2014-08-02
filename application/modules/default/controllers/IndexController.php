@@ -1,6 +1,10 @@
 <?php
 class IndexController extends Zend_Controller_Action
 {
+    private $db;
+    private $postMapper;
+    private $questionMapper;
+
     public function postDispatch()
     {
         if (isset($this->view->pageTitle)) {
@@ -59,20 +63,7 @@ class IndexController extends Zend_Controller_Action
             'excerpt' => 'Considerada pela crítica como uma das mais versáteis e completas das escritoras brasileiras contemporâneas, Ana Maria Machado...',
         );
 
-        $faqData = array(
-            '1' => array(
-                'id' => '1',
-                'title' => 'aaaaaa',
-            ),
-            '2' => array(
-                'id' => '2',
-                'title' => 'bbbbbb',
-            ),
-            '3' => array(
-                'id' => '3',
-                'title' => 'cccccc',
-            ),
-        );
+        $faqData = $this->questionMapper->getAllActiveQuestionsIdsAndTitles();
 
         $pageData = array(
             'worksData' => $worksData,
@@ -91,6 +82,7 @@ class IndexController extends Zend_Controller_Action
     {
         $this->db = Zend_Registry::get('db');
         $this->postMapper = new Moxca_Blog_PostMapper($this->db);
+        $this->questionMapper = new Moxca_Faq_QuestionMapper($this->db);
 
     }
 

@@ -23,10 +23,32 @@ class Faq_IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
+        $data = $this->_request->getParams();
+        try {
+            $id = $this->view->checkIdFromGet($data);
+        } catch (Exception $e) {
+            $id = null;
+        }
         $q = $this->questionMapper->getAllActiveQuestionsIdsAndTitles();
 
+        $loopData = array();
+        foreach($q as $key => $row) {
+            if ($row['id'] == $id) {
+                $selected = true;
+            } else {
+                $selected = false;
+            }
+            $loopData[$key] = array (
+                'id' => $row['id'],
+                'title' => $row['title'],
+                'selected' => $selected,
+            );
+
+        }
+
         $pageData = array(
-            'faqData' => $q,
+            'faqData' => $loopData,
+            'selectedQuestion' => $id,
         );
 
 
