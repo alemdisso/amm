@@ -97,9 +97,14 @@ $faqData = $pageData['faqData'];
 <form>
 <select class="duvidas" id="gotoFaq">
 <option selected="selected"><?php echo $this->translate("#(choose)") ?></option>
+<?php foreach($faqData as $k => $oneFaq) { ?>
+<!-- item de repeticao -->
+<option value="<?php echo $oneFaq['id'] ?>"><?php echo $oneFaq['title'] ?></option>
+<!-- /item de repeticao -->
+<?php } ?>
 
-<?php
-$this->faqsLoop($faqData);
+    <?php
+//$this->homeFaqsLoop($faqData, 'faq');
 ?>
 </select>
 </form>

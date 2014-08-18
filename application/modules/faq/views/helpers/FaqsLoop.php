@@ -1,6 +1,6 @@
 <?php
 
-class Default_View_Helper_FaqsLoop extends Zend_View_Helper_Abstract
+class Faq_View_Helper_FaqsLoop extends Zend_View_Helper_Abstract
 {
     public function faqsLoop($model)
     {

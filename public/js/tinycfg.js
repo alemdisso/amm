@@ -6,6 +6,7 @@ tinymce.init({
 	menubar: false,
 	toolbar: [ "undo redo | styleselect | bold italic | link image jbimages | alignleft aligncenter alignright | code" ],
 	plugins: ["link", "image", "jbimages", "code"],
+        relative_urls: false,
 	//menu : { // this is the complete default configuration
         //file   : {title : 'File'  , items : 'newdocument'},
         //edit   : {title : 'Edit'  , items : 'undo redo | cut copy paste pastetext | selectall'},
