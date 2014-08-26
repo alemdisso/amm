@@ -26,7 +26,7 @@ nbproject/project.properties
 /public/img/editions/tb/*
 /public/img/uploads/*
 
-/public/js/tinymce
+/public/js/tinymce/*
 
 /public/js/jquery.pajinate*.*
 
