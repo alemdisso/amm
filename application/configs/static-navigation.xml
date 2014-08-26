@@ -34,8 +34,8 @@
                 </works>
 
                 <news>
-                    <label>Novidades</label>
-                    <uri>/novidades</uri>
+                    <label>Curiosidades</label>
+                    <uri>/curiosidades</uri>
                 </news>
 
                 <biografia>

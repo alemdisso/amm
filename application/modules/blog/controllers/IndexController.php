@@ -100,7 +100,7 @@ class Blog_IndexController extends Zend_Controller_Action
 
                 $postsData[$postId] = array(
                         'title' => $loopPostObj->getTitle(),
-                        'exploreUri' => '/novidades/' . $loopPostObj->getUri(),
+                        'exploreUri' => '/curiosidades/' . $loopPostObj->getUri(),
                 );
             }
         }

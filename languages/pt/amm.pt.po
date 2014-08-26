@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2014-08-18 17:32-0300\n"
-"PO-Revision-Date: 2014-08-18 17:36-0300\n"
+"PO-Revision-Date: 2014-08-26 15:47-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -129,7 +129,7 @@ msgstr "/biografia"
 #: application\modules/includes/views/scripts/include/categories-loop-li.phtml:1
 #: application\modules/includes/views/scripts/include/categories-loop.phtml:2
 msgid "/blog/index/category"
-msgstr "/novidades-em"
+msgstr "/curiosidades-em"
 
 #: application\modules/admin/controllers/NavigationController.php:119
 #: application\modules/blog/views/scripts/index/posts-loop.phtml:4
@@ -1848,7 +1848,7 @@ msgstr "Sucesso!"
 #: application\modules/includes/views/scripts/include/footer-home.phtml:24
 #: application\modules/includes/views/scripts/include/footer.phtml:22
 msgid "#Blog title"
-msgstr "Novidades"
+msgstr "Curiosidades"
 
 #: application\modules/blog/views/scripts/index/category.phtml:13
 msgid "#No posts found with this criteria."
@@ -1954,7 +1954,7 @@ msgstr "Principal"
 #: application\modules/includes/views/scripts/include/header-login.phtml:11
 #: application\modules/includes/views/scripts/include/header.phtml:12
 msgid "#News"
-msgstr "Novidades"
+msgstr "Curiosidades"
 
 #: application\modules/includes/views/scripts/include/header-login.phtml:13
 msgid "#Contact"

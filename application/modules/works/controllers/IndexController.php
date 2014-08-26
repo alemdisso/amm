@@ -135,7 +135,7 @@ class Works_IndexController extends Zend_Controller_Action
             'leftSpecialTitle' => 'Menina bonita do laço de fita',
             'leftSpecialSummary' => 'História de uma menina que, de tão bonita, deixa até um coelho apaixonado.',
             'leftSpecialImageUri' => '/img/marcacao_destaque_livro1.png',
-            'rightSpecialUri' => '/livro/audacia-dessa-mulher',
+            'rightSpecialUri' => '/livro/a-audacia-dessa-mulher',
             'rightSpecialTitle' => 'A audácia dessa mulher',
             'rightSpecialSummary' => 'Um romance que engloba varias vertentes e vem do século XIX aos nossos dias.',
             'rightSpecialImageUri' => '/img/special/audacia_crop.png',

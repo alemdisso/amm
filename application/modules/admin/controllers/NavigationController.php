@@ -103,7 +103,7 @@ class Admin_NavigationController extends Zend_Controller_Action
         }
 
         $this->addPage($pages, 'biography', $this->view->translate("#Biography"), $this->view->translate("/biography"));
-        $newsNode = $this->addPage($pages, 'news', '#News', '/novidades');
+        $newsNode = $this->addPage($pages, 'news', '#News', '/curiosidades');
         $newsPages = $newsNode->addChild('pages');
 
         $categoriesIds = $this->taxonomyMapper->getAllCategoriesAlphabeticallyOrdered();

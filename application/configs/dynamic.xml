@@ -826,36 +826,36 @@
           <uri>/biografia</uri>
         </biography>
         <news>
-          <label>Novidades</label>
+          <label>Curiosidades</label>
           <uri>/news</uri>
           <pages>
             <category-abl>
               <label>ABL</label>
-              <uri>/novidades-em/abl</uri>
+              <uri>/curiosidades-em/abl</uri>
             </category-abl>
             <category-Agenda>
               <label>Agenda</label>
-              <uri>/novidades-em/Agenda</uri>
+              <uri>/curiosidades-em/Agenda</uri>
             </category-Agenda>
             <category-biografia>
               <label>Biografia</label>
-              <uri>/novidades-em/biografia</uri>
+              <uri>/curiosidades-em/biografia</uri>
             </category-biografia>
             <category-Escola>
               <label>Escola</label>
-              <uri>/novidades-em/Escola</uri>
+              <uri>/curiosidades-em/Escola</uri>
             </category-Escola>
             <category-Histórias>
               <label>Histórias</label>
-              <uri>/novidades-em/Histórias</uri>
+              <uri>/curiosidades-em/Histórias</uri>
             </category-Histórias>
             <category-Leitor>
               <label>Leitor</label>
-              <uri>/novidades-em/Leitor</uri>
+              <uri>/curiosidades-em/Leitor</uri>
             </category-Leitor>
             <category-Leitura>
               <label>Leitura</label>
-              <uri>/novidades-em/Leitura</uri>
+              <uri>/curiosidades-em/Leitura</uri>
             </category-Leitura>
             <post-autora-encontra-leitores-na-bienal-do-livro>
               <label>Autora encontra leitores na Bienal do Livro</label>
