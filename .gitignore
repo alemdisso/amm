@@ -26,6 +26,7 @@ nbproject/project.properties
 /public/img/editions/tb/*
 /public/img/uploads/*
 
+/public/js/tinymce/*
 /public/js/tinymce/langs/*
 /public/js/tinymce/skins/*
 /public/js/tinymce/themes/*
