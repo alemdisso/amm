@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-02 09:51-0300\n"
-"PO-Revision-Date: 2014-08-02 09:51-0300\n"
+"POT-Creation-Date: 2014-08-18 17:32-0300\n"
+"PO-Revision-Date: 2014-08-18 17:36-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -86,6 +86,7 @@ msgstr "Nova palavra chave"
 #: application\modules/includes/views/scripts/include/works-categories.phtml:6
 #: application\modules/works/views/scripts/edition/explore.phtml:7
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:24
+#: application\modules/works/views/scripts/index/editions-with-keyword.phtml:24
 #: application\modules/works/views/scripts/index/series.phtml:7
 #: application\modules/works/views/scripts/serie/explore.phtml:7
 msgid "#Works"
@@ -97,13 +98,13 @@ msgid "/works"
 msgstr "/livros"
 
 #: application\modules/admin/controllers/NavigationController.php:91
-#: application\modules/works/controllers/IndexController.php:148
+#: application\modules/works/controllers/IndexController.php:164
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:9
 msgid "/explore"
 msgstr "/livro"
 
 #: application\modules/admin/controllers/NavigationController.php:96
-#: application\modules/works/controllers/IndexController.php:103
+#: application\modules/works/controllers/IndexController.php:104
 #: application\modules/works/views/scripts/index/series.phtml:9
 msgid "#Series"
 msgstr "Coleções"
@@ -112,7 +113,7 @@ msgstr "Coleções"
 #: application\modules/default/views/scripts/index/index.phtml:70
 #: application\modules/default/views/scripts/index/index.phtml:72
 #: application\modules/default/views/scripts/index/index.phtml:73
-#: application\modules/includes/views/scripts/include/footer-home.phtml:25
+#: application\modules/includes/views/scripts/include/footer-home.phtml:29
 #: application\modules/includes/views/scripts/include/footer.phtml:27
 #: application\modules/includes/views/scripts/include/header-login.phtml:12
 #: application\modules/includes/views/scripts/include/header.phtml:13
@@ -239,7 +240,7 @@ msgid "#%s pages"
 msgstr "%s páginas"
 
 #: application\modules/works/controllers/EditionController.php:61
-#: application\modules/works/controllers/IndexController.php:58
+#: application\modules/works/controllers/IndexController.php:59
 #, php-format
 msgid "#Serie: %s"
 msgstr "Coleção: %s"
@@ -267,9 +268,14 @@ msgstr "Editora:"
 msgid "#Exploring %s"
 msgstr "%s"
 
-#: application\modules/works/controllers/IndexController.php:92
+#: application\modules/works/controllers/IndexController.php:93
 msgid "/serie/"
 msgstr "/colecao/"
+
+#: application\modules/works/controllers/IndexController.php:122
+#, php-format
+msgid "#With keyword '%s'"
+msgstr "Com a palavra-chave '%s'"
 
 #: library\Moxca/Access/Roles.php:10
 msgid "#Unknown"
@@ -1418,7 +1424,7 @@ msgstr "Bad value to Term"
 
 #: library\Author/Collection/WorkTypes.php:11
 #: application\modules/default/views/scripts/index/index.phtml:22
-#: application\modules/includes/views/scripts/include/footer-home.phtml:13
+#: application\modules/includes/views/scripts/include/footer-home.phtml:17
 #: application\modules/includes/views/scripts/include/footer.phtml:15
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Children"
@@ -1430,7 +1436,7 @@ msgstr "Juvenis"
 
 #: library\Author/Collection/WorkTypes.php:13
 #: application\modules/default/views/scripts/index/index.phtml:24
-#: application\modules/includes/views/scripts/include/footer-home.phtml:15
+#: application\modules/includes/views/scripts/include/footer-home.phtml:19
 #: application\modules/includes/views/scripts/include/footer.phtml:17
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Fiction"
@@ -1839,7 +1845,7 @@ msgstr "Sucesso!"
 #: application\modules/default/views/scripts/index/index.phtml:44
 #: application\modules/default/views/scripts/index/index.phtml:46
 #: application\modules/default/views/scripts/index/index.phtml:47
-#: application\modules/includes/views/scripts/include/footer-home.phtml:20
+#: application\modules/includes/views/scripts/include/footer-home.phtml:24
 #: application\modules/includes/views/scripts/include/footer.phtml:22
 msgid "#Blog title"
 msgstr "Novidades"
@@ -1851,7 +1857,7 @@ msgstr "Nada foi encontrado com esse critério de busca."
 #: application\modules/default/views/scripts/index/index.phtml:14
 #: application\modules/default/views/scripts/index/index.phtml:16
 #: application\modules/default/views/scripts/index/index.phtml:17
-#: application\modules/includes/views/scripts/include/footer-home.phtml:12
+#: application\modules/includes/views/scripts/include/footer-home.phtml:16
 #: application\modules/includes/views/scripts/include/footer.phtml:14
 #: application\modules/includes/views/scripts/include/header-login.phtml:10
 #: application\modules/includes/views/scripts/include/header.phtml:11
@@ -1864,14 +1870,14 @@ msgid "#Stories for all"
 msgstr "Mil histórias num só lugar"
 
 #: application\modules/default/views/scripts/index/index.phtml:23
-#: application\modules/includes/views/scripts/include/footer-home.phtml:14
+#: application\modules/includes/views/scripts/include/footer-home.phtml:18
 #: application\modules/includes/views/scripts/include/footer.phtml:16
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Young people"
 msgstr "Juvenis"
 
 #: application\modules/default/views/scripts/index/index.phtml:25
-#: application\modules/includes/views/scripts/include/footer-home.phtml:16
+#: application\modules/includes/views/scripts/include/footer-home.phtml:20
 #: application\modules/includes/views/scripts/include/footer.phtml:18
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Essays"
@@ -1900,7 +1906,7 @@ msgstr "Respostas"
 
 #: application\modules/default/views/scripts/index/index.phtml:90
 #: application\modules/faq/views/scripts/index/index.phtml:9
-#: application\modules/includes/views/scripts/include/footer-home.phtml:26
+#: application\modules/includes/views/scripts/include/footer-home.phtml:30
 #: application\modules/includes/views/scripts/include/footer.phtml:28
 msgid "#Frequently asked questions"
 msgstr "Perguntas frequentes"
@@ -1933,9 +1939,9 @@ msgstr "Categorias"
 
 #: application\modules/includes/views/scripts/include/footer-home.phtml:7
 msgid "#Tag cloud"
-msgstr "Nuvem de tags"
+msgstr "Palavras chave"
 
-#: application\modules/includes/views/scripts/include/footer-home.phtml:29
+#: application\modules/includes/views/scripts/include/footer-home.phtml:33
 #: application\modules/includes/views/scripts/include/footer.phtml:31
 msgid "#Copyright notice"
 msgstr "&copy;2014 Ana Maria Machado. Todos os direitos reservados."
@@ -1972,22 +1978,27 @@ msgid "#Awarded books"
 msgstr "Livros premiados"
 
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:7
+#: application\modules/works/views/scripts/index/editions-with-keyword.phtml:7
 msgid "#First"
 msgstr "Prim."
 
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:8
+#: application\modules/works/views/scripts/index/editions-with-keyword.phtml:8
 msgid "#Prev"
 msgstr "Ant."
 
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:9
+#: application\modules/works/views/scripts/index/editions-with-keyword.phtml:9
 msgid "#Last"
 msgstr "Últ."
 
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:10
+#: application\modules/works/views/scripts/index/editions-with-keyword.phtml:10
 msgid "#Next"
 msgstr "Próx."
 
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:11
+#: application\modules/works/views/scripts/index/editions-with-keyword.phtml:11
 msgid "#Showing {0}-{1} of {2} results"
 msgstr "Mostrando {0} a {1} de {2} encontrados"
 

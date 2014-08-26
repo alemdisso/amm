@@ -5,7 +5,11 @@ $pageData = $this->pageData;
 
 <div class="box_tag">
     <p><?php echo $this->translate("#Tag cloud") ?></p>
-    <p><a href="" class="tag_1">Escola</a>  <a href="" class="tag_3">Palestra</a>  <a href="" class="tag_2">Brincadeira de Sombra</a>  <a href="" class="tag_4">Biblioteca</a></p>
+    <p>
+        <?php foreach ($pageData['tags'] as $key => $arrayTag) { ?>
+        <a href="/tag/<?php echo $arrayTag['uri'] ?>" class="<?php echo $arrayTag['class'] ?>"><?php echo $arrayTag['term'] ?></a>
+        <?php } ?>
+    </p>
 </div>
 
 <ul class="box_rodape">

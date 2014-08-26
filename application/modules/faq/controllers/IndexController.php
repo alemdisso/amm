@@ -38,9 +38,10 @@ class Faq_IndexController extends Zend_Controller_Action
             } else {
                 $selected = false;
             }
+            $questionObj = $this->questionMapper->findById($row['id']);
             $loopData[$key] = array (
                 'id' => $row['id'],
-                'title' => $row['title'],
+                'question' => $questionObj->getQuestion(),
                 'selected' => $selected,
             );
 

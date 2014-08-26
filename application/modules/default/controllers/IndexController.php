@@ -64,12 +64,19 @@ class IndexController extends Zend_Controller_Action
         );
 
         $faqData = $this->questionMapper->getAllActiveQuestionsIdsAndTitles();
+        
+        foreach ($faqData as $key => $eachFaq) {
+            $questionObj = $this->questionMapper->findById($eachFaq['id']);
+
+            $faqModel[$key] = array('id' => $questionObj->getId(), 'question' => $questionObj->getQuestion());
+
+        }
 
         $pageData = array(
             'worksData' => $worksData,
             'blogData' => $blogData,
             'bioData' => $bioData,
-            'faqData' => $faqData,
+            'faqData' => $faqModel,
         );
 
 

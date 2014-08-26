@@ -5,6 +5,7 @@ class Works_IndexController extends Zend_Controller_Action
     private $editorMapper;
     private $editionMapper;
     private $workMapper;
+    private $taxonomyMapper;
 
     public function postDispatch()
     {
@@ -106,6 +107,21 @@ class Works_IndexController extends Zend_Controller_Action
 
 //
 
+    public function keywordAction()
+    {
+        $data = $this->_request->getParams();
+        try {
+            $uri = $this->view->checkUriFromGet($data);
+            $x = $this->taxonomyMapper->getTermByUri($uri);
+            $term = $x['term'];
+        } catch (Exception $e) {
+            throw $e;
+        }
+
+        $editionsIds = $this->taxonomyMapper->editionsWithKeyword($uri);
+        $this->buildEditionsListPage($editionsIds, sprintf($this->view->translate("#With keyword '%s'"), $term));
+    }
+
     public function youngAction()
     {
         $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_YOUNG);
@@ -171,6 +187,7 @@ class Works_IndexController extends Zend_Controller_Action
         $this->workMapper = new Author_Collection_WorkMapper($this->db);
         $this->editorMapper = new Author_Collection_EditorMapper($this->db);
         $this->editionMapper = new Author_Collection_EditionMapper($this->db);
+        $this->taxonomyMapper = new Author_Collection_TaxonomyMapper($this->db);
 
     }
 }
