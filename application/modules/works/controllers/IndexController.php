@@ -5,6 +5,7 @@ class Works_IndexController extends Zend_Controller_Action
     private $editorMapper;
     private $editionMapper;
     private $workMapper;
+    private $taxonomyMapper;
 
     public function postDispatch()
     {
@@ -106,6 +107,21 @@ class Works_IndexController extends Zend_Controller_Action
 
 //
 
+    public function keywordAction()
+    {
+        $data = $this->_request->getParams();
+        try {
+            $uri = $this->view->checkUriFromGet($data);
+            $x = $this->taxonomyMapper->getTermByUri($uri);
+            $term = $x['term'];
+        } catch (Exception $e) {
+            throw $e;
+        }
+
+        $editionsIds = $this->taxonomyMapper->editionsWithKeyword($uri);
+        $this->buildEditionsListPage($editionsIds, sprintf($this->view->translate("#With keyword '%s'"), $term));
+    }
+
     public function youngAction()
     {
         $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_YOUNG);
@@ -115,11 +131,11 @@ class Works_IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         $pageData = array(
-            'leftSpecialUri' => '/explore/menina-bonita-do-laco-de-fita',
+            'leftSpecialUri' => '/livro/menina-bonita-do-laco-de-fita',
             'leftSpecialTitle' => 'Menina bonita do laço de fita',
             'leftSpecialSummary' => 'História de uma menina que, de tão bonita, deixa até um coelho apaixonado.',
             'leftSpecialImageUri' => '/img/marcacao_destaque_livro1.png',
-            'rightSpecialUri' => '/explore/a-audacia-dessa-mulher',
+            'rightSpecialUri' => '/livro/audacia-dessa-mulher',
             'rightSpecialTitle' => 'A audácia dessa mulher',
             'rightSpecialSummary' => 'Um romance que engloba varias vertentes e vem do século XIX aos nossos dias.',
             'rightSpecialImageUri' => '/img/special/audacia_crop.png',
@@ -145,7 +161,7 @@ class Works_IndexController extends Zend_Controller_Action
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
                     'coverSrc' => $coverFilePath,
-                    'exploreUri' => '/explore/' . $loopWorkObj->getUri(),
+                    'exploreUri' => $this->view->translate('/explore') . '/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),
                     'prizes' => $prizesLabels,
@@ -171,6 +187,7 @@ class Works_IndexController extends Zend_Controller_Action
         $this->workMapper = new Author_Collection_WorkMapper($this->db);
         $this->editorMapper = new Author_Collection_EditorMapper($this->db);
         $this->editionMapper = new Author_Collection_EditionMapper($this->db);
+        $this->taxonomyMapper = new Author_Collection_TaxonomyMapper($this->db);
 
     }
 }

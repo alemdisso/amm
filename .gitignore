@@ -27,12 +27,11 @@ nbproject/project.properties
 /public/img/uploads/*
 
 /public/js/tinymce/*
-/public/js/tinymce/langs/*
-/public/js/tinymce/skins/*
-/public/js/tinymce/themes/*
-/public/js/tinymce/js/*
-/public/js/tinymce/plugins/*
+
 /public/js/jquery.pajinate*.*
 
 /public/img/special/*
+/public/img/up/*
 /public/js/admin/
+
+/wbfnts

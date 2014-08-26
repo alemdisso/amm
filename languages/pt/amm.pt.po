@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-12 18:34-0300\n"
-"PO-Revision-Date: 2013-10-15 10:43-0300\n"
+"POT-Creation-Date: 2014-08-18 17:32-0300\n"
+"PO-Revision-Date: 2014-08-18 17:36-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -21,19 +21,23 @@ msgstr ""
 #: application\modules/admin/controllers/EditionController.php:74
 #: application\modules/admin/controllers/EditionController.php:280
 #: application\modules/admin/controllers/EditorController.php:42
+#: application\modules/admin/controllers/KeywordController.php:41
+#: application\modules/admin/controllers/KeywordController.php:74
 #: application\modules/admin/controllers/PostController.php:39
 #: application\modules/admin/controllers/PostController.php:86
 #: application\modules/admin/controllers/PrizeController.php:41
 #: application\modules/admin/controllers/PrizeController.php:74
+#: application\modules/admin/controllers/QuestionController.php:39
+#: application\modules/admin/controllers/QuestionController.php:89
 #: application\modules/admin/controllers/SerieController.php:42
-#: application\modules/admin/controllers/WorkController.php:309
+#: application\modules/admin/controllers/WorkController.php:342
 #: application\modules/auth/controllers/UserController.php:39
 #: application\modules/auth/controllers/UserController.php:61
 msgid "#The record was successfully updated."
 msgstr "O registro foi atualizado com sucesso."
 
 #: application\modules/admin/controllers/EditionController.php:57
-#: application\modules/admin/views/scripts/edition/create.phtml:111
+#: application\modules/admin/views/scripts/edition/create.phtml:104
 msgid "#Create edition"
 msgstr "Criar edição"
 
@@ -68,35 +72,85 @@ msgstr "(escolha uma opção...)"
 msgid "#Create editor"
 msgstr "Criar editora"
 
-#: application\modules/admin/controllers/IndexController.php:75
+#: application\modules/admin/controllers/IndexController.php:103
 msgid "#no editions"
 msgstr "sem edições"
 
-#: application\modules/admin/controllers/NavigationController.php:46
+#: application\modules/admin/controllers/KeywordController.php:59
+#: application\modules/admin/controllers/KeywordController.php:110
+#: application\modules/admin/views/scripts/keyword/create.phtml:2
+msgid "#Create keyword"
+msgstr "Nova palavra chave"
+
+#: application\modules/admin/controllers/NavigationController.php:47
+#: application\modules/includes/views/scripts/include/works-categories.phtml:6
 #: application\modules/works/views/scripts/edition/explore.phtml:7
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:24
+#: application\modules/works/views/scripts/index/editions-with-keyword.phtml:24
 #: application\modules/works/views/scripts/index/series.phtml:7
 #: application\modules/works/views/scripts/serie/explore.phtml:7
 msgid "#Works"
 msgstr "Livros"
 
-#: application\modules/admin/controllers/NavigationController.php:47
+#: application\modules/admin/controllers/NavigationController.php:48
 #: library\Author/View/Helper/TypeListLink.php:27
 msgid "/works"
 msgstr "/livros"
 
+#: application\modules/admin/controllers/NavigationController.php:91
+#: application\modules/works/controllers/IndexController.php:164
+#: application\modules/admin/views/scripts/work/editions-loop.phtml:9
+msgid "/explore"
+msgstr "/livro"
+
+#: application\modules/admin/controllers/NavigationController.php:96
+#: application\modules/works/controllers/IndexController.php:104
+#: application\modules/works/views/scripts/index/series.phtml:9
+msgid "#Series"
+msgstr "Coleções"
+
+#: application\modules/admin/controllers/NavigationController.php:105
+#: application\modules/default/views/scripts/index/index.phtml:70
+#: application\modules/default/views/scripts/index/index.phtml:72
+#: application\modules/default/views/scripts/index/index.phtml:73
+#: application\modules/includes/views/scripts/include/footer-home.phtml:29
+#: application\modules/includes/views/scripts/include/footer.phtml:27
+#: application\modules/includes/views/scripts/include/header-login.phtml:12
+#: application\modules/includes/views/scripts/include/header.phtml:13
+msgid "#Biography"
+msgstr "Biografia"
+
+#: application\modules/admin/controllers/NavigationController.php:105
+msgid "/biography"
+msgstr "/biografia"
+
+#: application\modules/admin/controllers/NavigationController.php:112
+#: application\modules/blog/views/helpers/CategoryHrefTerm.php:10
+#: application\modules/includes/views/scripts/include/categories-loop-li.phtml:1
+#: application\modules/includes/views/scripts/include/categories-loop.phtml:2
+msgid "/blog/index/category"
+msgstr "/novidades-em"
+
+#: application\modules/admin/controllers/NavigationController.php:119
+#: application\modules/blog/views/scripts/index/posts-loop.phtml:4
+#: application\modules/default/views/scripts/index/index.phtml:54
+#: application\modules/default/views/scripts/index/index.phtml:58
+msgid "/post"
+msgstr "/post"
+
 #: application\modules/admin/controllers/PostController.php:48
-#: application\modules/admin/views/scripts/post/create.phtml:7
+#: application\modules/admin/views/scripts/post/create.phtml:13
 msgid "#Create post"
 msgstr "Criar post"
 
 #: application\modules/admin/controllers/PostController.php:119
-#: application\modules/admin/views/scripts/post/edit.phtml:6
+#: application\modules/admin/views/scripts/post/edit.phtml:9
 msgid "#Edit post"
 msgstr "Editar post"
 
 #: application\modules/admin/controllers/PostController.php:136
-#: application\modules/admin/controllers/WorkController.php:259
+#: application\modules/admin/controllers/QuestionController.php:139
+#: application\modules/admin/controllers/WorkController.php:292
 msgid "#The record was successfully removed."
 msgstr "O registro foi removido com sucesso."
 
@@ -110,6 +164,21 @@ msgstr "Remover post"
 #: application\modules/admin/views/scripts/prize/create.phtml:2
 msgid "#Create prize"
 msgstr "Criar prêmio"
+
+#: application\modules/admin/controllers/QuestionController.php:48
+#: application\modules/admin/views/scripts/question/create.phtml:10
+msgid "#Create question"
+msgstr "Criar pergunta"
+
+#: application\modules/admin/controllers/QuestionController.php:122
+#: application\modules/admin/views/scripts/question/edit.phtml:9
+msgid "#Edit question"
+msgstr "Editar pergunta"
+
+#: application\modules/admin/controllers/QuestionController.php:169
+#: application\modules/admin/views/scripts/question/remove.phtml:5
+msgid "#Remove question"
+msgstr "Remover pergunta"
 
 #: application\modules/admin/controllers/SerieController.php:65
 msgid "#Create serie"
@@ -131,14 +200,19 @@ msgstr "Alterar título"
 msgid "#Change type"
 msgstr "Alterar classificação"
 
-#: application\modules/admin/controllers/WorkController.php:175
-#: application\modules/admin/controllers/WorkController.php:180
-#: application\modules/admin/controllers/WorkController.php:193
-#: application\modules/admin/controllers/WorkController.php:198
+#: application\modules/admin/controllers/WorkController.php:173
+#: application\modules/admin/views/scripts/work/detail.phtml:19
+msgid "#Add keyword"
+msgstr "Nova palavra chave"
+
+#: application\modules/admin/controllers/WorkController.php:204
+#: application\modules/admin/controllers/WorkController.php:209
+#: application\modules/admin/controllers/WorkController.php:222
+#: application\modules/admin/controllers/WorkController.php:227
 msgid "#NI"
 msgstr "n.i."
 
-#: application\modules/admin/controllers/WorkController.php:289
+#: application\modules/admin/controllers/WorkController.php:322
 #: application\modules/admin/views/scripts/work/remove.phtml:5
 msgid "#Remove work"
 msgstr "Remover obra"
@@ -165,43 +239,43 @@ msgstr "ISBN: %s"
 msgid "#%s pages"
 msgstr "%s páginas"
 
-#: application\modules/works/controllers/EditionController.php:60
-#: application\modules/works/controllers/IndexController.php:58
+#: application\modules/works/controllers/EditionController.php:61
+#: application\modules/works/controllers/IndexController.php:59
 #, php-format
 msgid "#Serie: %s"
 msgstr "Coleção: %s"
 
-#: application\modules/works/controllers/EditionController.php:72
+#: application\modules/works/controllers/EditionController.php:77
 #: library\Author/Form/EditionCreate.php:148
 #: library\Author/Form/IllustratorChange.php:21
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:7
 msgid "#Illustrator:"
 msgstr "Ilustrador:"
 
-#: application\modules/works/controllers/EditionController.php:77
+#: application\modules/works/controllers/EditionController.php:82
 #: library\Author/Form/CoverDesignerChange.php:23
 #: library\Author/Form/EditionCreate.php:162
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:8
 msgid "#Cover designer:"
 msgstr "Capa:"
 
-#: application\modules/works/controllers/EditionController.php:82
+#: application\modules/works/controllers/EditionController.php:87
 msgid "#Editor:"
 msgstr "Editora:"
 
-#: application\modules/works/controllers/EditionController.php:103
+#: application\modules/works/controllers/EditionController.php:108
 #, php-format
 msgid "#Exploring %s"
-msgstr "Explorando %s"
+msgstr "%s"
 
-#: application\modules/works/controllers/IndexController.php:92
+#: application\modules/works/controllers/IndexController.php:93
 msgid "/serie/"
 msgstr "/colecao/"
 
-#: application\modules/works/controllers/IndexController.php:103
-#: application\modules/works/views/scripts/index/series.phtml:9
-msgid "#Series"
-msgstr "Coleções"
+#: application\modules/works/controllers/IndexController.php:122
+#, php-format
+msgid "#With keyword '%s'"
+msgstr "Com a palavra-chave '%s'"
 
 #: library\Moxca/Access/Roles.php:10
 msgid "#Unknown"
@@ -228,11 +302,13 @@ msgid "#System administrator"
 msgstr "Sysadmin"
 
 #: library\Moxca/Blog/PostStatus.php:10
+#: library\Moxca/Faq/QuestionStatus.php:10
 #: library\Author/Collection/WorkTypes.php:10
 msgid "#Nil"
 msgstr "Nula"
 
 #: library\Moxca/Blog/PostStatus.php:11
+#: library\Moxca/Faq/QuestionStatus.php:11
 msgid "#Draft"
 msgstr "Rascunho"
 
@@ -249,21 +325,29 @@ msgid "#Protected"
 msgstr "Protegido"
 
 #: library\Moxca/Blog/PostStatus.php:15
+#: library\Moxca/Faq/QuestionStatus.php:13
 msgid "#Archived"
 msgstr "Arquivado"
 
 #: library\Moxca/Blog/PostStatus.php:32
+#: library\Moxca/Faq/QuestionStatus.php:28
 #: library\Author/Collection/WorkTypes.php:30
 msgid "#Unknown type"
 msgstr "Tipo indefinido"
 
+#: library\Moxca/Faq/QuestionStatus.php:12
+msgid "#Active"
+msgstr "Ativa"
+
 #: library\Moxca/Form/PostCreate.php:18
+#: library\Moxca/Form/QuestionCreate.php:18
 #: library\Author/Form/EditionCreate.php:17
 #: library\Author/Form/TitleChange.php:23
 msgid "#Title:"
 msgstr "Título:"
 
 #: library\Moxca/Form/PostCreate.php:27
+#: library\Moxca/Form/QuestionCreate.php:27
 #: library\Author/Form/EditionCreate.php:26
 #: library\Author/Form/PrizeCreate.php:30
 #: library\Author/Form/TitleChange.php:32
@@ -271,7 +355,9 @@ msgid "#Title is required"
 msgstr "O título é obrigatório"
 
 #: library\Moxca/Form/PostCreate.php:36
+#: library\Moxca/Form/QuestionCreate.php:78
 #: application\modules/admin/views/scripts/index/list-posts.phtml:45
+#: application\modules/admin/views/scripts/index/list-questions.phtml:46
 msgid "#Status"
 msgstr "Status"
 
@@ -280,40 +366,62 @@ msgid "#Category"
 msgstr "Categoria"
 
 #: library\Moxca/Form/PostCreate.php:65
+#: library\Moxca/Form/QuestionCreate.php:33
 msgid "#Content:"
 msgstr "Conteúdo:"
 
-#: library\Moxca/Form/PostCreate.php:80 library\Moxca/Form/UserCreate.php:101
+#: library\Moxca/Form/PostCreate.php:80
+#: library\Moxca/Form/QuestionCreate.php:92
+#: library\Moxca/Form/UserCreate.php:101
+#: library\Author/Form/CharacterAdd.php:59
 #: library\Author/Form/CoverChange.php:33
 #: library\Author/Form/CoverDesignerChange.php:38
 #: library\Author/Form/DescriptionChange.php:37
 #: library\Author/Form/EditionCreate.php:176
 #: library\Author/Form/EditorCreate.php:32
 #: library\Author/Form/IllustratorChange.php:35
-#: library\Author/Form/IsbnChange.php:35
+#: library\Author/Form/IsbnChange.php:35 library\Author/Form/KeywordAdd.php:59
 #: library\Author/Form/PagesChange.php:38
 #: library\Author/Form/PrizeCreate.php:79
 #: library\Author/Form/SerieChange.php:34
 #: library\Author/Form/SerieCreate.php:39
 #: library\Author/Form/SummaryChange.php:37
+#: library\Author/Form/ThemeChange.php:45
 #: library\Author/Form/TitleChange.php:39
 #: library\Author/Form/WorkTypeChange.php:40
 msgid "#Submit"
 msgstr "Enviar"
 
-#: library\Moxca/Form/PostRemove.php:21 library\Author/Form/WorkRemove.php:21
+#: library\Moxca/Form/PostRemove.php:21
+#: library\Moxca/Form/QuestionRemove.php:21
+#: library\Author/Form/CharacterRemove.php:27
+#: library\Author/Form/WorkRemove.php:21
 msgid "#Confirm removal"
 msgstr "Confirmar remoção"
 
-#: library\Moxca/Form/PostRemove.php:21 library\Author/Form/WorkRemove.php:21
+#: library\Moxca/Form/PostRemove.php:21
+#: library\Moxca/Form/QuestionRemove.php:21
+#: library\Author/Form/CharacterRemove.php:27
+#: library\Author/Form/WorkRemove.php:21
 msgid "#Don't remove"
 msgstr "Não remova"
 
-#: library\Moxca/Form/PostRemove.php:32 library\Moxca/Form/UserCreate.php:117
-#: library\Moxca/Form/UserEdit.php:28 library\Moxca/Form/UserLogin.php:66
+#: library\Moxca/Form/PostRemove.php:32
+#: library\Moxca/Form/QuestionRemove.php:32
+#: library\Moxca/Form/UserCreate.php:117 library\Moxca/Form/UserEdit.php:28
+#: library\Moxca/Form/UserLogin.php:66
+#: library\Author/Form/CharacterRemove.php:39
 #: library\Author/Form/WorkRemove.php:32
 msgid "#Invalid data!"
 msgstr "Dados inválidos"
+
+#: library\Moxca/Form/QuestionCreate.php:47
+msgid "#Answer:"
+msgstr "Resposta:"
+
+#: library\Moxca/Form/QuestionCreate.php:62
+msgid "#Rank:"
+msgstr "Ordem:"
 
 #: library\Moxca/Form/UserCreate.php:15
 #: library\Author/Form/EditorCreate.php:15
@@ -1309,10 +1417,15 @@ msgstr "Zimbábue"
 msgid "#Bad value to Id."
 msgstr "Bad value to Id."
 
+#: library\Moxca/View/Helper/CheckTermFromGet.php:20
+#: library\Moxca/View/Helper/CheckTitleFromGet.php:20
+msgid "#Bad value as term."
+msgstr "Bad value to Term"
+
 #: library\Author/Collection/WorkTypes.php:11
-#: application\modules/default/views/scripts/index/index.phtml:18
-#: application\modules/includes/views/scripts/include/footer-home.phtml:10
-#: application\modules/includes/views/scripts/include/footer.phtml:12
+#: application\modules/default/views/scripts/index/index.phtml:22
+#: application\modules/includes/views/scripts/include/footer-home.phtml:17
+#: application\modules/includes/views/scripts/include/footer.phtml:15
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Children"
 msgstr "Infantis"
@@ -1322,9 +1435,9 @@ msgid "#Young"
 msgstr "Juvenis"
 
 #: library\Author/Collection/WorkTypes.php:13
-#: application\modules/default/views/scripts/index/index.phtml:20
-#: application\modules/includes/views/scripts/include/footer-home.phtml:12
-#: application\modules/includes/views/scripts/include/footer.phtml:14
+#: application\modules/default/views/scripts/index/index.phtml:24
+#: application\modules/includes/views/scripts/include/footer-home.phtml:19
+#: application\modules/includes/views/scripts/include/footer.phtml:17
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Fiction"
 msgstr "Ficção"
@@ -1332,6 +1445,21 @@ msgstr "Ficção"
 #: library\Author/Collection/WorkTypes.php:14
 msgid "#Essay"
 msgstr "Ensaios"
+
+#: library\Author/Form/CharacterAdd.php:23
+#: library\Author/Form/KeywordAdd.php:23
+#: library\Author/Form/ThemeChange.php:23
+#: application\modules/default/views/scripts/index/index.phtml:99
+msgid "#(choose)"
+msgstr "(escolha...)"
+
+#: library\Author/Form/CharacterAdd.php:31
+msgid "#Characters"
+msgstr "Personagens"
+
+#: library\Author/Form/CharacterAdd.php:45
+msgid "#New character:"
+msgstr "Novo personagem"
 
 #: library\Author/Form/CoverChange.php:22
 #: library\Author/Form/EditionCreate.php:32
@@ -1386,6 +1514,15 @@ msgstr "Páginas:"
 msgid "#Name is required"
 msgstr "O nome é obrigatório"
 
+#: library\Author/Form/KeywordAdd.php:31
+#: application\modules/admin/views/scripts/work/detail.phtml:17
+msgid "#Keywords"
+msgstr "Palavras chave"
+
+#: library\Author/Form/KeywordAdd.php:45
+msgid "#New keyword:"
+msgstr "Nova palavra chave:"
+
 #: library\Author/Form/PrizeCreate.php:21
 msgid "#Prize:"
 msgstr "Prêmio:"
@@ -1401,6 +1538,10 @@ msgstr "Categoria:"
 #: library\Author/Form/PrizeCreate.php:65
 msgid "#Year:"
 msgstr "Ano:"
+
+#: library\Author/Form/ThemeChange.php:31
+msgid "#Theme"
+msgstr "Tema"
 
 #: library\Author/Form/WorkTypeChange.php:25
 msgid "#Type:"
@@ -1452,15 +1593,19 @@ msgstr "Mudar número de páginas de %s"
 msgid "#Change %s's serie"
 msgstr "Alterar coleção de %s"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:84
+#: application\modules/admin/views/scripts/edition/create.phtml:72
 msgid "#(choose an editor)"
 msgstr "(escolha uma editora...)"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:123
+#: application\modules/admin/views/scripts/edition/create.phtml:88
+msgid "#(choose a serie)"
+msgstr "(escolha uma coleção...)"
+
+#: application\modules/admin/views/scripts/edition/create.phtml:116
 msgid "#(new editor)"
 msgstr "(nova editora)"
 
-#: application\modules/admin/views/scripts/edition/create.phtml:130
+#: application\modules/admin/views/scripts/edition/create.phtml:123
 msgid "#(new serie)"
 msgstr "(nova coleção)"
 
@@ -1474,6 +1619,7 @@ msgid "#List of posts"
 msgstr "Lista de posts"
 
 #: application\modules/admin/views/scripts/index/list-posts.phtml:44
+#: application\modules/admin/views/scripts/index/list-questions.phtml:45
 #: application\modules/admin/views/scripts/index/list-works.phtml:44
 #: application\modules/admin/views/scripts/work/list.phtml:19
 msgid "#Title"
@@ -1484,18 +1630,32 @@ msgid "#Date"
 msgstr "Data"
 
 #: application\modules/admin/views/scripts/index/list-posts.phtml:64
+#: application\modules/admin/views/scripts/index/list-questions.phtml:64
 #: application\modules/admin/views/scripts/index/list-works.phtml:63
 msgid "#remove"
 msgstr "remover"
 
 #: application\modules/admin/views/scripts/index/list-posts.phtml:65
+#: application\modules/admin/views/scripts/index/list-questions.phtml:65
 msgid "#edit"
 msgstr "editar"
+
+#: application\modules/admin/views/scripts/index/list-questions.phtml:39
+msgid "#List of questions"
+msgstr "Lista de perguntas"
+
+#: application\modules/admin/views/scripts/index/list-questions.phtml:44
+msgid "#Rank"
+msgstr "Ordem"
 
 #: application\modules/admin/views/scripts/index/list-works.phtml:39
 #: application\modules/admin/views/scripts/work/list.phtml:13
 msgid "#List of works"
 msgstr "Lista de obras"
+
+#: application\modules/admin/views/scripts/keyword/edit.phtml:2
+msgid "#Edit keyword"
+msgstr "Editar palavra chave"
 
 #: application\modules/admin/views/scripts/navigation/update.phtml:2
 msgid "#Navigation updated"
@@ -1518,6 +1678,14 @@ msgid "#List posts"
 msgstr "Listar posts"
 
 #: application\modules/admin/views/scripts/panel/panel.phtml:6
+msgid "#New Question"
+msgstr "Nova Pergunta"
+
+#: application\modules/admin/views/scripts/panel/panel.phtml:7
+msgid "#List questions"
+msgstr "Listar Perguntas"
+
+#: application\modules/admin/views/scripts/panel/panel.phtml:8
 msgid "#Logout"
 msgstr "Logout"
 
@@ -1546,6 +1714,31 @@ msgstr "Confirma a remoção do post %s? Isso NÂO pode ser desfeito."
 msgid "#Edit prize"
 msgstr "Editar prêmio"
 
+#: application\modules/admin/views/scripts/question/detail.phtml:8
+msgid "#Question"
+msgstr "Pergunta"
+
+#: application\modules/admin/views/scripts/question/detail.phtml:10
+msgid "#Answer"
+msgstr "Resposta"
+
+#: application\modules/admin/views/scripts/question/detail.phtml:12
+msgid "#(edit question)"
+msgstr "(editar pergunta)"
+
+#: application\modules/admin/views/scripts/question/detail.phtml:15
+msgid "#(remove this question!)"
+msgstr "(remova essa pergunta!)"
+
+#: application\modules/admin/views/scripts/question/detail.phtml:16
+msgid "#(goto question's page)"
+msgstr "(ir para a página da pergunta)"
+
+#: application\modules/admin/views/scripts/question/remove.phtml:8
+#, php-format
+msgid "#Do you confirm removal of question %s? This CAN'T be undone."
+msgstr "Confirma a remoção da pergunta %s? Isso NÂO pode ser desfeito."
+
 #: application\modules/admin/views/scripts/work/change-description.phtml:2
 #: application\modules/admin/views/scripts/work/change-summary.phtml:2
 #, php-format
@@ -1561,6 +1754,11 @@ msgstr "Mudar título de %s"
 #, php-format
 msgid "#Change %s's type"
 msgstr "Alterar classificação de %s"
+
+#: application\modules/admin/views/scripts/work/create-keyword.phtml:2
+#, php-format
+msgid "#%s's new keyword"
+msgstr "Nova palavra chave para \"%s\""
 
 #: application\modules/admin/views/scripts/work/detail.phtml:7
 msgid "#(change type)"
@@ -1582,22 +1780,22 @@ msgstr "Sumário"
 msgid "#(change summary)"
 msgstr "(editar sumário)"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:17
+#: application\modules/admin/views/scripts/work/detail.phtml:21
 #: application\modules/works/views/scripts/edition/list-legend.phtml:1
 #: application\modules/works/views/scripts/edition/list-legend.phtml:2
 #: application\modules/works/views/scripts/serie/explore.phtml:47
 msgid "#Prizes"
 msgstr "Prêmios"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:19
+#: application\modules/admin/views/scripts/work/detail.phtml:23
 msgid "#Add prize"
 msgstr "Novo prêmio"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:21
+#: application\modules/admin/views/scripts/work/detail.phtml:25
 msgid "#Editions"
 msgstr "Edições"
 
-#: application\modules/admin/views/scripts/work/detail.phtml:24
+#: application\modules/admin/views/scripts/work/detail.phtml:28
 msgid "#(remove this work!)"
 msgstr "(remova essa obra!)"
 
@@ -1606,6 +1804,7 @@ msgstr "(remova essa obra!)"
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:6
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:7
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:8
+#: application\modules/admin/views/scripts/work/keywords-loop.phtml:1
 #: application\modules/admin/views/scripts/work/prizes-loop.phtml:1
 msgid "#(edit)"
 msgstr "(editar)"
@@ -1640,50 +1839,112 @@ msgstr "Editar conta do usuário"
 msgid "#Success!!!"
 msgstr "Sucesso!"
 
+#: application\modules/blog/views/scripts/index/category.phtml:6
 #: application\modules/blog/views/scripts/index/index.phtml:6
 #: application\modules/blog/views/scripts/post/explore.phtml:7
-#: application\modules/default/views/scripts/index/index.phtml:42
-#: application\modules/includes/views/scripts/include/footer-home.phtml:17
-#: application\modules/includes/views/scripts/include/footer.phtml:19
+#: application\modules/default/views/scripts/index/index.phtml:44
+#: application\modules/default/views/scripts/index/index.phtml:46
+#: application\modules/default/views/scripts/index/index.phtml:47
+#: application\modules/includes/views/scripts/include/footer-home.phtml:24
+#: application\modules/includes/views/scripts/include/footer.phtml:22
 msgid "#Blog title"
 msgstr "Novidades"
 
-#: application\modules/blog/views/scripts/index/posts-loop.phtml:4
-msgid "/news"
-msgstr "/novidades"
+#: application\modules/blog/views/scripts/index/category.phtml:13
+msgid "#No posts found with this criteria."
+msgstr "Nada foi encontrado com esse critério de busca."
 
-#: application\modules/default/views/scripts/index/index.phtml:10
-#: application\modules/default/views/scripts/index/index.phtml:12
-#: application\modules/default/views/scripts/index/index.phtml:13
+#: application\modules/default/views/scripts/index/index.phtml:14
+#: application\modules/default/views/scripts/index/index.phtml:16
+#: application\modules/default/views/scripts/index/index.phtml:17
+#: application\modules/includes/views/scripts/include/footer-home.phtml:16
+#: application\modules/includes/views/scripts/include/footer.phtml:14
 #: application\modules/includes/views/scripts/include/header-login.phtml:10
 #: application\modules/includes/views/scripts/include/header.phtml:11
 #: application\modules/works/views/scripts/index/index.phtml:7
 msgid "#Books"
 msgstr "Livros"
 
-#: application\modules/default/views/scripts/index/index.phtml:13
+#: application\modules/default/views/scripts/index/index.phtml:17
 msgid "#Stories for all"
 msgstr "Mil histórias num só lugar"
 
-#: application\modules/default/views/scripts/index/index.phtml:19
-#: application\modules/includes/views/scripts/include/footer-home.phtml:11
-#: application\modules/includes/views/scripts/include/footer.phtml:13
+#: application\modules/default/views/scripts/index/index.phtml:23
+#: application\modules/includes/views/scripts/include/footer-home.phtml:18
+#: application\modules/includes/views/scripts/include/footer.phtml:16
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Young people"
 msgstr "Juvenis"
 
-#: application\modules/default/views/scripts/index/index.phtml:21
-#: application\modules/includes/views/scripts/include/footer-home.phtml:13
-#: application\modules/includes/views/scripts/include/footer.phtml:15
+#: application\modules/default/views/scripts/index/index.phtml:25
+#: application\modules/includes/views/scripts/include/footer-home.phtml:20
+#: application\modules/includes/views/scripts/include/footer.phtml:18
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Essays"
 msgstr "Ensaios"
 
-#: application\modules/default/views/scripts/index/index.phtml:28
+#: application\modules/default/views/scripts/index/index.phtml:32
+#: application\modules/default/views/scripts/index/index.phtml:79
 #: application\modules/works/views/scripts/index/index.phtml:15
 #: application\modules/works/views/scripts/index/index.phtml:21
 msgid "#more about"
 msgstr "mais"
+
+#: application\modules/default/views/scripts/index/index.phtml:47
+msgid "#Home blog tagline"
+msgstr "O que a Ana tem aprontado por aí"
+
+#: application\modules/default/views/scripts/index/index.phtml:73
+msgid "#Home biography tagline"
+msgstr "Um resumo da vida e obra da artista"
+
+#: application\modules/default/views/scripts/index/index.phtml:89
+#: application\modules/default/views/scripts/index/index.phtml:90
+#: application\modules/default/views/scripts/index/index.phtml:91
+msgid "#Faq title"
+msgstr "Respostas"
+
+#: application\modules/default/views/scripts/index/index.phtml:90
+#: application\modules/faq/views/scripts/index/index.phtml:9
+#: application\modules/includes/views/scripts/include/footer-home.phtml:30
+#: application\modules/includes/views/scripts/include/footer.phtml:28
+msgid "#Frequently asked questions"
+msgstr "Perguntas frequentes"
+
+#: application\modules/default/views/scripts/index/index.phtml:91
+msgid "#Get answers here"
+msgstr "Tire suas dúvidas"
+
+#: application\modules/default/views/scripts/index/index.phtml:96
+msgid "#Answers to frequently asked questions:"
+msgstr "Respostas para dúvidas frequentes:"
+
+#: application\modules/faq/views/scripts/index/index.phtml:11
+msgid ""
+"#No momento não temos como responder a mensagens enviadas através do site. "
+"Procuramos identificar quais são as dúvidas mais frequentes, e responde-las "
+"abaixo."
+msgstr ""
+"No momento não temos como responder a mensagens enviadas através do site. "
+"Procuramos identificar quais são as dúvidas mais frequentes, e responde-las "
+"abaixo."
+
+#: application\modules/faq/views/scripts/index/index.phtml:15
+msgid "#(the answer you are looking may be here)"
+msgstr "(A resposta para a sua duvida pode estar aqui)"
+
+#: application\modules/includes/views/scripts/include/categories.phtml:9
+msgid "#Categories"
+msgstr "Categorias"
+
+#: application\modules/includes/views/scripts/include/footer-home.phtml:7
+msgid "#Tag cloud"
+msgstr "Palavras chave"
+
+#: application\modules/includes/views/scripts/include/footer-home.phtml:33
+#: application\modules/includes/views/scripts/include/footer.phtml:31
+msgid "#Copyright notice"
+msgstr "&copy;2014 Ana Maria Machado. Todos os direitos reservados."
 
 #: application\modules/includes/views/scripts/include/header-login.phtml:5
 #: application\modules/includes/views/scripts/include/header.phtml:6
@@ -1694,11 +1955,6 @@ msgstr "Principal"
 #: application\modules/includes/views/scripts/include/header.phtml:12
 msgid "#News"
 msgstr "Novidades"
-
-#: application\modules/includes/views/scripts/include/header-login.phtml:12
-#: application\modules/includes/views/scripts/include/header.phtml:13
-msgid "#Biography"
-msgstr "Biografia"
 
 #: application\modules/includes/views/scripts/include/header-login.phtml:13
 msgid "#Contact"
@@ -1722,22 +1978,27 @@ msgid "#Awarded books"
 msgstr "Livros premiados"
 
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:7
+#: application\modules/works/views/scripts/index/editions-with-keyword.phtml:7
 msgid "#First"
 msgstr "Prim."
 
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:8
+#: application\modules/works/views/scripts/index/editions-with-keyword.phtml:8
 msgid "#Prev"
 msgstr "Ant."
 
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:9
+#: application\modules/works/views/scripts/index/editions-with-keyword.phtml:9
 msgid "#Last"
 msgstr "Últ."
 
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:10
+#: application\modules/works/views/scripts/index/editions-with-keyword.phtml:10
 msgid "#Next"
 msgstr "Próx."
 
 #: application\modules/works/views/scripts/index/editions-of-type.phtml:11
+#: application\modules/works/views/scripts/index/editions-with-keyword.phtml:11
 msgid "#Showing {0}-{1} of {2} results"
 msgstr "Mostrando {0} a {1} de {2} encontrados"
 
@@ -1749,11 +2010,14 @@ msgstr "Por categoria"
 msgid "#list editions"
 msgstr "livros da coleção"
 
+#~ msgid "#Work's type?"
+#~ msgstr "Tipo de livro?"
+
+#~ msgid "/news"
+#~ msgstr "/novidades"
+
 #~ msgid "/series"
 #~ msgstr "/colecoes"
-
-#~ msgid "/biography"
-#~ msgstr "/biografia"
 
 #~ msgid "#Ana Maria Machado - Fiction"
 #~ msgstr "Ana Maria Machado - Ficção"
@@ -1831,9 +2095,6 @@ msgstr "livros da coleção"
 
 #~ msgid "#Not defined"
 #~ msgstr "Indefinido"
-
-#~ msgid "#None action"
-#~ msgstr "(nenhuma ação)"
 
 #~ msgid "#Is a milestone"
 #~ msgstr "É um marco"
@@ -1941,9 +2202,6 @@ msgstr "livros da coleção"
 #~ msgid "#Suspended"
 #~ msgstr "Suspenso"
 
-#~ msgid "#New action"
-#~ msgstr "Nova ação"
-
 #~ msgid "#Project:"
 #~ msgstr "Projeto:"
 
@@ -2045,9 +2303,6 @@ msgstr "livros da coleção"
 
 #~ msgid "#Create new product"
 #~ msgstr "Adicionar produto"
-
-#~ msgid "#Action"
-#~ msgstr "Ação"
 
 #~ msgid "#Payee"
 #~ msgstr "Beneficiado"
@@ -2208,9 +2463,6 @@ msgstr "livros da coleção"
 
 #~ msgid "#There is no data about this institution."
 #~ msgstr "Não há informações sobre essa instituição."
-
-#~ msgid "#Edit institution"
-#~ msgstr "Editar instituição"
 
 #~ msgid "#City"
 #~ msgstr "Cidade"

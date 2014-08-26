@@ -1,0 +1,46 @@
+
+@font-face {
+    font-family: 'MuseoSans100';
+    src: url('../wbfnts/museosans-100-webfont.eot');
+    src: url('../wbfnts/museosans-100-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../wbfnts/museosans-100-webfont.woff') format('woff'),
+         url('../wbfnts/museosans-100-webfont.ttf') format('truetype'),
+         url('../wbfnts/museosans-100-webfont.svg#MuseoSans100') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'MuseoSans900';
+    src: url('../wbfnts/museosans-900-webfont.eot');
+    src: url('../wbfnts/museosans-900-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../wbfnts/museosans-900-webfont.woff') format('woff'),
+         url('../wbfnts/museosans-900-webfont.ttf') format('truetype'),
+         url('../wbfnts/museosans-900-webfont.svg#MuseoSans900') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: "HoratioL";
+    src: url('../wbfnts/horatiol-webfont.eot');
+    src: url('../wbfnts/horatiol-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../wbfnts/horatiol-webfont.woff') format('woff'),
+         url('../wbfnts/horatiol-webfont.ttf') format('truetype'),
+         url('../wbfnts/horatiol-webfont.svg#HorarioL') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "HoratioB";
+    src: url('../wbfnts/horatiob-webfont.eot');
+    src: url('../wbfnts/horatiob-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../wbfnts/horatiob-webfont.woff') format('woff'),
+         url('../wbfnts/horatiob-webfont.ttf') format('truetype'),
+         url('../wbfnts/horatiob-webfont.svg#HoratioB') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,18 @@
+<?php
+$pageData = $this->pageData;
+?>
+<!-- conteudo -->
+<div id="conteudo">
+<h1><img src="/img/icone_novidades.png" align="absmiddle" alt="<?php echo $this->translate("#Blog title") ?>" /> <?php echo $this->translate("#Blog title") ?></h1>
+
+<div id="index">
+
+<?php if ((isset($pageData['postsData'])) && (is_array($pageData['postsData']) && (count($pageData['postsData'])))) { ?>
+<?php $this->postsLoop($pageData['postsData']); ?>
+<?php } else { ?>
+<?php print $this->translate("#No posts found with this criteria."); ?>
+<?php } ?>
+</div>
+
+</div>
+<!-- /conteudo -->

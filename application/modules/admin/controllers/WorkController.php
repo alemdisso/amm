@@ -147,6 +147,35 @@ class Admin_WorkController extends Zend_Controller_Action
         }
     }
 
+    public function createKeywordAction()
+    {
+        // cria form
+        $form = new Author_Form_KeywordAdd;
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $this->processAndRedirect($form);
+            return;
+        } else {
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('id');
+            $element->setValue($id);
+
+            $workObj = $this->workMapper->findById($id);
+
+            $this->view->title = $workObj->getTitle();
+            $this->view->pageTitle = $this->view->translate("#Add keyword");
+        }
+    }
+
+
+
     public function detailAction()
     {
 
@@ -217,6 +246,9 @@ class Admin_WorkController extends Zend_Controller_Action
         $prizeMapper = new Author_Collection_PrizeMapper($this->db);
         $prizesLabels = $this->view->workPrizesLabels($id, $prizeMapper);
 
+        $taxonomyMapper = new Author_Collection_TaxonomyMapper($this->db);
+        $keywordsLabels = $this->view->workKeywordsLabels($id, $taxonomyMapper);
+
         $data = array(
             'id' => $id,
             'title' => $workObj->getTitle(),
@@ -226,6 +258,7 @@ class Admin_WorkController extends Zend_Controller_Action
             'summary' => nl2br($workObj->getSummary()),
             'editions' => $editionsModel,
             'prizes' => $prizesLabels,
+            'keywords' => $keywordsLabels,
         );
 
         $this->view->pageData = $data;
