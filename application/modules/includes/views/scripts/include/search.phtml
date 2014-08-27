@@ -30,7 +30,7 @@ document.onclick = fechaBox1;
 <h2>Busca de livros</h2>
 
 <form>
-<input type="text" class="busca display_block float_left" /><input type="submit" value="Ok" class="display_block float_right" />
+<input type="text" id="search_topic" class="busca display_block float_left" /><input type="submit" value="Ok" class="display_block float_right" />
 </form>
 
 <div id="box2">
@@ -64,3 +64,28 @@ document.onclick = fechaBox1;
 
 </div>
 <!-- /box busca -->
+<script>
+$(function() {
+
+    $("#search_topic").autocomplete({
+        source: "/works/index/autocomplete",
+        minLength: 2,
+        select: function(event, ui) {
+            var url = ui.item.id;
+            if(url != '#') {
+                location.href = '/livro/' + url;
+            }
+        },
+
+        html: true, // optional (jquery.ui.autocomplete.html.js required)
+
+      // optional (if other layers overlap autocomplete list)
+        open: function(event, ui) {
+            $(".ui-autocomplete").css("z-index", 1000);
+        }
+    });
+
+});
+
+
+</script>

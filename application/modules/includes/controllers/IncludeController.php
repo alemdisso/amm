@@ -100,6 +100,7 @@ class Includes_IncludeController extends Zend_Controller_Action
 
         foreach ($ids as $id => $term) {
             $publishedIds = $this->taxonomyMapper->getPublishedPostsByCategory($term);
+            //echo "publ " . count($publishedIds) . " for $term ($id) <br />";
             if (count($publishedIds)) {
                 $termAndUri = $taxonomyMapper->getTermAndUri($id);
                 $categoriesModel[$id] = array(
