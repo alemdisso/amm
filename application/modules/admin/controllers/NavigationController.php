@@ -31,7 +31,7 @@ class Admin_NavigationController extends Zend_Controller_Action
         $this->editionMapper = new Author_Collection_EditionMapper($this->db);
         $this->serieMapper = new Author_Collection_SerieMapper($this->db);
         $this->postMapper = new Moxca_Blog_PostMapper($this->db);
-        $this->taxonomyMapper = new Moxca_Taxonomy_TaxonomyMapper($this->db);
+        $this->taxonomyMapper = new Moxca_Blog_TaxonomyMapper($this->db);
     }
 
     public function updateAction()

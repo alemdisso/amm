@@ -2,7 +2,8 @@
 
 class Includes_IncludeController extends Zend_Controller_Action
 {
-    private $taxonomyMapper;
+    private $blogTaxonomyMapper;
+    private $collectionTaxonomyMapper;
 
     public function init()
     {
@@ -12,7 +13,7 @@ class Includes_IncludeController extends Zend_Controller_Action
     public function categoriesAction()
     {
 
-        $categoriesModel = $this->fetchCategories($this->taxonomyMapper);
+        $categoriesModel = $this->fetchCategories($this->blogTaxonomyMapper);
 
         $pageData = array(
             'categories' => $categoriesModel,
@@ -59,7 +60,7 @@ class Includes_IncludeController extends Zend_Controller_Action
 
     public function footerAction()
     {
-        $categoriesModel = $this->fetchCategories($this->taxonomyMapper);
+        $categoriesModel = $this->fetchCategories($this->blogTaxonomyMapper);
         $tagsModel = $this->fetchTagsCloud();
 
         $pageData = array(
@@ -88,7 +89,8 @@ class Includes_IncludeController extends Zend_Controller_Action
     private function initDbAndMappers()
     {
         $this->db = Zend_Registry::get('db');
-        $this->taxonomyMapper = new Author_Collection_TaxonomyMapper($this->db);
+        $this->blogTaxonomyMapper = new Moxca_Blog_TaxonomyMapper($this->db);
+        $this->collectionTaxonomyMapper = new Author_Collection_TaxonomyMapper($this->db);
     }
 
     private function fetchCategories($taxonomyMapper)
@@ -99,7 +101,7 @@ class Includes_IncludeController extends Zend_Controller_Action
         $lastInsertedId = null;
 
         foreach ($ids as $id => $term) {
-            $publishedIds = $this->taxonomyMapper->getPublishedPostsByCategory($term);
+            $publishedIds = $taxonomyMapper->getPublishedPostsByCategory($term);
             //echo "publ " . count($publishedIds) . " for $term ($id) <br />";
             if (count($publishedIds)) {
                 $termAndUri = $taxonomyMapper->getTermAndUri($id);
@@ -125,7 +127,7 @@ class Includes_IncludeController extends Zend_Controller_Action
 
     private function fetchTagsCloud()
     {
-        $tagsCloud = $this->taxonomyMapper->getAllWorksKeywordsAlphabeticallyOrdered();
+        $tagsCloud = $this->collectionTaxonomyMapper->getAllWorksKeywordsAlphabeticallyOrdered();
 
         $weight = array();
 

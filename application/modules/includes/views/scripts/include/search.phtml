@@ -30,7 +30,7 @@ document.onclick = fechaBox1;
 <h2>Busca de livros</h2>
 
 <form>
-<input type="text" id="search_topic" class="busca display_block float_left" /><input type="submit" value="Ok" class="display_block float_right" />
+<input type="text" id="search_topic" class="busca display_block float_left" /><input id='submitSearch' type="button" value="Ok" class="display_block float_right" />
 </form>
 
 <div id="box2">
@@ -65,6 +65,12 @@ document.onclick = fechaBox1;
 </div>
 <!-- /box busca -->
 <script>
+$(document).ready(function() {
+    $("#submitSearch").click(function(){
+        window.console.log("uiiii");
+    });
+});
+
 $(function() {
 
     $("#search_topic").autocomplete({
@@ -89,3 +95,7 @@ $(function() {
 
 
 </script>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.js"></script>
+<script type="text/javascript" src="/js/jquery.ui.autocomplete.html.js"></script>

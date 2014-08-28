@@ -87,7 +87,7 @@ class Blog_IndexController extends Zend_Controller_Action
     {
         $this->db = Zend_Registry::get('db');
         $this->postMapper = new Moxca_Blog_PostMapper($this->db);
-        $this->taxonomyMapper = new Moxca_Taxonomy_TaxonomyMapper($this->db);
+        $this->taxonomyMapper = new Moxca_Blog_TaxonomyMapper($this->db);
 
     }
 

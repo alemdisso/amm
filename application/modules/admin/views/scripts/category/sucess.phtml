@@ -1,0 +1,11 @@
+        <script type="text/javascript">
+
+        $(document).ready(function(){
+            var newSerie = $('#hidEditor').val();
+            initSeriesField(newSerie);
+        });
+
+</script>
+<form id="sucessNewEditorForm">
+        <input type="hidden" id="hidEditor" name="newEditorId" value="<?php echo $this->id ?>">
+</form>
