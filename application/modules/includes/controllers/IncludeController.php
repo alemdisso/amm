@@ -14,6 +14,7 @@ class Includes_IncludeController extends Zend_Controller_Action
     {
 
         $categoriesModel = $this->fetchCategories($this->blogTaxonomyMapper);
+        //print_r($categoriesModel);exit;
 
         $pageData = array(
             'categories' => $categoriesModel,
@@ -101,10 +102,11 @@ class Includes_IncludeController extends Zend_Controller_Action
         $lastInsertedId = null;
 
         foreach ($ids as $id => $term) {
-            $publishedIds = $taxonomyMapper->getPublishedPostsByCategory($term);
+            $termAndUri = $taxonomyMapper->getTermAndUri($id);
+            $publishedIds = $taxonomyMapper->getPublishedPostsByCategory($termAndUri['uri']);
             //echo "publ " . count($publishedIds) . " for $term ($id) <br />";
             if (count($publishedIds)) {
-                $termAndUri = $taxonomyMapper->getTermAndUri($id);
+                //$termAndUri = $taxonomyMapper->getTermAndUri($id);
                 $categoriesModel[$id] = array(
                     'label' => $termAndUri['term'],
                     'uri' => $termAndUri['uri'],
