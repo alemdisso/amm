@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-08-18 17:32-0300\n"
-"PO-Revision-Date: 2014-08-26 15:47-0300\n"
+"POT-Creation-Date: 2014-09-01 10:52-0300\n"
+"PO-Revision-Date: 2014-09-01 10:53-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -17,6 +17,7 @@ msgstr ""
 "X-Poedit-SearchPath-1: library\\Moxca\n"
 "X-Poedit-SearchPath-2: library\\Author\n"
 
+#: application\modules/admin/controllers/CategoryController.php:40
 #: application\modules/admin/controllers/EditionController.php:43
 #: application\modules/admin/controllers/EditionController.php:74
 #: application\modules/admin/controllers/EditionController.php:280
@@ -114,7 +115,7 @@ msgstr "Coleções"
 #: application\modules/default/views/scripts/index/index.phtml:72
 #: application\modules/default/views/scripts/index/index.phtml:73
 #: application\modules/includes/views/scripts/include/footer-home.phtml:29
-#: application\modules/includes/views/scripts/include/footer.phtml:27
+#: application\modules/includes/views/scripts/include/footer.phtml:31
 #: application\modules/includes/views/scripts/include/header-login.phtml:12
 #: application\modules/includes/views/scripts/include/header.phtml:13
 msgid "#Biography"
@@ -339,6 +340,33 @@ msgstr "Tipo indefinido"
 msgid "#Active"
 msgstr "Ativa"
 
+#: library\Moxca/Form/CategoryCreate.php:15
+msgid "#New category:"
+msgstr "Nova categoria"
+
+#: library\Moxca/Form/CategoryCreate.php:29
+#: library\Moxca/Form/PostCreate.php:88
+#: library\Moxca/Form/QuestionCreate.php:92
+#: library\Moxca/Form/UserCreate.php:101
+#: library\Author/Form/CharacterAdd.php:59
+#: library\Author/Form/CoverChange.php:33
+#: library\Author/Form/CoverDesignerChange.php:38
+#: library\Author/Form/DescriptionChange.php:37
+#: library\Author/Form/EditionCreate.php:176
+#: library\Author/Form/EditorCreate.php:32
+#: library\Author/Form/IllustratorChange.php:35
+#: library\Author/Form/IsbnChange.php:35 library\Author/Form/KeywordAdd.php:59
+#: library\Author/Form/PagesChange.php:38
+#: library\Author/Form/PrizeCreate.php:79
+#: library\Author/Form/SerieChange.php:34
+#: library\Author/Form/SerieCreate.php:39
+#: library\Author/Form/SummaryChange.php:37
+#: library\Author/Form/ThemeChange.php:45
+#: library\Author/Form/TitleChange.php:39
+#: library\Author/Form/WorkTypeChange.php:40
+msgid "#Submit"
+msgstr "Enviar"
+
 #: library\Moxca/Form/PostCreate.php:18
 #: library\Moxca/Form/QuestionCreate.php:18
 #: library\Author/Form/EditionCreate.php:17
@@ -361,36 +389,22 @@ msgstr "O título é obrigatório"
 msgid "#Status"
 msgstr "Status"
 
-#: library\Moxca/Form/PostCreate.php:52
+#: library\Moxca/Form/PostCreate.php:53
+#: library\Author/Form/CharacterAdd.php:23
+#: library\Author/Form/KeywordAdd.php:23
+#: library\Author/Form/ThemeChange.php:23
+#: application\modules/default/views/scripts/index/index.phtml:99
+msgid "#(choose)"
+msgstr "(escolha...)"
+
+#: library\Moxca/Form/PostCreate.php:60
 msgid "#Category"
 msgstr "Categoria"
 
-#: library\Moxca/Form/PostCreate.php:65
+#: library\Moxca/Form/PostCreate.php:73
 #: library\Moxca/Form/QuestionCreate.php:33
 msgid "#Content:"
 msgstr "Conteúdo:"
-
-#: library\Moxca/Form/PostCreate.php:80
-#: library\Moxca/Form/QuestionCreate.php:92
-#: library\Moxca/Form/UserCreate.php:101
-#: library\Author/Form/CharacterAdd.php:59
-#: library\Author/Form/CoverChange.php:33
-#: library\Author/Form/CoverDesignerChange.php:38
-#: library\Author/Form/DescriptionChange.php:37
-#: library\Author/Form/EditionCreate.php:176
-#: library\Author/Form/EditorCreate.php:32
-#: library\Author/Form/IllustratorChange.php:35
-#: library\Author/Form/IsbnChange.php:35 library\Author/Form/KeywordAdd.php:59
-#: library\Author/Form/PagesChange.php:38
-#: library\Author/Form/PrizeCreate.php:79
-#: library\Author/Form/SerieChange.php:34
-#: library\Author/Form/SerieCreate.php:39
-#: library\Author/Form/SummaryChange.php:37
-#: library\Author/Form/ThemeChange.php:45
-#: library\Author/Form/TitleChange.php:39
-#: library\Author/Form/WorkTypeChange.php:40
-msgid "#Submit"
-msgstr "Enviar"
 
 #: library\Moxca/Form/PostRemove.php:21
 #: library\Moxca/Form/QuestionRemove.php:21
@@ -1425,7 +1439,7 @@ msgstr "Bad value to Term"
 #: library\Author/Collection/WorkTypes.php:11
 #: application\modules/default/views/scripts/index/index.phtml:22
 #: application\modules/includes/views/scripts/include/footer-home.phtml:17
-#: application\modules/includes/views/scripts/include/footer.phtml:15
+#: application\modules/includes/views/scripts/include/footer.phtml:19
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Children"
 msgstr "Infantis"
@@ -1437,7 +1451,7 @@ msgstr "Juvenis"
 #: library\Author/Collection/WorkTypes.php:13
 #: application\modules/default/views/scripts/index/index.phtml:24
 #: application\modules/includes/views/scripts/include/footer-home.phtml:19
-#: application\modules/includes/views/scripts/include/footer.phtml:17
+#: application\modules/includes/views/scripts/include/footer.phtml:21
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Fiction"
 msgstr "Ficção"
@@ -1445,13 +1459,6 @@ msgstr "Ficção"
 #: library\Author/Collection/WorkTypes.php:14
 msgid "#Essay"
 msgstr "Ensaios"
-
-#: library\Author/Form/CharacterAdd.php:23
-#: library\Author/Form/KeywordAdd.php:23
-#: library\Author/Form/ThemeChange.php:23
-#: application\modules/default/views/scripts/index/index.phtml:99
-msgid "#(choose)"
-msgstr "(escolha...)"
 
 #: library\Author/Form/CharacterAdd.php:31
 msgid "#Characters"
@@ -1478,12 +1485,14 @@ msgid "#Type"
 msgstr "Tipo"
 
 #: library\Author/Form/EditionCreate.php:65
+#: library\Author/Form/SerieEdit.php:20
 #: application\modules/admin/views/scripts/index/list-works.phtml:46
 #: application\modules/admin/views/scripts/work/list.phtml:21
 msgid "#Editor"
 msgstr "Editora"
 
 #: library\Author/Form/EditionCreate.php:68
+#: library\Author/Form/SerieEdit.php:23
 msgid "#Editor is required"
 msgstr "A editora é obrigatória"
 
@@ -1846,7 +1855,7 @@ msgstr "Sucesso!"
 #: application\modules/default/views/scripts/index/index.phtml:46
 #: application\modules/default/views/scripts/index/index.phtml:47
 #: application\modules/includes/views/scripts/include/footer-home.phtml:24
-#: application\modules/includes/views/scripts/include/footer.phtml:22
+#: application\modules/includes/views/scripts/include/footer.phtml:26
 msgid "#Blog title"
 msgstr "Curiosidades"
 
@@ -1858,7 +1867,7 @@ msgstr "Nada foi encontrado com esse critério de busca."
 #: application\modules/default/views/scripts/index/index.phtml:16
 #: application\modules/default/views/scripts/index/index.phtml:17
 #: application\modules/includes/views/scripts/include/footer-home.phtml:16
-#: application\modules/includes/views/scripts/include/footer.phtml:14
+#: application\modules/includes/views/scripts/include/footer.phtml:18
 #: application\modules/includes/views/scripts/include/header-login.phtml:10
 #: application\modules/includes/views/scripts/include/header.phtml:11
 #: application\modules/works/views/scripts/index/index.phtml:7
@@ -1871,14 +1880,14 @@ msgstr "Mil histórias num só lugar"
 
 #: application\modules/default/views/scripts/index/index.phtml:23
 #: application\modules/includes/views/scripts/include/footer-home.phtml:18
-#: application\modules/includes/views/scripts/include/footer.phtml:16
+#: application\modules/includes/views/scripts/include/footer.phtml:20
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Young people"
 msgstr "Juvenis"
 
 #: application\modules/default/views/scripts/index/index.phtml:25
 #: application\modules/includes/views/scripts/include/footer-home.phtml:20
-#: application\modules/includes/views/scripts/include/footer.phtml:18
+#: application\modules/includes/views/scripts/include/footer.phtml:22
 #: application\modules/works/views/scripts/index/index.phtml:30
 msgid "#Essays"
 msgstr "Ensaios"
@@ -1907,7 +1916,7 @@ msgstr "Respostas"
 #: application\modules/default/views/scripts/index/index.phtml:90
 #: application\modules/faq/views/scripts/index/index.phtml:9
 #: application\modules/includes/views/scripts/include/footer-home.phtml:30
-#: application\modules/includes/views/scripts/include/footer.phtml:28
+#: application\modules/includes/views/scripts/include/footer.phtml:32
 msgid "#Frequently asked questions"
 msgstr "Perguntas frequentes"
 
@@ -1938,11 +1947,12 @@ msgid "#Categories"
 msgstr "Categorias"
 
 #: application\modules/includes/views/scripts/include/footer-home.phtml:7
+#: application\modules/includes/views/scripts/include/footer.phtml:9
 msgid "#Tag cloud"
 msgstr "Palavras chave"
 
 #: application\modules/includes/views/scripts/include/footer-home.phtml:33
-#: application\modules/includes/views/scripts/include/footer.phtml:31
+#: application\modules/includes/views/scripts/include/footer.phtml:35
 msgid "#Copyright notice"
 msgstr "&copy;2014 Ana Maria Machado. Todos os direitos reservados."
 
@@ -1959,6 +1969,10 @@ msgstr "Curiosidades"
 #: application\modules/includes/views/scripts/include/header-login.phtml:13
 msgid "#Contact"
 msgstr "Contato"
+
+#: application\modules/includes/views/scripts/include/search.phtml:30
+msgid "#Search for books"
+msgstr "Busca por livros"
 
 #: application\modules/works/views/scripts/edition/explore.phtml:38
 #: application\modules/works/views/scripts/serie/explore.phtml:31

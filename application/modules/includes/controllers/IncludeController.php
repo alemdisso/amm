@@ -74,7 +74,7 @@ class Includes_IncludeController extends Zend_Controller_Action
     public function footerHomeAction()
     {
 
-        $categoriesModel = $this->fetchCategories($this->taxonomyMapper);
+        $categoriesModel = $this->fetchCategories($this->blogTaxonomyMapper);
         $tagsModel = $this->fetchTagsCloud();
 
         $pageData = array(
