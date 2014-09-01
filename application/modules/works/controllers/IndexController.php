@@ -309,7 +309,7 @@ private function apply_highlight($a_json, $parts) {
     for($i = 0; $i < $p; $i++) {
 
       $part_len = mb_strlen($parts[$i]);
-      $a_match_start = $this->mb_stripos_all($converter->toAscii($label), $parts[$i]);
+      $a_match_start = $this->mb_stripos_all($converter->toAscii($label), $converter->toAscii($parts[$i]));
       foreach($a_match_start as $part_pos) {
 
         $overlap = false;
