@@ -134,7 +134,7 @@ class Includes_IncludeController extends Zend_Controller_Action
         $weight = array();
 
         foreach($tagsCloud as $id => $tagData) {
-            if ($tagData['count'] > 0) {
+            if ($tagData['count'] > 1) {
                 $weight[] = array('id' => $id, 'count' => $tagData['count']);
             }
         }
@@ -147,18 +147,21 @@ class Includes_IncludeController extends Zend_Controller_Action
                 $median = 0;
             }
         }
+        //print_r($median);exit;
         reset($tagsCloud);
         $tagsModel = array();
 
         foreach($tagsCloud as $id => $tagData) {
-            if ($tagData['count'] < $median) {
-                $class = 'tag_1';
-            } elseif ($tagData['count'] == $median) {
-                $class = 'tag_2';
-            } else {
-                $class = 'tag_3';
+            if ($tagData['count'] > 1) {
+                if ($tagData['count'] < $median) {
+                    $class = 'tag_1';
+                } elseif ($tagData['count'] == $median) {
+                    $class = 'tag_2';
+                } else {
+                    $class = 'tag_3';
+                }
+                $tagsModel[] = array('class' => $class, 'term' => $tagData['term'], 'uri' => $tagData['uri']);
             }
-            $tagsModel[] = array('class' => $class, 'term' => $tagData['term'], 'uri' => $tagData['uri']);
         }
 
         return $tagsModel;

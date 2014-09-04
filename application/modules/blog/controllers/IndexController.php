@@ -24,7 +24,12 @@ class Blog_IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        $postsIds = $this->postMapper->getLastPublishedPosts();
+        $data = $this->_request->getParams();
+
+        $page = $data['page'];
+        $limit = 3;
+        $offset = ($page - 1) * $limit;
+        $postsIds = $this->postMapper->getLastPublishedPosts($limit, $offset);
 
         $postsData = array();
         foreach ($postsIds as $postId) {
@@ -43,7 +48,21 @@ class Blog_IndexController extends Zend_Controller_Action
 
         }
 
-        $pageData = array('postsData' => $postsData);
+        if ($offset) {
+            $previous = $this->view->translate("anterior");
+        } else {
+            $previous = null;
+        }
+
+        $allPostsIds = $this->postMapper->getAllPublishedIds();
+        $allPostsCount = count($allPostsIds);
+        if (($limit * $page) < $allPostsCount) {
+            $next = $this->view->translate("proximo");
+        } else {
+            $next = null;
+        }
+
+        $pageData = array('postsData' => $postsData, 'previous' => $previous, 'next' => $next, 'page' => $page);
         $this->view->pageData = $pageData;
 
     }
