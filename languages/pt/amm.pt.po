@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-01 10:52-0300\n"
-"PO-Revision-Date: 2014-09-01 10:53-0300\n"
+"POT-Creation-Date: 2014-09-12 18:34-0300\n"
+"PO-Revision-Date: 2014-09-12 18:35-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -20,7 +20,7 @@ msgstr ""
 #: application\modules/admin/controllers/CategoryController.php:40
 #: application\modules/admin/controllers/EditionController.php:43
 #: application\modules/admin/controllers/EditionController.php:74
-#: application\modules/admin/controllers/EditionController.php:280
+#: application\modules/admin/controllers/EditionController.php:314
 #: application\modules/admin/controllers/EditorController.php:42
 #: application\modules/admin/controllers/KeywordController.php:41
 #: application\modules/admin/controllers/KeywordController.php:74
@@ -51,21 +51,25 @@ msgstr "Trocar imagem"
 msgid "#Change cover designer"
 msgstr "Trocar designer da capa"
 
-#: application\modules/admin/controllers/EditionController.php:152
+#: application\modules/admin/controllers/EditionController.php:154
+msgid "#Change editor"
+msgstr "Alterar editora"
+
+#: application\modules/admin/controllers/EditionController.php:186
 msgid "#Change illustrator"
 msgstr "Editar ilustrador"
 
-#: application\modules/admin/controllers/EditionController.php:182
-#: application\modules/admin/controllers/EditionController.php:212
+#: application\modules/admin/controllers/EditionController.php:216
+#: application\modules/admin/controllers/EditionController.php:246
 msgid "#Change isbn"
 msgstr "Editar isbn"
 
-#: application\modules/admin/controllers/EditionController.php:243
+#: application\modules/admin/controllers/EditionController.php:277
 msgid "#Change serie"
 msgstr "Alterar coleção"
 
-#: application\modules/admin/controllers/EditionController.php:252
-#: application\modules/admin/controllers/EditionController.php:265
+#: application\modules/admin/controllers/EditionController.php:286
+#: application\modules/admin/controllers/EditionController.php:299
 msgid "#(choose an option)"
 msgstr "(escolha uma opção...)"
 
@@ -111,9 +115,9 @@ msgid "#Series"
 msgstr "Coleções"
 
 #: application\modules/admin/controllers/NavigationController.php:105
-#: application\modules/default/views/scripts/index/index.phtml:70
+#: application\modules/default/views/scripts/index/index.phtml:69
+#: application\modules/default/views/scripts/index/index.phtml:71
 #: application\modules/default/views/scripts/index/index.phtml:72
-#: application\modules/default/views/scripts/index/index.phtml:73
 #: application\modules/includes/views/scripts/include/footer-home.phtml:29
 #: application\modules/includes/views/scripts/include/footer.phtml:31
 #: application\modules/includes/views/scripts/include/header-login.phtml:12
@@ -134,8 +138,8 @@ msgstr "/curiosidades-em"
 
 #: application\modules/admin/controllers/NavigationController.php:119
 #: application\modules/blog/views/scripts/index/posts-loop.phtml:4
-#: application\modules/default/views/scripts/index/index.phtml:54
-#: application\modules/default/views/scripts/index/index.phtml:58
+#: application\modules/default/views/scripts/index/index.phtml:53
+#: application\modules/default/views/scripts/index/index.phtml:57
 msgid "/post"
 msgstr "/post"
 
@@ -225,6 +229,14 @@ msgstr "Não foi possível fazer o login. Por favor tente novamente."
 #: application\modules/auth/controllers/UserController.php:14
 msgid "#Access denied"
 msgstr "Acesso negado"
+
+#: application\modules/blog/controllers/IndexController.php:52
+msgid "#previous"
+msgstr "anterior"
+
+#: application\modules/blog/controllers/IndexController.php:60
+msgid "#next"
+msgstr "próximo"
 
 #: application\modules/blog/controllers/PostController.php:46
 msgid "#Not published"
@@ -353,6 +365,7 @@ msgstr "Nova categoria"
 #: library\Author/Form/CoverDesignerChange.php:38
 #: library\Author/Form/DescriptionChange.php:37
 #: library\Author/Form/EditionCreate.php:176
+#: library\Author/Form/EditorChange.php:34
 #: library\Author/Form/EditorCreate.php:32
 #: library\Author/Form/IllustratorChange.php:35
 #: library\Author/Form/IsbnChange.php:35 library\Author/Form/KeywordAdd.php:59
@@ -393,7 +406,7 @@ msgstr "Status"
 #: library\Author/Form/CharacterAdd.php:23
 #: library\Author/Form/KeywordAdd.php:23
 #: library\Author/Form/ThemeChange.php:23
-#: application\modules/default/views/scripts/index/index.phtml:99
+#: application\modules/default/views/scripts/index/index.phtml:98
 msgid "#(choose)"
 msgstr "(escolha...)"
 
@@ -1485,6 +1498,7 @@ msgid "#Type"
 msgstr "Tipo"
 
 #: library\Author/Form/EditionCreate.php:65
+#: library\Author/Form/EditorChange.php:20
 #: library\Author/Form/SerieEdit.php:20
 #: application\modules/admin/views/scripts/index/list-works.phtml:46
 #: application\modules/admin/views/scripts/work/list.phtml:21
@@ -1581,6 +1595,11 @@ msgstr "Editar designer da capa de %s"
 #, php-format
 msgid "#Change cover for %s"
 msgstr "Mudar imagem para %s"
+
+#: application\modules/admin/views/scripts/edition/change-editor.phtml:2
+#, php-format
+msgid "#Change %s's editor"
+msgstr "Alterar editor de %s"
 
 #: application\modules/admin/views/scripts/edition/change-illustrator.phtml:2
 #, php-format
@@ -1808,6 +1827,7 @@ msgstr "Edições"
 msgid "#(remove this work!)"
 msgstr "(remova essa obra!)"
 
+#: application\modules/admin/views/scripts/work/editions-loop.phtml:3
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:4
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:5
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:6
@@ -1893,7 +1913,7 @@ msgid "#Essays"
 msgstr "Ensaios"
 
 #: application\modules/default/views/scripts/index/index.phtml:32
-#: application\modules/default/views/scripts/index/index.phtml:79
+#: application\modules/default/views/scripts/index/index.phtml:78
 #: application\modules/works/views/scripts/index/index.phtml:15
 #: application\modules/works/views/scripts/index/index.phtml:21
 msgid "#more about"
@@ -1903,28 +1923,28 @@ msgstr "mais"
 msgid "#Home blog tagline"
 msgstr "O que a Ana tem aprontado por aí"
 
-#: application\modules/default/views/scripts/index/index.phtml:73
+#: application\modules/default/views/scripts/index/index.phtml:72
 msgid "#Home biography tagline"
 msgstr "Um resumo da vida e obra da artista"
 
+#: application\modules/default/views/scripts/index/index.phtml:88
 #: application\modules/default/views/scripts/index/index.phtml:89
 #: application\modules/default/views/scripts/index/index.phtml:90
-#: application\modules/default/views/scripts/index/index.phtml:91
 msgid "#Faq title"
 msgstr "Respostas"
 
-#: application\modules/default/views/scripts/index/index.phtml:90
+#: application\modules/default/views/scripts/index/index.phtml:89
 #: application\modules/faq/views/scripts/index/index.phtml:9
 #: application\modules/includes/views/scripts/include/footer-home.phtml:30
 #: application\modules/includes/views/scripts/include/footer.phtml:32
 msgid "#Frequently asked questions"
 msgstr "Perguntas frequentes"
 
-#: application\modules/default/views/scripts/index/index.phtml:91
+#: application\modules/default/views/scripts/index/index.phtml:90
 msgid "#Get answers here"
 msgstr "Tire suas dúvidas"
 
-#: application\modules/default/views/scripts/index/index.phtml:96
+#: application\modules/default/views/scripts/index/index.phtml:95
 msgid "#Answers to frequently asked questions:"
 msgstr "Respostas para dúvidas frequentes:"
 

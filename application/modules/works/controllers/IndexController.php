@@ -4,6 +4,7 @@ class Works_IndexController extends Zend_Controller_Action
     private $db;
     private $editorMapper;
     private $editionMapper;
+    private $serieMapper;
     private $workMapper;
     private $taxonomyMapper;
 
@@ -124,7 +125,7 @@ class Works_IndexController extends Zend_Controller_Action
 
     public function youngAction()
     {
-        $editionsIds = $this->editionMapper->getAllIdsOfType(Author_Collection_WorkTypeConstants::TYPE_YOUNG);
+        $editionsIds = $this->editionMapper->getAllEditionsOfTypeAlphabeticallyOrdered(Author_Collection_WorkTypeConstants::TYPE_YOUNG);
         $this->buildEditionsListPage($editionsIds, "#Young");
     }
 
@@ -153,6 +154,15 @@ class Works_IndexController extends Zend_Controller_Action
             $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
             $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
 
+            if($loopEditionObj->getSerie()) {
+                $loopSerieObj = $this->serieMapper->findById($loopEditionObj->getSerie());
+                $serieName = $loopSerieObj->getName();
+                $serieUri = $loopSerieObj->getUri();
+            } else {
+                $serieName = null;
+                $serieUri = null;
+            }
+
             $coverFilePath = $this->view->coverFilePath($loopEditionObj);
 
             $prizeMapper = new Author_Collection_PrizeMapper($this->db);
@@ -164,6 +174,8 @@ class Works_IndexController extends Zend_Controller_Action
                     'exploreUri' => $this->view->translate('/explore') . '/' . $loopWorkObj->getUri(),
                     'summary' => $loopWorkObj->getSummary(),
                     'editorName' => $loopEditorObj->getName(),
+                    'serieName' => $serieName,
+                    'serieUri' => $serieUri,
                     'prizes' => $prizesLabels,
                     'moreAbout' => false,
                     'otherLanguages' => false,
@@ -251,6 +263,7 @@ class Works_IndexController extends Zend_Controller_Action
         $this->workMapper = new Author_Collection_WorkMapper($this->db);
         $this->editorMapper = new Author_Collection_EditorMapper($this->db);
         $this->editionMapper = new Author_Collection_EditionMapper($this->db);
+        $this->serieMapper = new Author_Collection_SerieMapper($this->db);
         $this->taxonomyMapper = new Author_Collection_TaxonomyMapper($this->db);
 
     }

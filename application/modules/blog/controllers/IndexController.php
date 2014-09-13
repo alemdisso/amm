@@ -49,7 +49,7 @@ class Blog_IndexController extends Zend_Controller_Action
         }
 
         if ($offset) {
-            $previous = $this->view->translate("anterior");
+            $previous = $this->view->translate("#previous");
         } else {
             $previous = null;
         }
@@ -57,7 +57,7 @@ class Blog_IndexController extends Zend_Controller_Action
         $allPostsIds = $this->postMapper->getAllPublishedIds();
         $allPostsCount = count($allPostsIds);
         if (($limit * $page) < $allPostsCount) {
-            $next = $this->view->translate("proximo");
+            $next = $this->view->translate("#next");
         } else {
             $next = null;
         }

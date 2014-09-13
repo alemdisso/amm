@@ -131,38 +131,47 @@ class Includes_IncludeController extends Zend_Controller_Action
     {
         $tagsCloud = $this->collectionTaxonomyMapper->getAllWorksKeywordsAlphabeticallyOrdered();
 
-        $weight = array();
-
+        $min = null;
+        $max = null;
         foreach($tagsCloud as $id => $tagData) {
-            if ($tagData['count'] > 1) {
-                $weight[] = array('id' => $id, 'count' => $tagData['count']);
-            }
+                if ((is_null($min)) || ($tagData['count'] < $min)) {
+                    $min = $tagData['count'];
+                }
+                if ((is_null($max)) || ($tagData['count'] > $max)) {
+                    $max = $tagData['count'];
+                }
         }
-        $i = count($weight);
-        if ($i) {
-            $medianIndex = ceil($i/2);
-            if(isset($weight[$medianIndex]['count'])) {
-                $median = $weight[$medianIndex]['count'];
-            } else {
-                $median = 0;
-            }
-        }
-        //print_r($median);exit;
+
+        $fontSizes = 5;
+        $classes = array(
+            '0' => 'tag_2',
+            '1' => 'tag_3',
+            '2' => 'tag_4',
+            '3' => 'tag_5',
+            '4' => 'tag_6',
+        );
+        $range = $max - $min;
+        $step = floor($range / $fontSizes);
+
         reset($tagsCloud);
         $tagsModel = array();
-
         foreach($tagsCloud as $id => $tagData) {
-            if ($tagData['count'] > 1) {
-                if ($tagData['count'] < $median) {
-                    $class = 'tag_1';
-                } elseif ($tagData['count'] == $median) {
-                    $class = 'tag_2';
-                } else {
-                    $class = 'tag_3';
-                }
-                $tagsModel[] = array('class' => $class, 'term' => $tagData['term'], 'uri' => $tagData['uri']);
+            $count = $tagData['count'];
+            $whichRange = floor($count / $step);
+            if ($whichRange) {
+                $whichRange--;
             }
+            if ($whichRange >= count($classes)) {
+                $whichRange = count($classes) - 1;
+            }
+
+            if ($count > 2) {
+                $tagsModel[] = array('class' => $classes[$whichRange], 'term' => $tagData['term'], 'uri' => $tagData['uri']);
+            }
+
         }
+
+
 
         return $tagsModel;
 

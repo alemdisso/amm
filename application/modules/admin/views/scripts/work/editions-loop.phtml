@@ -1,6 +1,6 @@
 <div class="float_left">
     <?php echo $this->cover($this->editionId, $this->src) ?>
-    <p><?php echo $this->editorName ?></p>
+    <p><?php echo $this->editorName ?> <a href="/admin/edition/change-editor/?id=<?php echo $this->editionId ?>"><?php echo $this->translate('#(edit)')?></a></p>
     <p><?php echo $this->translate('#ISBN:')?><?php echo $this->isbn ?> <a href="/admin/edition/change-isbn/?id=<?php echo $this->editionId ?>"><?php echo $this->translate('#(edit)')?></a></p>
     <p><?php echo $this->translate('#Pages:')?><?php echo $this->pages ?> <a href="/admin/edition/change-pages/?id=<?php echo $this->editionId ?>"><?php echo $this->translate('#(edit)')?></a></p>
     <p><?php echo $this->translate('#Serie:')?><?php echo $this->serie ?> <a href="/admin/edition/change-serie/?id=<?php echo $this->editionId ?>"><?php echo $this->translate('#(edit)')?></a></p>

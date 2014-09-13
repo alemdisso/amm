@@ -123,6 +123,40 @@ class Admin_EditionController extends Zend_Controller_Action
         }
     }
 
+
+   public function changeEditorAction()
+    {
+        // cria form
+        $form = new Author_Form_EditorChange;
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $this->processAndRedirect($form);
+            return;
+        } else {
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('id');
+            $element->setValue($id);
+
+            $editionObj = $this->editionMapper->findById($id);
+            $element = $form->getElement('editor');
+            $this->populateEditorsSelect($element, $editionObj->getEditor(), $editionObj->getEditor());
+            $element->setValue($editionObj->getEditor());
+
+            $workObj = $this->workMapper->findById($editionObj->getWork());
+            $this->view->title = $workObj->getTitle();
+            $this->view->pageTitle = $this->view->translate("#Change editor");
+        }
+    }
+
+
+
     public function changeIllustratorAction()
     {
         // cria form

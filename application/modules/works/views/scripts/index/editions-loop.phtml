@@ -4,9 +4,12 @@
 <?php $this->thumbnailCover($this->coverSrc, $this->exploreUri, $this->title) ?>
 <div style="width:450px;" class="float_right"><!-- largura para quando existir thumbnail + class na div -->
 <h3><a href="<?php echo $this->exploreUri ?>"><?php echo $this->title ?></a> <?php if (is_array($this->prizes)) { ?><?php echo $this->prizesLoopLegend($this->prizes); ?><?php } ?></h3>
-<p><strong><?php echo $this->editorName ?></strong></p>
+<?php if ($this->serieName) { ?>
+<p><?php echo $this->translate("#Serie:") ?> <a href="/colecao/<?php echo $this->serieUri ?>" title="<?php echo $this->serieName ?>"><?php echo $this->serieName ?></a></p>
+<?php } ?>
+<!--<p><strong><?php echo $this->editorName ?></strong></p>-->
 <p><?php echo $this->summary ?></p>
-<p><a href="<?php echo $this->exploreUri ?>" title="$title ?>" class="mais">leia mais</a></p>
+<p><a href="<?php echo $this->exploreUri ?>" title="<?php echo $this->title ?>" class="mais">leia mais</a></p>
 </div>
 </div>
 </li>
