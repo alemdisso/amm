@@ -1,21 +1,44 @@
 <?php
 $pageData = $this->pageData;
 ?>
+<script type="text/javascript">
+    $(document).ready(function(){
+
+            $('#page_container').pajinate({
+					num_page_links_to_display : 13,
+					items_per_page : 4,
+                                        nav_label_first: '<?php echo $this->translate("#First") ?>',
+                                        nav_label_prev: '<?php echo $this->translate("#Prev") ?>',
+                                        nav_label_last: '<?php echo $this->translate("#Last") ?>',
+                                        nav_label_next: '<?php echo $this->translate("#Next") ?>',
+                                        nav_label_info: '<?php echo $this->translate("#Showing {0}-{1} of {2} results") ?>'
+				});
+
+        $('.page_link').on('click', function(e) {
+            e.preventDefault();
+            jQuery('html, body').animate({scrollTop: top}, 800);
+
+        return false;
+        });
+    });
+</script>
+
 <!-- conteudo -->
 <div id="conteudo">
 
 <h1><img src="/img/icone_livros.png" align="absmiddle" alt="<?php echo $this->translate("#Works") ?>" /> <?php echo $this->translate("#Works") ?></h1>
 
 <h2 class="categoria"><?php echo $this->translate("#Series") ?></h2>
-<ul id="holder">
+
+<div id="page_container">
+<ul class="content"
 <?php $this->seriesLoop($pageData['seriesData']); ?>
 </ul>
 <!-- paginacao -->
-<div id="paginacao" class="clearfix">
-<span class="float_left">Livros <strong>1 de 10</strong> de 33</span>
-<span class="float_right">in&iacute;cio | <img src="/img/icone_anterior.png" align="absmiddle" /> anterior | <a href="" title=""><strong>pr&oacute;ximo</strong> <img src="/img/icone_mais.png" align="absmiddle" /></a> | <a href="" title=""><strong>fim</strong></a></span>
-</div>
+<div class="page_navigation"></div>
+<div class="info_text"></div>
 <!-- /paginacao -->
+</div>
 
 </div>
 <!-- /conteudo -->

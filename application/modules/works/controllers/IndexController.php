@@ -78,7 +78,11 @@ class Works_IndexController extends Zend_Controller_Action
             $loopSerieObj = $serieMapper->findById($serieId);
 
             $data = $this->editionMapper->getSomeEditionFrom($serieId);
-            $editionId = $data[0];
+
+            $editionId = null;
+            if ($data) {
+                $editionId = $data[0];
+            }
 
             if ($editionId) {
                 $loopEditionObj = $this->editionMapper->findById($editionId);
@@ -86,6 +90,8 @@ class Works_IndexController extends Zend_Controller_Action
                 $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
 
                 $coverFilePath = $this->view->coverFilePath($loopEditionObj);
+//                print_r($loopEditionObj->getCover());
+//                print("<BR>$coverFilePath<BR>");exit;
                 $serieLabel = $loopSerieObj->getName();
 
                 $seriesData[$serieId] = array(

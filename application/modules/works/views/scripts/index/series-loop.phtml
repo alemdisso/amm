@@ -1,9 +1,12 @@
 <!-- item de repeticao -->
 <li>
 <div class="item_livro clearfix">
+<?php $this->thumbnailCover($this->coverSrc, $this->exploreUri, $this->title) ?>
+<div style="width:450px;" class="float_right"><!-- largura para quando existir thumbnail + class na div -->
 <h3><a href="<?php echo $this->exploreUri ?>"><?php echo $this->title ?></a></h3>
 <p><strong><?php echo $this->editorName ?></strong></p>
 <p><a href="<?php echo $this->exploreUri ?>" title="$title ?>" class="mais"><?php echo $this->translate("#list editions") ?></a></p>
+</div>
 </div>
 </li>
 <!-- /item de repeticao -->

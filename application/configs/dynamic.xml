@@ -721,98 +721,104 @@
               <label>Tapete Mágico</label>
               <uri>/livro/tapete-magico</uri>
             </edition-tapete-magico>
-            <serie-abre-o-olho>
-              <label>Abre o olho</label>
-              <uri>/colecao/abre-o-olho</uri>
-            </serie-abre-o-olho>
-            <serie-abrindo-caminho>
-              <label>Abrindo Caminho</label>
-              <uri>/colecao/abrindo-caminho</uri>
-            </serie-abrindo-caminho>
-            <serie-adivinhe-so>
-              <label>Adivinhe Só</label>
-              <uri>/colecao/adivinhe-so</uri>
-            </serie-adivinhe-so>
-            <serie-ana-maria-machado-atica-br>
-              <label>Ana Maria Machado</label>
-              <uri>/colecao/ana-maria-machado-atica-br</uri>
-            </serie-ana-maria-machado-atica-br>
-            <serie-ana-maria-machado-moderna-br>
-              <label>Ana Maria Machado</label>
-              <uri>/colecao/ana-maria-machado-moderna-br</uri>
-            </serie-ana-maria-machado-moderna-br>
-            <serie-arte-para-criancas>
-              <label>Arte para Crianças</label>
-              <uri>/colecao/arte-para-criancas</uri>
-            </serie-arte-para-criancas>
-            <serie-barquinho-de-papel>
-              <label>Barquinho de Papel</label>
-              <uri>/colecao/barquinho-de-papel</uri>
-            </serie-barquinho-de-papel>
-            <serie-batutinha>
-              <label>Batutinha</label>
-              <uri>/colecao/batutinha</uri>
-            </serie-batutinha>
-            <serie-celeste>
-              <label>Celeste</label>
-              <uri>/colecao/celeste</uri>
-            </serie-celeste>
-            <serie-conta-de-novo>
-              <label>Conta de novo</label>
-              <uri>/colecao/conta-de-novo</uri>
-            </serie-conta-de-novo>
-            <serie-gato-escondido>
-              <label>Gato Escondido</label>
-              <uri>/colecao/gato-escondido</uri>
-            </serie-gato-escondido>
-            <serie-girassol>
-              <label>Girassol</label>
-              <uri>/colecao/girassol</uri>
-            </serie-girassol>
-            <serie-historias-de-outras-terras>
-              <label>Histórias de outras terras</label>
-              <uri>/colecao/historias-de-outras-terras</uri>
-            </serie-historias-de-outras-terras>
-            <serie-isto-ou-aquilo>
-              <label>Isto ou Aquilo</label>
-              <uri>/colecao/isto-ou-aquilo</uri>
-            </serie-isto-ou-aquilo>
-            <serie-le-pra-mim>
-              <label>Lê pra mim</label>
-              <uri>/colecao/le-pra-mim</uri>
-            </serie-le-pra-mim>
-            <serie-mico-maneco>
-              <label>Mico Maneco</label>
-              <uri>/colecao/mico-maneco</uri>
-            </serie-mico-maneco>
-            <serie-para-gostar-de-ler-junior>
-              <label>Para Gostar de Ler Junior</label>
-              <uri>/colecao/para-gostar-de-ler-junior</uri>
-            </serie-para-gostar-de-ler-junior>
-            <serie-passando-a-limpo>
-              <label>Passando a limpo</label>
-              <uri>/colecao/passando-a-limpo</uri>
-            </serie-passando-a-limpo>
-            <serie-primeiras-historias>
-              <label>Primeiras Histórias</label>
-              <uri>/colecao/primeiras-historias</uri>
-            </serie-primeiras-historias>
-            <serie-sete-mares>
-              <label>Sete mares</label>
-              <uri>/colecao/sete-mares</uri>
-            </serie-sete-mares>
-            <serie-sinal-verde>
-              <label>Sinal Verde</label>
-              <uri>/colecao/sinal-verde</uri>
-            </serie-sinal-verde>
-            <serie-teatro-jovem>
-              <label>Teatro Jovem</label>
-              <uri>/colecao/teatro-jovem</uri>
-            </serie-teatro-jovem>
-            <serie-uni-duni-te>
-              <label>Uni duni tê</label>
-              <uri>/colecao/uni-duni-te</uri>
-            </serie-uni-duni-te>
+            <series>
+              <label>Coleções</label>
+              <uri>/livros/colecoes</uri>
+              <pages>
+                <serie-abre-o-olho>
+                  <label>Abre o olho</label>
+                  <uri>/colecao/abre-o-olho</uri>
+                </serie-abre-o-olho>
+                <serie-abrindo-caminho>
+                  <label>Abrindo Caminho</label>
+                  <uri>/colecao/abrindo-caminho</uri>
+                </serie-abrindo-caminho>
+                <serie-adivinhe-so>
+                  <label>Adivinhe Só</label>
+                  <uri>/colecao/adivinhe-so</uri>
+                </serie-adivinhe-so>
+                <serie-ana-maria-machado-atica-br>
+                  <label>Ana Maria Machado</label>
+                  <uri>/colecao/ana-maria-machado-atica-br</uri>
+                </serie-ana-maria-machado-atica-br>
+                <serie-ana-maria-machado-moderna-br>
+                  <label>Ana Maria Machado</label>
+                  <uri>/colecao/ana-maria-machado-moderna-br</uri>
+                </serie-ana-maria-machado-moderna-br>
+                <serie-arte-para-criancas>
+                  <label>Arte para Crianças</label>
+                  <uri>/colecao/arte-para-criancas</uri>
+                </serie-arte-para-criancas>
+                <serie-barquinho-de-papel>
+                  <label>Barquinho de Papel</label>
+                  <uri>/colecao/barquinho-de-papel</uri>
+                </serie-barquinho-de-papel>
+                <serie-batutinha>
+                  <label>Batutinha</label>
+                  <uri>/colecao/batutinha</uri>
+                </serie-batutinha>
+                <serie-celeste>
+                  <label>Celeste</label>
+                  <uri>/colecao/celeste</uri>
+                </serie-celeste>
+                <serie-conta-de-novo>
+                  <label>Conta de novo</label>
+                  <uri>/colecao/conta-de-novo</uri>
+                </serie-conta-de-novo>
+                <serie-gato-escondido>
+                  <label>Gato Escondido</label>
+                  <uri>/colecao/gato-escondido</uri>
+                </serie-gato-escondido>
+                <serie-girassol>
+                  <label>Girassol</label>
+                  <uri>/colecao/girassol</uri>
+                </serie-girassol>
+                <serie-historias-de-outras-terras>
+                  <label>Histórias de outras terras</label>
+                  <uri>/colecao/historias-de-outras-terras</uri>
+                </serie-historias-de-outras-terras>
+                <serie-isto-ou-aquilo>
+                  <label>Isto ou Aquilo</label>
+                  <uri>/colecao/isto-ou-aquilo</uri>
+                </serie-isto-ou-aquilo>
+                <serie-le-pra-mim>
+                  <label>Lê pra mim</label>
+                  <uri>/colecao/le-pra-mim</uri>
+                </serie-le-pra-mim>
+                <serie-mico-maneco>
+                  <label>Mico Maneco</label>
+                  <uri>/colecao/mico-maneco</uri>
+                </serie-mico-maneco>
+                <serie-para-gostar-de-ler-junior>
+                  <label>Para Gostar de Ler Junior</label>
+                  <uri>/colecao/para-gostar-de-ler-junior</uri>
+                </serie-para-gostar-de-ler-junior>
+                <serie-passando-a-limpo>
+                  <label>Passando a limpo</label>
+                  <uri>/colecao/passando-a-limpo</uri>
+                </serie-passando-a-limpo>
+                <serie-primeiras-historias>
+                  <label>Primeiras Histórias</label>
+                  <uri>/colecao/primeiras-historias</uri>
+                </serie-primeiras-historias>
+                <serie-sete-mares>
+                  <label>Sete mares</label>
+                  <uri>/colecao/sete-mares</uri>
+                </serie-sete-mares>
+                <serie-sinal-verde>
+                  <label>Sinal Verde</label>
+                  <uri>/colecao/sinal-verde</uri>
+                </serie-sinal-verde>
+                <serie-teatro-jovem>
+                  <label>Teatro Jovem</label>
+                  <uri>/colecao/teatro-jovem</uri>
+                </serie-teatro-jovem>
+                <serie-uni-duni-te>
+                  <label>Uni duni tê</label>
+                  <uri>/colecao/uni-duni-te</uri>
+                </serie-uni-duni-te>
+              </pages>
+            </series>
           </pages>
         </works>
         <biography>
@@ -823,34 +829,6 @@
           <label>Curiosidades</label>
           <uri>/curiosidades</uri>
           <pages>
-            <category-abl>
-              <label>ABL</label>
-              <uri>/news-about/abl</uri>
-            </category-abl>
-            <category-agenda>
-              <label>Agenda</label>
-              <uri>/news-about/agenda</uri>
-            </category-agenda>
-            <category-escola>
-              <label>Escola</label>
-              <uri>/news-about/escola</uri>
-            </category-escola>
-            <category-exposicao-virtual>
-              <label>Exposição Virtual</label>
-              <uri>/news-about/exposicao-virtual</uri>
-            </category-exposicao-virtual>
-            <category-historias>
-              <label>Histórias</label>
-              <uri>/news-about/historias</uri>
-            </category-historias>
-            <category-leitor>
-              <label>Leitor</label>
-              <uri>/news-about/leitor</uri>
-            </category-leitor>
-            <category-leitura>
-              <label>Leitura</label>
-              <uri>/news-about/leitura</uri>
-            </category-leitura>
             <post-teste-sobre-taxonomia>
               <label>Teste sobre taxonomia</label>
               <uri>/post/teste-sobre-taxonomia</uri>
@@ -907,6 +885,34 @@
               <label>Encontros com os leitores</label>
               <uri>/post/encontros-com-os-leitores</uri>
             </post-encontros-com-os-leitores>
+            <category-abl>
+              <label>ABL</label>
+              <uri>/curiosidades-em/abl</uri>
+            </category-abl>
+            <category-agenda>
+              <label>Agenda</label>
+              <uri>/curiosidades-em/agenda</uri>
+            </category-agenda>
+            <category-escola>
+              <label>Escola</label>
+              <uri>/curiosidades-em/escola</uri>
+            </category-escola>
+            <category-exposicao-virtual>
+              <label>Exposição Virtual</label>
+              <uri>/curiosidades-em/exposicao-virtual</uri>
+            </category-exposicao-virtual>
+            <category-historias>
+              <label>Histórias</label>
+              <uri>/curiosidades-em/historias</uri>
+            </category-historias>
+            <category-leitor>
+              <label>Leitor</label>
+              <uri>/curiosidades-em/leitor</uri>
+            </category-leitor>
+            <category-leitura>
+              <label>Leitura</label>
+              <uri>/curiosidades-em/leitura</uri>
+            </category-leitura>
           </pages>
         </news>
       </pages>
