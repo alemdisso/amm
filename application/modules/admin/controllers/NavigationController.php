@@ -93,13 +93,13 @@ class Admin_NavigationController extends Zend_Controller_Action
             $edition = $this->addPage($nodePages, 'edition-' . $loopWorkObj->getUri(), $loopWorkObj->getTitle(), $exploreString . '/' . $loopWorkObj->getUri());
         }
 
-        $series = $this->addPage($worksPages, 'series', $this->view->translate("#Series"), '/series');
-
-        $seriesPages = $series->addChild('pages');
+//        $series = $this->addPage($worksPages, 'series', $this->view->translate("#Series"), '/series');
+//
+//        $seriesPages = $series->addChild('pages');
         $seriesIds = $this->serieMapper->getAllIds();
         foreach ($seriesIds as $serieId) {
             $loopSerieObj = $this->serieMapper->findById($serieId);
-            $serie = $this->addPage($seriesPages, 'serie-' . $loopSerieObj->getUri(), $loopSerieObj->getName(), '/colecao/' . $loopSerieObj->getUri());
+            $serie = $this->addPage($worksPages, 'serie-' . $loopSerieObj->getUri(), $loopSerieObj->getName(), '/colecao/' . $loopSerieObj->getUri());
         }
 
         $this->addPage($pages, 'biography', $this->view->translate("#Biography"), $this->view->translate("/biography"));
@@ -109,7 +109,7 @@ class Admin_NavigationController extends Zend_Controller_Action
         $categoriesIds = $this->taxonomyMapper->getAllCategoriesAlphabeticallyOrdered();
         foreach ($categoriesIds as $categoryId => $term) {
             $loopTermAndUri = $this->taxonomyMapper->getTermAndUri($categoryId);
-            $serie = $this->addPage($newsPages, 'category-' . $loopTermAndUri['uri'], $loopTermAndUri['term'], $this->view->translate('/blog/index/category') . "/" . $loopTermAndUri['uri']);
+            $serie = $this->addPage($newsPages, 'category-' . $loopTermAndUri['uri'], $loopTermAndUri['term'], $this->view->translate('/news-about') . "/" . $loopTermAndUri['uri']);
         }
 
 
