@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-12 18:34-0300\n"
-"PO-Revision-Date: 2014-09-12 18:35-0300\n"
+"POT-Creation-Date: 2014-09-14 16:16-0300\n"
+"PO-Revision-Date: 2014-09-14 16:17-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -103,16 +103,10 @@ msgid "/works"
 msgstr "/livros"
 
 #: application\modules/admin/controllers/NavigationController.php:91
-#: application\modules/works/controllers/IndexController.php:164
+#: application\modules/works/controllers/IndexController.php:174
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:9
 msgid "/explore"
 msgstr "/livro"
-
-#: application\modules/admin/controllers/NavigationController.php:96
-#: application\modules/works/controllers/IndexController.php:104
-#: application\modules/works/views/scripts/index/series.phtml:9
-msgid "#Series"
-msgstr "Coleções"
 
 #: application\modules/admin/controllers/NavigationController.php:105
 #: application\modules/default/views/scripts/index/index.phtml:69
@@ -129,19 +123,16 @@ msgstr "Biografia"
 msgid "/biography"
 msgstr "/biografia"
 
-#: application\modules/admin/controllers/NavigationController.php:112
-#: application\modules/blog/views/helpers/CategoryHrefTerm.php:10
-#: application\modules/includes/views/scripts/include/categories-loop-li.phtml:1
-#: application\modules/includes/views/scripts/include/categories-loop.phtml:2
-msgid "/blog/index/category"
-msgstr "/curiosidades-em"
-
-#: application\modules/admin/controllers/NavigationController.php:119
+#: application\modules/admin/controllers/NavigationController.php:113
 #: application\modules/blog/views/scripts/index/posts-loop.phtml:4
 #: application\modules/default/views/scripts/index/index.phtml:53
 #: application\modules/default/views/scripts/index/index.phtml:57
 msgid "/post"
 msgstr "/post"
+
+#: application\modules/admin/controllers/NavigationController.php:119
+msgid "/news-about"
+msgstr "/curiosidades-em"
 
 #: application\modules/admin/controllers/PostController.php:48
 #: application\modules/admin/views/scripts/post/create.phtml:13
@@ -242,50 +233,61 @@ msgstr "próximo"
 msgid "#Not published"
 msgstr "Não publicado"
 
-#: application\modules/works/controllers/EditionController.php:43
+#: application\modules/blog/views/helpers/CategoryHrefTerm.php:10
+#: application\modules/includes/views/scripts/include/categories-loop-li.phtml:1
+#: application\modules/includes/views/scripts/include/categories-loop.phtml:2
+msgid "/blog/index/category"
+msgstr "/curiosidades-em"
+
+#: application\modules/works/controllers/EditionController.php:44
 #, php-format
 msgid "#ISBN: %s"
 msgstr "ISBN: %s"
 
-#: application\modules/works/controllers/EditionController.php:50
+#: application\modules/works/controllers/EditionController.php:51
 #, php-format
 msgid "#%s pages"
 msgstr "%s páginas"
 
-#: application\modules/works/controllers/EditionController.php:61
-#: application\modules/works/controllers/IndexController.php:59
+#: application\modules/works/controllers/EditionController.php:62
+#: application\modules/works/controllers/IndexController.php:60
 #, php-format
 msgid "#Serie: %s"
 msgstr "Coleção: %s"
 
-#: application\modules/works/controllers/EditionController.php:77
+#: application\modules/works/controllers/EditionController.php:78
 #: library\Author/Form/EditionCreate.php:148
 #: library\Author/Form/IllustratorChange.php:21
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:7
 msgid "#Illustrator:"
 msgstr "Ilustrador:"
 
-#: application\modules/works/controllers/EditionController.php:82
+#: application\modules/works/controllers/EditionController.php:83
 #: library\Author/Form/CoverDesignerChange.php:23
 #: library\Author/Form/EditionCreate.php:162
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:8
 msgid "#Cover designer:"
 msgstr "Capa:"
 
-#: application\modules/works/controllers/EditionController.php:87
+#: application\modules/works/controllers/EditionController.php:88
 msgid "#Editor:"
 msgstr "Editora:"
 
-#: application\modules/works/controllers/EditionController.php:108
+#: application\modules/works/controllers/EditionController.php:109
 #, php-format
 msgid "#Exploring %s"
 msgstr "%s"
 
-#: application\modules/works/controllers/IndexController.php:93
+#: application\modules/works/controllers/IndexController.php:94
 msgid "/serie/"
 msgstr "/colecao/"
 
-#: application\modules/works/controllers/IndexController.php:122
+#: application\modules/works/controllers/IndexController.php:105
+#: application\modules/works/views/scripts/index/series.phtml:9
+msgid "#Series"
+msgstr "Coleções"
+
+#: application\modules/works/controllers/IndexController.php:123
 #, php-format
 msgid "#With keyword '%s'"
 msgstr "Com a palavra-chave '%s'"
@@ -1839,6 +1841,7 @@ msgid "#(edit)"
 msgstr "(editar)"
 
 #: application\modules/admin/views/scripts/work/editions-loop.phtml:6
+#: application\modules/works/views/scripts/index/editions-loop.phtml:8
 msgid "#Serie:"
 msgstr "Coleção: "
 
@@ -2046,9 +2049,6 @@ msgstr "livros da coleção"
 
 #~ msgid "#Work's type?"
 #~ msgstr "Tipo de livro?"
-
-#~ msgid "/news"
-#~ msgstr "/novidades"
 
 #~ msgid "/series"
 #~ msgstr "/colecoes"

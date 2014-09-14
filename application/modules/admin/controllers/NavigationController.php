@@ -106,17 +106,17 @@ class Admin_NavigationController extends Zend_Controller_Action
         $newsNode = $this->addPage($pages, 'news', '#News', '/curiosidades');
         $newsPages = $newsNode->addChild('pages');
 
-        $categoriesIds = $this->taxonomyMapper->getAllCategoriesAlphabeticallyOrdered();
-        foreach ($categoriesIds as $categoryId => $term) {
-            $loopTermAndUri = $this->taxonomyMapper->getTermAndUri($categoryId);
-            $serie = $this->addPage($newsPages, 'category-' . $loopTermAndUri['uri'], $loopTermAndUri['term'], $this->view->translate('/news-about') . "/" . $loopTermAndUri['uri']);
-        }
-
 
         $postsIds = $this->postMapper->getAllPublishedIds();
         foreach ($postsIds as $postId) {
             $loopPostObj = $this->postMapper->findById($postId);
             $serie = $this->addPage($newsPages, 'post-' . $loopPostObj->getUri(), $loopPostObj->getTitle(), $this->view->translate('/post') . '/' . $loopPostObj->getUri());
+        }
+
+        $categoriesIds = $this->taxonomyMapper->getAllCategoriesAlphabeticallyOrdered();
+        foreach ($categoriesIds as $categoryId => $term) {
+            $loopTermAndUri = $this->taxonomyMapper->getTermAndUri($categoryId);
+            $serie = $this->addPage($newsPages, 'category-' . $loopTermAndUri['uri'], $loopTermAndUri['term'], $this->view->translate('/news-about') . "/" . $loopTermAndUri['uri']);
         }
 
 
