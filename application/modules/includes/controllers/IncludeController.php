@@ -131,12 +131,12 @@ class Includes_IncludeController extends Zend_Controller_Action
     {
         $tagsCloud = $this->collectionTaxonomyMapper->getAllWorksKeywordsAlphabeticallyOrdered();
 
-        $min = null;
+        $min = 4;
         $max = null;
         foreach($tagsCloud as $id => $tagData) {
-                if ((is_null($min)) || ($tagData['count'] < $min)) {
-                    $min = $tagData['count'];
-                }
+//                if ((is_null($min)) || ($tagData['count'] < $min)) {
+//                    $min = $tagData['count'];
+//                }
                 if ((is_null($max)) || ($tagData['count'] > $max)) {
                     $max = $tagData['count'];
                 }
@@ -157,7 +157,7 @@ class Includes_IncludeController extends Zend_Controller_Action
         $tagsModel = array();
         foreach($tagsCloud as $id => $tagData) {
             $count = $tagData['count'];
-            $whichRange = floor($count / $step);
+            $whichRange = floor(($count-$min) / $step);
             if ($whichRange) {
                 $whichRange--;
             }
@@ -165,7 +165,7 @@ class Includes_IncludeController extends Zend_Controller_Action
                 $whichRange = count($classes) - 1;
             }
 
-            if ($count > 2) {
+            if ($count >= $min) {
                 $tagsModel[] = array('class' => $classes[$whichRange], 'term' => $tagData['term'], 'uri' => $tagData['uri']);
             }
 
