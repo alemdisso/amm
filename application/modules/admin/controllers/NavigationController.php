@@ -8,6 +8,8 @@ class Admin_NavigationController extends Zend_Controller_Action
     private $serieMapper;
     private $workMapper;
     private $postMapper;
+    private $blogTaxonomyMapper;
+    private $collectionTaxonomyMapper;
 
     public function preDispatch()
     {
@@ -31,7 +33,8 @@ class Admin_NavigationController extends Zend_Controller_Action
         $this->editionMapper = new Author_Collection_EditionMapper($this->db);
         $this->serieMapper = new Author_Collection_SerieMapper($this->db);
         $this->postMapper = new Moxca_Blog_PostMapper($this->db);
-        $this->taxonomyMapper = new Moxca_Blog_TaxonomyMapper($this->db);
+        $this->blogTaxonomyMapper = new Moxca_Blog_TaxonomyMapper($this->db);
+        $this->collectionTaxonomyMapper = new Author_Collection_TaxonomyMapper($this->db);
     }
 
     public function updateAction()
@@ -102,6 +105,15 @@ class Admin_NavigationController extends Zend_Controller_Action
             $serie = $this->addPage($seriesPages, 'serie-' . $loopSerieObj->getUri(), $loopSerieObj->getName(), '/colecao/' . $loopSerieObj->getUri());
         }
 
+        $keywords = $this->addPage($worksPages, 'keywords', $this->view->translate("#Tag cloud"), '/tag-cloud');
+        $tagsModel = $this->collectionTaxonomyMapper->getAllWorksKeywordsAlphabeticallyOrdered();
+        $tagsPages = $keywords->addChild('pages');
+        foreach ($tagsModel as $termId => $termData) {
+            $termAndUri = $this->collectionTaxonomyMapper->getTermAndUri($termId);
+            $serie = $this->addPage($tagsPages, 'keyword-' . $termAndUri['uri'], $termAndUri['term'], '/tag/' . $termAndUri['uri']);
+        }
+
+
         $this->addPage($pages, 'biography', $this->view->translate("#Biography"), $this->view->translate("/biography"));
         $newsNode = $this->addPage($pages, 'news', '#News', '/curiosidades');
         $newsPages = $newsNode->addChild('pages');
@@ -113,9 +125,9 @@ class Admin_NavigationController extends Zend_Controller_Action
             $serie = $this->addPage($newsPages, 'post-' . $loopPostObj->getUri(), $loopPostObj->getTitle(), $this->view->translate('/post') . '/' . $loopPostObj->getUri());
         }
 
-        $categoriesIds = $this->taxonomyMapper->getAllCategoriesAlphabeticallyOrdered();
+        $categoriesIds = $this->blogTaxonomyMapper->getAllCategoriesAlphabeticallyOrdered();
         foreach ($categoriesIds as $categoryId => $term) {
-            $loopTermAndUri = $this->taxonomyMapper->getTermAndUri($categoryId);
+            $loopTermAndUri = $this->blogTaxonomyMapper->getTermAndUri($categoryId);
             $serie = $this->addPage($newsPages, 'category-' . $loopTermAndUri['uri'], $loopTermAndUri['term'], $this->view->translate('/news-about') . "/" . $loopTermAndUri['uri']);
         }
 
@@ -143,5 +155,8 @@ class Admin_NavigationController extends Zend_Controller_Action
 //        echo $dom->saveXML();die();
         $dom->save($filename); // I used both (menu.xml) as well ($filename) but neither seems to work
     }
+
+
+
 
 }

@@ -6,7 +6,7 @@ class Works_IndexController extends Zend_Controller_Action
     private $editionMapper;
     private $serieMapper;
     private $workMapper;
-    private $taxonomyMapper;
+    private $collectionTaxonomyMapper;
 
     public function postDispatch()
     {
@@ -119,13 +119,13 @@ class Works_IndexController extends Zend_Controller_Action
         $data = $this->_request->getParams();
         try {
             $uri = $this->view->checkUriFromGet($data);
-            $x = $this->taxonomyMapper->getTermByUri($uri);
+            $x = $this->collectionTaxonomyMapper->getTermByUri($uri);
             $term = $x['term'];
         } catch (Exception $e) {
             throw $e;
         }
 
-        $editionsIds = $this->taxonomyMapper->editionsWithKeyword($uri);
+        $editionsIds = $this->collectionTaxonomyMapper->editionsWithKeyword($uri);
         $this->buildEditionsListPage($editionsIds, sprintf($this->view->translate("#With keyword '%s'"), $term));
     }
 
@@ -150,6 +150,19 @@ class Works_IndexController extends Zend_Controller_Action
 
         $this->view->pageData = $pageData;
         $this->view->pageTitle = "Ana Maria Machado - Histórias";
+    }
+
+    public function tagCloudAction()
+    {
+
+       $tagsModel = $this->fetchTagsCloud();
+
+        $pageData = array(
+            'tags' => $tagsModel,
+        );
+
+        $this->view->pageData = $pageData;
+        $this->view->pageTitle = "Ana Maria Machado - Palavras chave";
     }
 
     private function buildEditionsListPage($editionsIds, $title)
@@ -270,7 +283,7 @@ class Works_IndexController extends Zend_Controller_Action
         $this->editorMapper = new Author_Collection_EditorMapper($this->db);
         $this->editionMapper = new Author_Collection_EditionMapper($this->db);
         $this->serieMapper = new Author_Collection_SerieMapper($this->db);
-        $this->taxonomyMapper = new Author_Collection_TaxonomyMapper($this->db);
+        $this->collectionTaxonomyMapper = new Author_Collection_TaxonomyMapper($this->db);
 
     }
 
@@ -376,6 +389,60 @@ private function apply_highlight($a_json, $parts) {
   return $a_json;
 
 }
+
+    private function fetchTagsCloud()
+    {
+        $tagsCloud = $this->collectionTaxonomyMapper->getAllWorksKeywordsAlphabeticallyOrdered();
+
+        $min = 2;
+        $max = null;
+        foreach($tagsCloud as $id => $tagData) {
+//                if ((is_null($min)) || ($tagData['count'] < $min)) {
+//                    $min = $tagData['count'];
+//                }
+                if ((is_null($max)) || ($tagData['count'] > $max)) {
+                    $max = $tagData['count'];
+                }
+        }
+
+        $fontSizes = 6;
+        $classes = array(
+            '0' => 'tag_2',
+            '1' => 'tag_3',
+            '2' => 'tag_4',
+            '3' => 'tag_5',
+            '4' => 'tag_6',
+            '5' => 'tag_7',
+        );
+        $range = $max - $min;
+        $step = floor($range / $fontSizes);
+
+        reset($tagsCloud);
+        $tagsModel = array();
+        foreach($tagsCloud as $id => $tagData) {
+            $count = $tagData['count'];
+            $whichRange = floor(($count-$min) / $step);
+            if ($whichRange) {
+                $whichRange--;
+            }
+            if ($whichRange >= count($classes)) {
+                $whichRange = count($classes) - 1;
+            }
+
+            if ($count >= $min) {
+                $tagsModel[] = array('class' => $classes[$whichRange], 'term' => $tagData['term'], 'uri' => $tagData['uri']);
+            }
+
+        }
+
+
+
+        return $tagsModel;
+
+    }
+
+
+
 
 }
 

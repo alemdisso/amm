@@ -1,0 +1,23 @@
+<?php
+$pageData = $this->pageData;
+?>
+<!-- conteudo -->
+<div id="conteudo">
+
+<h1><img src="/img/icone_livros.png" align="absmiddle" alt="<?php echo $this->translate("#Tag cloud") ?>" /> <?php echo $this->translate("#Tag cloud") ?></h1>
+
+<!-- destaques -->
+<div class="clearfix">
+    <p>
+        <?php foreach ($pageData['tags'] as $key => $arrayTag) { ?>
+        <a href="/tag/<?php echo $arrayTag['uri'] ?>" class="<?php echo $arrayTag['class'] ?>"><?php echo $arrayTag['term'] ?></a>
+        <?php } ?>
+    </p>
+</div>
+<!-- /destaques -->
+
+
+
+
+</div>
+<!-- /conteudo -->
