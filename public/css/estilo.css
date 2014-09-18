@@ -234,7 +234,9 @@ h4 {
 	}
 
 .item {
-	margin-bottom:20px;
+	margin-bottom:30px;
+	padding-bottom:10px;
+	border-bottom:1px solid #fff;
 	}
 
 .box_conteudo {
@@ -341,6 +343,7 @@ h4 {
 #novidades_home .coluna1 {
 	margin:100px 35px 0 0;
 	float:left;
+	width:350px;
 	}
 
 #novidades_home .coluna2 {
@@ -379,7 +382,8 @@ h4 {
 #biografia_home .coluna2 {
 	margin:25px 0 0 0;
 	float:right;
-	width:460px;
+	/*width:460px;*/
+	width:480px;
 	font-size:18px;
 	font-family:swissc;
 	line-height:24px;
@@ -572,7 +576,7 @@ h4 {
 	margin-bottom:30px;
 	}
 
-#lateral div.box_detalhe {
+#lateral div.box_detalhe, #lateral div.box_detalhe_livros {
 	width:300px;
 	height:38px;
 	background:url(../img/detalhe_box.png) no-repeat;
