@@ -156,6 +156,10 @@ a.tag_7 {
 	background:url(../img/icone_topo_contato.png) no-repeat;
 	}
 
+#menu li a#menu_faq {
+	background:url(../img/icone_topo_faq.png) no-repeat;
+	}
+
 /* CONTEÚDO */
 #conteudo {
 	line-height:18px;
