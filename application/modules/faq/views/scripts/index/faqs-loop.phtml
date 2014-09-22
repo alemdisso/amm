@@ -1,3 +1,6 @@
 <!-- item de repeticao -->
-<option value="<?php echo $this->id ?>" <?php echo ($this->selected ? 'selected' : '') ?>><?php echo $this->question ?></option>
+<p id="question-<?php echo $this->id ?>"><strong><?php echo $this->question ?></strong></p>
+<p class="item_faq"><?php echo $this->answer ?><br />
+<a href="#top"><?php echo $this->translate("#Back to Top") ?></a></p>
+
 <!-- /item de repeticao -->

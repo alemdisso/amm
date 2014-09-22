@@ -6,20 +6,21 @@ $faqData = $pageData['faqData'];
 <!-- conteudo -->
 <div id="conteudo">
 
-<h1><img src="/img/icone_faq.png" align="absmiddle" alt="<?php echo $this->translate("#Frequently asked questions") ?>" /> <?php echo $this->translate("#Frequently asked questions") ?></h1>
-
-<!--<p><?php echo $this->translate("#No momento não temos como responder a mensagens enviadas através do site. Procuramos identificar quais são as dúvidas mais frequentes, e responde-las abaixo.") ?></p>-->
+<h1><img id="top" src="/img/icone_faq.png" align="absmiddle" alt="<?php echo $this->translate("#Frequently asked questions") ?>" /> <?php echo $this->translate("#Frequently asked questions") ?></h1>
 
 <form id="callQuestionAndAnswer" >
 <select id="questionToShow" >
 <option <?php echo ($this->questionSelected ? 'selected="selected"' : '') ?>><?php echo $this->translate("#(the answer you are looking may be here)") ?></option>
 <?php
-$this->faqsLoop($faqData);
+$this->faqsLoopSelect($faqData);
 ?>
 </select>
 
 
 </form>
+<?php
+$this->faqsLoop($faqData);
+?>
 
 <div id="questionAndAnswer"></div>
 
@@ -30,43 +31,14 @@ $this->faqsLoop($faqData);
 
         $(document).ready(function(){
 
-            var selected = $('#questionToShow').val();
-            window.console.log(selected);
-            if (!selected) {
-                $("#questionAndAnswer").hide();
-            } else {
-                loadQuestion();
-            }
-
 
             $('#questionToShow').change(function(){
                 var current = $(this).val();
 
-                $.ajax({
-                    type: 'get',
-                    url:'/faq/question/show/?id=' + current,
+                window.location = '#question-' + current;
 
-                    success: function(successReturn){
-                    $('#questionAndAnswer').html(successReturn);
-                    }
-                });
-                $("#questionAndAnswer").show();
             });
 
-            function loadQuestion()
-            {
-                var selected = $('#questionToShow').val();
-
-                $.ajax({
-                    type: 'get',
-                    url:'/faq/question/show/?id=' + selected,
-
-                    success: function(successReturn){
-                    $('#questionAndAnswer').html(successReturn);
-                    }
-                });
-
-            }
         });
 
         </script>

@@ -42,6 +42,7 @@ class Faq_IndexController extends Zend_Controller_Action
             $loopData[$key] = array (
                 'id' => $row['id'],
                 'question' => $questionObj->getQuestion(),
+                'answer' => $questionObj->getAnswer(),
                 'selected' => $selected,
             );
 
