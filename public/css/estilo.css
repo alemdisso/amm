@@ -159,6 +159,20 @@ a.tag_7 {
 #menu li a#menu_faq {
 	background:url(../img/icone_topo_faq.png) no-repeat;
 	}
+	
+/* BUSCA BOX */
+li.ui-menu-item {
+	background:#FFFFFF;
+	border:1px solid #CECECE;
+	border-bottom-color:#fff;
+ 	padding:10px;
+	width:300px;
+	}
+	
+li.ui-menu-item a {
+	font-size:13px;
+	cursor:pointer;
+	}
 
 /* CONTEÚDO */
 #conteudo {
@@ -746,7 +760,8 @@ input[type=option] {
 	}
 
 input[type=text].busca {
-	width:200px;
+	/*width:200px;*/
+	width:250px;
 	padding:10px 5px;
 	margin:0 0 20px 0;
 	background:#dddddd;
@@ -769,6 +784,7 @@ input[type=submit], input[type=button] {
 	font-size:14px;
 	font-weight:bold;
 	cursor:pointer;
+	display:none;
 	}
 
 label {
