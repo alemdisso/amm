@@ -26,9 +26,11 @@ class Blog_IndexController extends Zend_Controller_Action
     {
         $data = $this->_request->getParams();
 
-        $page = $data['page'];
-        $limit = 3;
-        $offset = ($page - 1) * $limit;
+//        $page = $data['page'];
+//        $limit = 3;
+//        $offset = ($page - 1) * $limit;
+        $limit = 100;
+        $offset = 0;
         $postsIds = $this->postMapper->getLastPublishedPosts($limit, $offset);
 
         $postsData = array();
@@ -36,18 +38,29 @@ class Blog_IndexController extends Zend_Controller_Action
             $loopPostObj = $this->postMapper->findById($postId);
             $publicationDate = $this->view->splitDateFromDateTime($loopPostObj->getPublicationDate());
             $categoryData = $this->view->CategoryTermAndUri($loopPostObj->getCategory(), $this->taxonomyMapper);
+            $parag = preg_match_all("{<p>(.*)</p>}",$loopPostObj->getContent(),$pTags);
+//            echo "<br>";echo "TITULO<br>";echo "<br>";
+//            echo $loopPostObj->getTitle();echo "<br>";
+//            echo $pTags[0][0];
+//            echo "<br>";echo "========<br>";echo "<br>";
+//            print_r($pTags);
 
+            if (isset($pTags[0][0])) {
+                $content = $pTags[0][0];
+            } else {
+                $content = $loopPostObj->getContent();
+            }
             $postsData[$postId] = array(
                 'title' => $loopPostObj->getTitle(),
                 'uri' => $loopPostObj->getUri(),
-                'content' => $loopPostObj->getContent(),
+                'content' => $content,
                 'publicationDate' => $this->view->formatDateToShow($publicationDate, "."),
                 'categoryModel' => $categoryData,
                 'commentsCount' => 0,
             );
 
         }
-
+//exit;
         if ($offset) {
             $previous = $this->view->translate("#previous");
         } else {
@@ -56,11 +69,13 @@ class Blog_IndexController extends Zend_Controller_Action
 
         $allPostsIds = $this->postMapper->getAllPublishedIds();
         $allPostsCount = count($allPostsIds);
-        if (($limit * $page) < $allPostsCount) {
-            $next = $this->view->translate("#next");
-        } else {
-            $next = null;
-        }
+//        if (($limit * $page) < $allPostsCount) {
+//            $next = $this->view->translate("#next");
+//        } else {
+//            $next = null;
+//        }
+        $next = null;
+        $page = 1;
 
         $pageData = array('postsData' => $postsData, 'previous' => $previous, 'next' => $next, 'page' => $page);
         $this->view->pageData = $pageData;
