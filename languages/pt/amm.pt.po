@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: amm\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-09-22 16:54-0300\n"
-"PO-Revision-Date: 2014-09-22 16:54-0300\n"
+"POT-Creation-Date: 2014-09-24 15:47-0300\n"
+"PO-Revision-Date: 2014-09-24 15:49-0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: Português\n"
@@ -2038,6 +2038,10 @@ msgstr "Contato"
 #: application\modules/includes/views/scripts/include/search.phtml:30
 msgid "#Search for books"
 msgstr "Busca por livros"
+
+#: application\modules/includes/views/scripts/include/search.phtml:33
+msgid "#Use field below to search and click on one of the suggested titles"
+msgstr "Use o campo abaixo e depois clique em um dos livros sugeridos"
 
 #: application\modules/includes/views/scripts/include/works-categories.phtml:35
 msgid "/works/series"
