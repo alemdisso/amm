@@ -799,6 +799,8 @@ input[type=submit], input[type=button] {
 	font-size:14px;
 	font-weight:bold;
 	cursor:pointer;
+	}
+.box input[type=submit], .box input[type=button] {
 	display:none;
 	}
 
