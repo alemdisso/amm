@@ -61,11 +61,15 @@ class Admin_PostController extends Zend_Controller_Action
 
         $postObj = $this->postMapper->findById($id);
 
+        $taxonomyMapper = new Moxca_Blog_TaxonomyMapper($this->db);
+        $keywordsLabels = $this->view->postKeywordsLabels($id, $taxonomyMapper);
+
         $data = array(
             'id' => $id,
             'uri' => $postObj->getUri(),
             'title' => $postObj->getTitle(),
             'content' => $postObj->getContent(),
+            'keywords' => $keywordsLabels,
         );
 
         $this->view->pageData = $data;
@@ -167,5 +171,62 @@ class Admin_PostController extends Zend_Controller_Action
 
         }
     }
+
+
+    public function createKeywordAction()
+    {
+        // cria form
+        $form = new Moxca_Form_PostKeywordAdd;
+        $this->view->form = $form;
+
+        if ($this->getRequest()->isPost()) {
+            $this->processAndRedirect($form);
+            return;
+        } else {
+            $data = $this->_request->getParams();
+            try {
+                $id = $this->view->checkIdFromGet($data);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $element = $form->getElement('id');
+            $element->setValue($id);
+
+            $postObj = $this->postMapper->findById($id);
+
+            $this->view->title = $postObj->getTitle();
+            $this->view->pageTitle = $this->view->translate("#Add keyword");
+        }
+    }
+
+
+    private function processAndRedirect($form)
+    {
+        $postedData = $this->getRequest()->getPost();
+        if ($form->isValid($postedData)) {
+            $postObj = $form->process($postedData);
+            $postId = $postObj->getId();
+            $this->_helper->getHelper('FlashMessenger')
+                ->addMessage($this->view->translate('#The record was successfully updated.'));
+            $this->_redirect('/admin/post/detail/?id=' . $postId);
+        } else {
+            //form error: populate and go back
+            $form->populate($postedData);
+            try {
+                $id = $this->view->checkIdFromGet($postedData);
+            } catch (Exception $e) {
+                throw $e;
+            }
+
+            $postObj = $this->postMapper->findById($id);
+
+            $this->view->title = $postObj->getTitle();
+            $this->view->form = $form;
+        }
+
+    }
+
+
 
 }

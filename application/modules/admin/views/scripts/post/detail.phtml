@@ -7,6 +7,12 @@ $pageData = $this->pageData;
 
     <h3><?php echo $this->translate('#Content')?></h2>
     <p><?php echo $pageData['content']?></p>
+
+    <h3><?php echo $this->translate('#Keywords')?></h2>
+    <?php echo $this->keywordsLoop($pageData['keywords']) ?>
+    <p><a href="/admin/post/create-keyword/?id=<?php echo $pageData['id'] ?>"><?php echo $this->translate("#Add keyword") ?></a></p>
+
+
     <p> <a href="/admin/post/edit/?id=<?php echo $pageData['id'] ?>"><?php echo $this->translate("#(edit post)") ?></a></p>
 
     <hr>
