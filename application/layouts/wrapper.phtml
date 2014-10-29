@@ -29,3 +29,7 @@
     </div><!-- #Envelope -->
   </body>
 </html>
+<?php
+$env = APPLICATION_ENV;
+if ($env = 'production') include ("analyticstracking.phtml");
+?>

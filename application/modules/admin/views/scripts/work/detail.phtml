@@ -4,6 +4,7 @@ $pageData = $this->pageData;
 <!-- conteudo -->
 <div id="conteudo">
     <h1><?php echo $pageData['title'] ?></h1>
+    <p><a href="/admin/work/change-title/?id=<?php echo $pageData['id'] ?>"><?php echo $this->translate("#(change title)") ?></a></p>
     <h2><a href="<?php echo $pageData['typeListLink']?>"><?php echo $pageData['typeLabel']?></a></h3> <a href="/admin/work/change-type/?id=<?php echo $pageData['id'] ?>"><?php echo $this->translate('#(change type)')?></a></p>
 
     <h3><?php echo $this->translate('#Description')?></h2>

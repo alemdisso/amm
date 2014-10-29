@@ -17,12 +17,12 @@ tinymce.init({
         //tools  : {title : 'Tools' , items : 'spellchecker code'}
     //},
 	//content_css : "/css/fonts.css?" + new Date().getTime() + ",/css/main.css?" + new Date().getTime(),    // resolved to http://domain.mine/mycontent.css
-	content_css : "/css/fonts.css?" + new Date().getTime() + ",/css/main.css?" + new Date().getTime(),    // resolved to http://domain.mine/mycontent.css
+	content_css : "/css/estilo.css?" + new Date().getTime(),    // resolved to http://domain.mine/mycontent.css
 	language : 'pt_BR',
 	style_formats: [
         {title: 'Sub-título', block: 'h3', classes: 'subTitulo'},
 		{title: 'Referência', selector: 'p', classes: 'referencia'},
-		{title: 'Legenda', selector: 'p', classes: 'caption'},
+		{title: 'Legenda', selector: 'p', classes: 'legenda'},
     ],
 });
 

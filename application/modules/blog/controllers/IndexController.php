@@ -38,6 +38,7 @@ class Blog_IndexController extends Zend_Controller_Action
             $loopPostObj = $this->postMapper->findById($postId);
             $publicationDate = $this->view->splitDateFromDateTime($loopPostObj->getPublicationDate());
             $categoryData = $this->view->CategoryTermAndUri($loopPostObj->getCategory(), $this->taxonomyMapper);
+
             $parag = preg_match_all("{<p>(.*)</p>}",$loopPostObj->getContent(),$pTags);
 //            echo "<br>";echo "TITULO<br>";echo "<br>";
 //            echo $loopPostObj->getTitle();echo "<br>";
@@ -46,9 +47,16 @@ class Blog_IndexController extends Zend_Controller_Action
 //            print_r($pTags);
 
             if (isset($pTags[0][0])) {
-                $content = $pTags[0][0];
+                $firstP = $pTags[0][0];
+                $imgLen = strpos($loopPostObj->getContent(), $firstP);
+                $content = substr($loopPostObj->getContent(), 0, strlen($firstP) + $imgLen);
             } else {
                 $content = $loopPostObj->getContent();
+            }
+
+            $continueLink = true;
+            if ($content == $loopPostObj->getContent()) {
+                $continueLink = false;
             }
             $postsData[$postId] = array(
                 'title' => $loopPostObj->getTitle(),
@@ -57,6 +65,7 @@ class Blog_IndexController extends Zend_Controller_Action
                 'publicationDate' => $this->view->formatDateToShow($publicationDate, "."),
                 'categoryModel' => $categoryData,
                 'commentsCount' => 0,
+                'continueLink' => $continueLink,
             );
 
         }
@@ -101,13 +110,27 @@ class Blog_IndexController extends Zend_Controller_Action
             $publicationDate = $this->view->splitDateFromDateTime($loopPostObj->getPublicationDate());
             $categoryData = $this->view->CategoryTermAndUri($loopPostObj->getCategory(), $this->taxonomyMapper);
 
+            $parag = preg_match_all("{<p>(.*)</p>}",$loopPostObj->getContent(),$pTags);
+            if (isset($pTags[0][0])) {
+                $firstP = $pTags[0][0];
+                $imgLen = strpos($loopPostObj->getContent(), $firstP);
+                $content = substr($loopPostObj->getContent(), 0, strlen($firstP) + $imgLen);
+            } else {
+                $content = $loopPostObj->getContent();
+            }
+            $continueLink = true;
+            if ($content == $loopPostObj->getContent()) {
+                $continueLink = false;
+            }
+
             $postsData[$postId] = array(
                 'title' => $loopPostObj->getTitle(),
                 'uri' => $loopPostObj->getUri(),
-                'content' => $loopPostObj->getContent(),
+                'content' => $content,
                 'publicationDate' => $this->view->formatDateToShow($publicationDate, "."),
                 'categoryModel' => $categoryData,
                 'commentsCount' => 0,
+                'continueLink' => $continueLink,
             );
 
         }

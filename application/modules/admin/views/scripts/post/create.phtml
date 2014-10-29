@@ -1,14 +1,5 @@
-<?php
-$this->inlineScript()->appendFile($this->baseUrl('tinymce/tinymce.min'));
-$this->inlineScript()->appendFile($this->baseUrl('tinycfg'));
-?>
 <script type="text/javascript" src="/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript" src="/js/tinycfg.js"></script>
-
-<!--<script type="text/javascript" src="/js/tinymce/tinymce.min.js"></script>
-<script type="text/javascript" src="/js/admin/init_richtext.js"></script>-->
-
-
 <div id="conteudo">
             <h1><?php print($this->translate('#Create post')) ?></h1>
 <?php echo $this->form; ?>

@@ -4,7 +4,7 @@ $pageData = $this->pageData;
 <div id="rodape">
 
 <div class="box_tag">
-    <p><?php echo $this->translate("#Tag cloud") ?></p>
+    <p><a href="/tag-cloud" title="$this->view->translate('#Tag cloud')" alt="$this->view->translate('#Tag cloud')"><?php echo $this->translate("#Tag cloud") ?></a></p>
     <p>
         <?php foreach ($pageData['tags'] as $key => $arrayTag) { ?>
         <a href="/tag/<?php echo $arrayTag['uri'] ?>" class="<?php echo $arrayTag['class'] ?>"><?php echo $arrayTag['term'] ?></a>

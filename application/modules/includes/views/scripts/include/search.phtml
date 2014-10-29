@@ -30,7 +30,7 @@ document.onclick = fechaBox1;
 <h2><?php echo $this->translate("#Search for books") ?></h2>
 <p><small><?php echo $this->translate("#Use field below to search and click on one of the suggested titles") ?></small>
     </p>
-<form>
+<form action="javascript:submitSearchForm()">
 <input type="text" id="search_topic" class="busca display_block float_left" /><input id='submitSearch' type="button" value="Ok" class="display_block float_right" />
 </form>
 
@@ -94,6 +94,13 @@ $(function() {
 
 });
 
+function submitSearchForm() {
+    var url = $('#search_topic').val();
+    window.console.log(url);
+    if(url != '#') {
+        location.href = '/livro/' + url;
+    }
+}
 
 </script>
 

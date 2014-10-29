@@ -18,5 +18,24 @@ $pageData = $this->pageData;
 
 <!-- /conteudo -->
 <script>
+$(document).ready(function() {
 
+    var cc = 1;
+
+	// this converts images in the bodycopy to have captions under them
+	$("#explore img[alt]").each(function() {
+    		var $img = $(this);
+		var width = $img.width();
+                var divWidth = $img.width() + 40;
+		var imgClass = $img.attr('class');
+		var imgStyle = $img.attr('style');
+		var $div = $("<div />")
+			.attr('class', 'img_legenda ' + imgClass)
+			.attr('style', imgStyle)
+			.css('width', divWidth + 'px');
+		$img.wrap($div).removeClass(imgClass).removeAttr('style').attr('width', width  + 'px');
+		$('<p class="legenda">' + $img.attr('alt') + '</p>').insertAfter($img);
+	});
+
+});
     </script>

@@ -537,6 +537,14 @@
                   <label>Uma, Duas, Três Princesas</label>
                   <uri>/livro/uma-duas-tres-princesas</uri>
                 </edition-uma-duas-tres-princesas>
+                <edition-historias-africanas>
+                  <label>Histórias Africanas</label>
+                  <uri>/livro/historias-africanas</uri>
+                </edition-historias-africanas>
+                <edition-historias-greco-romanas>
+                  <label>Histórias greco-romanas</label>
+                  <uri>/livro/historias-greco-romanas</uri>
+                </edition-historias-greco-romanas>
               </pages>
             </children>
             <young>
@@ -627,6 +635,14 @@
                   <label>Histórias à Brasileira 3: O Pavão Misterioso e outras</label>
                   <uri>/livro/historias-a-brasileira-3-o-pavao-misterioso-e-outras</uri>
                 </edition-historias-a-brasileira-3-o-pavao-misterioso-e-outras>
+                <edition-historias-a-brasileira-4-a-donzela-guerreira-e-outras>
+                  <label>Histórias à Brasileira 4: A Donzela Guerreira e outras</label>
+                  <uri>/livro/historias-a-brasileira-4-a-donzela-guerreira-e-outras</uri>
+                </edition-historias-a-brasileira-4-a-donzela-guerreira-e-outras>
+                <edition-enquanto-o-dia-nao-chega>
+                  <label>Enquanto o dia não chega</label>
+                  <uri>/livro/enquanto-o-dia-nao-chega</uri>
+                </edition-enquanto-o-dia-nao-chega>
               </pages>
             </young>
             <fiction>
@@ -827,6 +843,10 @@
                   <label>Adivinhação</label>
                   <uri>/tag/adivinhacao</uri>
                 </keyword-adivinhacao>
+                <keyword-admiracao>
+                  <label>Admiração</label>
+                  <uri>/tag/admiracao</uri>
+                </keyword-admiracao>
                 <keyword-adolescencia>
                   <label>Adolescência</label>
                   <uri>/tag/adolescencia</uri>
@@ -843,6 +863,10 @@
                   <label>Aldeia</label>
                   <uri>/tag/aldeia</uri>
                 </keyword-aldeia>
+                <keyword-alexandre-dumas>
+                  <label>Alexandre Dumas</label>
+                  <uri>/tag/alexandre-dumas</uri>
+                </keyword-alexandre-dumas>
                 <keyword-alfredo-volpi>
                   <label>Alfredo Volpi</label>
                   <uri>/tag/alfredo-volpi</uri>
@@ -851,6 +875,10 @@
                   <label>Alice</label>
                   <uri>/tag/alice</uri>
                 </keyword-alice>
+                <keyword-alija>
+                  <label>ALIJA</label>
+                  <uri>/tag/alija</uri>
+                </keyword-alija>
                 <keyword-amadeo-modigliani>
                   <label>Amadeo Modigliani</label>
                   <uri>/tag/amadeo-modigliani</uri>
@@ -859,6 +887,10 @@
                   <label>América Latina</label>
                   <uri>/tag/america-latina</uri>
                 </keyword-america-latina>
+                <keyword-amigo>
+                  <label>Amigo</label>
+                  <uri>/tag/amigo</uri>
+                </keyword-amigo>
                 <keyword-amigos>
                   <label>Amigos</label>
                   <uri>/tag/amigos</uri>
@@ -871,10 +903,18 @@
                   <label>Amor</label>
                   <uri>/tag/amor</uri>
                 </keyword-amor>
+                <keyword-anarquia>
+                  <label>Anarquia</label>
+                  <uri>/tag/anarquia</uri>
+                </keyword-anarquia>
                 <keyword-animais>
                   <label>Animais</label>
                   <uri>/tag/animais</uri>
                 </keyword-animais>
+                <keyword-anjo>
+                  <label>Anjo</label>
+                  <uri>/tag/anjo</uri>
+                </keyword-anjo>
                 <keyword-apca>
                   <label>APCA</label>
                   <uri>/tag/apca</uri>
@@ -888,13 +928,25 @@
                   <uri>/tag/arabia</uri>
                 </keyword-arabia>
                 <keyword-arca-de-noe>
-                  <label>Arca de noé</label>
+                  <label>Arca de Noé</label>
                   <uri>/tag/arca-de-noe</uri>
                 </keyword-arca-de-noe>
+                <keyword-areia>
+                  <label>Areia</label>
+                  <uri>/tag/areia</uri>
+                </keyword-areia>
+                <keyword-arte-popular>
+                  <label>Arte Popular</label>
+                  <uri>/tag/arte-popular</uri>
+                </keyword-arte-popular>
                 <keyword-artes-plasticas>
                   <label>Artes Plásticas</label>
                   <uri>/tag/artes-plasticas</uri>
                 </keyword-artes-plasticas>
+                <keyword-artigo>
+                  <label>Artigo</label>
+                  <uri>/tag/artigo</uri>
+                </keyword-artigo>
                 <keyword-arvores>
                   <label>Árvores</label>
                   <uri>/tag/arvores</uri>
@@ -915,6 +967,14 @@
                   <label>Avô</label>
                   <uri>/tag/avo</uri>
                 </keyword-avo>
+                <keyword-bahia>
+                  <label>Bahia</label>
+                  <uri>/tag/bahia</uri>
+                </keyword-bahia>
+                <keyword-balao>
+                  <label>Balão</label>
+                  <uri>/tag/balao</uri>
+                </keyword-balao>
                 <keyword-banho>
                   <label>Banho</label>
                   <uri>/tag/banho</uri>
@@ -923,14 +983,26 @@
                   <label>Barata</label>
                   <uri>/tag/barata</uri>
                 </keyword-barata>
+                <keyword-barco>
+                  <label>Barco</label>
+                  <uri>/tag/barco</uri>
+                </keyword-barco>
                 <keyword-besouro>
                   <label>Besouro</label>
                   <uri>/tag/besouro</uri>
                 </keyword-besouro>
+                <keyword-biblioteca-nacional-da-venezuela>
+                  <label>Biblioteca Nacional da Venezuela</label>
+                  <uri>/tag/biblioteca-nacional-da-venezuela</uri>
+                </keyword-biblioteca-nacional-da-venezuela>
                 <keyword-bichinhos>
                   <label>Bichinhos</label>
                   <uri>/tag/bichinhos</uri>
                 </keyword-bichinhos>
+                <keyword-bienal-de-sao-paulo>
+                  <label>Bienal de São Paulo</label>
+                  <uri>/tag/bienal-de-sao-paulo</uri>
+                </keyword-bienal-de-sao-paulo>
                 <keyword-biografia>
                   <label>Biografia</label>
                   <uri>/tag/biografia</uri>
@@ -939,10 +1011,30 @@
                   <label>Birra</label>
                   <uri>/tag/birra</uri>
                 </keyword-birra>
+                <keyword-bisa>
+                  <label>Bisa</label>
+                  <uri>/tag/bisa</uri>
+                </keyword-bisa>
                 <keyword-bobeira>
                   <label>Bobeira</label>
                   <uri>/tag/bobeira</uri>
                 </keyword-bobeira>
+                <keyword-bola>
+                  <label>Bola</label>
+                  <uri>/tag/bola</uri>
+                </keyword-bola>
+                <keyword-bolo-de-areia>
+                  <label>Bolo de Areia</label>
+                  <uri>/tag/bolo-de-areia</uri>
+                </keyword-bolo-de-areia>
+                <keyword-boneca>
+                  <label>Boneca</label>
+                  <uri>/tag/boneca</uri>
+                </keyword-boneca>
+                <keyword-boto>
+                  <label>Boto</label>
+                  <uri>/tag/boto</uri>
+                </keyword-boto>
                 <keyword-brasil>
                   <label>Brasil</label>
                   <uri>/tag/brasil</uri>
@@ -959,6 +1051,14 @@
                   <label>Brincadeira</label>
                   <uri>/tag/brincadeira</uri>
                 </keyword-brincadeira>
+                <keyword-brinquedo>
+                  <label>Brinquedo</label>
+                  <uri>/tag/brinquedo</uri>
+                </keyword-brinquedo>
+                <keyword-bruxa>
+                  <label>Bruxa</label>
+                  <uri>/tag/bruxa</uri>
+                </keyword-bruxa>
                 <keyword-cachorro>
                   <label>Cachorro</label>
                   <uri>/tag/cachorro</uri>
@@ -971,22 +1071,54 @@
                   <label>Caminhos</label>
                   <uri>/tag/caminhos</uri>
                 </keyword-caminhos>
+                <keyword-canada>
+                  <label>Canadá</label>
+                  <uri>/tag/canada</uri>
+                </keyword-canada>
+                <keyword-cantigas>
+                  <label>Cantigas</label>
+                  <uri>/tag/cantigas</uri>
+                </keyword-cantigas>
                 <keyword-cantigas-de-ninar>
                   <label>Cantigas de Ninar</label>
                   <uri>/tag/cantigas-de-ninar</uri>
                 </keyword-cantigas-de-ninar>
+                <keyword-capa-e-espada>
+                  <label>Capa e Espada</label>
+                  <uri>/tag/capa-e-espada</uri>
+                </keyword-capa-e-espada>
+                <keyword-carater>
+                  <label>Caráter</label>
+                  <uri>/tag/carater</uri>
+                </keyword-carater>
                 <keyword-carlos-drummond-de-andrade>
                   <label>Carlos Drummond de Andrade</label>
                   <uri>/tag/carlos-drummond-de-andrade</uri>
                 </keyword-carlos-drummond-de-andrade>
+                <keyword-carnaval>
+                  <label>Carnaval</label>
+                  <uri>/tag/carnaval</uri>
+                </keyword-carnaval>
                 <keyword-carta>
                   <label>Carta</label>
                   <uri>/tag/carta</uri>
                 </keyword-carta>
+                <keyword-casa>
+                  <label>Casa</label>
+                  <uri>/tag/casa</uri>
+                </keyword-casa>
+                <keyword-castelo-de-areia>
+                  <label>Castelo de Areia</label>
+                  <uri>/tag/castelo-de-areia</uri>
+                </keyword-castelo-de-areia>
                 <keyword-cavaleiro>
                   <label>Cavaleiro</label>
                   <uri>/tag/cavaleiro</uri>
                 </keyword-cavaleiro>
+                <keyword-cavalo>
+                  <label>Cavalo</label>
+                  <uri>/tag/cavalo</uri>
+                </keyword-cavalo>
                 <keyword-cenoura>
                   <label>Cenoura</label>
                   <uri>/tag/cenoura</uri>
@@ -1015,20 +1147,40 @@
                   <label>Ciência</label>
                   <uri>/tag/ciencia</uri>
                 </keyword-ciencia>
+                <keyword-ciumes>
+                  <label>Ciúmes</label>
+                  <uri>/tag/ciumes</uri>
+                </keyword-ciumes>
+                <keyword-civilizacao>
+                  <label>Civilização</label>
+                  <uri>/tag/civilizacao</uri>
+                </keyword-civilizacao>
+                <keyword-clasp>
+                  <label>CLASP</label>
+                  <uri>/tag/clasp</uri>
+                </keyword-clasp>
                 <keyword-coelho>
                   <label>Coelho</label>
                   <uri>/tag/coelho</uri>
                 </keyword-coelho>
+                <keyword-comida>
+                  <label>Comida</label>
+                  <uri>/tag/comida</uri>
+                </keyword-comida>
                 <keyword-comilanca>
                   <label>Comilança</label>
                   <uri>/tag/comilanca</uri>
                 </keyword-comilanca>
+                <keyword-conferencia>
+                  <label>Conferência</label>
+                  <uri>/tag/conferencia</uri>
+                </keyword-conferencia>
                 <keyword-contar-historia>
-                  <label>Contar história</label>
+                  <label>Contar História</label>
                   <uri>/tag/contar-historia</uri>
                 </keyword-contar-historia>
                 <keyword-conto-de-fadas>
-                  <label>Conto de fadas</label>
+                  <label>Conto de Fadas</label>
                   <uri>/tag/conto-de-fadas</uri>
                 </keyword-conto-de-fadas>
                 <keyword-contos-de-fadas>
@@ -1039,10 +1191,22 @@
                   <label>Coragem</label>
                   <uri>/tag/coragem</uri>
                 </keyword-coragem>
+                <keyword-cordel>
+                  <label>Cordel</label>
+                  <uri>/tag/cordel</uri>
+                </keyword-cordel>
+                <keyword-costumes>
+                  <label>Costumes</label>
+                  <uri>/tag/costumes</uri>
+                </keyword-costumes>
                 <keyword-crescer>
                   <label>Crescer</label>
                   <uri>/tag/crescer</uri>
                 </keyword-crescer>
+                <keyword-crescimento>
+                  <label>Crescimento</label>
+                  <uri>/tag/crescimento</uri>
+                </keyword-crescimento>
                 <keyword-crianca>
                   <label>Criança</label>
                   <uri>/tag/crianca</uri>
@@ -1051,6 +1215,10 @@
                   <label>Crianças</label>
                   <uri>/tag/criancas</uri>
                 </keyword-criancas>
+                <keyword-critica>
+                  <label>Crítica</label>
+                  <uri>/tag/critica</uri>
+                </keyword-critica>
                 <keyword-cultura>
                   <label>Cultura</label>
                   <uri>/tag/cultura</uri>
@@ -1083,10 +1251,18 @@
                   <label>Detalhe</label>
                   <uri>/tag/detalhe</uri>
                 </keyword-detalhe>
+                <keyword-determinacao>
+                  <label>Determinação</label>
+                  <uri>/tag/determinacao</uri>
+                </keyword-determinacao>
                 <keyword-dias-da-semana>
-                  <label>Dias da semana</label>
+                  <label>Dias da Semana</label>
                   <uri>/tag/dias-da-semana</uri>
                 </keyword-dias-da-semana>
+                <keyword-diferenca>
+                  <label>Diferença</label>
+                  <uri>/tag/diferenca</uri>
+                </keyword-diferenca>
                 <keyword-direitos>
                   <label>Direitos</label>
                   <uri>/tag/direitos</uri>
@@ -1095,6 +1271,10 @@
                   <label>Distração</label>
                   <uri>/tag/distracao</uri>
                 </keyword-distracao>
+                <keyword-diversao>
+                  <label>Diversão</label>
+                  <uri>/tag/diversao</uri>
+                </keyword-diversao>
                 <keyword-dividir>
                   <label>Dividir</label>
                   <uri>/tag/dividir</uri>
@@ -1115,6 +1295,14 @@
                   <label>Economia</label>
                   <uri>/tag/economia</uri>
                 </keyword-economia>
+                <keyword-edificio>
+                  <label>Edifício</label>
+                  <uri>/tag/edificio</uri>
+                </keyword-edificio>
+                <keyword-egito>
+                  <label>Egito</label>
+                  <uri>/tag/egito</uri>
+                </keyword-egito>
                 <keyword-egoismo>
                   <label>Egoismo</label>
                   <uri>/tag/egoismo</uri>
@@ -1123,6 +1311,14 @@
                   <label>Elfo</label>
                   <uri>/tag/elfo</uri>
                 </keyword-elfo>
+                <keyword-engenho>
+                  <label>Engenho</label>
+                  <uri>/tag/engenho</uri>
+                </keyword-engenho>
+                <keyword-ensaio>
+                  <label>Ensaio</label>
+                  <uri>/tag/ensaio</uri>
+                </keyword-ensaio>
                 <keyword-escola>
                   <label>Escola</label>
                   <uri>/tag/escola</uri>
@@ -1143,6 +1339,10 @@
                   <label>Esopo</label>
                   <uri>/tag/esopo</uri>
                 </keyword-esopo>
+                <keyword-espantalho>
+                  <label>Espantalho</label>
+                  <uri>/tag/espantalho</uri>
+                </keyword-espantalho>
                 <keyword-esperanca>
                   <label>Esperança</label>
                   <uri>/tag/esperanca</uri>
@@ -1151,10 +1351,26 @@
                   <label>Esperteza</label>
                   <uri>/tag/esperteza</uri>
                 </keyword-esperteza>
+                <keyword-estilingue>
+                  <label>Estilingue</label>
+                  <uri>/tag/estilingue</uri>
+                </keyword-estilingue>
+                <keyword-etica>
+                  <label>Ética</label>
+                  <uri>/tag/etica</uri>
+                </keyword-etica>
+                <keyword-fabula>
+                  <label>Fábula</label>
+                  <uri>/tag/fabula</uri>
+                </keyword-fabula>
                 <keyword-familia>
                   <label>Família</label>
                   <uri>/tag/familia</uri>
                 </keyword-familia>
+                <keyword-fantasia>
+                  <label>Fantasia</label>
+                  <uri>/tag/fantasia</uri>
+                </keyword-fantasia>
                 <keyword-fauna-brasileira>
                   <label>Fauna Brasileira</label>
                   <uri>/tag/fauna-brasileira</uri>
@@ -1176,9 +1392,17 @@
                   <uri>/tag/festa</uri>
                 </keyword-festa>
                 <keyword-fim-de-semana>
-                  <label>Fim de semana</label>
+                  <label>Fim de Semana</label>
                   <uri>/tag/fim-de-semana</uri>
                 </keyword-fim-de-semana>
+                <keyword-finlandia>
+                  <label>Finlândia</label>
+                  <uri>/tag/finlandia</uri>
+                </keyword-finlandia>
+                <keyword-floresta>
+                  <label>Floresta</label>
+                  <uri>/tag/floresta</uri>
+                </keyword-floresta>
                 <keyword-fnlij>
                   <label>FNLIJ</label>
                   <uri>/tag/fnlij</uri>
@@ -1187,18 +1411,46 @@
                   <label>Folclore</label>
                   <uri>/tag/folclore</uri>
                 </keyword-folclore>
+                <keyword-forro>
+                  <label>Forró</label>
+                  <uri>/tag/forro</uri>
+                </keyword-forro>
+                <keyword-franca>
+                  <label>França</label>
+                  <uri>/tag/franca</uri>
+                </keyword-franca>
                 <keyword-fundalectura>
                   <label>Fundalectura</label>
                   <uri>/tag/fundalectura</uri>
                 </keyword-fundalectura>
+                <keyword-futuro>
+                  <label>Futuro</label>
+                  <uri>/tag/futuro</uri>
+                </keyword-futuro>
+                <keyword-gaivota>
+                  <label>Gaivota</label>
+                  <uri>/tag/gaivota</uri>
+                </keyword-gaivota>
                 <keyword-galinha>
                   <label>Galinha</label>
                   <uri>/tag/galinha</uri>
                 </keyword-galinha>
+                <keyword-galinheiro>
+                  <label>Galinheiro</label>
+                  <uri>/tag/galinheiro</uri>
+                </keyword-galinheiro>
+                <keyword-ganhos>
+                  <label>Ganhos</label>
+                  <uri>/tag/ganhos</uri>
+                </keyword-ganhos>
                 <keyword-gato>
                   <label>Gato</label>
                   <uri>/tag/gato</uri>
                 </keyword-gato>
+                <keyword-geracoes>
+                  <label>Gerações</label>
+                  <uri>/tag/geracoes</uri>
+                </keyword-geracoes>
                 <keyword-globalizacao>
                   <label>Globalização</label>
                   <uri>/tag/globalizacao</uri>
@@ -1208,7 +1460,7 @@
                   <uri>/tag/gostosura</uri>
                 </keyword-gostosura>
                 <keyword-grande-e-pequeno>
-                  <label>Grande e pequeno</label>
+                  <label>Grande e Pequeno</label>
                   <uri>/tag/grande-e-pequeno</uri>
                 </keyword-grande-e-pequeno>
                 <keyword-grecia>
@@ -1219,26 +1471,62 @@
                   <label>Guerra</label>
                   <uri>/tag/guerra</uri>
                 </keyword-guerra>
+                <keyword-guimaraes-rosa>
+                  <label>Guimarães Rosa</label>
+                  <uri>/tag/guimaraes-rosa</uri>
+                </keyword-guimaraes-rosa>
                 <keyword-gulodice>
                   <label>Gulodice</label>
                   <uri>/tag/gulodice</uri>
                 </keyword-gulodice>
+                <keyword-hans-cristian-andersen>
+                  <label>Hans Cristian Andersen</label>
+                  <uri>/tag/hans-cristian-andersen</uri>
+                </keyword-hans-cristian-andersen>
                 <keyword-historia>
                   <label>História</label>
                   <uri>/tag/historia</uri>
                 </keyword-historia>
+                <keyword-homenagem>
+                  <label>Homenagem</label>
+                  <uri>/tag/homenagem</uri>
+                </keyword-homenagem>
                 <keyword-homonimos>
                   <label>Homônimos</label>
                   <uri>/tag/homonimos</uri>
                 </keyword-homonimos>
+                <keyword-honra>
+                  <label>Honra</label>
+                  <uri>/tag/honra</uri>
+                </keyword-honra>
                 <keyword-hora-de-dormir>
                   <label>Hora de Dormir</label>
                   <uri>/tag/hora-de-dormir</uri>
                 </keyword-hora-de-dormir>
+                <keyword-hospitais>
+                  <label>Hospitais</label>
+                  <uri>/tag/hospitais</uri>
+                </keyword-hospitais>
+                <keyword-ibby>
+                  <label>IBBY</label>
+                  <uri>/tag/ibby</uri>
+                </keyword-ibby>
                 <keyword-identidade>
                   <label>Identidade</label>
                   <uri>/tag/identidade</uri>
                 </keyword-identidade>
+                <keyword-ilha>
+                  <label>Ilha</label>
+                  <uri>/tag/ilha</uri>
+                </keyword-ilha>
+                <keyword-ilusao>
+                  <label>Ilusão</label>
+                  <uri>/tag/ilusao</uri>
+                </keyword-ilusao>
+                <keyword-ilustracao>
+                  <label>Ilustração</label>
+                  <uri>/tag/ilustracao</uri>
+                </keyword-ilustracao>
                 <keyword-imaginacao>
                   <label>Imaginação</label>
                   <uri>/tag/imaginacao</uri>
@@ -1247,26 +1535,70 @@
                   <label>Independência</label>
                   <uri>/tag/independencia</uri>
                 </keyword-independencia>
+                <keyword-indio>
+                  <label>Índio</label>
+                  <uri>/tag/indio</uri>
+                </keyword-indio>
                 <keyword-infamia>
                   <label>Infâmia</label>
                   <uri>/tag/infamia</uri>
                 </keyword-infamia>
+                <keyword-infancia>
+                  <label>Infância</label>
+                  <uri>/tag/infancia</uri>
+                </keyword-infancia>
+                <keyword-irmaos-e-irmas>
+                  <label>Irmãos e irmãs</label>
+                  <uri>/tag/irmaos-e-irmas</uri>
+                </keyword-irmaos-e-irmas>
+                <keyword-irmaos-grimm>
+                  <label>Irmãos Grimm</label>
+                  <uri>/tag/irmaos-grimm</uri>
+                </keyword-irmaos-grimm>
+                <keyword-irmas-e-irmaos>
+                  <label>Irmãs e Irmãos</label>
+                  <uri>/tag/irmas-e-irmaos</uri>
+                </keyword-irmas-e-irmaos>
                 <keyword-jabuti>
                   <label>Jabuti</label>
                   <uri>/tag/jabuti</uri>
                 </keyword-jabuti>
+                <keyword-jamaica>
+                  <label>Jamaica</label>
+                  <uri>/tag/jamaica</uri>
+                </keyword-jamaica>
                 <keyword-jardim>
                   <label>Jardim</label>
                   <uri>/tag/jardim</uri>
                 </keyword-jardim>
+                <keyword-jesus>
+                  <label>Jesus</label>
+                  <uri>/tag/jesus</uri>
+                </keyword-jesus>
+                <keyword-jorge-amado>
+                  <label>Jorge Amado</label>
+                  <uri>/tag/jorge-amado</uri>
+                </keyword-jorge-amado>
+                <keyword-jose-lins-do-rego>
+                  <label>José Lins do Rego</label>
+                  <uri>/tag/jose-lins-do-rego</uri>
+                </keyword-jose-lins-do-rego>
                 <keyword-justica>
                   <label>Justiça</label>
                   <uri>/tag/justica</uri>
                 </keyword-justica>
+                <keyword-leitor>
+                  <label>Leitor</label>
+                  <uri>/tag/leitor</uri>
+                </keyword-leitor>
                 <keyword-leitura>
                   <label>Leitura</label>
                   <uri>/tag/leitura</uri>
                 </keyword-leitura>
+                <keyword-lenda-indigena>
+                  <label>Lenda Indígena</label>
+                  <uri>/tag/lenda-indigena</uri>
+                </keyword-lenda-indigena>
                 <keyword-lendas>
                   <label>Lendas</label>
                   <uri>/tag/lendas</uri>
@@ -1276,9 +1608,13 @@
                   <uri>/tag/liberdade</uri>
                 </keyword-liberdade>
                 <keyword-lingua-portuguesa>
-                  <label>Língua portuguesa</label>
+                  <label>Língua Portuguesa</label>
                   <uri>/tag/lingua-portuguesa</uri>
                 </keyword-lingua-portuguesa>
+                <keyword-linguado>
+                  <label>Linguado</label>
+                  <uri>/tag/linguado</uri>
+                </keyword-linguado>
                 <keyword-literatura>
                   <label>Literatura</label>
                   <uri>/tag/literatura</uri>
@@ -1287,10 +1623,26 @@
                   <label>Livros</label>
                   <uri>/tag/livros</uri>
                 </keyword-livros>
+                <keyword-lobo>
+                  <label>Lobo</label>
+                  <uri>/tag/lobo</uri>
+                </keyword-lobo>
+                <keyword-lua>
+                  <label>Lua</label>
+                  <uri>/tag/lua</uri>
+                </keyword-lua>
+                <keyword-luar>
+                  <label>Luar</label>
+                  <uri>/tag/luar</uri>
+                </keyword-luar>
                 <keyword-macaco>
                   <label>Macaco</label>
                   <uri>/tag/macaco</uri>
                 </keyword-macaco>
+                <keyword-mae>
+                  <label>Mãe</label>
+                  <uri>/tag/mae</uri>
+                </keyword-mae>
                 <keyword-magica>
                   <label>Mágica</label>
                   <uri>/tag/magica</uri>
@@ -1323,6 +1675,14 @@
                   <label>Memória</label>
                   <uri>/tag/memoria</uri>
                 </keyword-memoria>
+                <keyword-mensagem>
+                  <label>Mensagem</label>
+                  <uri>/tag/mensagem</uri>
+                </keyword-mensagem>
+                <keyword-mico>
+                  <label>Mico</label>
+                  <uri>/tag/mico</uri>
+                </keyword-mico>
                 <keyword-mico-maneco>
                   <label>Mico Maneco</label>
                   <uri>/tag/mico-maneco</uri>
@@ -1331,6 +1691,10 @@
                   <label>Mistério</label>
                   <uri>/tag/misterio</uri>
                 </keyword-misterio>
+                <keyword-mistura>
+                  <label>Mistura</label>
+                  <uri>/tag/mistura</uri>
+                </keyword-mistura>
                 <keyword-mitologia>
                   <label>Mitologia</label>
                   <uri>/tag/mitologia</uri>
@@ -1344,19 +1708,23 @@
                   <uri>/tag/mulher</uri>
                 </keyword-mulher>
                 <keyword-mundo-da-lua>
-                  <label>Mundo da lua</label>
+                  <label>Mundo da Lua</label>
                   <uri>/tag/mundo-da-lua</uri>
                 </keyword-mundo-da-lua>
                 <keyword-musica>
                   <label>Música</label>
                   <uri>/tag/musica</uri>
                 </keyword-musica>
+                <keyword-natal>
+                  <label>Natal</label>
+                  <uri>/tag/natal</uri>
+                </keyword-natal>
                 <keyword-natureza>
                   <label>Natureza</label>
                   <uri>/tag/natureza</uri>
                 </keyword-natureza>
                 <keyword-netas-e-netos>
-                  <label>Netas e netos</label>
+                  <label>Netas e Netos</label>
                   <uri>/tag/netas-e-netos</uri>
                 </keyword-netas-e-netos>
                 <keyword-noma>
@@ -1367,6 +1735,18 @@
                   <label>Nome</label>
                   <uri>/tag/nome</uri>
                 </keyword-nome>
+                <keyword-nordeste>
+                  <label>Nordeste</label>
+                  <uri>/tag/nordeste</uri>
+                </keyword-nordeste>
+                <keyword-nova-escola>
+                  <label>Nova Escola</label>
+                  <uri>/tag/nova-escola</uri>
+                </keyword-nova-escola>
+                <keyword-numeros>
+                  <label>Números</label>
+                  <uri>/tag/numeros</uri>
+                </keyword-numeros>
                 <keyword-obsessao>
                   <label>Obsessão</label>
                   <uri>/tag/obsessao</uri>
@@ -1379,6 +1759,14 @@
                   <label>Onça</label>
                   <uri>/tag/onca</uri>
                 </keyword-onca>
+                <keyword-opiniao>
+                  <label>Opinião</label>
+                  <uri>/tag/opiniao</uri>
+                </keyword-opiniao>
+                <keyword-orgulho>
+                  <label>Orgulho</label>
+                  <uri>/tag/orgulho</uri>
+                </keyword-orgulho>
                 <keyword-oriente-medio>
                   <label>Oriente Médio</label>
                   <uri>/tag/oriente-medio</uri>
@@ -1391,6 +1779,10 @@
                   <label>Ovidio</label>
                   <uri>/tag/ovidio</uri>
                 </keyword-ovidio>
+                <keyword-pai>
+                  <label>Pai</label>
+                  <uri>/tag/pai</uri>
+                </keyword-pai>
                 <keyword-pais-e-filhos>
                   <label>Pais e Filhos</label>
                   <uri>/tag/pais-e-filhos</uri>
@@ -1403,6 +1795,14 @@
                   <label>Palavras</label>
                   <uri>/tag/palavras</uri>
                 </keyword-palavras>
+                <keyword-palestra>
+                  <label>Palestra</label>
+                  <uri>/tag/palestra</uri>
+                </keyword-palestra>
+                <keyword-palhaco>
+                  <label>Palhaço</label>
+                  <uri>/tag/palhaco</uri>
+                </keyword-palhaco>
                 <keyword-paronimos>
                   <label>Parônimos</label>
                   <uri>/tag/paronimos</uri>
@@ -1411,30 +1811,70 @@
                   <label>Páscoa</label>
                   <uri>/tag/pascoa</uri>
                 </keyword-pascoa>
+                <keyword-passado>
+                  <label>Passado</label>
+                  <uri>/tag/passado</uri>
+                </keyword-passado>
                 <keyword-passeio>
                   <label>Passeio</label>
                   <uri>/tag/passeio</uri>
                 </keyword-passeio>
+                <keyword-pastor>
+                  <label>Pastor</label>
+                  <uri>/tag/pastor</uri>
+                </keyword-pastor>
+                <keyword-pato>
+                  <label>Pato</label>
+                  <uri>/tag/pato</uri>
+                </keyword-pato>
+                <keyword-pavao>
+                  <label>Pavão</label>
+                  <uri>/tag/pavao</uri>
+                </keyword-pavao>
                 <keyword-paz>
                   <label>Paz</label>
                   <uri>/tag/paz</uri>
                 </keyword-paz>
+                <keyword-peixe>
+                  <label>Peixe</label>
+                  <uri>/tag/peixe</uri>
+                </keyword-peixe>
+                <keyword-perdas>
+                  <label>Perdas</label>
+                  <uri>/tag/perdas</uri>
+                </keyword-perdas>
+                <keyword-personagens>
+                  <label>Personagens</label>
+                  <uri>/tag/personagens</uri>
+                </keyword-personagens>
                 <keyword-pescador>
                   <label>Pescador</label>
                   <uri>/tag/pescador</uri>
                 </keyword-pescador>
-                <keyword-pescadores>
-                  <label>Pescadores</label>
-                  <uri>/tag/pescadores</uri>
-                </keyword-pescadores>
                 <keyword-pessoas-admiraveis>
-                  <label>Pessoas admiráveis</label>
+                  <label>Pessoas Admiráveis</label>
                   <uri>/tag/pessoas-admiraveis</uri>
                 </keyword-pessoas-admiraveis>
+                <keyword-petropolis>
+                  <label>Petrópolis</label>
+                  <uri>/tag/petropolis</uri>
+                </keyword-petropolis>
+                <keyword-piadinhas>
+                  <label>Piadinhas</label>
+                  <uri>/tag/piadinhas</uri>
+                </keyword-piadinhas>
+                <keyword-pintinho>
+                  <label>Pintinho</label>
+                  <uri>/tag/pintinho</uri>
+                </keyword-pintinho>
                 <keyword-pintores>
                   <label>Pintores</label>
                   <uri>/tag/pintores</uri>
                 </keyword-pintores>
+                <keyword-pipa>
+                  <label>Pipa</label>
+                  <uri>/tag/pipa</uri>
+                </keyword-pipa>
                 <keyword-piquenique>
                   <label>Piquenique</label>
                   <uri>/tag/piquenique</uri>
@@ -1443,14 +1883,30 @@
                   <label>Poderosos</label>
                   <uri>/tag/poderosos</uri>
                 </keyword-poderosos>
+                <keyword-poesia>
+                  <label>Poesia</label>
+                  <uri>/tag/poesia</uri>
+                </keyword-poesia>
                 <keyword-politica>
                   <label>Política</label>
                   <uri>/tag/politica</uri>
                 </keyword-politica>
+                <keyword-porco>
+                  <label>Porco</label>
+                  <uri>/tag/porco</uri>
+                </keyword-porco>
                 <keyword-portinari>
                   <label>Portinari</label>
                   <uri>/tag/portinari</uri>
                 </keyword-portinari>
+                <keyword-portugal>
+                  <label>Portugal</label>
+                  <uri>/tag/portugal</uri>
+                </keyword-portugal>
+                <keyword-pos-64>
+                  <label>Pós-64</label>
+                  <uri>/tag/pos-64</uri>
+                </keyword-pos-64>
                 <keyword-praga>
                   <label>Praga</label>
                   <uri>/tag/praga</uri>
@@ -1471,10 +1927,22 @@
                   <label>Preconceito</label>
                   <uri>/tag/preconceito</uri>
                 </keyword-preconceito>
+                <keyword-predio>
+                  <label>Prédio</label>
+                  <uri>/tag/predio</uri>
+                </keyword-predio>
                 <keyword-premio-alejandro-jose-cabassa>
                   <label>Prêmio Alejandro José Cabassa</label>
                   <uri>/tag/premio-alejandro-jose-cabassa</uri>
                 </keyword-premio-alejandro-jose-cabassa>
+                <keyword-premio-americas>
+                  <label>Prêmio Américas</label>
+                  <uri>/tag/premio-americas</uri>
+                </keyword-premio-americas>
+                <keyword-premio-apple>
+                  <label>Prêmio APPLE</label>
+                  <uri>/tag/premio-apple</uri>
+                </keyword-premio-apple>
                 <keyword-premio-casa-de-las-americas>
                   <label>Prêmio Casa de Las Americas</label>
                   <uri>/tag/premio-casa-de-las-americas</uri>
@@ -1491,12 +1959,16 @@
                   <label>Prêmio João de Barro</label>
                   <uri>/tag/premio-joao-de-barro</uri>
                 </keyword-premio-joao-de-barro>
+                <keyword-premio-maioridade-crefisul>
+                  <label>Prêmio Maioridade Crefisul</label>
+                  <uri>/tag/premio-maioridade-crefisul</uri>
+                </keyword-premio-maioridade-crefisul>
                 <keyword-premio-passo-fundo-zaffari-bourbon-de-literatura>
                   <label>Prêmio Passo Fundo Zaffari Bourbon de Literatura</label>
                   <uri>/tag/premio-passo-fundo-zaffari-bourbon-de-literatura</uri>
                 </keyword-premio-passo-fundo-zaffari-bourbon-de-literatura>
                 <keyword-prestar-atencao>
-                  <label>Prestar atenção</label>
+                  <label>Prestar Atenção</label>
                   <uri>/tag/prestar-atencao</uri>
                 </keyword-prestar-atencao>
                 <keyword-primos>
@@ -1507,6 +1979,14 @@
                   <label>Princesas</label>
                   <uri>/tag/princesas</uri>
                 </keyword-princesas>
+                <keyword-principe>
+                  <label>Príncipe</label>
+                  <uri>/tag/principe</uri>
+                </keyword-principe>
+                <keyword-profissao>
+                  <label>Profissão</label>
+                  <uri>/tag/profissao</uri>
+                </keyword-profissao>
                 <keyword-putarco>
                   <label>Putarco</label>
                   <uri>/tag/putarco</uri>
@@ -1523,10 +2003,18 @@
                   <label>Rainha</label>
                   <uri>/tag/rainha</uri>
                 </keyword-rainha>
+                <keyword-raposa>
+                  <label>Raposa</label>
+                  <uri>/tag/raposa</uri>
+                </keyword-raposa>
                 <keyword-ratinho>
                   <label>Ratinho</label>
                   <uri>/tag/ratinho</uri>
                 </keyword-ratinho>
+                <keyword-rato>
+                  <label>Rato</label>
+                  <uri>/tag/rato</uri>
+                </keyword-rato>
                 <keyword-reconto>
                   <label>Reconto</label>
                   <uri>/tag/reconto</uri>
@@ -1543,6 +2031,10 @@
                   <label>Resistência</label>
                   <uri>/tag/resistencia</uri>
                 </keyword-resistencia>
+                <keyword-respeito>
+                  <label>Respeito</label>
+                  <uri>/tag/respeito</uri>
+                </keyword-respeito>
                 <keyword-reto>
                   <label>Reto</label>
                   <uri>/tag/reto</uri>
@@ -1555,6 +2047,10 @@
                   <label>Rio de Janeiro</label>
                   <uri>/tag/rio-de-janeiro</uri>
                 </keyword-rio-de-janeiro>
+                <keyword-roland-barthes>
+                  <label>Roland Barthes</label>
+                  <uri>/tag/roland-barthes</uri>
+                </keyword-roland-barthes>
                 <keyword-roma>
                   <label>Roma</label>
                   <uri>/tag/roma</uri>
@@ -1563,10 +2059,34 @@
                   <label>Romance</label>
                   <uri>/tag/romance</uri>
                 </keyword-romance>
+                <keyword-rondon>
+                  <label>Rondon</label>
+                  <uri>/tag/rondon</uri>
+                </keyword-rondon>
+                <keyword-sabedoria>
+                  <label>Sabedoria</label>
+                  <uri>/tag/sabedoria</uri>
+                </keyword-sabedoria>
                 <keyword-saudades>
                   <label>Saudades</label>
                   <uri>/tag/saudades</uri>
                 </keyword-saudades>
+                <keyword-seca>
+                  <label>Seca</label>
+                  <uri>/tag/seca</uri>
+                </keyword-seca>
+                <keyword-seculo-xxi>
+                  <label>Século XXI</label>
+                  <uri>/tag/seculo-xxi</uri>
+                </keyword-seculo-xxi>
+                <keyword-seducao>
+                  <label>Sedução</label>
+                  <uri>/tag/seducao</uri>
+                </keyword-seducao>
+                <keyword-separacao>
+                  <label>Separação</label>
+                  <uri>/tag/separacao</uri>
+                </keyword-separacao>
                 <keyword-sereia>
                   <label>Sereia</label>
                   <uri>/tag/sereia</uri>
@@ -1579,14 +2099,34 @@
                   <label>Sertão</label>
                   <uri>/tag/sertao</uri>
                 </keyword-sertao>
+                <keyword-sindico>
+                  <label>Síndico</label>
+                  <uri>/tag/sindico</uri>
+                </keyword-sindico>
+                <keyword-solidao>
+                  <label>Solidão</label>
+                  <uri>/tag/solidao</uri>
+                </keyword-solidao>
+                <keyword-solidariedade>
+                  <label>Solidariedade</label>
+                  <uri>/tag/solidariedade</uri>
+                </keyword-solidariedade>
                 <keyword-sombras>
                   <label>Sombras</label>
                   <uri>/tag/sombras</uri>
                 </keyword-sombras>
+                <keyword-sonho>
+                  <label>Sonho</label>
+                  <uri>/tag/sonho</uri>
+                </keyword-sonho>
                 <keyword-sono>
                   <label>Sono</label>
                   <uri>/tag/sono</uri>
                 </keyword-sono>
+                <keyword-sorte>
+                  <label>Sorte</label>
+                  <uri>/tag/sorte</uri>
+                </keyword-sorte>
                 <keyword-super-heroi>
                   <label>Super-herói</label>
                   <uri>/tag/super-heroi</uri>
@@ -1599,6 +2139,10 @@
                   <label>Susto</label>
                   <uri>/tag/susto</uri>
                 </keyword-susto>
+                <keyword-tartaruga>
+                  <label>Tartaruga</label>
+                  <uri>/tag/tartaruga</uri>
+                </keyword-tartaruga>
                 <keyword-tatu>
                   <label>Tatu</label>
                   <uri>/tag/tatu</uri>
@@ -1607,6 +2151,10 @@
                   <label>Teatro</label>
                   <uri>/tag/teatro</uri>
                 </keyword-teatro>
+                <keyword-tecnologia>
+                  <label>Tecnologia</label>
+                  <uri>/tag/tecnologia</uri>
+                </keyword-tecnologia>
                 <keyword-tecnologias>
                   <label>Tecnologias</label>
                   <uri>/tag/tecnologias</uri>
@@ -1615,6 +2163,14 @@
                   <label>Tempo</label>
                   <uri>/tag/tempo</uri>
                 </keyword-tempo>
+                <keyword-tese>
+                  <label>Tese</label>
+                  <uri>/tag/tese</uri>
+                </keyword-tese>
+                <keyword-tesouro>
+                  <label>Tesouro</label>
+                  <uri>/tag/tesouro</uri>
+                </keyword-tesouro>
                 <keyword-tirania>
                   <label>Tirania</label>
                   <uri>/tag/tirania</uri>
@@ -1627,6 +2183,10 @@
                   <label>Trabalho</label>
                   <uri>/tag/trabalho</uri>
                 </keyword-trabalho>
+                <keyword-tradicao>
+                  <label>Tradição</label>
+                  <uri>/tag/tradicao</uri>
+                </keyword-tradicao>
                 <keyword-traicao>
                   <label>Traição</label>
                   <uri>/tag/traicao</uri>
@@ -1651,6 +2211,10 @@
                   <label>Tristeza</label>
                   <uri>/tag/tristeza</uri>
                 </keyword-tristeza>
+                <keyword-troia>
+                  <label>Tróia</label>
+                  <uri>/tag/troia</uri>
+                </keyword-troia>
                 <keyword-turma>
                   <label>Turma</label>
                   <uri>/tag/turma</uri>
@@ -1663,14 +2227,30 @@
                   <label>União</label>
                   <uri>/tag/uniao</uri>
                 </keyword-uniao>
+                <keyword-unicornio>
+                  <label>Unicórnio</label>
+                  <uri>/tag/unicornio</uri>
+                </keyword-unicornio>
                 <keyword-urubu>
                   <label>Urubu</label>
                   <uri>/tag/urubu</uri>
                 </keyword-urubu>
+                <keyword-vaidade>
+                  <label>Vaidade</label>
+                  <uri>/tag/vaidade</uri>
+                </keyword-vaidade>
+                <keyword-veado>
+                  <label>Veado</label>
+                  <uri>/tag/veado</uri>
+                </keyword-veado>
                 <keyword-veneza>
                   <label>Veneza</label>
                   <uri>/tag/veneza</uri>
                 </keyword-veneza>
+                <keyword-vergonha>
+                  <label>Vergonha</label>
+                  <uri>/tag/vergonha</uri>
+                </keyword-vergonha>
                 <keyword-versos>
                   <label>Versos</label>
                   <uri>/tag/versos</uri>
@@ -1695,6 +2275,10 @@
                   <label>Vovó</label>
                   <uri>/tag/vovo</uri>
                 </keyword-vovo>
+                <keyword-ziraldo>
+                  <label>Ziraldo</label>
+                  <uri>/tag/ziraldo</uri>
+                </keyword-ziraldo>
                 <keyword-zoologico>
                   <label>Zoológico</label>
                   <uri>/tag/zoologico</uri>
@@ -1711,42 +2295,6 @@
           <label>Curiosidades</label>
           <uri>/curiosidades</uri>
           <pages>
-            <post-teste-sobre-taxonomia>
-              <label>Teste sobre taxonomia</label>
-              <uri>/post/teste-sobre-taxonomia</uri>
-            </post-teste-sobre-taxonomia>
-            <post-e-mais-um-novo-post-para-testes>
-              <label>e mais um novo post para testes</label>
-              <uri>/post/e-mais-um-novo-post-para-testes</uri>
-            </post-e-mais-um-novo-post-para-testes>
-            <post-um-novo-post-para-testes>
-              <label>um novo post para testes</label>
-              <uri>/post/um-novo-post-para-testes</uri>
-            </post-um-novo-post-para-testes>
-            <post-ana-maria-machado-faz-discurso-de-abertura-em-frankfurt>
-              <label>Ana Maria Machado faz discurso de abertura em Frankfurt</label>
-              <uri>/post/ana-maria-machado-faz-discurso-de-abertura-em-frankfurt</uri>
-            </post-ana-maria-machado-faz-discurso-de-abertura-em-frankfurt>
-            <post-tempo-de-colheita>
-              <label>Tempo de colheita</label>
-              <uri>/post/tempo-de-colheita</uri>
-            </post-tempo-de-colheita>
-            <post-mil-historias>
-              <label>Mil Histórias</label>
-              <uri>/post/mil-historias</uri>
-            </post-mil-historias>
-            <post-agora-para-ficar>
-              <label>Agora para ficar</label>
-              <uri>/post/agora-para-ficar</uri>
-            </post-agora-para-ficar>
-            <post-aquele-abraco>
-              <label>Aquele Abraço</label>
-              <uri>/post/aquele-abraco</uri>
-            </post-aquele-abraco>
-            <post-pintando-o-caneco>
-              <label>Pintando o caneco</label>
-              <uri>/post/pintando-o-caneco</uri>
-            </post-pintando-o-caneco>
             <post-do-outro-lado-tem-segredos>
               <label>Do outro lado tem segredos</label>
               <uri>/post/do-outro-lado-tem-segredos</uri>
@@ -1755,6 +2303,26 @@
               <label>Primeiros Passos</label>
               <uri>/post/primeiros-passos</uri>
             </post-primeiros-passos>
+            <post-pintando-o-caneco>
+              <label>Pintando o caneco</label>
+              <uri>/post/pintando-o-caneco</uri>
+            </post-pintando-o-caneco>
+            <post-aquele-abraco>
+              <label>Aquele Abraço</label>
+              <uri>/post/aquele-abraco</uri>
+            </post-aquele-abraco>
+            <post-agora-para-ficar>
+              <label>Agora para ficar</label>
+              <uri>/post/agora-para-ficar</uri>
+            </post-agora-para-ficar>
+            <post-mil-historias>
+              <label>Mil Histórias</label>
+              <uri>/post/mil-historias</uri>
+            </post-mil-historias>
+            <post-tempo-de-colheita>
+              <label>Tempo de colheita</label>
+              <uri>/post/tempo-de-colheita</uri>
+            </post-tempo-de-colheita>
             <post-tropical-sol-da-liberdade-ganha-resenha-em-el-pais>
               <label>Tropical Sol Da liberdade ganha resenha em "El País"</label>
               <uri>/post/tropical-sol-da-liberdade-ganha-resenha-em-el-pais</uri>
@@ -1763,6 +2331,10 @@
               <label>Autora participa de eventos na Inglaterra e Bélgica</label>
               <uri>/post/autora-participa-de-eventos-na-inglaterra-e-belgica</uri>
             </post-autora-participa-de-eventos-na-inglaterra-e-belgica>
+            <post-ana-maria-machado-faz-discurso-de-abertura-em-frankfurt>
+              <label>Ana Maria Machado faz discurso de abertura em Frankfurt</label>
+              <uri>/post/ana-maria-machado-faz-discurso-de-abertura-em-frankfurt</uri>
+            </post-ana-maria-machado-faz-discurso-de-abertura-em-frankfurt>
             <post-encontros-com-os-leitores>
               <label>Encontros com os leitores</label>
               <uri>/post/encontros-com-os-leitores</uri>
