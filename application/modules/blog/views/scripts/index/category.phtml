@@ -5,14 +5,40 @@ $pageData = $this->pageData;
 <div id="conteudo">
 <h1><img src="/img/icone_novidades.png" align="absmiddle" alt="<?php echo $this->translate("#Blog title") ?>" /> <?php echo $this->translate("#Blog title") ?></h1>
 
-<div id="index">
-
+<div id="page_container">
+<ul class="content"
 <?php if ((isset($pageData['postsData'])) && (is_array($pageData['postsData']) && (count($pageData['postsData'])))) { ?>
 <?php $this->postsLoop($pageData['postsData']); ?>
 <?php } else { ?>
 <?php print $this->translate("#No posts found with this criteria."); ?>
 <?php } ?>
+</ul>
+<!-- paginacao -->
+<div class="page_navigation"></div>
+<div class="info_text"></div>
+<!-- /paginacao -->
 </div>
-
 </div>
 <!-- /conteudo -->
+<script type="text/javascript">
+    $(document).ready(function(){
+
+            $('#page_container').pajinate({
+					num_page_links_to_display : 13,
+					items_per_page : 5,
+                                        nav_label_first: '<?php echo $this->translate("#First") ?>',
+                                        nav_label_prev: '<?php echo $this->translate("#Prev") ?>',
+                                        nav_label_last: '<?php echo $this->translate("#Last") ?>',
+                                        nav_label_next: '<?php echo $this->translate("#Next") ?>',
+                                        nav_label_info: '<?php echo $this->translate("#Showing {0}-{1} of {2} results") ?>'
+				});
+
+        $('.page_link').on('click', function(e) {
+            e.preventDefault();
+            jQuery('html, body').animate({scrollTop: top}, 800);
+
+        return false;
+        });
+    });
+</script>
+
