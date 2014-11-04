@@ -23,7 +23,6 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-
         $worksData = array(
             'worksSpecialUri' => '/livro/canteiros-de-saturno',
             'worksSpecialTitle' => 'Canteiros de Saturno',
@@ -64,7 +63,7 @@ class IndexController extends Zend_Controller_Action
         );
 
         $faqData = $this->questionMapper->getAllActiveQuestionsIdsAndTitles();
-        
+
         foreach ($faqData as $key => $eachFaq) {
             $questionObj = $this->questionMapper->findById($eachFaq['id']);
 
