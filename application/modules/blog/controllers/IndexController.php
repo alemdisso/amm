@@ -88,6 +88,7 @@ class Blog_IndexController extends Zend_Controller_Action
 
         $pageData = array('postsData' => $postsData, 'previous' => $previous, 'next' => $next, 'page' => $page);
         $this->view->pageData = $pageData;
+        $this->view->pageTitle = $this->view->translate("#Blog title");
 
     }
 
@@ -137,6 +138,7 @@ class Blog_IndexController extends Zend_Controller_Action
 
         $pageData = array('postsData' => $postsData);
         $this->view->pageData = $pageData;
+        $this->view->pageTitle = $categoryData['term'] . " - " . $this->view->translate("#Blog title");
 
     }
 

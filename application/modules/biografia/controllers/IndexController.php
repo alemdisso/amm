@@ -8,8 +8,16 @@ class Biografia_IndexController extends Zend_Controller_Action
         $this->view->setNestedLayout($layoutHelper, 'inner_biografia');
     }
 
+    public function postDispatch()
+    {
+        if (isset($this->view->pageTitle)) {
+            $this->_helper->layout()->getView()->headTitle($this->view->pageTitle . " :: Ana Maria Machado");
+        }
+    }
+
     public function indexAction()
     {
+        $this->view->pageTitle = $this->view->translate("#Biography");
 
     }
 
