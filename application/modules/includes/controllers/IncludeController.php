@@ -158,6 +158,9 @@ class Includes_IncludeController extends Zend_Controller_Action
         );
         $range = $max - $min;
         $step = floor($range / $fontSizes);
+	if ($step < 1) {
+		$step = 1;
+	}
 
         reset($tagsCloud);
         $tagsModel = array();

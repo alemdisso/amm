@@ -24,10 +24,10 @@ class IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         $worksData = array(
-            'worksSpecialUri' => '/livro/canteiros-de-saturno',
-            'worksSpecialTitle' => 'Canteiros de Saturno',
-            'worksSpecialSummary' => 'Um livro sobre o tempo e seu efeito sobre as pessoas',
-            'worksSpecialImageUri' => '/img/special/canteiros_home.png',
+            'worksSpecialUri' => '/livro/um-mapa-todo-seu',
+            'worksSpecialTitle' => 'Um Mapa Todo Seu',
+            'worksSpecialSummary' => 'Uma história de amor de duas pessoas admiráveis',
+            'worksSpecialImageUri' => '/img/special/mapa_home.png',
         );
 
         $postsIds = $this->postMapper->getLastPublishedPosts(2);

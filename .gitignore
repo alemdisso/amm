@@ -11,8 +11,9 @@ library/Moxca/
 library/Author/
 
 /nbproject/**/*
-nbproject/private/**/*
-nbproject/project.properties
+nbproject/private/*
+nbproject/project.properties/*
+/nbproject/*
 
 /tests/log/**/*
 /nbproject/

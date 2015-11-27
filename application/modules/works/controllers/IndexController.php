@@ -138,14 +138,14 @@ class Works_IndexController extends Zend_Controller_Action
     public function indexAction()
     {
         $pageData = array(
-            'leftSpecialUri' => '/livro/menina-bonita-do-laco-de-fita',
-            'leftSpecialTitle' => 'Menina bonita do laço de fita',
-            'leftSpecialSummary' => 'História de uma menina que, de tão bonita, deixa até um coelho apaixonado.',
-            'leftSpecialImageUri' => '/img/marcacao_destaque_livro1.png',
-            'rightSpecialUri' => '/livro/a-audacia-dessa-mulher',
-            'rightSpecialTitle' => 'A audácia dessa mulher',
-            'rightSpecialSummary' => 'Um romance que engloba varias vertentes e vem do século XIX aos nossos dias.',
-            'rightSpecialImageUri' => '/img/special/audacia_crop.png',
+            'leftSpecialUri' => '/livro/na-praia-e-no-luar-tartaruga-quer-o-mar',
+            'leftSpecialTitle' => 'Na Praia e No Luar, Tartaruga Quer o Mar',
+            'leftSpecialSummary' => 'Dois irmãos mobilizam uma cidade para preservar a natureza',
+            'leftSpecialImageUri' => '/img/special/praia_luar_crop.png',
+            'rightSpecialUri' => '/livro/um-mapa-todo-seu',
+            'rightSpecialTitle' => 'Um Mapa Todo Seu',
+            'rightSpecialSummary' => 'O amor vivido por duas pessoas notáveis da nossa História é contado por Ana Maria Machado.',
+            'rightSpecialImageUri' => '/img/special/mapa_crop_works.png',
         );
 
         $this->view->pageData = $pageData;
