@@ -25,6 +25,8 @@ nbproject/project.properties/*
 /application/configs/sandbox_application.ini
 /public/img/editions/raw/*
 /public/img/editions/tb/*
+/public/img/editions/new/*
+/public/img/editions/md/*
 /public/img/uploads/*
 
 /public/js/tinymce/*
@@ -37,3 +39,4 @@ nbproject/project.properties/*
 
 /library/Zend/*.*
 /wbfnts
+/application/configs/application.ini.prod

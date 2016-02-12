@@ -89,7 +89,7 @@ class Works_IndexController extends Zend_Controller_Action
                 $loopWorkObj = $this->workMapper->findById($loopEditionObj->getWork());
                 $loopEditorObj = $this->editorMapper->findById($loopEditionObj->getEditor());
 
-                $coverFilePath = $this->view->coverFilePath($loopEditionObj);
+                $coverFilePath = $this->view->coverFilePath($loopEditionObj, "no_img.png", "tb");
 //                print_r($loopEditionObj->getCover());
 //                print("<BR>$coverFilePath<BR>");exit;
                 $serieLabel = $loopSerieObj->getName();
@@ -181,11 +181,18 @@ class Works_IndexController extends Zend_Controller_Action
                 $serieName = null;
                 $serieUri = null;
             }
+            
+            if ($loopWorkObj->getStatus() != Author_Collection_WorkStatusConstants::STATUS_RESIZED) 
+            {
+                $this->resizeCover($loopWorkObj, $loopEditionObj);
+            }
+        
 
-            $coverFilePath = $this->view->coverFilePath($loopEditionObj);
+            $coverFilePath = $this->view->coverFilePath($loopEditionObj, "no_img.png", "tb");
 
             $prizeMapper = new Author_Collection_PrizeMapper($this->db);
             $prizesLabels = $this->view->workPrizesLabels($loopWorkObj->getId(), $prizeMapper);
+
 
             $editionsData[$editionId] = array(
                     'title' => $loopWorkObj->getTitle(),
@@ -216,21 +223,18 @@ class Works_IndexController extends Zend_Controller_Action
         $this->_helper->viewRenderer->setNoRender(TRUE);
 
         // prevent direct access
-        $isAjax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND
-        strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
-        if(!$isAjax) {
-          $user_error = 'Access denied - not an AJAX request...';
-          trigger_error($user_error, E_USER_ERROR);
-        }
-
+//        $isAjax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND
+//        strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) === 'xmlhttprequest';
+//        if(!$isAjax) {
+//          $user_error = 'Access denied - not an AJAX request...';
+//          trigger_error($user_error, E_USER_ERROR);
+//        }
+//
 
 
 
         $data = $this->_request->getParams();
         $term = $data['term'];
-
-        $parts = explode(' ', $term);
-
 
         $a_json = array();
         $a_json_row = array();
@@ -248,9 +252,12 @@ class Works_IndexController extends Zend_Controller_Action
           exit;
         }
         // *****************************************************************************
-
-
+        $converter = new Moxca_Util_StringToAscii();
+        $term = $converter->toAscii($term);
         $parts = explode(' ', $term);
+//        $parts = explode('xyzijijij ', $term);
+//die(print_r($parts));
+
 
         $result = $this->editionMapper->getAutoCompleteWorks($parts);
 
@@ -327,7 +334,10 @@ private function mb_stripos_all($haystack, $needle) {
  * @return array
  */
 private function apply_highlight($a_json, $parts) {
-
+    
+//    print_r($a_json);echo "<br>";
+//    print_r($parts);echo "<br>";
+//die();
   $p = count($parts);
   $rows = count($a_json);
 
@@ -341,24 +351,29 @@ private function apply_highlight($a_json, $parts) {
     for($i = 0; $i < $p; $i++) {
 
       $part_len = mb_strlen($parts[$i]);
-      $a_match_start = $this->mb_stripos_all($converter->toAscii($label), $converter->toAscii($parts[$i]));
-      foreach($a_match_start as $part_pos) {
+      if ($part_len > 1) {
+        $a_match_start = $this->mb_stripos_all($converter->toAscii($label), $converter->toAscii($parts[$i]));
+        foreach($a_match_start as $part_pos) {
 
-        $overlap = false;
-        foreach($a_label_match as $pos => $len) {
-          if($part_pos - $pos >= 0 && $part_pos - $pos < $len) {
-            $overlap = true;
-            break;
+          $overlap = false;
+          foreach($a_label_match as $pos => $len) {
+            if($part_pos - $pos >= 0 && $part_pos - $pos < $len) {
+              $overlap = true;
+              break;
+            }
           }
-        }
-        if(!$overlap) {
-          $a_label_match[$part_pos] = $part_len;
-        }
+          if(!$overlap) {
+            $a_label_match[$part_pos] = $part_len;
+          }
 
+        }
       }
 
     }
 
+//    echo "<br>a_label_match<br>";
+//    print_r($a_label_match);echo "<br>";
+//    print_r($parts);echo "<br>";
     if(count($a_label_match) > 0) {
       ksort($a_label_match);
 
@@ -385,8 +400,9 @@ private function apply_highlight($a_json, $parts) {
     }
 
   }
-
-  return $a_json;
+//  echo "<br>";
+//die (print_r($a_json));
+return $a_json;
 
 }
 
@@ -441,8 +457,76 @@ private function apply_highlight($a_json, $parts) {
 
     }
 
+    
+    
+
+    private function resizeCover(Author_Collection_Work $workObj, Author_Collection_Edition $editionObj)
+    {
+        
+        $coverRawFilePath = $this->view->coverFilePath($editionObj);
+        $extension = strtolower(strrchr($coverRawFilePath, '.'));
+        
+        
+        list($width, $height) = getimagesize($_SERVER['DOCUMENT_ROOT'] . '/public' . $coverRawFilePath);
+        
+//        if ((!$width) && (!$height)) {
+//            die("erro na imagem");
+//        }
+        
+//        print_r($width); echo" W<br />";
+//        print_r($height); echo" H <br />";
+        
+        
+
+        if ($workObj->GetStatus() != Author_Collection_WorkStatusConstants::STATUS_RESIZED) {
+            $rsz = new Moxca_Util_Resize($_SERVER['DOCUMENT_ROOT'] . '/public' . $coverRawFilePath);
+            if ($rsz->resizeImage(198, 198)) {
+                $rsz->saveImage($_SERVER['DOCUMENT_ROOT'] . '/public' . '/img/editions/tb/' . $workObj->getUri()  . '.png');
+                unset($rsz);
 
 
+                if (($width > 380) || ($height > 380)) {
+
+                    $rsz = new Moxca_Util_Resize($_SERVER['DOCUMENT_ROOT'] . '/public' . $this->view->coverFilePath($editionObj));
+                    $rsz->resizeImage(381, 381);
+                    $rsz->saveImage($_SERVER['DOCUMENT_ROOT'] . '/public' . '/img/editions/md/' . $workObj->getUri()  . '.png');
+                    unset($rsz);
+                } else {
+                    $rsz = new Moxca_Util_Resize($_SERVER['DOCUMENT_ROOT'] . '/public' . $this->view->coverFilePath($editionObj));
+                    $rsz->resizeImage($width, $height);
+                    $rsz->saveImage($_SERVER['DOCUMENT_ROOT'] . '/public' . '/img/editions/md/' . $workObj->getUri()  . '.png');
+                    unset($rsz);
+                }
+
+
+                $rsz = new Moxca_Util_Resize($_SERVER['DOCUMENT_ROOT'] . '/public' . $coverRawFilePath);
+                $rsz->resizeImage($width, $height);
+
+                $rsz->saveImage($_SERVER['DOCUMENT_ROOT'] . '/public' . '/img/editions/new/' . $workObj->getUri()  . '.png');
+                $editionObj->setCover($workObj->getUri()  . '.png');
+                $this->editionMapper->update($editionObj);
+                //unlink($_SERVER['DOCUMENT_ROOT'] . '/public' . $coverRawFilePath);
+                //$coverRawFilePath = '/img/editions/raw/' . $workObj->getUri()  . '.png';
+
+                unset($rsz);
+            }
+            
+            
+            if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/public' . '/img/editions/new/' . $workObj->getUri()  . '.png')) {
+                $workObj->SetStatus(Author_Collection_WorkStatusConstants::STATUS_RESIZED);
+            } else {
+                $workObj->SetStatus(Author_Collection_WorkStatusConstants::STATUS_RAW);
+
+            } 
+            $this->workMapper->update($workObj);
+        }
+
+        
+    }
+
+        
+    
+   
 
 }
 

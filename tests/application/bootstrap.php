@@ -15,8 +15,18 @@ set_include_path(implode(PATH_SEPARATOR, array(
     get_include_path(),
 )));
 
+// Ensure zend_version is on include_path
+set_include_path(implode(PATH_SEPARATOR, array(
+    realpath(APPLICATION_PATH . '/../../Zend_1.11.11'),
+    get_include_path(),
+)));
 
-require_once 'Zend/Loader/AutoLoader.php';
+//$array_path = explode(PATH_SEPARATOR, get_include_path());
+//$array_path[] = realpath(APPLICATION_PATH . '/../../Zend_1.11.11');
+//$newPathString = implode(PATH_SEPARATOR, $array_path);
+//set_include_path($newPathString);
+
+require_once 'Zend/Loader/Autoloader.php';
 $autoloader = Zend_Loader_AutoLoader::getInstance();
 $autoloader->registerNamespace('PHPUnit_');
 $autoloader->registerNamespace('Moxca_');
