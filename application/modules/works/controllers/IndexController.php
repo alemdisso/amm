@@ -182,12 +182,6 @@ class Works_IndexController extends Zend_Controller_Action
                 $serieUri = null;
             }
             
-            if ($loopWorkObj->getStatus() != Author_Collection_WorkStatusConstants::STATUS_RESIZED) 
-            {
-                $this->resizeCover($loopWorkObj, $loopEditionObj);
-            }
-        
-
             $coverFilePath = $this->view->coverFilePath($loopEditionObj, "no_img.png", "tb");
 
             $prizeMapper = new Author_Collection_PrizeMapper($this->db);
@@ -455,76 +449,7 @@ return $a_json;
 
         return $tagsModel;
 
-    }
-
-    
-    
-
-    private function resizeCover(Author_Collection_Work $workObj, Author_Collection_Edition $editionObj)
-    {
-        
-        $coverRawFilePath = $this->view->coverFilePath($editionObj);
-        $extension = strtolower(strrchr($coverRawFilePath, '.'));
-        
-        
-        list($width, $height) = getimagesize($_SERVER['DOCUMENT_ROOT'] . '/public' . $coverRawFilePath);
-        
-//        if ((!$width) && (!$height)) {
-//            die("erro na imagem");
-//        }
-        
-//        print_r($width); echo" W<br />";
-//        print_r($height); echo" H <br />";
-        
-        
-
-        if ($workObj->GetStatus() != Author_Collection_WorkStatusConstants::STATUS_RESIZED) {
-            $rsz = new Moxca_Util_Resize($_SERVER['DOCUMENT_ROOT'] . '/public' . $coverRawFilePath);
-            if ($rsz->resizeImage(198, 198)) {
-                $rsz->saveImage($_SERVER['DOCUMENT_ROOT'] . '/public' . '/img/editions/tb/' . $workObj->getUri()  . '.png');
-                unset($rsz);
-
-
-                if (($width > 380) || ($height > 380)) {
-
-                    $rsz = new Moxca_Util_Resize($_SERVER['DOCUMENT_ROOT'] . '/public' . $this->view->coverFilePath($editionObj));
-                    $rsz->resizeImage(381, 381);
-                    $rsz->saveImage($_SERVER['DOCUMENT_ROOT'] . '/public' . '/img/editions/md/' . $workObj->getUri()  . '.png');
-                    unset($rsz);
-                } else {
-                    $rsz = new Moxca_Util_Resize($_SERVER['DOCUMENT_ROOT'] . '/public' . $this->view->coverFilePath($editionObj));
-                    $rsz->resizeImage($width, $height);
-                    $rsz->saveImage($_SERVER['DOCUMENT_ROOT'] . '/public' . '/img/editions/md/' . $workObj->getUri()  . '.png');
-                    unset($rsz);
-                }
-
-
-                $rsz = new Moxca_Util_Resize($_SERVER['DOCUMENT_ROOT'] . '/public' . $coverRawFilePath);
-                $rsz->resizeImage($width, $height);
-
-                $rsz->saveImage($_SERVER['DOCUMENT_ROOT'] . '/public' . '/img/editions/new/' . $workObj->getUri()  . '.png');
-                $editionObj->setCover($workObj->getUri()  . '.png');
-                $this->editionMapper->update($editionObj);
-                //unlink($_SERVER['DOCUMENT_ROOT'] . '/public' . $coverRawFilePath);
-                //$coverRawFilePath = '/img/editions/raw/' . $workObj->getUri()  . '.png';
-
-                unset($rsz);
-            }
-            
-            
-            if (file_exists($_SERVER['DOCUMENT_ROOT'] . '/public' . '/img/editions/new/' . $workObj->getUri()  . '.png')) {
-                $workObj->SetStatus(Author_Collection_WorkStatusConstants::STATUS_RESIZED);
-            } else {
-                $workObj->SetStatus(Author_Collection_WorkStatusConstants::STATUS_RAW);
-
-            } 
-            $this->workMapper->update($workObj);
-        }
-
-        
-    }
-
-        
+    }        
     
    
 
