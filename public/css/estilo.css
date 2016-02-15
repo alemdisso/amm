@@ -799,12 +799,12 @@ div.box_tag {
 /* PAINEL */
 .panel {
 	clear:both;
-	height:87px;
+	height:47px;
 	width:960px;
-	padding:30px 20px 0 20px;
+	padding:10px 20px 0 20px;
 	margin:0 0 -16px 0;
 	background:url(../img/fundo_painel.png) repeat-x;
-	font-size:12px;
+	font-size:14px;
 	}
 
 .panel a {
